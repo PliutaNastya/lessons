@@ -25,6 +25,9 @@ h2 {
 h2.gastro-festivals__title { /* Усі h2 з класом .gastro-festivals__title */
     color: rgb(113, 102, 130); 
 }
+.gastro-festivals__text.text { /* Елементи, які одночасно мають і .gastro-festivals__text, і .text */
+    color: khaki;
+}
 
 
 /* Стилізація параграфів різними способами */
