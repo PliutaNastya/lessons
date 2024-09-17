@@ -1,0 +1,284 @@
+/* Підключення шрифтів для сторінки PersonalPortfolio через https://fonts.google.com/ */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,600;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,500;1,500&display=swap');
+
+/* Підключення шрифтів для сторінки Business Presentation через плагін */
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:regular,700&display=swap");
+
+/* Локальне підключення шрифтів для сторінки LandingPage*/
+@import url("fonts.css");
+
+/* Підключення обнулюючих стилів */
+@import url("reset.css");
+
+/* Загальні стилі для body */
+body {
+	font-family: "Montserrat", sans-serif;
+	line-height: 1.5;
+	font-size: 18px;
+}
+
+/* Стилі для header */
+.title {
+	font-weight: 700;
+	text-decoration: wavy underline;
+	color: rgb(42, 8, 98);
+	font-size: 26px;
+}
+.header__title {
+	font-size: 42px;
+}
+.menu__item {
+	color: rgb(163, 14, 89);
+}
+.sublist-menu__item a {
+	color: rgb(5, 130, 158);
+	text-indent: 15px;
+	text-decoration: underline dotted rgb(132, 1, 67);
+}
+
+/* Стилі для main */
+/* Властивості CSS для тексту */
+.text-properties {
+	color: #010154;
+}
+.main-properties__title {
+	color: rgb(3, 143, 45);
+}
+.main-properties__list p {
+	text-indent: 20px;
+}
+.main-properties__item--color p {
+	color: purple;
+}
+.main-properties__item--ff p {
+	font-family: 'Courier New', Courier, monospace;
+}
+.main-properties__item--fz p {
+	font-size: 24px;
+}
+.fw-property__item, .other-property {
+	text-indent: 10px;
+}
+.fw-property__item p, .fw-property__item > ul > li, .other-property > ul > li {
+	text-indent: 20px;
+}
+.fw-property__item--400 {
+	font-weight: 400;
+}
+.fw-property__item--700 {
+	font-weight: 700;
+}
+.fw-property__item--lighter {
+	font-weight: lighter;
+}
+.fw-property__item--bolder {
+	font-weight: bolder;
+}
+.fw-property__item--100 {
+	font-weight: 100;
+}
+.fw-property__item--200 {
+	font-weight: 200;
+}
+.fw-property__item--300 {
+	font-weight: 300;
+}
+.fw-property__item--500 {
+	font-weight: 500;
+}
+.fw-property__item--600 {
+	font-weight: 600;
+}
+.fw-property__item--800 {
+	font-weight: 800;
+}
+.fw-property__item--900 {
+	font-weight: 900;
+}
+.other-properties {
+	color: rgb(1, 94, 16);
+}
+.other-property__item--fs-normal {
+	/* Дефолтне значення */
+}
+.other-property__item--fs-italic {
+	font-style: italic;
+}
+.other-property__item--fs-oblique {
+	font-style: oblique;
+}
+.other-property__item--lh {
+	line-height: 2;
+}
+.other-property__item--ls-positive {
+	letter-spacing: 2px;
+}
+.other-property__item--ls-negative {
+	letter-spacing: -1px;
+}
+.other-property__item--ta-left {
+	/* Дефолтне значення */
+}
+.other-property__item--ta-right {
+	text-align: right;
+}
+.other-property__item--ta-center {
+	text-align: center;
+}
+.other-property__item--ta-justify {
+	text-align: justify;
+}
+.other-property__item--td-underline {
+	text-decoration: underline;
+}
+.other-property__item--td-overline {
+	text-decoration: overline;
+}
+.other-property__item--td-line-through {
+	text-decoration: line-through;
+}
+.other-property__item--td-none {
+	text-decoration: none;
+}
+.other-property__item--tt-uppercase {
+	text-transform: uppercase;
+}
+.other-property__item--tt-lowercase {
+	text-transform: lowercase;
+}
+.other-property__item--tt-capitalize {
+	text-transform: capitalize;
+}
+.other-property__item--tt-none {
+	text-transform: none;
+}
+.other-property > .other-property--text-indent {
+	text-indent: 10%;
+}
+.other-property__item--ws-positive {
+	word-spacing: 20px;
+}
+.other-property__item--ws-negative {
+	word-spacing: -3px;
+}
+/* Призначення кольорів у CSS */
+.color-assignment {
+	color: rgb(122, 1, 17);
+}
+.color-assignment h3 {
+	text-indent: 10px;
+}
+.color-assignment p {
+	text-indent: 20px;
+}
+.color-assignment__title {
+	color: rgb(240, 95, 79);
+}
+.color-assignment__keywords span {
+	color: blue;
+}
+.color-hex span {
+	color: #FF5733;
+}
+.subtitle{
+	font-weight: 500;
+}
+.color-rgb span {
+	color: rgba(255, 0, 0, 0.5);
+}
+.color-hsl span {
+	color: hsl(120, 100%, 50%);
+}
+/* Тіні в CSS */
+.shadow-property {
+	color: saddlebrown;
+}
+.shadow-property > ul {
+	text-indent: 10px;
+	font-weight: 500;
+}
+.shadow-property__title {
+	color: rgb(137, 6, 50);
+}
+.shadow-property__examples {
+	text-indent: 20px;
+}
+.shadow-property__example {
+	color: rgb(102, 104, 0);
+}
+.shadow-property__example--1 {
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.shadow-property__example--2 {
+	text-shadow: 8px -8px 2px rgba(80,4,51,0.6);
+}
+.shadow-property__example--3 {
+	text-shadow: 6px 0px 5px rgba(46,182,0,0.6);
+}
+/* Корисні ресурси та інструменти для роботи з кольорами і тінями */
+.useful-links__title {
+	color: darkmagenta;
+}
+.useful-links__subtitle {
+	color: salmon;
+}
+.useful-links__list {
+	text-indent: 15px;
+}
+.useful-links__item a {
+	text-decoration: underline overline darkmagenta;
+}
+/* Підключення шрифтів */
+.personal-portfolio {
+	font-family: "Work Sans", sans-serif;
+}
+.personal-portfolio_title {
+	font-size: 38px;
+	font-weight: 600;
+	color: #132238;
+	line-height: 1.3;
+}
+.personal-portfolio__text-block p {
+	color: #556070; 
+	line-height: 1.3;
+}
+.business-presentation {
+	font-family: "DM Sans", sans-serif;
+}
+.business-presentation__title {
+	color: #1E1B39;
+	font-size: 88px;
+	font-weight: 700;
+	line-height: 1.1;
+}
+.business-presentation__text-block p {
+	color: #474464;
+	font-size: 24px;
+	line-height: 1.75; 
+}
+.landing-page {
+	font-family: "Roboto", sans-serif;
+}
+.landing-page__title {
+	color: #091133;
+	font-size: 50px;
+	font-weight: 500;
+	line-height: 1.3;
+	letter-spacing: 1px;
+}
+.landing-page__text-block p {
+	color: #505F98;
+	line-height: 1.7;
+}
+/* Стилі для footer */
+footer a{
+	font-weight: 500;
+}
+footer p {
+	color: rgb(84, 2, 111);
+	text-shadow: 3px 4px 5px rgb(181, 21, 234);
+	font-size: 24px;
+	letter-spacing: 3px;
+}

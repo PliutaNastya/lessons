@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="keywords" content="CSS, властивості CSS, текст CSS, кольори в CSS, тіні в CSS, font-family, color, text-shadow, генератор тіней, палітра кольорів, генератор кольорів, text-transform, font-size, font-weight, CSS гайд">
+   <meta name="description" content="Детальний гайд по властивостях CSS для роботи з текстом, кольорами та тінями. Приклади використання властивостей color, text-shadow, font-size та інших. Корисні ресурси для генерації кольорів і тіней.">
+	<!-- Підключення всіх варіацій шрифту 'Montserrat' з fonts.google.com для відображення різних властивостей тексту в CSS-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Властивості CSS для тексту, кольорів та тіней: детальний гайд</title>
+</head>
+<body>
+   <header class="header">
+		<h1 class="header__title title">Властивості CSS для роботи з текстом, кольором і тінями</h1>
+		<ol class="header__menu menu">
+			<li class="menu__item">
+				<a href="#text-property">Властивості CSS для тексту</a>
+				<ul class="menu__sublist sublist-menu">
+					<li class="sublist-menu__item"><a href="#color-property">color</a></li>
+					<li class="sublist-menu__item"><a href="#font-family-property">font-family</a></li>
+					<li class="sublist-menu__item"><a href="#font-size-property">font-size</a></li>
+					<li class="sublist-menu__item"><a href="#font-weight-property">font-weight</a></li>
+					<li class="sublist-menu__item"><a href="#other-css-text-property">Інші важливі властивості для тексту</a></li>
+				</ul>
+			</li>
+			<li class="menu__item">
+				<a href="#color-assignment">Призначення кольорів у CSS</a>
+				<ul class="menu__sublist sublist-menu">
+					<li class="sublist-menu__item"><a href="#color-keywords">Ключові слова для кольорів</a></li>
+					<li class="sublist-menu__item"><a href="#color-hex">Шістнадцятковий формат (HEX)</a></li>
+					<li class="sublist-menu__item"><a href="#color-rgb">Формат RGB і RGBA</a></li>
+					<li class="sublist-menu__item"><a href="#color-hsl">HSL та HSLA</a></li>
+				</ul>
+			</li>
+			<li class="menu__item"><a href="#shadow-property">Тіні в CSS</a>
+			</li>
+			<li class="menu__item"><a href="#useful-links">Корисні ресурси та інструменти для роботи з кольорами і тінями</a></li>
+			<li class="menu__item"><a href="#connecting-fonts">Підключення шрифтів</a></li>
+		</ol>
+	</header>
+	<main class="main">
+		<div class="text-properties">
+			<div id="text-property" class="text-properties__main main-properties">
+				<h2 class="title main-properties__title">Властивості CSS для тексту</h2>
+				<ul class="main-properties__list">
+					<li id="color-property" class="main-properties__item main-properties__item--color">
+						<mark>color</mark> - задає колір тексту. Підтримує ключові слова, шістнадцяткові (HEX), RGB та HSL-формати.
+						<p>Це речення буде фіолетовим.</p>
+					</li>
+					<li id="font-family-property" class="main-properties__item main-properties__item--ff">
+						<mark>font-family</mark> - визначає шрифт для тексту. Список шрифтів задається через кому: перший доступний шрифт використовується.
+						<p>Це речення буде Courier New, або Courier, якщо Courier New недоступний.</p>
+					</li>
+					<li id="font-size-property" class="main-properties__item main-properties__item--fz">
+						<mark>font-size</mark> - задає розмір шрифту. Може бути в пікселях (px), відносних одиницях (rem, %) або абсолютних величинах (наприклад, xx-small, small, medium, large).
+						<p>Це речення буде розміром 24px.</p>
+					</li>
+					<li id="font-weight-property" class="main-properties__item main-properties__item--fw fw-property">
+						<mark>font-weight</mark> - контролює товщину шрифту. Можливі значення:
+						<ul class="fw-property__list">
+							<li class="fw-property__item">
+								normal або 400: звичайний текст.
+								<p class="fw-property__item--400">Це речення буде нормальної товщини.</p>
+							</li>
+							<li class="fw-property__item">
+								bold або 700: жирний текст.
+								<p class="fw-property__item--700">Це речення буде жирним.</p>
+							</li>
+							<li class="fw-property__item">
+								lighter: тонший шрифт порівняно з батьківським елементом.
+								<p class="fw-property__item--lighter">Це речення буде мати тонший шрифт порівняно з батьківським елементом.</p>
+							</li>
+							<li class="fw-property__item">
+								bolder: товщий шрифт порівняно з батьківським елементом.
+								<p class="fw-property__item--bolder">Це речення буде мати товщий шрифт порівняно з батьківським елементом.</p>
+							</li>
+							<li class="fw-property__item">
+								Числові значення: від 100 (тонкий) до 900 (дуже жирний).
+								<ul>
+									<li class="fw-property__item--100">Це речення буде мати значення font-weight: 100.</li>
+									<li class="fw-property__item--200">Це речення буде мати значення font-weight: 200.</li>
+									<li class="fw-property__item--300">Це речення буде мати значення font-weight: 300.</li>
+									<li class="fw-property__item--400">Це речення буде мати значення font-weight: 400.</li>
+									<li class="fw-property__item--500">Це речення буде мати значення font-weight: 500.</li>
+									<li class="fw-property__item--600">Це речення буде мати значення font-weight: 600.</li>
+									<li class="fw-property__item--700">Це речення буде мати значення font-weight: 700.</li>
+									<li class="fw-property__item--800">Це речення буде мати значення font-weight: 800.</li>
+									<li class="fw-property__item--900">Це речення буде мати значення font-weight: 900.</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li id="other-css-text-property" class="main-properties__item main-properties__item--other other-properties">
+						<mark>Інші важливі властивості для тексту</mark>
+						<ul class="other-properties__list">
+							<li class="other-properties__item other-property">
+								<mark>font-style</mark> - задає стиль шрифту, наприклад, курсив.
+								<ul class="other-property__list">
+									<li class="other-property__item other-property__item--fs-normal">normal: звичайний текст без стилю.</li>
+									<li class="other-property__item other-property__item--fs-italic">italic: курсив.</li>
+									<li class="other-property__item other-property__item--fs-oblique">oblique: похилий текст, подібний до курсива.</li>
+								</ul>
+							</li>
+							<li class="other-properties__item other-property">
+								<mark>line-height</mark> - визначає висоту рядка. Може бути:
+								<ul class="other-property__list">
+									<li>Числове значення (1.5): відносна висота рядка до розміру шрифту.</li>
+									<li>Відсотки (150%): висота рядка у відсотках від розміру шрифту.</li>
+									<li>Фіксовані одиниці (наприклад, px): абсолютна висота рядка.</li>
+									<li class="other-property__item other-property__item--lh">Це речення матиме міжрядковий інтервал 2.</li>
+								</ul>
+							</li>
+							<li class="other-properties__item other-property">
+								<mark>letter-spacing </mark>- задає відстань між літерами.
+								<ul class="other-property__list">
+									<li class="other-property__item other-property__item--ls-positive">Позитивне значення (2px): збільшує відстань між літерами.</li>
+									<li class="other-property__item other-property__item--ls-negative">Негативне значення (-1px): зменшує відстань між літерами.</li>
+								</ul>
+							</li>
+							<li class="other-properties__item other-property">
+								<mark>text-align</mark> - вирівнює текст всередині блочного елемента. Можливі значення:
+								<ul class="other-property__list">
+									<li class="other-property__item other-property__item--ta-left">left: вирівнює текст по лівому краю (за замовчуванням для ліво-направлених мов).</li>
+									<li class="other-property__item other-property__item--ta-right">right: вирівнює текст по правому краю.</li>
+									<li class="other-property__item other-property__item--ta-center">center: вирівнює текст по центру.</li>
+									<li class="other-property__item other-property__item--ta-justify">justify: вирівнює текст по обидва боки, додаючи пробіли між словами для вирівнювання рядків.</li>
+								</ul>
+							</li>
+							<li class="other-properties__item other-property">
+								<mark>text-decoration</mark> - додає до тексту підкреслення, накреслення зверху або перекреслення. Значення:
+								<ul class="other-property__list">
+									<li class="other-property__item other-property__item--td-underline">underline: підкреслює текст.</li>
+									<li class="other-property__item other-property__item--td-overline">overline: додає лінію над текстом.</li>
+									<li class="other-property__item other-property__item--td-line-through">line-through: перекреслює текст.</li>
+									<li class="other-property__item other-property__item--td-none">none: видаляє будь-які стилі.</li>
+								</ul>
+							</li>
+							<li class="other-properties__item other-property">
+								<mark>text-transform</mark> - змінює регістр (регистр) тексту. Значення:
+								<ul class="other-property__list">
+									<li class="other-property__item other-property__item--tt-uppercase">uppercase: переводить весь текст у верхній регістр (великі літери).</li>
+									<li class="other-property__item other-property__item--tt-lowercase">lowercase: переводить весь текст у нижній регістр (малі літери).</li>
+									<li class="other-property__item other-property__item--tt-capitalize">capitalize: робить перші літери кожного слова великими.</li>
+									<li class="other-property__item other-property__item--tt-none">none: залишає текст без змін.</li>
+								</ul>
+							</li>
+							<li class="other-properties__item other-property">
+								<mark>text-indent</mark> - задає відступ для першого рядка тексту в елементі. Може бути у відсотках або фіксованих одиницях (наприклад, px).
+								<p class="other-property--text-indent">Це речення матиме відступ для першого рядка.</p>
+							</li>
+							<li class="other-properties__item other-property">
+								<mark>word-spacing</mark> - контролює відстань між словами. Позитивні значення збільшують відстань, а негативні зменшують.
+								<ul class="other-property__list">
+									<li class="other-property__item other-property__item--ws-positive">Це речення матиме відстань між словами 20px.</li>
+									<li class="other-property__item other-property__item--ws-negative">Це речення матиме відстань між словами -3px.</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div id="color-assignment" class="color-assignment">
+				<h2 class="title color-assignment__title">Призначення кольорів у CSS</h2>
+				<div id="color-keywords" class="color-assignment__keywords">
+					<h3 class="subtitle color-assignment__subtitle">Ключові слова для кольорів</h3>
+					<p>CSS підтримує стандартні назви кольорів, такі як red, blue, green, black і т. д. <span>Це речення буде синім.</span></p>
+				</div>
+				<div id="color-hex" class="color-assignment__color-hex color-hex">
+					<h3 class="color-hex__subtitle subtitle">Шістнадцятковий формат (HEX)</h3>
+					<p>HEX-код складається з шести символів, які представляють червоний, зелений і синій канали кольору (RGB). Наприклад, #FF5733. <span>Це речення буде помаранчевим.</span></p>
+					<img src="img/hex_circle.jpg" alt="Коло з різними кольорами та HEX кодами до них" title="Шістнадцяткові коди колірного колеса" width="500">
+				</div>
+				<div id="color-rgb" class="color-rgb">
+					<h3 class="subtitle color-rgb__subtitle">Формат RGB і RGBA</h3>
+					<p>Формат RGB задає колір через значення червоного, зеленого і синього каналів у діапазоні від 0 до 255. RGBA додає прозорість через четвертий параметр (альфа-канал). <span>Це речення буде напівпрозорим червоним.</span></p>
+				</div>
+				<div id="color-hsl" class="color-hsl">
+					<h3 class="subtitle color-hsl__subtitle">HSL та HSLA</h3>
+					<p>HSL використовує три параметри для задання кольору: тон (hue), насиченість (saturation) і яскравість (lightness). HSLA додає прозорість. <span>Це речення буде яскраво-зеленим.</span></p>
+				</div>
+			</div>
+			<div id="shadow-property" class="shadow-property">
+				<h2 class="title shadow-property__title">Тіні в CSS</h2>
+			   <p><mark>text-shadow</mark> Задає тінь для тексту. Синтаксис:</p>
+				<ul>
+					<li>Перший параметр: горизонтальний зміщення.</li>
+					<li>Другий параметр: вертикальний зміщення.</li>
+					<li>Третій параметр (необов'язковий): розмиття.</li>
+					<li>Четвертий параметр (необов'язковий): колір тіні.</li>
+				</ul>
+				<div class="shadow-property__examples">
+					<p class="shadow-property__example shadow-property__example--1"> “Що розум людини може осягнути і в що він може повірити, те він здатний досягти”, – Наполеон Хілл.</p>
+					<p class="shadow-property__example shadow-property__example--2">“Найскладніше почати діяти, все інше залежить тільки від наполегливості.”, – Амелія Ергарт.</p>
+					<p class="shadow-property__example shadow-property__example--3">“Логіка може привести вас. від пункту “А” до пункту “Б”, а уява – куди завгодно”, – Альберт Айнштайн.</p>
+				</div>
+			</div>
+			<div id="useful-links" class="useful-links">
+				<h2 class="title useful-links__title">Корисні ресурси та інструменти для роботи з кольорами і тінями</h2>
+				<h3 class="subtitle useful-links__subtitle">Інструменти для підбору кольорів:</h3>
+				<ul class="useful-links__list">
+					<li class="useful-links__item"><a href="https://color.adobe.com/ru/create" target="_blank">Adobe Color</a></li>
+					<li class="useful-links__item"><a href="https://coolors.co/" target="_blank">Coolors</a></li>
+					<li class="useful-links__item"><a href="https://paletton.com/" target="_blank">Paletton</a></li>
+					<li class="useful-links__item"><a href="https://www.materialpalette.com/" target="_blank">Material Palette</a></li>
+				</ul>
+				<h3 class="subtitle useful-links__subtitle">Інструменти для роботи з тінями:</h3>
+				<ul class="useful-links__list">
+					<li class="useful-links__item"><a href="https://www.cssmatic.com/box-shadow" target="_blank">CSS Shadow Generator</a></li>
+					<li class="useful-links__item"><a href="https://cssgenerator.org/text-shadow-css-generator.html" target="_blank">Text Shadow Generator</a></li>
+				</ul>
+				<h3 class="subtitle useful-links__subtitle">Інструменти для експериментів із кольорами:</h3>
+				<ul class="useful-links__list">
+					<li class="useful-links__item"><a href="https://www.colorhexa.com/" target="_blank">Hex Color Codes</a></li>
+					<li class="useful-links__item"><a href="https://www.0to255.com/" target="_blank">0to255</a></li>
+				</ul>
+				<h3 class="subtitle useful-links__subtitle">Генератори градієнтів:</h3>
+				<ul class="useful-links__list">
+					<li class="useful-links__item"><a href="https://cssgradient.io/" target="_blank">CSS Gradient Generator</a></li>
+					<li class="useful-links__item"><a href="https://gradienthunt.com/" target="_blank">Gradient Hunt</a></li>
+					<li class="useful-links__item"><a href="https://bgjar.com/" target="_blank">BGJar</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="connecting-fonts">
+			<div class="personal-portfolio">
+				<h2 class="personal-portfolio_title" lang="en">I am Professional User Experience Designer</h2>
+				<div class="personal-portfolio__text-block" lang="zxx">
+					<p>I design and develop services for customers specializing creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences.</p>
+					<p>I design and develop services for customers specializing creating stylish, modern websites, web services.</p>
+				</div>
+			</div>
+			<div class="business-presentation">
+				<h2 class="business-presentation__title" lang="en">About us</h2>
+				<div class="business-presentation__text-block" lang="zxx">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam nec suscipit dui sed cursus nibh id risus ultrices convallis phasellus vel tristique diam ham placerat aliquet libero a aliquam nisl accumsan eget etiam ultrices.</p>
+					<p>At sed pretium ac condimentum in non arcu venenatis ac nulla nullam cursus morbi eget magna donec lacus fames sed fames fames erat tincidunt tellus sed vitae venenatis pulvinar orci nunc eget mauris venenatis dis nonid nibh.</p>
+				</div>
+			</div>
+			<div class="landing-page">
+				<h2 class="landing-page__title" lang="en">Introduce Your Product Quickly & Effectively</h2>
+				<div class="landing-page__text-block" lang="zxx">
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus</p>
+					<p>mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<a href="https://www.linkedin.com/in/pliuta-anastasiia" target="_blank" title="Посилання на LinkedIn">Написати мені: <img src="img/linkedin_icon.svg" alt="Логотип соціальної мережі LinkedIn - in" title="Логотип LinkedIn" width="25"></a>
+		<p>&copy; 2024. Всі права захищені.</p>
+	</footer>
+</body>
+</html>
