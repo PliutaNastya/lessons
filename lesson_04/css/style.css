@@ -1,7 +1,5 @@
 /* Підключення шрифтів для сторінки PersonalPortfolio через https://fonts.google.com/ */
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,600;1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,500;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,500;0,600;1,500;1,600&display=swap');
 
 /* Підключення шрифтів для сторінки Business Presentation через плагін */
 @import url("https://fonts.googleapis.com/css?family=DM+Sans:regular,700&display=swap");
