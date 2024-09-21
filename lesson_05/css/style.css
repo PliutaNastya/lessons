@@ -188,6 +188,9 @@ body{
 	margin-bottom: 30px;
 	vertical-align: top;
 	overflow: auto;
+	border-radius: 12px;
+	border: 1px solid #262626;
+	background: linear-gradient(222deg, rgba(229, 0, 0, 0.50) -208.03%, rgba(229, 0, 0, 0.00) 41.32%), #0F0F0F;
 }
 .item-dark-theme--3, .item-dark-theme--6{
 	margin-right: 0px;
@@ -208,13 +211,16 @@ body{
 .item-dark-theme__header img {
 	max-width: 100%;
 	padding: 16px;
-	margin-inline-end: 16px;
 	vertical-align: middle;
 }
 .item-dark-theme__header div {
 	display: inline-block;
 	max-width: 72px;
 	min-height: 72px;
+	border-radius: 12px;
+	border: 1px solid  #1F1F1F;
+	background: #141414;
+	margin-inline-end: 16px;
 }
 .item-dark-theme__text {
 	color: #999;
