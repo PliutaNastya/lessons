@@ -343,22 +343,22 @@ body{
       <div class="items">
       	<div class="item">
           	<div class="content">Content</div>
-        	</div>
-			<div class="item">
+        </div>
+	<div class="item">
           	<div class="content">Content</div>
-        	</div>
-			<div class="item">
+        </div>
+	<div class="item">
           	<div class="content">Content</div>
-        	</div>
-			<div class="item">
+        </div>
+	<div class="item">
           	<div class="content">Content</div>
-        	</div>
-			<div class="item">
+        </div>
+	<div class="item">
           	<div class="content">Content</div>
-			</div>
-        	<div class="item">
+	</div>
+        <div class="item">
           	<div class="content">Content</div>
-        	</div>
+        </div>
       </div>
     </div>
  */
