@@ -336,3 +336,56 @@ body{
 	text-align: center;
 	font-weight: 700;
 }
+
+/* Можно ще таку структуру побудувати для колонок, але мені більш звичний мій варіант */
+/* 
+<div class="container">
+      <div class="items">
+      	<div class="item">
+          	<div class="content">Content</div>
+        	</div>
+			<div class="item">
+          	<div class="content">Content</div>
+        	</div>
+			<div class="item">
+          	<div class="content">Content</div>
+        	</div>
+			<div class="item">
+          	<div class="content">Content</div>
+        	</div>
+			<div class="item">
+          	<div class="content">Content</div>
+			</div>
+        	<div class="item">
+          	<div class="content">Content</div>
+        	</div>
+      </div>
+    </div>
+ */
+ /* 
+ .container {
+	max-width: 1200px;
+	margin: 0 auto;
+	background-color: blue;
+	padding: 20px;
+}
+.items {
+	margin: 0 -30px; 
+	font-size: 0;
+	max-width: 1200px;
+	margin: 0 auto;
+	background-color: blue;
+}
+.item {
+	display: inline-block;
+	padding: 30px 30px; 
+	font-size: 16px; 
+	max-width: 33.333%;
+	aбо
+  	width: 340px; 
+}
+.content {
+	padding: 100px;
+	background-color: purple;
+}
+ */
