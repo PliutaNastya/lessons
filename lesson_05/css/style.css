@@ -62,7 +62,9 @@ body{
 }
 
 /* Стилі для header*/
-.header {}
+.header {
+	margin-block-end: 20px;
+}
 .header__title {
 	font-size: 34px;
 	font-weight: 700;
@@ -71,7 +73,6 @@ body{
 }
 .menu {
 	padding: 10px;
-	margin-bottom: 10px;
 	background-color: #b1e8bf;
 }
 .menu__item a {
@@ -161,6 +162,7 @@ body{
 }
 .text-block-dark-theme {
 	max-width: 1297px;
+	margin-block-end: 80px;
 }
 .text-block-dark-theme__title {
 	color: #FFF;
@@ -172,7 +174,6 @@ body{
 .text-block-dark-theme__text {
 	color: #999;
 	line-height: 1.5; 
-	margin-block-end: 80px;
 }
 .items-dark-theme {
 	font-size: 0px;
@@ -181,7 +182,7 @@ body{
 	background-color: #262626;
 	padding: 50px;
 	display: inline-block;
-	max-width: calc(33.333% - 20px);
+	width: calc(33.333% - 20px);
 	font-size: 18px;
 	color: #FFFFFF;
 	margin-right: 30px;
@@ -216,12 +217,10 @@ body{
 .item-dark-theme__header div {
 	display: inline-block;
 	padding: 16px;
-	/* Костилі, щоб виставити іконку по центру */
 	line-height: 2;
-	text-align: center;
-	/* Знаю, що краще не задавати фіксовані розміри, але в данному випадку хочу, щоб всі іконки були однакові */
 	width: 72px;
 	height: 72px;
+	text-align: center;
 	border-radius: 12px;
 	border: 1px solid  #1F1F1F;
 	background: #141414;
@@ -262,8 +261,7 @@ body{
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 1.6;
-	max-width: 190px;
-	width: 100%;
+	min-width: 190px;
 	min-height: 36px;
 	text-align: center;
 	color: #091133;
@@ -302,7 +300,7 @@ body{
 	font-size: 0;
 }
 .item-landing-template {
-	max-width: calc(50% - 15px);
+	width: calc(50% - 15px);
 	display: inline-block;
 	margin-right: 30px;
 	margin-bottom: 30px;
@@ -316,6 +314,9 @@ body{
 	max-width: 36px;
 	height: 36px;
 	margin-block-end: 14px;
+}
+.item-landing-template__icon img {
+	width: 100%;
 }
 .item-landing-template__title {
 	color: #091133;
@@ -341,56 +342,3 @@ body{
 	text-align: center;
 	font-weight: 700;
 }
-
-/* Можно ще таку структуру побудувати для колонок, але мені більш звичний мій варіант */
-/* 
-<div class="container">
-      <div class="items">
-      	<div class="item">
-          	<div class="content">Content</div>
-        </div>
-	<div class="item">
-          	<div class="content">Content</div>
-        </div>
-	<div class="item">
-          	<div class="content">Content</div>
-        </div>
-	<div class="item">
-          	<div class="content">Content</div>
-        </div>
-	<div class="item">
-          	<div class="content">Content</div>
-	</div>
-        <div class="item">
-          	<div class="content">Content</div>
-        </div>
-      </div>
-    </div>
- */
- /* 
- .container {
-	max-width: 1200px;
-	margin: 0 auto;
-	background-color: blue;
-	padding: 20px;
-}
-.items {
-	margin: 0 -30px; 
-	font-size: 0;
-	max-width: 1200px;
-	margin: 0 auto;
-	background-color: blue;
-}
-.item {
-	display: inline-block;
-	padding: 30px 30px; 
-	font-size: 16px; 
-	max-width: 33.333%;
-	aбо
-  	width: 340px; 
-}
-.content {
-	padding: 100px;
-	background-color: purple;
-}
- */
