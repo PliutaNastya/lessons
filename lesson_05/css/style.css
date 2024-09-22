@@ -212,6 +212,7 @@ body{
 	max-width: 100%;
 	padding: 16px;
 	vertical-align: middle;
+	text-align: center;
 }
 .item-dark-theme__header div {
 	display: inline-block;
