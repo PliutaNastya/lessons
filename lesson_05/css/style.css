@@ -215,8 +215,9 @@ body{
 }
 .item-dark-theme__header div {
 	display: inline-block;
-	max-width: 72px;
-	min-height: 72px;
+	/*Знаю, що краще не задавати фіксовані розміри, але в данному випадку хочу, щоб всі іконки були однакові */
+	width: 72px;
+	height: 72px;
 	border-radius: 12px;
 	border: 1px solid  #1F1F1F;
 	background: #141414;
