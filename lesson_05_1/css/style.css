@@ -397,6 +397,8 @@ body{
 	vertical-align: middle;
 	color: #FFFFFF;
 	margin-inline-end: 5px;
+	hyphens: auto;
+	max-width: 100%;
 }
 .dark-content-header div {
 	width: 72px;
