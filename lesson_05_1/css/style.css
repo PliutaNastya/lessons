@@ -1,0 +1,429 @@
+/* Підключення шрифтів */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Manrope:regular,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,500&display=swap");
+
+/* Обнулення стилів */
+@import url("reset.css");
+
+/* P.S. Тут використані різні види відступів, ширини та інших властивостей, це зроблене навмисно для практики */
+
+/* Загальні стилі */
+
+body{
+	font-family: Montserrat, sans-serif;
+	background-color: #5B7553;
+	font-size: 18px;
+	line-height: 1.2;
+	color: #051301;
+}
+.wrapper {
+	max-width: 1480px;
+	background-color: #8EB897;
+	margin-inline: auto;
+	/* або 
+	margin: 0 auto;
+	*/
+	padding-inline: 15px;
+	/* або
+	padding: 0px 15px;
+	*/
+}
+/* 
+.page__text {
+	margin-bottom: 20px;
+	color: #2a4e00;
+}
+.title {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 20px;
+	color: #004466;
+}
+.results__title {
+	font-weight: 700;
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+.results__list {
+	background-color: #88D39B;
+	padding: 10px;
+}
+.results__item p, .results__item:not(:last-child), .results__item img {
+	margin-bottom: 10px;
+}
+.results__item img{
+	max-width: 700px;
+}
+.tb-page, .rl-page, .tb-new-prop, .rl-new-prop{
+	margin-bottom: 20px;
+}
+.padding-margin, .padding-margin-new-prop, .width-height, .width-height-new-prop, .results {
+	margin-bottom: 20px;
+}
+
+
+.header {
+	margin-block-end: 20px;
+}
+.header__title {
+	font-size: 34px;
+	font-weight: 700;
+	margin-bottom: 20px;
+	color: #5e4b00;
+}
+.menu {
+	padding: 10px;
+	background-color: #b1e8bf;
+}
+.menu__item a {
+	display: inline-block;
+	text-decoration: dotted underline;
+}
+.menu__item:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+
+.rl-page__padding-margin, .rl-new-prop__padding-margin, .rl-page__width-height, .rl-new-prop__width-height {
+	writing-mode: vertical-rl;
+}
+
+
+.padding-margin div, .padding-margin span, .padding-margin img {
+	padding: 20px 30px 40px 50px;
+	margin: 10px 20px 30px 40px;
+}
+.padding-margin div, .padding-margin-new-prop div {
+	background-color: #C3E8BD;
+}
+.padding-margin span {
+	background-color: #ACDFA4;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.padding-margin img, .padding-margin-new-prop img {
+	background-color: #E2F5E0; 
+	max-width: 300px;
+	width: 100%;
+} 
+.padding-margin-new-prop div, .padding-margin-new-prop span, .padding-margin-new-prop img {
+	padding-block-start: 20px; 
+	padding-inline-end: 30px; 
+	padding-block-end: 40px; 
+	padding-inline-start: 50px; 
+
+	margin-block-start: 10px; 
+	margin-inline-end: 20px; 
+	margin-block-end: 30px; 
+	margin-inline-start: 40px; 
+}
+.padding-margin-new-prop span {
+	background-color: #ACDFA4;
+	padding-block-start: 0px;
+	padding-block-end: 0px;
+}
+.rl-new-prop__results > ul > li > img {
+	margin-right: 20px;
+}
+
+
+.width-height div, .width-height span {
+	max-width: 700px;
+	height: 150px;
+	overflow: auto;
+}
+.width-height div, .width-height-new-prop div {
+	background-color: #C3E8BD;
+}
+.width-height span, .width-height-new-prop span {
+	background-color: #ACDFA4;
+}
+.width-height img{
+	max-width: 300px;
+	width: 100%;
+}
+
+.width-height-new-prop div, .width-height-new-prop span {
+	max-inline-size: 700px;
+	block-size: 150px;
+	overflow: auto;
+}
+.width-height-new-prop img{
+	max-inline-size: 300px;
+} 
+
+
+
+.page__landing, .page__landing-template {
+	font-family: Roboto, sans-serif;
+	background-color: #FFFFFF;
+	padding: 20px;
+	max-width: 540px;
+	margin-inline: auto;
+	margin-block-end: 50px;
+}
+.landing__text-block {
+	margin-block-end: 70px;
+}
+.text-block-landing__title {
+	font-size: 50px;
+	letter-spacing: 1px;
+}
+.text-block-landing__text {
+	color: #505F98;
+	line-height: 1.7; 
+}
+.text-block-landing__text:not(:last-child), .text-block-landing-template__text:not(:last-child) {
+	margin-block-end: 20px;
+}
+.landing__button {
+	display: inline-block;
+	vertical-align: top;
+	padding: 5px;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.6;
+	min-width: 190px;
+	min-height: 36px;
+	text-align: center;
+	color: #091133;
+	border-radius: 2px;
+	border: 2px solid #091133;
+}
+.landing__button--dark {
+	background-color: #111B47;
+	color: #FFFFFF;
+}
+.landing__button:not(:last-child) {
+	margin-inline-end: 30px;
+	margin-block-end: 5px;
+}
+
+
+
+.text-block__title {
+	line-height: 1.3;
+	font-weight: 500;
+	font-size: 36px;
+	margin-block-end: 20px;
+}
+.text-block__text {
+	color: #6F7CB2;
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+
+
+.landing-template__text-block {
+	margin-block-end: 70px;
+}
+.items-landing-template {
+	font-size: 0;
+}
+.item-landing-template {
+	width: calc(50% - 15px);
+	display: inline-block;
+	margin-right: 30px;
+	margin-bottom: 30px;
+	vertical-align: top;
+	font-size: 14px;
+}
+.item-landing-template--2, .item-landing-template--4 {
+	margin-right: 0;
+}
+.item-landing-template__icon {
+	max-width: 36px;
+	height: 36px;
+	margin-block-end: 14px;
+}
+.item-landing-template__icon img {
+	width: 100%;
+}
+.item-landing-template__title {
+	color: #091133;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.6;
+	margin-block-end: 6px;
+}
+.item-landing-template__text {
+	color: #5D6970;
+	font-size: 12px;
+	line-height: 1.5;
+} */
+
+
+/* Стилі для DarkThemeWebsite 1ий варіант */
+.page__dark-theme {
+	font-family: Manrope, sans-serif;
+	background-color: #141414;
+	padding: 20px;
+	margin-block-end: 50px;
+	max-width: 1597px;
+}
+.text-block-dark-theme {
+	max-width: 1297px;
+	margin-block-end: 80px;
+}
+.text-block-dark-theme__title {
+	color: #FFF;
+	font-size: 38px;
+	font-weight: 700;
+	line-height: 1.5; 
+	margin-block-end: 14px;
+}
+.text-block-dark-theme__text {
+	color: #999;
+	line-height: 1.5; 
+}
+.items-dark-theme {
+	font-size: 0px;
+}
+.item-dark-theme {
+	background-color: #262626;
+	padding: 50px;
+	display: inline-block;
+	width: calc(33.333% - 20px);
+	font-size: 18px;
+	color: #FFFFFF;
+	margin-right: 30px;
+	margin-bottom: 30px;
+	vertical-align: top;
+	overflow: auto;
+	border-radius: 12px;
+	border: 1px solid #262626;
+	background: linear-gradient(222deg, rgba(229, 0, 0, 0.50) -208.03%, rgba(229, 0, 0, 0.00) 41.32%), #0F0F0F;
+}
+.item-dark-theme--3, .item-dark-theme--6{
+	margin-right: 0px;
+}
+.item-dark-theme__header {
+	margin-block-end: 30px;
+}
+.item-dark-theme__header h3 {
+	color: #FFF;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 1.5;
+	display: inline-block;
+	vertical-align: middle;
+	/* для безпеки */
+	margin-inline-end: 5px;
+}
+.item-dark-theme__header img {
+	max-width: 100%;
+	max-height: 100%;
+	vertical-align: middle;
+}
+.item-dark-theme__header div {
+	display: inline-block;
+	padding: 16px;
+	/* Намагання виставити по центру іконки */
+	line-height: 2;
+	width: 72px;
+	height: 72px;
+	text-align: center;
+	border-radius: 12px;
+	border: 1px solid  #1F1F1F;
+	background: #141414;
+	margin-inline-end: 16px;
+}
+.item-dark-theme__text {
+	color: #999;
+	line-height: 1.5;
+}
+
+/* 2ий варіант */
+.dark-wrapper {
+	font-family: Manrope, sans-serif;
+	padding: 20px;
+	background-color: #141414;
+	max-width: 1597px;
+	margin-inline: auto;
+}
+.dark-text-block {
+	max-width: 1297px;
+	margin-block-end: 80px;
+}
+.dark-title {
+	color: #FFF;
+	font-size: 38px;
+	font-weight: 700;
+	line-height: 1.5; 
+	margin-block-end: 14px;
+}
+.dark-text {
+	color: #999;
+	line-height: 1.5; 
+}
+
+.dark-container {
+	overflow: hidden;
+}
+.dark-items {
+	font-size: 0;
+	margin-inline: -15px;
+}
+.dark-item {
+	padding-inline: 15px;
+	display: inline-block;
+	width: 33.333%;
+	margin-block-end: 30px;
+	vertical-align: top;
+	overflow: auto;
+}
+.dark-content {
+	padding: 40px;
+	line-height: 1.5;
+	border-radius: 10px;
+	border: 1px solid #262626;
+	background: linear-gradient(222deg, rgba(229, 0, 0, 0.50) -208.03%, rgba(229, 0, 0, 0.00) 41.32%), #0F0F0F;
+}
+.dark-content-header {
+	margin-block-end: 24px;
+}
+.dark-content-header img {
+	vertical-align: middle;
+	max-width: 100%;
+	max-height: 100%;
+}
+.dark-content-header h3 {
+	display: inline-block;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 1.5; 
+	vertical-align: middle;
+	color: #FFFFFF;
+	margin-inline-end: 5px;
+}
+.dark-content-header div {
+	width: 72px;
+	height: 72px;
+	padding: 16px;
+	line-height: 2;
+	text-align: center;
+	display: inline-block;
+	border-radius: 10px;
+	border: 1px solid #1F1F1F;
+	background: #141414;
+	margin-inline-end: 16px;
+}
+.dark-content-text {
+	color: #999;
+	font-size: 16px;
+	line-height: 1.5; 
+}
+
+/* Стилі для footer */
+
+.footer {
+	padding: 20px;
+	background-color: #0f1a00;
+}
+.footer p{
+	color: #5B7553;
+	text-align: center;
+	font-weight: 700;
+}

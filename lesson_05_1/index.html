@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="keywords" content="CSS padding vs margin, нові властивості padding, нові властивості margin, width vs height, нові CSS-властивості width height, CSS відступи, адаптивні розміри, padding-inline, margin-block, CSS оновлення, властивості для різних елементів">
+   <meta name="description" content="Детальний гід по порівнянню класичних та нових CSS-властивостей для padding, margin, width та height. Дізнайтеся, як правильно застосовувати ці властивості для створення адаптивних макетів і роботи з різними типами елементів">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Порівняння CSS-властивостей: padding, margin, width та height - старі та нові методи</title>
+</head>
+<body>
+	<div class="wrapper">
+		<!-- <header class="header">
+			<h1 class="header__title">Як працюють padding/margin та width/height в звичайному режимі та при зміні напрямку тексту за допомогою writing-mode</h1>
+			<ol class="header__list menu">
+				<li class="menu__item"><a href="#tb-page-pdg-mrg">1. Вплив відступів на div, span та img у звичайному режимі</a></li>
+				<li class="menu__item"><a href="#rl-page-pdg-mrg">2. Вплив відступів на div, span та img при зміні напрямку тексту</a></li>
+				<li class="menu__item"><a href="#tb-new-prop-pdg-mrg">3. Вплив нових властивостей відступів на div, span та img у звичайному режимі</a></li>
+				<li class="menu__item"><a href="#rl-new-prop-pdg-mrg">4. Вплив нових властивостей відступів на div, span та img при зміні напрямку тексту</a></li>
+				<li class="menu__item"><a href="#tb-page-width-height">5. Вплив ширини та висоти на div, span та img у звичайному режимі</a></li>
+				<li class="menu__item"><a href="rl-page-width-height">6. Вплив ширини та висоти на div, span та img при зміні напрямку тексту</a></li>
+				<li class="menu__item"><a href="#tb-new-prop-width-height">7. Вплив нових властивостей ширини та висоти на div, span та img у звичайному режимі</a></li>
+				<li class="menu__item"><a href="#rl-new-prop-width-height">8. Вплив нових властивостей ширини та висоти на div, span та img при зміні напрямку тексту</a></li>
+			</ol>
+		</header> -->
+		<main class="page">
+		   <!-- <div class="page-article">
+				<p class="page__text">
+					При розробці веб-сторінок ми часто використовуємо відступи (margin і padding) для різних елементів. У цій статті ми розглянемо, як поводяться відступи для різних типів елементів: текстових блоків ("div"), рядкових елементів ("span") та зображень ("img"). Крім того, ми покажемо, як змінюються ці відступи при зміні напрямку тексту за допомогою властивості CSS writing-mode.
+				</p>
+				<div class="page__tb tb-page" id="tb-page-pdg-mrg">
+					<h2 class="tb-page__title title">1. Вплив відступів на div, span та img у звичайному режимі</h2>
+					<div class="tb-page__padding-margin padding-margin">
+						<div>Українське кіно переживає справжнє відродження в останні роки. Стрічки, створені українськими режисерами, отримують визнання не лише в Україні, але й на міжнародних кінофестивалях. Особливо популярними стали фільми, що відображають сучасні соціальні та історичні виклики, такі як війна на сході України, культурна спадщина та становлення національної ідентичності.</div>
+						<span>Один із найбільш яскравих прикладів сучасного українського кіно — "20 днів у Маріуполі" — це потужний документальний фільм українського журналіста і режисера Мстислава Чернова, який зафіксував жахливі події під час російського вторгнення у лютому-березні 2022 року. Фільм розповідає про перші 20 днів облоги Маріуполя — міста, яке стало символом стійкості та людських страждань під час війни.</span>
+						<img src="img/ukrainian_film.jpg" alt="Обкладинка фільму '20 днів у Маріуполі. Журналіст із камерою в руках на фоні зруйнованого міста'">
+					</div>
+					<div class="tb-page__results results">
+						<h3 class="results__title">Результат:</h3>
+						<ul class="results__list">
+							<li class="results__item">
+								<p>&#9998; margin: застосовується до всіх чотирьох сторін елемента — зверху, знизу, зліва та справа. Зовнішні відступи створюють простір між цим блоком та іншими елементами.</p> 
+								<p>&#9998; padding: також застосовується до всіх чотирьох сторін усередині блоку, збільшуючи внутрішній простір між контентом і межами елемента.</p>
+								<img src="img/padding_margin/padding_margin_div.png" alt="Скрін, на якому показано вплив відступів на блочні елементи. Зеленим кольором вказані внутрішні відступи, а червоним - зовнішні.">
+							</li>
+							<li class="results__item">
+								<p>&#9998; margin: у рядкових елементах margin застосовується лише зліва та справа (горизонтальні відступи). Зовнішні відступи зверху та знизу ігноруються, оскільки рядкові елементи не створюють вертикальних блоків і не впливають на вертикальні відступи між рядками.</p>
+		      				<p>&#9998; У рядкових елементах, таких як "span", властивість padding працює, але може не проявлятись так само, як у блочних елементах. Тобто горизонтальні відступи (padding-left і padding-right) працюватимуть нормально, а ось вертикальні (padding-top і padding-bottom) можуть не впливати на висоту рядкового елемента так, як ви очікуєте. В моєму випадку padding-top та padding-bottom ламали текст, як показано на картинці, тому я їх прибрала.
+								</p>
+								<img src="img/padding_margin/padding_margin_span_break_text.png" alt="Скрін, на якому показано вплив відступів на рядкові елементи. Зеленим кольором вказані внутрішні відступи, а червоним - зовнішні.">
+								<img src="img/padding_margin/padding_margin_span.png" alt="Скрін, на якому показано вплив відступів на рядкові елементи. Зеленим кольором вказані внутрішні відступи, а червоним - зовнішні.">
+							</li>
+							<li class="results__item">
+								<p>&#9998; margin: застосовується до всіх сторін зображення — зверху, знизу, зліва і справа. Зображення вважається рядковим елементом, але margin коректно працює для всіх сторін, оскільки зображення може бути обрамлене блоками.</p>
+								<p>&#9998; padding: створює відступ всередині елемента, але сам контент зображення не змінюється. Фон або рамка покажуть відступ між зображенням та границею елемента.</p>
+								<img src="img/padding_margin/padding_margin_img.png" alt="Скрін, на якому показано вплив відступів на блочно-рядкові елементи. Зеленим кольором вказані внутрішні відступи, а червоним - зовнішні.">
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="page__rl rl-page" id="rl-page-pdg-mrg">
+					<h2 class="rl-page__title title">2. Вплив відступів на div, span та img при зміні напрямку тексту</h2>
+					<div class="rl-page__padding-margin padding-margin">
+						<div>Українське кіно переживає справжнє відродження в останні роки. Стрічки, створені українськими режисерами, отримують визнання не лише в Україні, але й на міжнародних кінофестивалях. Особливо популярними стали фільми, що відображають сучасні соціальні та історичні виклики, такі як війна на сході України, культурна спадщина та становлення національної ідентичності.</div>
+						<span>Один із найбільш яскравих прикладів сучасного українського кіно — "20 днів у Маріуполі" — це потужний документальний фільм українського журналіста і режисера Мстислава Чернова, який зафіксував жахливі події під час російського вторгнення у лютому-березні 2022 року. Фільм розповідає про перші 20 днів облоги Маріуполя — міста, яке стало символом стійкості та людських страждань під час війни.</span>
+						<img src="img/ukrainian_film.jpg" alt="Обкладинка фільму '20 днів у Маріуполі. Журналіст із камерою в руках на фоні зруйнованого міста'">
+					</div>
+					<div class="rl-page__results results">
+						<h3 class="results__title">Результат:</h3>
+						<ul class="results__list">
+							<li class="results__item">
+								<p>&#9998; У вертикальному режимі текст буде розташований вертикально, і margin буде застосовуватися зліва і справа як до вертикальних сторін елемента, а зверху і знизу — як до горизонтальних.</p> 
+								<p>&#9998; Те ж саме відбудеться з padding.</p>
+								<img src="img/padding_margin/padding_margin_rl_div.png" alt="Скрін, на якому показано вплив відступів на блочні елементи при зміні напрямку тексту. Зеленим кольором вказані внутрішні відступи, а червоним - зовнішні.">
+							</li>
+							<li class="results__item">
+								<p>&#9998; У вертикальному режимі рядкові елементи будуть розташовані один над одним, і margin застосовуватиметься як вертикальні відступи (між елементами зверху і знизу).</p>
+		      				<p>&#9998; Коли я змінила напрямок тексту за допомогою writing-mode: vertical-rl (або іншого вертикального режиму), рядкові елементи намагаються зберігати своє "рядкове" поводження. Але в цьому випадку, властивості padding-left і padding-right перетворюються у вертикальні відступи (зверху і знизу), а оскільки "span" залишився рядковим елементом, це спричинило проблему з відображенням тексту. Текст "поламався" або "сховався", тому що відступи, які раніше були горизонтальними, тепер стали вертикальними, і текст не має достатнього простору для відображення.
+								</p>
+								<img src="img/padding_margin/padding_margin_rl_span.png" alt="Скрін, на якому показано вплив відступів на рядкові елементи при зміні напрямку тексту. Зеленим кольором вказані внутрішні відступи, а червоним - зовнішні.">
+							</li>
+							<li class="results__item">
+								<p> &#9998; У режимі writing-mode: vertical-rl текст орієнтується вертикально, але зображення автоматично не повертається.</p>
+								<img src="img/padding_margin/padding_margin_rl_img.png" alt="Скрін, на якому показано вплив відступів на блочно-рядкові елементи при зміні напрямку тексту. Зеленим кольором вказані внутрішні відступи, а червоним - зовнішні.">
+							</li>
+						</ul>
+					</div>
+				</div>
+				<p class="page__text">Тепер розглянемо поведінку властивостей padding-inline, padding-block, margin-inline і margin-block. Ці властивості задають відступи залежно від напрямку тексту, тобто вони працюють по-різному для горизонтального і вертикального напрямків.</p>
+				<div class="page__tb-new-prop tb-new-prop" id="tb-new-prop-pdg-mrg">
+					<h2 class="tb-new-prop__title title">3. Вплив нових властивостей відступів на div, span та img у звичайному режимі</h2>
+					<div class="tb-new-prop__padding-margin padding-margin-new-prop">
+						<div>Українське кіно переживає справжнє відродження в останні роки. Стрічки, створені українськими режисерами, отримують визнання не лише в Україні, але й на міжнародних кінофестивалях. Особливо популярними стали фільми, що відображають сучасні соціальні та історичні виклики, такі як війна на сході України, культурна спадщина та становлення національної ідентичності.</div>
+						<span>Один із найбільш яскравих прикладів сучасного українського кіно — "20 днів у Маріуполі" — це потужний документальний фільм українського журналіста і режисера Мстислава Чернова, який зафіксував жахливі події під час російського вторгнення у лютому-березні 2022 року. Фільм розповідає про перші 20 днів облоги Маріуполя — міста, яке стало символом стійкості та людських страждань під час війни.</span>
+						<img src="img/ukrainian_film.jpg" alt="Обкладинка фільму '20 днів у Маріуполі. Журналіст із камерою в руках на фоні зруйнованого міста'">
+					</div>
+					<div class="tb-new-prop__results results">
+						<h3 class="results__title">Результат:</h3>
+						<ul class="results__list">
+							<li class="results__item">
+								<p>&#9998; padding-inline-start: Встановлює внутрішній відступ з початку рядка (тобто зліва у режимі ліворуч-направо або справа у режимі праворуч-наліво).</p> 
+								<p>&#9998; padding-inline-end: Встановлює внутрішній відступ з кінця рядка (праворуч у режимі ліворуч-направо або ліворуч у режимі праворуч-наліво).</p>
+								<p>&#9998; padding-block-start: Встановлює внутрішній відступ з початку блоку (зверху у звичайному горизонтальному режимі).</p> 
+								<p>&#9998; padding-block-end: Встановлює внутрішній відступ з кінця блоку (знизу у звичайному горизонтальному режимі).</p>
+							</li>
+							<li class="results__item">
+								<p>&#9998; margin-inline-start: Встановлює зовнішній відступ з початку рядка (зліва у тексті ліворуч-направо або справа у тексті праворуч-направо).</p>
+		      				<p>&#9998; margin-inline-end: Встановлює зовнішній відступ з кінця рядка (праворуч у тексті ліворуч-направо або ліворуч у тексті праворуч-наліво).</p>
+								<p>&#9998; margin-block-start: Встановлює зовнішній відступ з початку блоку (зверху у звичайному горизонтальному режимі).</p>
+		      				<p>&#9998; margin-block-end: Встановлює зовнішній відступ з кінця блоку (знизу у звичайному горизонтальному режимі).</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="page__rl-new-prop rl-new-prop" id="rl-new-prop-pdg-mrg">
+					<h2 class="rl-new-prop__title title">4. Вплив нових властивостей відступів на div, span та img при зміні напрямку тексту</h2>
+					<div class="rl-new-prop__padding-margin padding-margin-new-prop">
+						<div>Українське кіно переживає справжнє відродження в останні роки. Стрічки, створені українськими режисерами, отримують визнання не лише в Україні, але й на міжнародних кінофестивалях. Особливо популярними стали фільми, що відображають сучасні соціальні та історичні виклики, такі як війна на сході України, культурна спадщина та становлення національної ідентичності.</div>
+						<span>Один із найбільш яскравих прикладів сучасного українського кіно — "20 днів у Маріуполі" — це потужний документальний фільм українського журналіста і режисера Мстислава Чернова, який зафіксував жахливі події під час російського вторгнення у лютому-березні 2022 року. Фільм розповідає про перші 20 днів облоги Маріуполя — міста, яке стало символом стійкості та людських страждань під час війни.</span>
+						<img src="img/ukrainian_film.jpg" alt="Обкладинка фільму '20 днів у Маріуполі. Журналіст із камерою в руках на фоні зруйнованого міста'">
+					</div>
+					<div class="rl-new-prop__results results">
+						<h3 class="results__title">Результат:</h3>
+						<ul class="results__list">
+							<li class="results__item">
+								<p>&#9998; padding-inline: стане зверху і знизу (новий напрям тексту).</p>
+								<p>&#9998; padding-block: тепер працюватиме зліва і справа.</p>
+							</li>
+							<li class="results__item">
+								<p>&#9998; margin-inline: також змінить свій напрям на вертикальні відступи (зверху і знизу).</p>
+								<p>&#9998; margin-block: застосовуватиметься як горизонтальні відступи (зліва і справа).</p>
+								<img src="img/padding_margin_inline_block/padding_margin_inline_block_rl_div.png" alt="Скрін, на якому показано вплив нових властивостей відступів на блочні елементи при зміні напрямку тексту. Зеленим кольором вказані внутрішні відступи, а червоним - зовнішні.">
+								<img src="img/padding_margin_inline_block/padding_margin_inline_block_rl_span.png" alt="Скрін, на якому показано вплив нових властивостей відступів на рядкові елементи при зміні напрямку тексту. Зеленим кольором вказані внутрішні відступи, а червоним - зовнішні.">
+								<img src="img/padding_margin_inline_block/padding_margin_inline_block_rl_img.png" alt="Скрін, на якому показано вплив нових властивостей відступів на блочно-рядкові елементи при зміні напрямку тексту. Зеленим кольором вказані внутрішні відступи, а червоним - зовнішні.">
+						</ul>
+					</div>
+				</div>
+				<p class="page__text">
+					Тепер розглянемо, як різні властивості ширини та висоти впливають на елементи "div", "span" і "img", а також як змінюється їхнє поводження при зміні напряму тексту за допомогою властивості writing-mode.
+				</p>
+				<div class="page__tb tb-page" id="tb-page-width-height">
+					<h2 class="tb-page__title title">5. Вплив ширини та висоти на div, span та img у звичайному режимі</h2>
+					<div class="tb-page__width-height width-height">
+						<div>Українське кіно переживає справжнє відродження в останні роки. Стрічки, створені українськими режисерами, отримують визнання не лише в Україні, але й на міжнародних кінофестивалях. Особливо популярними стали фільми, що відображають сучасні соціальні та історичні виклики, такі як війна на сході України, культурна спадщина та становлення національної ідентичності.</div>
+						<span>Один із найбільш яскравих прикладів сучасного українського кіно — "20 днів у Маріуполі" — це потужний документальний фільм українського журналіста і режисера Мстислава Чернова, який зафіксував жахливі події під час російського вторгнення у лютому-березні 2022 року. Фільм розповідає про перші 20 днів облоги Маріуполя — міста, яке стало символом стійкості та людських страждань під час війни.</span>
+						<img src="img/ukrainian_film.jpg" alt="Обкладинка фільму '20 днів у Маріуполі. Журналіст із камерою в руках на фоні зруйнованого міста'">
+					</div>
+					<div class="tb-page__results results">
+						<h3 class="results__title">Результат:</h3>
+						<ul class="results__list">
+							<li class="results__item">&#9998; "div" отримує максимальну ширину 700px та висоту 150px і відображається як блочний елемент із заданими розмірами.</li>
+							<li class="results__item">&#9998; "span" за замовчуванням є рядковим елементом, тому ширина та висота не застосовуються.</li>
+							<li class="results__item">&#9998; "img" отримує максимальну ширину 300px.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="page__rl rl-page" id="rl-page-width-height">
+					<h2 class="rl-page__title title">6. Вплив ширини та висоти на div, span та img при зміні напрямку тексту</h2>
+					<div class="rl-page__width-height width-height">
+						<div>Українське кіно переживає справжнє відродження в останні роки. Стрічки, створені українськими режисерами, отримують визнання не лише в Україні, але й на міжнародних кінофестивалях. Особливо популярними стали фільми, що відображають сучасні соціальні та історичні виклики, такі як війна на сході України, культурна спадщина та становлення національної ідентичності.</div>
+						<span>Один із найбільш яскравих прикладів сучасного українського кіно — "20 днів у Маріуполі" — це потужний документальний фільм українського журналіста і режисера Мстислава Чернова, який зафіксував жахливі події під час російського вторгнення у лютому-березні 2022 року. Фільм розповідає про перші 20 днів облоги Маріуполя — міста, яке стало символом стійкості та людських страждань під час війни.</span>
+						<img src="img/ukrainian_film.jpg" alt="Обкладинка фільму '20 днів у Маріуполі. Журналіст із камерою в руках на фоні зруйнованого міста'">
+					</div>
+					<div class="rl-page__results results">
+						<h3 class="results__title">Результат:</h3>
+						<ul class="results__list">
+							<li class="results__item">&#9998; "div" тепер відображає текст вертикально, і ширина та висота залишаються такими самими.</li>
+							<li class="results__item">&#9998; "span" також відображає текст вертикально, при цьому ширина та висота поводяться як звичайно, але тепер фактично ширина стає висотою, а висота — шириною, оскільки текст відображається вертикально.</li>
+							<li class="results__item">&#9998; "img" не змінює поведінку, оскільки це зображення.</li>
+						</ul>
+					</div>
+				</div>
+				<p class="page__text">Тепер розглянемо більш гнучкі властивості inline-size та block-size, які працюють із будь-яким напрямом тексту.</p>
+				<div class="page__tb-new-prop tb-new-prop" id="tb-new-prop-width-height">
+					<h2 class="tb-new-prop__title title">7. Вплив нових властивостей ширини та висоти на div, span та img у звичайному режимі</h2>
+					<div class="tb-new-prop__width-height width-height-new-prop">
+						<div>Українське кіно переживає справжнє відродження в останні роки. Стрічки, створені українськими режисерами, отримують визнання не лише в Україні, але й на міжнародних кінофестивалях. Особливо популярними стали фільми, що відображають сучасні соціальні та історичні виклики, такі як війна на сході України, культурна спадщина та становлення національної ідентичності.</div>
+						<span>Один із найбільш яскравих прикладів сучасного українського кіно — "20 днів у Маріуполі" — це потужний документальний фільм українського журналіста і режисера Мстислава Чернова, який зафіксував жахливі події під час російського вторгнення у лютому-березні 2022 року. Фільм розповідає про перші 20 днів облоги Маріуполя — міста, яке стало символом стійкості та людських страждань під час війни.</span>
+						<img src="img/ukrainian_film.jpg" alt="Обкладинка фільму '20 днів у Маріуполі. Журналіст із камерою в руках на фоні зруйнованого міста'">
+					</div>
+					<div class="tb-new-prop__results results">
+						<h3 class="results__title">Результат:</h3>
+						<ul class="results__list">
+							<li class="results__item">&#9998; "div" отримує максимальну ширину 700px та висоту 150px і відображається як блочний елемент із заданими розмірами.</li>
+							<li class="results__item">&#9998; "span" за замовчуванням є рядковим елементом, тому ширина та висота не застосовуються.</li>
+							<li class="results__item">&#9998; "img" отримує максимальну ширину 300px.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="page__rl-new-prop rl-new-prop" id="rl-new-prop-width-height">
+					<h2 class="rl-new-prop__title title">8. Вплив нових властивостей ширини та висоти на div, span та img при зміні напрямку тексту</h2>
+					<div class="rl-new-prop__width-height width-height-new-prop">
+						<div>Українське кіно переживає справжнє відродження в останні роки. Стрічки, створені українськими режисерами, отримують визнання не лише в Україні, але й на міжнародних кінофестивалях. Особливо популярними стали фільми, що відображають сучасні соціальні та історичні виклики, такі як війна на сході України, культурна спадщина та становлення національної ідентичності.</div>
+						<span>Один із найбільш яскравих прикладів сучасного українського кіно — "20 днів у Маріуполі" — це потужний документальний фільм українського журналіста і режисера Мстислава Чернова, який зафіксував жахливі події під час російського вторгнення у лютому-березні 2022 року. Фільм розповідає про перші 20 днів облоги Маріуполя — міста, яке стало символом стійкості та людських страждань під час війни.</span>
+						<img src="img/ukrainian_film.jpg" alt="Обкладинка фільму '20 днів у Маріуполі. Журналіст із камерою в руках на фоні зруйнованого міста'">
+					</div>
+					<div class="rl-new-prop__results results">
+						<h3 class="results__title">Результат:</h3>
+						<ul class="results__list">
+							<li class="results__item">&#9998; Тепер inline-size стає висотою, а block-size — шириною. Наприклад, якщо раніше ширина була 700px, то тепер цей розмір буде застосовуватися по вертикалі.</li>
+							<li class="results__item">&#9998; Максимальні та мінімальні розміри (max-inline-size, min-inline-size, max-block-size, min-block-size) також змінюють свій напрям. У вертикальному режимі inline-size керуватиме вертикальним розміром, а block-size — горизонтальним.</li>
+							<li class="results__item">&#9998; "img" не змінює поведінку, оскільки це зображення.</li>
+						</ul>
+					</div>
+				</div>
+			</div> -->
+			<div class="page__dark-theme dark-theme" lang="en">
+				<div class="dark-theme__text-block text-block-dark-theme">
+					<h2 class="text-block-dark-theme__title">We Provide you streaming experience across various devices.</h2>
+					<p class="text-block-dark-theme__text">With StreamVibe, you can enjoy your favorite movies and TV shows anytime, anywhere. Our platform is designed to be compatible with a wide range of devices, ensuring that you never miss a moment of entertainment.</p>
+				</div>
+				<div class="dark-theme__items items-dark-theme">
+					<div class="items-dark-theme__item item-dark-theme">
+						<div class="item-dark-theme__header">
+							<div><img src="img/icons/dark_theme/smartphone.svg" alt="Small icon - red phone"></div>
+							<h3>Smartphones</h3>
+						</div>
+						<p class="item-dark-theme__text">StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store</p>
+					</div>
+					<div class="items-dark-theme__item item-dark-theme">
+						<div class="item-dark-theme__header">
+							<div><img src="img/icons/dark_theme/tablet.svg" alt="Small icon - red tablet"></div>
+							<h3>Tablet</h3>
+						</div>
+						<p class="item-dark-theme__text">StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store</p>
+					</div>
+					<div class="items-dark-theme__item item-dark-theme item-dark-theme--3">
+						<div class="item-dark-theme__header">
+							<div><img src="img/icons/dark_theme/smarttv.svg" alt="Small icon - red smart tv"></div>
+							<h3>Smart TV</h3>
+						</div>
+						<p class="item-dark-theme__text">StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store</p>
+					</div>
+					<div class="items-dark-theme__item item-dark-theme">
+						<div class="item-dark-theme__header">
+							<div><img src="img/icons/dark_theme/laptop.svg" alt="Small icon - red laptop"></div>
+							<h3>Laptops</h3>
+						</div>
+						<p class="item-dark-theme__text">StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store</p>
+					</div>
+					<div class="items-dark-theme__item item-dark-theme">
+						<div class="item-dark-theme__header">
+							<div><img src="img/icons/dark_theme/gaming_console.svg" alt="Small icon - red gaming console"></div>
+							<h3>Gaming Consoles</h3>
+						</div>
+						<p class="item-dark-theme__text">StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store</p>
+					</div>
+					<div class="items-dark-theme__item item-dark-theme item-dark-theme--6">
+						<div class="item-dark-theme__header">
+							<div><img src="img/icons/dark_theme/vr_headsets.svg" alt="Small icon - vr headsets"></div>
+							<h3>VR Headsets</h3>
+						</div>
+						<p class="item-dark-theme__text">StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store</p>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="page__landing landing" lang="zxx">
+				<div class="landing__text-block text-block-landing text-block">
+					<h2 class="text-block-landing__title text-block__title">Introduce Your Product Quickly & Effectively</h2>
+					<p class="text-block-landing__text text-block__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus </p>
+					<p class="text-block-landing__text text-block__text">mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+				</div>
+				<div class="landing__buttons">
+					<a href="#" class="landing__button landing__button--dark" target="_blank">Purchase UI Kit</a>
+					<a href="#" class="landing__button" target="_blank">Learn More</a>
+				</div>
+			</div>
+			<div class="page__landing-template landing-template" lang="zxx">
+				<div class="landing-template__text-block text-block-landing-template text-block">
+					<h2 class="text-block-landing-template__title text-block__title">Design & Build Your Own Landing Pages</h2>
+					<p class="text-block-landing-template__text text-block__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus</p>
+					<p class="text-block-landing-template__text text-block__text">mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+				</div>
+				<div class="landing-template__items items-landing-template">
+					<div class="items-landing-template__item item-landing-template">
+						<div class="item-landing-template__icon">
+							<img src="img/icons/landing_page_template/card_icon.svg" alt="An icon showing a notebook with a house drawn on the page and a pencil">
+						</div>
+						<h3 class="item-landing-template__title">Title Goes Here</h3>
+						<p class="item-landing-template__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+					</div>
+					<div class="items-landing-template__item item-landing-template item-landing-template--2">
+						<div class="item-landing-template__icon">
+							<img src="img/icons/landing_page_template/card_icon.svg" alt="An icon showing a notebook with a house drawn on the page and a pencil">
+						</div>
+						<h3 class="item-landing-template__title">Title Goes Here</h3>
+						<p class="item-landing-template__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+					</div>
+					<div class="items-landing-template__item item-landing-template">
+						<div class="item-landing-template__icon">
+							<img src="img/icons/landing_page_template/card_icon.svg" alt="An icon showing a notebook with a house drawn on the page and a pencil">
+						</div>
+						<h3 class="item-landing-template__title">Title Goes Here</h3>
+						<p class="item-landing-template__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+					</div>
+					<div class="items-landing-template__item item-landing-template item-landing-template--4">
+						<div class="item-landing-template__icon">
+							<img src="img/icons/landing_page_template/card_icon.svg" alt="An icon showing a notebook with a house drawn on the page and a pencil">
+						</div>
+						<h3 class="item-landing-template__title">Title Goes Here</h3>
+						<p class="item-landing-template__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+					</div>
+				</div>
+			</div> -->
+			<!-- Побудова структуру по прикладу Євгена -->
+			<div class="dark-wrapper">
+				<div class="dark-text-block">
+					<h2 class="dark-title">We Provide you streaming experience across various devices.</h2>
+					<p class="dark-text">With StreamVibe, you can enjoy your favorite movies and TV shows anytime, anywhere. Our platform is designed to be compatible with a wide range of devices, ensuring that you never miss a moment of entertainment.</p>
+				</div>
+				<div class="dark-container">
+					<div class="dark-items">
+						<div class="dark-item">
+							<div class="dark-content">
+								<div class="dark-content-header">
+									<div><img src="img/icons/dark_theme/smartphone.svg" alt="Small icon - red phone"></div>
+									<h3>Smartphones</h3>
+								</div>
+								<p class="dark-content-text">StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store</p>
+							</div>
+						</div>
+						<div class="dark-item">
+							<div class="dark-content">
+								<div class="dark-content-header">
+									<div><img src="img/icons/dark_theme/tablet.svg" alt="Small icon - red tablet"></div>
+									<h3>Tablet</h3>
+								</div>
+								<p class="dark-content-text">StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store</p>
+							</div>
+						</div>
+						<div class="dark-item">
+							<div class="dark-content">
+								<div class="dark-content-header">
+									<div><img src="img/icons/dark_theme/smarttv.svg" alt="Small icon - red smart tv"></div>
+									<h3>Smart TV</h3>
+								</div>
+								<p class="dark-content-text">StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store</p>
+							</div>
+						</div>
+						<div class="dark-item">
+							<div class="dark-content">
+								<div class="dark-content-header">
+									<div><img src="img/icons/dark_theme/laptop.svg" alt="Small icon - red laptop"></div>
+									<h3>Laptops</h3>
+								</div>
+								<p class="dark-content-text">StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store</p>
+							</div>
+						</div>
+						<div class="dark-item">
+							<div class="dark-content">
+								<div class="dark-content-header">
+									<div><img src="img/icons/dark_theme/gaming_console.svg" alt="Small icon - red gaming console"></div>
+									<h3>Gaming Consoles</h3>
+								</div>
+								<p class="dark-content-text">StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store</p>
+							</div>
+						</div>
+						<div class="dark-item">
+							<div class="dark-content">
+								<div class="dark-content-header">
+									<div><img src="img/icons/dark_theme/vr_headsets.svg" alt="Small icon - red vr headsets"></div>
+									<h3>VR Headsets</h3>
+								</div>
+								<p class="dark-content-text">StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</dвшм>
+		</main>
+		<!-- <footer class="footer">
+			<p>©2024 Yourcompany</p>
+		</footer> -->
+	</div>
+</body>
+</html>
