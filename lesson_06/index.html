@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="keywords" content="CSS властивості, оформлення блоків, CSS оформлення блоків, border, outline, box-shadow, background">
+   <meta name="description" content="На цій сторінці розглянуто різні властивості оформлення блоків. А саме: border, outline, box-shadow, background. Також наведені пиклади побудови фігур за допомогою CSS.">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Відпрацювання таких CSS властивостей, як border, outline, box-shadow, background</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<h1 class="header__title">Відпрацювання таких CSS властивостей, як border, outline, box-shadow, background</h1>
+				<ul class="header__menu menu">
+					<li class="menu__item"><a href="#properties"><span>Відпрацювання властивостей: border, outline, box-shadow</span></a></li>
+					<li class="menu__item"><a href="#background"><span>Відпрацювання властивостей background</span></a></li>
+					<li class="menu__item"><a href="#css-figures-lvl1"><span>Фігури з допомогою CSS (Level 1)</span></a></li>
+					<li class="menu__item"><a href="#css-figures-lvl2"><span>Фігури з допомогою CSS (Level 2)</span></a></li>
+					<li class="menu__item"><a href="#css-figures-lvl1-rl"><span>Фігури з допомогою CSS (Level 1) у вертикальному режимі</span></a></li>
+					<li class="menu__item"><a href="#css-figures-lvl2-rl"><span>Фігури з допомогою CSS (Level 2) у вертикальному режимі</span></a></li>
+					<li class="menu__item"><a href="#layout-1"><span>Макет №1</span></a></li>
+					<li class="menu__item"><a href="#layout-2"><span>Макет №2</span></a></li>
+				</ul>
+			</div>
+		</header>
+		<main class="main">
+			<div class="main__properties properties" id="properties">
+				<div class="properties__container">
+					<div class="properties__border border">
+						<div class="border__block">
+							<h2 class="title">Приклади впливу border на блочні, рядкові та блочно-рядкові елементи</h2>
+							<div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto nesciunt expedita quos laudantium consectetur. Atque, eius, dolorem rem, ducimus tempore nostrum cupiditate ratione eligendi labore dolorum autem corrupti nam libero.</div>
+							<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi asperiores fugiat inventore, harum atque explicabo nemo vitae adipisci possimus cum eos quisquam debitis ducimus voluptate officia laborum rem hic quidem.</span>
+							<img src="img/odesa_1.jpg" class="border__inline-block" alt="Вид зверху на Оперний театр міста Одеса">
+						</div>
+						<div class="border__examples examples-border">
+							<h3 class="subtitle">Більше прикладів (Level 1 & Level 2)</h3>
+							<div class="examples-border__example examples-border__example--1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit mollitia sequi distinctio ad voluptatibus reprehenderit architecto repellat reiciendis, ex eius perferendis doloremque quis, saepe nam, deserunt vel vitae voluptas rerum.</div>
+							<div class="examples-border__example examples-border__example--2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit mollitia sequi distinctio ad voluptatibus reprehenderit architecto repellat reiciendis, ex eius perferendis doloremque quis, saepe nam, deserunt vel vitae voluptas rerum.</div>
+							<p class="examples-border__example examples-border__example--3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit mollitia sequi distinctio ad voluptatibus reprehenderit architecto repellat reiciendis, ex eius perferendis doloremque quis, saepe nam, deserunt vel vitae voluptas rerum.</p>
+							<p class="examples-border__example examples-border__example--4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit mollitia sequi distinctio ad voluptatibus reprehenderit architecto repellat reiciendis, ex eius perferendis doloremque quis, saepe nam, deserunt vel vitae voluptas rerum.</p>
+							<a class="examples-border__example examples-border__example--5" href="#">Тиць-тиць</a>
+							<a class="examples-border__example examples-border__example--6" href="#">Тицни мене</a>
+						</div>
+					</div>
+					<div class="properties__outline outline">
+						<h2 class="outline__title title">Приклади використання outline</h2>
+						<a class="outline__link outline__link--1" href="#">Посилання 1</a>
+						<a class="outline__link outline__link--2" href="#">Посилання 2</a>
+						<a class="outline__link outline__link--3" href="#">Посилання 3</a>
+					</div>
+					<div class="properties__box-shadow box-shadow">
+						<div class="box-shadow__block">
+							<h2 class="title">Приклади впливу box-shadow на блочні, рядкові та блочно-рядкові елементи</h2>
+							<div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus quia iure doloremque eos molestias, laborum sit quaerat maxime incidunt veritatis optio eligendi ad qui quisquam! Molestiae dicta aliquam modi eum.</div>
+							<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cum totam rerum, modi dolores eligendi, perspiciatis cupiditate iste numquam asperiores blanditiis consequuntur culpa saepe pariatur harum animi recusandae aut fugit!</span>
+							<img src="img/odesa_1.jpg" alt="Вид зверху на Оперний театр міста Одеса">
+						</div>
+						<div class="box-shadow__examples examples-box-shadow">
+							<h3 class="subtitle">Більше прикладів</h3>
+							<div class="examples-box-shadow__example examples-box-shadow__example--1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit mollitia sequi distinctio ad voluptatibus reprehenderit architecto repellat reiciendis, ex eius perferendis doloremque quis, saepe nam, deserunt vel vitae voluptas rerum.</div>
+							<div class="examples-box-shadow__example examples-box-shadow__example--2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit mollitia sequi distinctio ad voluptatibus reprehenderit architecto repellat reiciendis, ex eius perferendis doloremque quis, saepe nam, deserunt vel vitae voluptas rerum.</div>
+							<p class="examples-box-shadow__example examples-box-shadow__example--3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit mollitia sequi distinctio ad voluptatibus reprehenderit architecto repellat reiciendis, ex eius perferendis doloremque quis, saepe nam, deserunt vel vitae voluptas rerum.</p>
+							<p class="examples-box-shadow__example examples-box-shadow__example--4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit mollitia sequi distinctio ad voluptatibus reprehenderit architecto repellat reiciendis, ex eius perferendis doloremque quis, saepe nam, deserunt vel vitae voluptas rerum.</p>
+							<a class="examples-box-shadow__example examples-box-shadow__example--5" href="">Тиць-тиць</a>
+							<a class="examples-box-shadow__example examples-box-shadow__example--6" href="">Тицни мене</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main__background background" id="background">
+				<div class="background__container">
+					<h2 class="title">Відпрацювання властивостей background</h2>
+					<!-- Тут в div просто текст, це просто для розуміння властивостей background -->
+					<div class="background__items items">
+						<div class="items__item item">
+							<div class="item__content item__content--1">Лінійний градієнт</div>
+						</div>
+						<div class="items__item item">
+							<div class="item__content item__content--2">Радіальний градієнт</div>
+						</div>
+						<div class="items__item item">
+							<div class="item__content item__content--3">Зображення, що повторюється</div>
+						</div>
+						<div class="items__item item">
+							<div class="item__content item__content--4">
+								Фіксоване зображення
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis cupiditate eius, saepe voluptatum reprehenderit veniam reiciendis quod quia eos in, omnis quam aliquid quisquam fuga ullam id sit quo atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis cupiditate eius, saepe voluptatum reprehenderit veniam reiciendis quod quia eos in, omnis quam aliquid quisquam fuga ullam id sit quo atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis cupiditate eius, saepe voluptatum reprehenderit veniam reiciendis quod quia eos in, omnis quam aliquid quisquam fuga ullam id sit quo atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis cupiditate eius, saepe voluptatum reprehenderit veniam reiciendis quod quia eos in, omnis quam aliquid quisquam fuga ullam id sit quo atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis cupiditate eius, saepe voluptatum reprehenderit veniam reiciendis quod quia eos in, omnis quam aliquid quisquam fuga ullam id sit quo atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis cupiditate eius, saepe voluptatum reprehenderit veniam reiciendis quod quia eos in, omnis quam aliquid quisquam fuga ullam id sit quo atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+							</div>
+						</div>
+						<div class="items__item item">
+							<div class="item__content item__content--5">Contain</div>
+						</div>
+						<div class="items__item item">
+							<div class="item__content item__content--6">Cover</div>
+						</div>
+						<div class="items__item item items__item--7">
+							<div class="item__content item__content--7">Декілька зображень</div>
+						</div>
+						<div class="items__item item items__item--8">
+							<div class="item__content item__content--8">Background pattern</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main__css-figures css-figures css-figures__container">
+				<div class="css-figures css-figures__lvl1" id="css-figures-lvl1">
+					<h2 class="title">Фігури з допомогою CSS (Level 1)</h2>
+					<div class="css-figures__figure figure figure--1"></div>
+					<div class="css-figures__figure figure figure--2"></div>
+					<div class="css-figures__figure figure figure--3"></div>
+					<div class="css-figures__figure figure figure--4"></div>
+					<div class="css-figures__figure figure figure--5"></div>
+					<div class="css-figures__figure figure figure--6"></div>
+					<div class="css-figures__figure figure figure--7"></div>
+					<div class="css-figures__figure figure figure--8"></div>
+					<div class="css-figures__figure figure figure--9"></div>
+					<div class="css-figures__figure figure figure--10"></div>
+				</div>
+				<div class="css-figures css-figures__lvl2" id="css-figures-lvl2">
+					<h2 class="title">Фігури з допомогою CSS (Level 2)</h2>
+					<div class="css-figures__figure figure figure--1"></div>
+					<div class="css-figures__figure figure figure--2"></div>
+					<div class="css-figures__figure figure figure--3"></div>
+					<div class="css-figures__figure figure figure--4"></div>
+					<div class="css-figures__figure figure figure--5"></div>
+					<div class="css-figures__figure figure figure--6"></div>
+					<div class="css-figures__figure figure figure--7"></div>
+					<div class="css-figures__figure figure figure--8"></div>
+					<div class="css-figures__figure figure figure--9"></div>
+					<div class="css-figures__figure figure figure--10"></div>
+				</div>
+				<div class="css-figures css-figures__lvl1 rl" id="css-figures-lvl1-rl">
+					<h2 class="title">Фігури з допомогою CSS (Level 1) у вертикальному режимі</h2>
+					<div class="css-figures__figure figure figure--1"></div>
+					<div class="css-figures__figure figure figure--2"></div>
+					<div class="css-figures__figure figure figure--3"></div>
+					<div class="css-figures__figure figure figure--4"></div>
+					<div class="css-figures__figure figure figure--5"></div>
+					<div class="css-figures__figure figure figure--6"></div>
+					<div class="css-figures__figure figure figure--7"></div>
+					<div class="css-figures__figure figure figure--8"></div>
+					<div class="css-figures__figure figure figure--9"></div>
+					<div class="css-figures__figure figure figure--10"></div>
+				</div>
+				<div class="css-figures css-figures__lvl2 rl" id="css-figures-lvl2-rl">
+					<h2 class="title">Фігури з допомогою CSS (Level 2) у вертикальному режимі</h2>
+					<div class="css-figures__figure figure figure--1"></div>
+					<div class="css-figures__figure figure figure--2"></div>
+					<div class="css-figures__figure figure figure--3"></div>
+					<div class="css-figures__figure figure figure--4"></div>
+					<div class="css-figures__figure figure figure--5"></div>
+					<div class="css-figures__figure figure figure--6"></div>
+					<div class="css-figures__figure figure figure--7"></div>
+					<div class="css-figures__figure figure figure--8"></div>
+					<div class="css-figures__figure figure figure--9"></div>
+					<div class="css-figures__figure figure figure--10"></div>
+				</div>
+			</div>
+			<div class="main__cinema" id="layout-1">
+				<div class="cinema"></div>
+				<div class="cinema__container">
+					<div class="cinema__text-block text-block">
+						<h2 class="text-block__title">The Best Streaming Experience</h2>
+						<p class="text-block__text">StreamVibe is the best streaming experience for watching your favorite movies and shows on demand, anytime, anywhere. With StreamVibe, you can enjoy a wide variety of content, including the latest blockbusters, classic movies, popular TV shows, and more. You can also create your own watchlists, so you can easily find the content you want to watch.</p>
+						<a href="#" class="text-block__button"><span>Start Watching Now</span></a>
+					</div>
+				</div>
+			</div>
+			<!-- 1 варіант через побудову структури -->
+			<div class="main__portfolio portfolio" id="layout-2">
+				<div class="portfolio__container">
+					<div class="portfolio__items items-portfolio">
+						<div class="items-portfolio__item item-portfolio item-portfolio--1">
+							<div class="item-portfolio__content">
+								<div class="item-portfolio__subtitle">Features</div>
+								<h2 class="item-portfolio__title">Give Your Site A New Look</h2>
+								<p class="item-portfolio__text">Service range including technical skills, design, business understanding.</p>
+								<ul class="item-portfolio__list portfolio-list">
+									<li class="portfolio-list__item">Range including technical skills</li>
+									<li class="portfolio-list__item">Business understanding</li>
+									<li class="portfolio-list__item">Partner on the long run</li>
+								</ul>
+							</div>
+						</div>
+						<div class="items-portfolio__item item-portfolio item-portfolio--2">
+							<div class="item-portfolio__content">
+								<img src="img/portfolio.png" alt="A picture of a table with a phone, headphones and water. A guy's face is in a circle at the top.">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Потім дійшло, що так буде швидше і менше коду (залишила два варіанти, бо вже було зроблено), через margin-inline-end. 2 варіант -->
+			<div class="main__features features">
+				<div class="features__container">
+					<div class="features__content content-features">
+						<div class="content-features__subtitle">Features</div>
+						<h2 class="content-features__title">Give Your Site A New Look</h2>
+						<p class="content-features__text">Service range including technical skills, design, business understanding.</p>
+						<ul class="content-features__list features-list">
+							<li class="features-list__item">Range including technical skills</li>
+							<li class="features-list__item">Business understanding</li>
+							<li class="features-list__item">Partner on the long run</li>
+						</ul>
+					</div>
+					<div class="features__image">
+						<img src="img/portfolio.png" alt="A picture of a table with a phone, headphones and water. A guy's face is in a circle at the top.">
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<p>&copy; Anastasiia Pliuta</p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
