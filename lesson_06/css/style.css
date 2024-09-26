@@ -451,7 +451,6 @@ body {
 	font-size: 58px;
 	font-weight: 700;
 	line-height: 1.5;
-	word-break: break-all;
 }
 .text-block__text {
 	margin-block-end: 50px;
@@ -527,7 +526,7 @@ body {
 	margin-block-end: 26px;
 }
 .portfolio-list__item, .features-list__item {
-	background: url("../img/check_icon.svg") left center / 32px no-repeat;
+	background: url("../img/check_icon.svg") left top / 32px no-repeat;
 	min-height: 32px;
 	color:  rgba(57, 20, 0, 0.64);
 	font-size: 16px;
