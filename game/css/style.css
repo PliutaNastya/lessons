@@ -149,7 +149,7 @@ body {
 
 .game__block:not(:first-child) {
 	visibility: hidden;
-
+}
 
 .game__block:hover + .game__block, .game__block:hover  {
    visibility: visible;
