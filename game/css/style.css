@@ -1,0 +1,231 @@
+/* Підключення шрифтів */
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,700&display=swap");
+
+/* Обнулення стилів */
+@import url("reset.css");
+
+/* Загальні стилі */
+body {
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+	background-color: #8A89C0;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+[class$="__container"] {
+	max-width: 1230px;
+	padding-inline: 15px;
+	margin-inline: auto;
+}
+#game-rl {
+	writing-mode: vertical-rl;
+}
+#game-rl .game__block {
+	background: linear-gradient(45deg, rgba(255, 105, 180, 0.7), rgba(0, 204, 255, 0.7));
+}
+
+.game {
+	inline-size: 1000px;
+	block-size: 900px;
+	border: 3px solid #393888;
+	margin-inline: auto;
+	padding: 10px;
+	background: url("../img/background_3.jpg") center/cover no-repeat;
+}
+/* .game__block--1, .game__block--3, .game__block--5, .game__block--7, .game__block--11, .game__block--13, .game__block--15 {
+	background: url("../img/down-arrow.png") center / contain no-repeat;
+} */
+.game__block:nth-child(2n+1):not(.game__block--9, .game__block--23) {
+	background: url("../img/arrow_down.svg") center / contain no-repeat, linear-gradient(45deg, rgba(255, 105, 180, 0.7), rgba(0, 204, 255, 0.7));
+}
+/* .game__block--6, .game__block--8, .game__block--10, .game__block--14 {
+	background: url("../img/left-arrow.png") center / contain no-repeat;
+} */
+.game__block:nth-child(2n+6):not(.game__block--12) {
+	background: url("../img/arrow_left.svg") center / contain no-repeat, linear-gradient(45deg, rgba(255, 105, 180, 0.7), rgba(0, 204, 255, 0.7));
+}
+/* .game__block--2, .game__block--4, .game__block--12 {
+	background: url("../img/right-arrow.png") center / contain no-repeat;
+} */
+.game__block:nth-child(2n):not(.game__block--6, .game__block--8, .game__block--10, .game__block--14) {
+	background: url("../img/arrow_right.svg") center / contain no-repeat, linear-gradient(45deg, rgba(255, 105, 180, 0.7), rgba(0, 204, 255, 0.7));
+}
+.game__block--1 {
+	inline-size: 70px;
+	block-size: 100px;
+}
+.game__block--2 {
+	margin-inline-start: 70px;
+	margin-block-start: -68px;
+	inline-size: 700px;
+	block-size: 68px;
+}
+.game__block--3 {
+	margin-inline-start: 704px;
+	inline-size: 66px;
+	block-size: 150px;
+}
+.game__block--4 {
+	margin-block-start: -64px;
+	margin-inline-start: 770px;
+	inline-size: 200px;
+	block-size: 64px;
+}
+.game__block--5 {
+	margin-inline-start: 908px;
+	inline-size: 62px;
+	block-size: 100px;
+}
+.game__block--6 {
+	margin-block-start: -60px;
+	margin-inline-start: 408px;
+	inline-size: 500px;
+	block-size: 60px;
+}
+.game__block--7 {
+	margin-inline-start: 408px;
+	inline-size: 58px;
+	block-size: 100px;
+}
+.game__block--8 {
+	margin-inline-start: 166px;
+	inline-size: 300px;
+	block-size: 56px;
+}
+.game__block--9 {
+	background: url("../img/arrow_up.svg") center / contain no-repeat, linear-gradient(45deg, rgba(255, 105, 180, 0.7), rgba(0, 204, 255, 0.7));
+	margin-block-start: -256px;
+	margin-inline-start: 166px;
+	inline-size: 54px;
+	block-size: 200px;
+}
+.game__block--10 {
+	margin-block-start: -200px;
+	margin-inline-start: 16px;
+	inline-size: 150px;
+	block-size: 52px;
+}
+.game__block--11 {
+	margin-inline-start: 16px;
+	inline-size: 50px;
+	block-size: 250px;
+}
+.game__block--12 {
+	margin-inline-start: 16px;
+	inline-size: 700px;
+	block-size: 48px;
+}
+.game__block--13 {
+	margin-inline-start: 669px;
+	inline-size: 47px;
+	block-size: 100px;
+}
+.game__block--14 {
+	margin-inline-start: 466px;
+	inline-size: 250px;
+	block-size: 44px;
+}
+.game__block--15 {
+	margin-inline-start: 466px;
+	inline-size: 42px;
+	block-size: 70px;
+}
+.game__block--23 {
+	background: linear-gradient(45deg, rgba(255, 105, 180, 0.75), rgba(0, 204, 255, 0.7));
+	color: #8f2359;
+	font-weight: 700;
+	inline-size: 80px;
+	block-size: 80px;
+	line-height: 80px;
+	border-radius: 50%;
+	vertical-align: middle;
+	text-align: center;
+	margin-inline-start: calc(50% - 40px);
+	margin-block-start: -10px;
+}
+
+/* .game__block:not(:first-child) {
+	visibility: hidden;
+} */
+
+.game__block:hover + .game__block, .game__block:hover  {
+   visibility: visible;
+}
+
+.game__block--22:hover + .game__block--23 {
+   visibility: visible;
+}
+
+
+/* .game__block--1:hover + .game__block--2 {
+	visibility: visible;
+}
+.game__block--2:hover + .game__block--3 {
+	visibility: visible;
+}
+.game__block--3:hover + .game__block--4 {
+	visibility: visible;
+}
+.game__block--4:hover + .game__block--5 {
+	visibility: visible;
+}
+.game__block--5:hover + .game__block--6 {
+	visibility: visible;
+}
+.game__block--6:hover + .game__block--7 {
+	visibility: visible;
+}
+.game__block--7:hover + .game__block--8 {
+	visibility: visible;
+}
+.game__block--8:hover + .game__block--9 {
+	visibility: visible;
+}
+.game__block--9:hover + .game__block--10 {
+	visibility: visible;
+}
+.game__block--10:hover + .game__block--11 {
+	visibility: visible;
+}
+.game__block--11:hover + .game__block--12 {
+	visibility: visible;
+}
+.game__block--12:hover + .game__block--13 {
+	visibility: visible;
+}
+.game__block--13:hover + .game__block--14 {
+	visibility: visible;
+}
+.game__block--14:hover + .game__block--15 {
+	visibility: visible;
+}
+.game__block--15:hover + .game__block--16 {
+	visibility: visible;
+}
+.game__block--16:hover + .game__block--17 {
+	visibility: visible;
+}
+.game__block--17:hover + .game__block--18 {
+	visibility: visible;
+}
+.game__block--18:hover + .game__block--19 {
+	visibility: visible;
+}
+.game__block--19:hover + .game__block--20 {
+	visibility: visible;
+}
+.game__block--20:hover + .game__block--21 {
+	visibility: visible;
+}
+.game__block--21:hover + .game__block--22 {
+	visibility: visible;
+}
+.game__block--22:hover + .game__block.game__block--23 {
+	visibility: visible;
+}
+.game__block.game__block--23:hover {
+	visibility: visible;
+} */
