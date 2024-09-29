@@ -815,7 +815,7 @@ div:has(> span) {
 	background: url("../img/quote.svg") top left / 48px no-repeat;
 	padding-inline-start: 80px;
 }
-.article__content p:last-of-type {
+.article__content p:last-of-type:not(div > p:last-of-type) {
 	margin-block-end: 58px;
 }
 .article__content:last-child::after {
