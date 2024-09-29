@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="keywords" content="CSS, Pseudo-classes, Pseudo-elements, :hover, :active, :visited, :focus, :focus-visible, :target, :first-child, :last-child, :nth-child, :has, ::before, ::after, web design, front-end development, styling">
+   <meta name="description" content="Learn about CSS pseudo-classes and pseudo-elements, including how to use :hover, :active, :visited, :focus, :first-child, :last-child, and more. Explore practical examples and layouts to enhance your web design skills.">
+   <link rel="stylesheet" href="css/style.css">
+   <title>CSS Pseudo-classes and Pseudo-elements</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<h2 class="header__title">CSS Pseudo-classes and Pseudo-elements</h2>
+				<ul class="header__list menu">
+					<li class="menu__item"><a href="#hover">:hover</a></li>
+					<li class="menu__item"><a href="#active">:active</a></li>
+					<li class="menu__item"><a href="#visited">:visited</a></li>
+					<li class="menu__item"><a href="#focus">:focus, :focus-visible</a></li>
+					<li class="menu__item"><a href="#target">:target</a></li>
+					<li class="menu__item"><a href="#first-child-type">:first-child, :first-of-type</a></li>
+					<li class="menu__item"><a href="#last-child-type">:last-child, :last-of-type</a></li>
+					<li class="menu__item"><a href="#nth">:nth-child, :nth-of-type()</a></li>
+					<li class="menu__item"><a href="#has">:has</a></li>
+					<li class="menu__item"><a href="#pseudo-elements">::before, ::after</a></li>
+					<li class="menu__item"><a href="#game">Game "Stay on Track"</a></li>
+					<li class="menu__item"><a href="#layout-1">Макет №1</a></li>
+					<li class="menu__item"><a href="#layout-2">Макет №2</a></li>
+					<li class="menu__item"><a href="#layout-3">Макет №3</a></li>
+				</ul>
+			</div>
+		</header>
+		<main class="main">
+			<div class="main__container">
+				<div class="main__hover hover" id="hover">
+					<h2 class="hover__title title">:hover</h2>
+					<div>
+						<a href="#" class="hover__link hover__link--1 link">Hover №1</a>
+						<a href="#" class="hover__link hover__link--2 link">Hover №2</a>
+						<a href="#" class="hover__link hover__link--3 link">Hover №3</a>
+						<a href="#" class="hover__link hover__link--4 link">Hover №4</a>
+						<a href="#" class="hover__link hover__link--5 link">Hover №5</a>
+						<a href="#" class="hover__link hover__link--6 link">Hover №6</a>
+						<a href="#" class="hover__link hover__link--7 link">Hover №7</a>
+						<a href="#" class="hover__link hover__link--8 link">Hover №8</a>
+						<a href="#" class="hover__link hover__link--9 link">Hover №9</a>
+						<a href="#" class="hover__link hover__link--10 link">Hover №10</a>
+					</div>
+				</div>
+				<div class="main__active active" id="active">
+					<h2 class="active__title title">:active</h2>
+					<div>
+						<a href="https://www.linkedin.com/" target="_blank" class="active__link active__link--1 link">LinkedIn</a>
+						<a href="https://www.instagram.com/" target="_blank" class="active__link active__link--2 link">Instagram</a>
+						<a href="https://www.facebook.com/" target="_blank" class="active__link active__link--3 link">Facebook</a>
+						<a href="https://www.google.com/" target="_blank" class="active__link active__link--4 link">Google</a>
+						<a href="https://edu.fls.guru/" target="_blank" class="active__link active__link--5 link">FLS</a>
+					</div>
+				</div>
+				<div class="main__visited visited" id="visited">
+					<h2 class="visited__title title">:visited</h2>
+					<div>
+						<a href="https://www.linkedin.com/" target="_blank" class="visited__link visited__link--1 link">LinkedIn</a>
+						<a href="https://www.instagram.com/" target="_blank" class="visited__link visited__link--2 link">Instagram</a>
+						<a href="https://www.facebook.com/" target="_blank" class="visited__link visited__link--3 link">Facebook</a>
+						<a href="https://www.google.com/" target="_blank" class="visited__link visited__link--4 link">Google</a>
+						<a href="https://edu.fls.guru/" target="_blank" class="visited__link visited__link--5 link">FLS</a>
+					</div>
+				</div>
+				<div class="main__focus" id="focus">
+					<h2 class="focus__title title">:focus, :focus-visible</h2>
+					<div>
+						<a href="https://www.linkedin.com/" target="_blank" class="focus__link focus__link--1 link">LinkedIn</a>
+						<a href="https://www.instagram.com/" target="_blank" class="focus__link focus__link--2 link">Instagram</a>
+						<a href="https://www.facebook.com/" target="_blank" class="focus__link focus__link--3 link">Facebook</a>
+						<a href="https://www.google.com/" target="_blank" class="focus__link focus__link--4 link">Google</a>
+						<a href="https://edu.fls.guru/" target="_blank" class="focus__link focus__link--5 link">FLS</a>
+					</div>
+				</div>
+				<div class="main__target" id="target">
+					<h2 class="focus__title title">:target</h2>
+					<div>
+						<a href="#hover" class="target__link target__link--1 link">Jump to :hover</a>
+						<a href="#active" class="target__link target__link--2 link">Jump to :active</a>
+						<a href="#visited" class="target__link target__link--3 link">Jump to :visited</a>
+						<a href="#focus" class="target__link target__link--4 link">Jump to :focus, :focus-visible</a>
+					</div>
+				</div>
+				<div class="main__first-child-type" id="first-child-type">
+					<h2 class="first-child-type__title title">:first-child, :first-of-type</h2>
+					<div class="first-child-type__examples">
+						<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo id necessitatibus beatae aspernatur, possimus modi illo? Quia dolore nobis maiores officia asperiores ratione ipsa nisi eum, reiciendis fugit sequi, rerum voluptatum, deleniti ducimus provident. Quaerat!</div>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo id necessitatibus beatae aspernatur, possimus modi illo? Quia dolore nobis maiores officia asperiores ratione ipsa nisi eum, reiciendis fugit sequi, rerum voluptatum, deleniti ducimus provident. Quaerat!</p>
+						<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo id necessitatibus beatae aspernatur, possimus modi illo? Quia dolore nobis maiores officia asperiores ratione ipsa nisi eum, reiciendis fugit sequi, rerum voluptatum, deleniti ducimus provident. Quaerat!</div>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo id necessitatibus beatae aspernatur, possimus modi illo? Quia dolore nobis maiores officia asperiores ratione ipsa nisi eum, reiciendis fugit sequi, rerum voluptatum, deleniti ducimus provident. Quaerat!</p>
+					</div>
+				</div>
+				<div class="main__last-child-type" id="last-child-type">
+					<h2 class="last-child-type__title title">:last-child, :last-of-type</h2>
+					<div class="last-child-type__examples">
+						<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo id necessitatibus beatae aspernatur, possimus modi illo? Quia dolore nobis maiores officia asperiores ratione ipsa nisi eum, reiciendis fugit sequi, rerum voluptatum, deleniti ducimus provident. Quaerat!</div>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo id necessitatibus beatae aspernatur, possimus modi illo? Quia dolore nobis maiores officia asperiores ratione ipsa nisi eum, reiciendis fugit sequi, rerum voluptatum, deleniti ducimus provident. Quaerat!</p>
+						<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo id necessitatibus beatae aspernatur, possimus modi illo? Quia dolore nobis maiores officia asperiores ratione ipsa nisi eum, reiciendis fugit sequi, rerum voluptatum, deleniti ducimus provident. Quaerat!</div>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo id necessitatibus beatae aspernatur, possimus modi illo? Quia dolore nobis maiores officia asperiores ratione ipsa nisi eum, reiciendis fugit sequi, rerum voluptatum, deleniti ducimus provident. Quaerat!</p>
+					</div>
+				</div>
+				<div class="main__nth nth" id="nth">
+					<h2 class="focus__title title">:nth-child, :nth-of-type()</h2>
+					<div class="nth__items items-nth">
+						<div class="items-nth__item item-nth">
+							<div class="item-nth__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et cum sint sit cupiditate, similique, suscipit placeat, illo maiores pariatur enim non! Veritatis aliquam quod totam deleniti? Et, quibusdam excepturi.</div>
+						</div>
+						<div class="items-nth__item item-nth">
+							<div class="item-nth__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et cum sint sit cupiditate, similique, suscipit placeat, illo maiores pariatur enim non! Veritatis aliquam quod totam deleniti? Et, quibusdam excepturi.</div>
+						</div>
+						<div class="items-nth__item item-nth">
+							<div class="item-nth__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et cum sint sit cupiditate, similique, suscipit placeat, illo maiores pariatur enim non! Veritatis aliquam quod totam deleniti? Et, quibusdam excepturi.</div>
+						</div>
+						<div class="items-nth__item item-nth">
+							<div class="item-nth__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et cum sint sit cupiditate, similique, suscipit placeat, illo maiores pariatur enim non! Veritatis aliquam quod totam deleniti? Et, quibusdam excepturi.</div>
+						</div>
+						<div class="items-nth__item item-nth">
+							<div class="item-nth__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et cum sint sit cupiditate, similique, suscipit placeat, illo maiores pariatur enim non! Veritatis aliquam quod totam deleniti? Et, quibusdam excepturi.</div>
+						</div>
+						<div class="items-nth__item item-nth">
+							<div class="item-nth__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et cum sint sit cupiditate, similique, suscipit placeat, illo maiores pariatur enim non! Veritatis aliquam quod totam deleniti? Et, quibusdam excepturi.</div>
+						</div>
+						<div class="items-nth__item item-nth">
+							<div class="item-nth__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et cum sint sit cupiditate, similique, suscipit placeat, illo maiores pariatur enim non! Veritatis aliquam quod totam deleniti? Et, quibusdam excepturi.</div>
+						</div>
+						<div class="items-nth__item item-nth">
+							<div class="item-nth__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et cum sint sit cupiditate, similique, suscipit placeat, illo maiores pariatur enim non! Veritatis aliquam quod totam deleniti? Et, quibusdam excepturi.</div>
+						</div>
+						<div class="items-nth__item item-nth">
+							<div class="item-nth__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et cum sint sit cupiditate, similique, suscipit placeat, illo maiores pariatur enim non! Veritatis aliquam quod totam deleniti? Et, quibusdam excepturi.</div>
+						</div>
+						<div class="items-nth__item item-nth">
+							<div class="item-nth__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et cum sint sit cupiditate, similique, suscipit placeat, illo maiores pariatur enim non! Veritatis aliquam quod totam deleniti? Et, quibusdam excepturi.</div>
+						</div>
+						<div class="items-nth__item item-nth">
+							<div class="item-nth__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et cum sint sit cupiditate, similique, suscipit placeat, illo maiores pariatur enim non! Veritatis aliquam quod totam deleniti? Et, quibusdam excepturi.</div>
+						</div>
+						<div class="items-nth__item item-nth">
+							<div class="item-nth__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et cum sint sit cupiditate, similique, suscipit placeat, illo maiores pariatur enim non! Veritatis aliquam quod totam deleniti? Et, quibusdam excepturi.</div>
+						</div>
+						<div class="items-nth__item item-nth">
+							<div class="item-nth__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et cum sint sit cupiditate, similique, suscipit placeat, illo maiores pariatur enim non! Veritatis aliquam quod totam deleniti? Et, quibusdam excepturi.</div>
+						</div>
+						<div class="items-nth__item item-nth">
+							<div class="item-nth__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et cum sint sit cupiditate, similique, suscipit placeat, illo maiores pariatur enim non! Veritatis aliquam quod totam deleniti? Et, quibusdam excepturi.</div>
+						</div>
+						<div class="items-nth__item item-nth">
+							<div class="item-nth__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et cum sint sit cupiditate, similique, suscipit placeat, illo maiores pariatur enim non! Veritatis aliquam quod totam deleniti? Et, quibusdam excepturi.</div>
+						</div>
+						<div class="items-nth__item item-nth">
+							<div class="item-nth__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et cum sint sit cupiditate, similique, suscipit placeat, illo maiores pariatur enim non! Veritatis aliquam quod totam deleniti? Et, quibusdam excepturi.</div>
+						</div>
+						<div class="items-nth__item item-nth">
+							<div class="item-nth__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et cum sint sit cupiditate, similique, suscipit placeat, illo maiores pariatur enim non! Veritatis aliquam quod totam deleniti? Et, quibusdam excepturi.</div>
+						</div>
+						<div class="items-nth__item item-nth">
+							<div class="item-nth__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et cum sint sit cupiditate, similique, suscipit placeat, illo maiores pariatur enim non! Veritatis aliquam quod totam deleniti? Et, quibusdam excepturi.</div>
+						</div>
+						<div class="items-nth__item item-nth">
+							<div class="item-nth__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et cum sint sit cupiditate, similique, suscipit placeat, illo maiores pariatur enim non! Veritatis aliquam quod totam deleniti? Et, quibusdam excepturi.</div>
+						</div>
+						<div class="items-nth__item item-nth">
+							<div class="item-nth__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et cum sint sit cupiditate, similique, suscipit placeat, illo maiores pariatur enim non! Veritatis aliquam quod totam deleniti? Et, quibusdam excepturi.</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__has has" id="has">
+					<h2 class="has__title title">:has</h2>
+					<div class="has__content">
+						<h3>Lorem ipsum dolor sit amet.</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ipsa quidem cum repellat quo mollitia unde natus nam impedit reprehenderit, consectetur architecto incidunt rem commodi dolor nobis dignissimos animi repellendus, dolorem sunt ipsam temporibus <a href="#">corporis</a> ducimus saepe. Illo, quae minima. Ab culpa similique nam exercitationem commodi eum voluptates maxime error!</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ipsa quidem cum repellat quo mollitia unde natus nam impedit <mark>reprehenderit</mark>, consectetur architecto incidunt rem commodi dolor nobis dignissimos animi repellendus, dolorem sunt ipsam temporibus corporis ducimus saepe. Illo, quae minima. Ab culpa similique nam exercitationem commodi eum voluptates maxime error!</p>
+						<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ipsa quidem cum repellat quo mollitia unde natus nam impedit reprehenderit, <span>consectetur </span>architecto incidunt rem commodi dolor nobis dignissimos animi repellendus, dolorem sunt ipsam temporibus corporis ducimus saepe. Illo, quae minima. Ab culpa similique nam exercitationem commodi eum voluptates maxime error!</div>
+					</div>
+				</div>
+				<div class="main__pseudo-elements pseudo-elements" id="pseudo-elements">
+					<h2 class="pseudo-elements__title title">::before, ::after</h2>
+					<div class="pseudo-elements__examples examples-pseudo-elem">
+						<ul class="examples-pseudo-elem__list list-pseudo-elem">
+							<li class="list-pseudo-elem__item list-pseudo-elem__item--1">Lorem ipsum dolor sit amet.</li>
+							<li class="list-pseudo-elem__item list-pseudo-elem__item--2">Lorem ipsum dolor sit amet.</li>
+							<li class="list-pseudo-elem__item list-pseudo-elem__item--3">Lorem ipsum dolor sit amet.</li>
+							<li class="list-pseudo-elem__item list-pseudo-elem__item--4">Lorem ipsum dolor sit amet.</li>
+							<li class="list-pseudo-elem__item list-pseudo-elem__item--5">Lorem ipsum dolor sit amet.</li>
+							<li class="list-pseudo-elem__item list-pseudo-elem__item--6">Lorem ipsum dolor sit amet.</li>
+							<li class="list-pseudo-elem__item list-pseudo-elem__item--7">Lorem ipsum dolor sit amet.</li>
+							<li class="list-pseudo-elem__item list-pseudo-elem__item--8">Lorem ipsum dolor sit amet.</li>
+							<li class="list-pseudo-elem__item list-pseudo-elem__item--9">Lorem ipsum dolor sit amet.</li>
+							<li class="list-pseudo-elem__item list-pseudo-elem__item--10">Lorem ipsum dolor sit amet.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="main__game" id="game">
+					<h2 class="game__title title">Game "Stay on Track"</h2>
+					<div class="game" id="game-rl">
+						<div class="game__block game__block--1"></div>
+						<div class="game__block game__block--2"></div>
+						<div class="game__block game__block--3"></div>
+						<div class="game__block game__block--4"></div>
+						<div class="game__block game__block--5"></div>
+						<div class="game__block game__block--6"></div>
+						<div class="game__block game__block--7"></div>
+						<div class="game__block game__block--8"></div>
+						<div class="game__block game__block--9"></div>
+						<div class="game__block game__block--10"></div>
+						<div class="game__block game__block--11"></div>
+						<div class="game__block game__block--12"></div>
+						<div class="game__block game__block--13"></div>
+						<div class="game__block game__block--14"></div>
+						<div class="game__block game__block--15"></div>
+						<div class="game__block game__block--16"><a href="congratulations.html">Click me</a></div>
+					</div>
+				</div>
+				<div class="main__timeline timeline" id="layout-1">
+					<h2 class="timeline__title title">Макет №1</h2>
+					<div class="timeline__list list-timeline">
+						<a href="#" class="list-timeline__item item-timeline">
+							<div class="item-timeline__number">01</div>
+							<div class="item-timeline__content content-timeline">
+								<div class="content-timeline__data">Jan 2023</div>
+								<h3 class="content-timeline__title content-timeline__title--1">Research & discovery</h3>
+								<p class="content-timeline__text">Et arcu aliquam viverra felis rhoncus vitae arcu eget urna viverra massa nullaolmerolil fermentum congue ultrices.</p>
+							</div>
+						</a>
+						<a href="#" class="list-timeline__item item-timeline">
+							<div class="item-timeline__number">02</div>
+							<div class="item-timeline__content content-timeline">
+								<div class="content-timeline__data">Feb 2023</div>
+								<h3 class="content-timeline__title content-timeline__title--2">Product development</h3>
+								<p class="content-timeline__text">Libero sed nibh dictumst viverra tincidunt nulla risusolm neque lorem sed elementum adipiscing purus massa.</p>
+							</div>
+						</a>
+						<a href="#" class="list-timeline__item item-timeline">
+							<div class="item-timeline__number">03</div>
+							<div class="item-timeline__content content-timeline">
+								<div class="content-timeline__data">Apr 2023</div>
+								<h3 class="content-timeline__title content-timeline__title--3">Product launch</h3>
+								<p class="content-timeline__text">In diam aenean nunc amet faucibus commodo mattisole tincidunt euismod quis gravida tellus eros venenatis.</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="main__pricing pricing" id="layout-2">
+					<h2 class="timeline__title title">Макет №2</h2>
+					<div class="pricing__col col-pricing">
+						<div class="col-pricing__header header-col-pricing">
+							<div class="header-col-pricing__value">Basic</div>
+							<div class="header-col-pricing__price">$99</div>
+							<div class="header-col-pricing__periodicity">Billed monthly</div>
+						</div>
+						<ul class="col-pricing__list list-pricing">
+							<li class="list-pricing__item">All analytics features</li>
+							<li class="list-pricing__item">Up to 250,000 tracked visits</li>
+							<li class="list-pricing__item">Normal support</li>
+							<li class="list-pricing__item">Up to 3 team members</li>
+						</ul>
+					</div>
+				</div>
+				<div class="main__article article" id="layout-3">
+					<h2 class="article__title title">Макет №3</h2>
+					<div class="article__container">
+						<div class="article__img">
+							<img src="img/article_img.jpg" alt="A boy and a girl are sitting at a table with laptops, laughing.">
+						</div>
+						<div class="article__content">
+							<p>Agency provides a full service range including technical skills, design, business understanding.</p>
+							<p>Outsource your digital marketing efforts, instead of handling in-house. They can provide your business with a variety of digital solutions to promote your product or service online and help you.</p>
+							<h3>Promote your product</h3>
+							<p>Ability to put themselves in the merchant's shoes. It is meant to partner on the long run, and work as an extension of the merchant's team.</p>
+							<ul>
+								<li>Digital marketing</li>
+								<li>Efforts instead</li>
+								<li>Handling in-house</li>
+							</ul>
+							<p>A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house. They can provide your business with a variety of digital solutions to promote your product or service online and help you.</p>
+							<h3>Service online and help</h3>
+							<p>Put themselves in the merchant's shoes. It is meant to partner on the long run, and work as an extension of the merchant's team.</p>
+							<ol>
+								<li>Marketing efforts</li>
+								<li>Instead of handling</li>
+								<li>In-house</li>
+							</ol>
+							<p>Agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house. They can provide your business with a variety of digital solutions to promote your product or service online and help you.</p>
+							<div>
+								<p>Provide your business with a variety of digital solutions to promote your product or service online and help you.</p>
+							</div>
+							<p>Outsource your digital marketing efforts, instead of handling in-house. They can provide your business with a variety of digital solutions to promote your product or service online and help you.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<p>Anastasiia Pliuta</p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
