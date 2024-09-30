@@ -593,6 +593,8 @@ div:has(> span) {
 	font-weight: 700;
 	/* По макету вони посередині, але при доданні тексту так і залишиться посередині, залишила так, щоб відповідати макету */
 	vertical-align: middle;
+	/* Для безпеки */
+	padding: 5px;
 }
 .item-timeline__number:not(:last-child){
 	margin-inline-end: 42px;
@@ -817,7 +819,7 @@ div:has(> span) {
 	background: url("../img/quote.svg") top left / 48px no-repeat;
 	padding-inline-start: 80px;
 }
-.article__content p:last-of-type:not(div > p:last-of-type) {
+.article__content:last-of-type {
 	margin-block-end: 58px;
 }
 .article__content:last-child::after {
