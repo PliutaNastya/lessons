@@ -692,7 +692,9 @@ div:has(> span) {
 	line-height: 1.1;
 	opacity: 0.6;
 }
-.col-pricing__list {}
+.col-pricing__list {
+	padding-inline-start: 12px;
+}
 .list-pricing > * {
 	margin-block-end: 26px;
 }
