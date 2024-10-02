@@ -89,10 +89,10 @@
 					<h2 class="examples__title title">Приклади коду для оптимізації зображень</h2>
 					<p class="examples__text text">Для кращої продуктивності сайту можна використовувати формат WebP, а також fallback (резервний варіант) для браузерів, які його не підтримують.</p>
 					<div class="examples__code">
-						picture
-							<span>source srcset="img/webp_example.webp" type="image/webp"</span>
-							<span>img src="img/jpeg_example.jpg" alt="Дівчина сидить за ноутбуком. На столі також є блокнот, чашка з блюдцем та квіти у вазі."</span>
-						/picture
+						&lt;picture&gt;
+							<span>&lt;source srcset="img/webp_example.webp" type="image/webp"&gt;</span>
+							<span>&lt;img src="img/jpeg_example.jpg" alt="Дівчина сидить за ноутбуком. На столі також є блокнот, чашка з блюдцем та квіти у вазі."&gt;</span>
+						&lt;/picture
 					</div>
 					<picture>
 						<source srcset="img/webp_example.webp" type="image/webp">
@@ -100,11 +100,11 @@
 					</picture>
 					<p class="examples__text text">AVIF забезпечує вищу ступінь стиснення при збереженні якості. Ви можете використовувати його так само, як і WebP, з fallback для старіших браузерів.</p>
 					<div class="examples__code">
-						picture 
-							<span>source srcset="img/avif_example.avif" type="image/avif"</span>
-							<span>source srcset="img/webp_example.webp" type="image/webp"</span>
-							<span>img src="img/jpeg_example.jpg" alt="Дівчина сидить за ноутбуком. На столі також є блокнот, чашка з блюдцем та квіти у вазі."</span>
-						/picture
+						&lt;picture&gt;
+							<span>&lt;source srcset="img/avif_example.avif" type="image/avif"&gt;</span>
+							<span>&lt;source srcset="img/webp_example.webp" type="image/webp"&gt;</span>
+							<span>&lt;img src="img/jpeg_example.jpg" alt="Дівчина сидить за ноутбуком. На столі також є блокнот, чашка з блюдцем та квіти у вазі."&gt;</span>
+						&lt;/picture&gt;
 					</div>
 					<picture>
 						<source srcset="img/avif_example.avif" type="image/avif">
@@ -113,24 +113,24 @@
 					</picture>
 					<p class="examples__text text">Використовуючи атрибут srcset, можна адаптувати зображення для різних розмірів екранів та швидкості інтернету користувача.</p>
 					<div class="examples__code">
-						picture 
+						&lt;picture&gt;
 							<span title="Коментар">Source для зображення у форматі WebP для екранів з шириною 3000px і більше</span>
-							<span>source media="(min-width: 3000px)" srcset="img/webp_example.webp" type="image/webp"</span>
+							<span>&lt;source media="(min-width: 3000px)" srcset="img/webp_example.webp" type="image/webp"&gt;</span>
 							<span title="Коментар">Source для зображення у форматі WebP для екранів з шириною 1054px і більше</span>
-							<span>source media="(min-width: 1054px)" srcset="img/webp_1024_example.webp" type="image/webp"</span>
+							<span>&lt;source media="(min-width: 1054px)" srcset="img/webp_1024_example.webp" type="image/webp"&gt;</span>
 							<span title="Коментар">Source для зображення у форматі WebP для екранів з шириною 670px і більше</span>
-							<span>source media="(min-width: 670px)" srcset="img/webp_640_example.webp" type="image/webp"</span>
+							<span>&lt;source media="(min-width: 670px)" srcset="img/webp_640_example.webp" type="image/webp"&gt;</span>
 							<span title="Коментар">Source для зображення у форматі WebP для екранів менше 670px</span>
-							<span>source srcset="img/webp_320_example.webp" type="image/webp" type="image/webp"</span>
+							<span>&lt;source srcset="img/webp_320_example.webp" type="image/webp" type="image/webp"&gt;</span>
 							<span title="Коментар">Source для зображення у форматі JPG для екранів з шириною 3000px і більше. На випадок, коли браузери не підтримують WebP формат.</span>
-							<span>source media="(min-width: 3000px)" srcset="img/jpeg_example.jpg"</span>
+							<span>&lt;source media="(min-width: 3000px)" srcset="img/jpeg_example.jpg"&gt;</span>
 							<span title="Коментар">Source для зображення у форматі JPG для екранів з шириною 1054px і більше. На випадок, коли браузери не підтримують WebP формат.</span>
-							<span>source media="(min-width: 1054px)" srcset="img/jpeg_1024_example.jpg"</span>
+							<span>&lt;source media="(min-width: 1054px)" srcset="img/jpeg_1024_example.jpg"&gt;</span>
 							<span title="Коментар">Source для зображення у форматі JPG для екранів з шириною 670px і більше. На випадок, коли браузери не підтримують WebP формат.</span>
-							<span>source media="(min-width: 670px)" srcset="img/jpeg_640_example.jpg"</span>
+							<span>&lt;source media="(min-width: 670px)" srcset="img/jpeg_640_example.jpg"&gt;</span>
 							<span title="Коментар">Основне зображення у форматі JPG для екранів з шириною менше 670px. На випадок, коли браузери не підтримують WebP формат.</span>
-							<span>img src="img/jpeg_320_example.jpg" alt="Дівчина сидить за ноутбуком. На столі також є блокнот, чашка з блюдцем та квіти у вазі."</span>
-						/picture
+							<span>&lt;img src="img/jpeg_320_example.jpg" alt="Дівчина сидить за ноутбуком. На столі також є блокнот, чашка з блюдцем та квіти у вазі."&gt;</span>
+						&lt;/picture&gt;
 					</div>
 					<picture>
 						<!-- Source для зображення у форматі WebP для екранів з шириною 3000px і більше -->
@@ -152,14 +152,14 @@
 					</picture>
 					<p class="examples__text text">Варіант для оптимізації та найкращої якості</p>
 					<div class="examples__code">
-						picture 
+						&lt;picture&gt; 
 							<span title="Коментар">WebP формат з різними роздільними здатностями</span>
-							<span>source srcset="img/portfolio/content/main_picture_1_5x.webp 1.5x, img/portfolio/content/main_picture_2x.webp 2x, img/portfolio/content/main_picture_3x.webp 3x, img/portfolio/content/main_picture_4x.webp 4x, img/portfolio/content/main_picture_1x.webp 1x" type="image/webp"</span>
+							<span>&lt;source srcset="img/portfolio/content/main_picture_1_5x.webp 1.5x, img/portfolio/content/main_picture_2x.webp 2x, img/portfolio/content/main_picture_3x.webp 3x, img/portfolio/content/main_picture_4x.webp 4x, img/portfolio/content/main_picture_1x.webp 1x" type="image/webp"&gt;</span>
 							<span title="Коментар">JPEG формат на випадок, коли браузери не підтримують WebP формат</span>
-							<span>source srcset="img/portfolio/content/main_picture_1_5x.jpg 1.5x, img/portfolio/content/main_picture_2x.jpg 2x, img/portfolio/content/main_picture_3x.jpg 3x, img/portfolio/content/main_picture_4x.jpg 4x, img/portfolio/content/main_picture_1x.jpg 1x" type="image/jpeg"</span>
+							<span>&lt;source srcset="img/portfolio/content/main_picture_1_5x.jpg 1.5x, img/portfolio/content/main_picture_2x.jpg 2x, img/portfolio/content/main_picture_3x.jpg 3x, img/portfolio/content/main_picture_4x.jpg 4x, img/portfolio/content/main_picture_1x.jpg 1x" type="image/jpeg"&gt;</span>
 							<span title="Коментар">Основне зображення для випадків, коли жоден з джерел не підходить</span>
-							<span>img src="img/portfolio/content/main_picture_1x.jpg" alt="Чоловік в сонцезахисних окулярах вночі під дощем дивиться вдалину."</span>
-						/picture
+							<span>&lt;img src="img/portfolio/content/main_picture_1x.jpg" alt="Чоловік в сонцезахисних окулярах вночі під дощем дивиться вдалину."&gt;</span>
+						&lt;/picture&gt;
 					</div>
 					<picture>
 						<!-- WebP формат з різними роздільними здатностями -->
@@ -294,6 +294,8 @@
 								<div class="design__img">
 									<img src="img/portfolio/design/cloud_element.svg" alt="Дизайнерський елемент - обведена хмарка, прозора всередині.">
 									<h4>Елемент дизайну - хмарка, векторне зображення, SVG-формат</h4>
+									<img src="img/portfolio/design/quotes_icon.svg" alt="Іконка - лапки.">
+									<h4>Елемент дизайну - лапки, векторне зображення, SVG-формат</h4>
 								</div>
 							</div>
 						</div>
