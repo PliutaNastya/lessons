@@ -133,6 +133,7 @@ body {
 .examples__code span {
 	padding-inline-start: 20px;
 	display: block;
+	word-break: break-all;
 }
 .examples__code [title] {
 	color: #28293E;
