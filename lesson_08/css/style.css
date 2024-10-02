@@ -1,0 +1,315 @@
+/* Підключення шрифтів */
+@import url("https://fonts.googleapis.com/css?family=Sofia+Sans+Semi+Condensed:regular,700&display=swap");
+
+/* Обнулення стилів */
+@import url("reset.css");
+
+/* Загальні стилі */
+body {
+	font-family: "Sofia Sans Semi Condensed", sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+	background-color: #FDF0E9;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+[class$="__container"] {
+	max-width: 1230px;
+	padding-inline: 15px;
+	margin-inline: auto;
+}
+.title {
+	font-size: 32px;
+	color: #28293E;
+}
+.title:not(:last-child) {
+	margin-block-end: 15px;
+}
+.main__container {
+	padding-block: 50px;
+}
+[class^="main__"]:not(:last-child) {
+	margin-block-end: 20px;
+}
+.main {
+	background-color: #C69B8C;
+}
+.text {
+	padding: 10px;
+	border-radius: 15px;
+	background-color: #82a3c3a5;
+}
+
+/* Стилі для header */
+
+.header {
+	background-color: #BA7065;
+	padding-block: 30px;
+}
+.header__title {
+	font-size: 40px;
+	color: #28293E;
+}
+.header__title:not(:last-child) {
+	margin-block-end: 15px;
+}
+.menu {
+	max-width: 500px;
+	padding: 20px;
+	background-color: #ae443e4f;
+	border-radius: 15px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+	color: #f7cbcb;
+}
+.menu__item:not(:last-child) {
+	margin-block-end: 10px;
+}
+.menu__item:hover {
+	color: #28293E;
+}
+.menu__item a {
+	padding-inline-start: 30px;
+	background: url("../img/check_icon.svg") 0 0/25px no-repeat;
+}
+
+/* Стилі для колонок */
+
+.items {
+	font-size: 0;
+	margin-inline: -20px;
+}
+.item {
+	display: inline-block;
+	padding: 20px;
+	width: 33.333%;
+	font-size: 18px;
+	vertical-align: top;
+}
+.item__content {
+	background-color: #33699c6c;
+	padding: 10px;
+	border-radius: 15px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+.item__content > * {
+	margin-block-end: 10px;
+}
+.item__content > *:last-child {
+	margin-block-end: 0px;
+}
+.item__content h3 {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+}
+.item__content img {
+	width: 100%;
+}
+
+/* Стилі для "Приклади коду для оптимізації зображень" */
+
+.examples > picture {
+	display: inline-block;
+}
+.examples > * {
+	margin-block-end: 10px;
+}
+.examples > *:last-child {
+	margin-block-end: 0px;
+}
+.examples img {
+	width: 100%;
+}
+.examples__code {
+	background-color: #BA7065;
+	border-radius: 15px;
+	padding: 20px;
+}
+.examples__code span {
+	padding-inline-start: 20px;
+	display: block;
+}
+.examples__code [title] {
+	color: #28293E;
+}
+
+/* Стилі для "Використання векторної графіки для створення ефектів при наведенні" */
+
+.item__content--1 svg:hover path {
+	stroke: #611915;
+}
+.item__content--2 svg:hover path {
+	opacity: 0.8;
+}
+.item__content--3 svg:hover path {
+	stroke-width: 1.7;
+	stroke: #611915;
+}
+.item__content--4 svg:hover .svg-4 {
+	fill: #611915;
+}
+.item__content--5 svg:hover {
+	filter: drop-shadow(3px 3px 5px rgb(28, 11, 50));
+}
+.item__content--6 svg:hover {
+	opacity: 0.9;
+	filter: drop-shadow(7px 5px 10px rgb(0, 95, 146));
+}
+
+/* Стилі для "SVG-спрайти" */
+
+.svg-sprite__box {
+	text-align: center;
+}
+.icon {
+	max-width: 200px;
+}
+.icon:not(:last-child) {
+	margin-inline-end: 10px;
+}
+.svg-sprite > * {
+	margin-block-end: 15px;
+}
+.svg-sprite > *:last-child {
+	margin-block-end: 0px;
+}
+.icon {
+   color: #611915;
+}
+.icon:hover {
+   color: #28293E;
+}
+
+/* Стилі для "Іконочний шрифт" */
+
+.icon-font > * {
+	margin-block-end: 15px;
+}
+.icon-font > *:last-child {
+	margin-block-end: 15px;
+}
+.icon-font__block h3 {
+	font-size: 24px;
+	font-weight: 700;
+}
+.icon-font__block {
+	max-width: 300px;
+}
+._icon-business_icon::before, ._icon-cart_icon::after, ._icon-diagram_icon::before, ._icon-set_up_icon::after, ._icon-upload_icon::before {
+	font-size: 70px;
+	color: #611915;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 50%;
+	background-color: #BA7065;
+}
+._icon-business_icon::before, ._icon-diagram_icon::before, ._icon-upload_icon::before {
+	margin-inline-end: 10px;
+}
+._icon-cart_icon::after, ._icon-set_up_icon::after {
+	margin-inline-start: 10px;
+}
+._icon-business_icon:hover::before, ._icon-cart_icon:hover::after, ._icon-diagram_icon:hover::before, ._icon-set_up_icon:hover::after, ._icon-upload_icon:hover::before {
+	color: #28293E;
+}
+
+/* Стилі для "Домашня робота" */
+
+.item__content {
+	text-align: center;
+}
+.icons__icon--1 img {
+	max-width: 45px;
+}
+.icons__icon--2 img, .icons__icon--3 img {
+	max-width: 48px;
+	vertical-align: middle;
+}
+.icons__icon--2 div, .icons__icon--3 div {
+	display: inline-block;
+	vertical-align: middle;
+	width: 112px;
+	height: 112px;
+	line-height: 112px;
+	border-radius: 50%;
+	background-color: #EF6C57;
+}
+.icons__icon--4 img, .icons__icon--5 img {
+	max-width: 148px;
+}
+.icons__icon--6 img {
+	width: 10px;
+}
+.icons__icon--6 img {
+	width: 10px;
+	vertical-align: middle;
+}
+.icons__icon--6 div, .icons__icon--7 div, .icons__icon--8 div {
+	display: inline-block;
+	vertical-align: middle;
+	width: 48px;
+	height: 48px;
+	line-height: 48px;
+	border-radius: 50%;
+	background-color: #EF6D58;
+}
+.icons__icon--7 img, .icons__icon--8 img {
+	width: 16px;
+	vertical-align: middle;
+}
+.icons__icon:hover div {
+	background-color: #28293E;
+}
+.icons__icon > *, .design__img > *, .content__img > * {
+	margin-block-end: 10px;
+}
+.icons__icon > *:last-child, .design__img > *:last-child, .content__img > *:last-child {
+	margin-block-end: 0px;
+}
+.design {}
+.design__img img {
+	max-width: 282px;
+}
+.content__img--1 img, .content__img--2 img {
+	border-radius: 5px;
+}
+.content__img--3 img {
+	max-width: 147px;
+}
+.content__img--4 img {
+	max-width: 108px;
+}
+.content__img--5 img {
+	max-width: 119px;
+}
+.content__img--6 img {
+	max-width: 86px;
+}
+.content__img--7 img {
+	max-width: 126px;
+}
+.content__img--8 img {
+	box-shadow: 0px 24px 48px 0px rgba(85, 30, 0, 0.04);
+}
+
+/* Стилі для footer */
+
+.footer {
+	background-color: #28293E;
+	padding-block: 30px;
+}
+.footer p {
+	font-weight: 700;
+	font-size: 28px;
+	text-align: center;
+	color: #FFFFFF;
+}
+.footer p::before {
+	content: "\00A9";
+	margin-inline-end: 10px;
+}

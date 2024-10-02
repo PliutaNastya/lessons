@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="keywords" content="веб-графіка, формати зображень, WebP, AVIF, оптимізація зображень, SVG, PNG, SVG-спрайти, іконочний шрифт.">
+   <meta name="description" content="Інформація про ключові формати веб-графіки (WebP, AVIF, PNG, SVG) та оптимізацію зображень для швидкого завантаження сайтів. Практичні приклади.">
+	<link rel="stylesheet" href="css/icon_font_style.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Веб-графіка: формати, інструменти, оптимізація та приклади</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<h1 class="header__title">Веб-графіка: формати, інструменти, оптимізація та приклади</h1>
+				<ul class="header__menu menu">
+					<li class="menu__item"><a href="#web">Що таке веб-графіка?</a></li>
+					<li class="menu__item"><a href="#formats">Формати зображень у веб-графіці</a></li>
+					<li class="menu__item"><a href="#examples">Приклади коду для оптимізації зображень</a></li>
+					<li class="menu__item"><a href="#hover-effects">Використання векторної графіки для створення ефектів при наведенні</a></li>
+					<li class="menu__item"><a href="#svg-sprite">SVG-спрайти</a></li>
+					<li class="menu__item"><a href="#icon-font">Іконочний шрифт</a></li>
+					<li class="menu__item"><a href="#homework">Домашня робота</a></li>
+				</ul>
+			</div>
+		</header>
+		<main class="main">
+			<div class="main__container">
+				<div class="main__web web" id="web">
+					<h2 class="web__title title">Що таке веб-графіка?</h2>
+					<p class="web__text text">Веб-графіка — це один з ключових елементів сучасних веб-сайтів, який забезпечує візуальну привабливість та взаємодію з користувачем. Вона включає в себе всі зображення, іконки, фони та інші графічні елементи, які використовуються для покращення дизайну і функціональності веб-сторінок. Основне завдання веб-графіки — передавати інформацію, підтримувати брендінг та покращувати користувацький досвід.</p>
+				</div>
+				<div class="main__formats formats" id="formats">
+					<h2 class="formats__title title">Формати зображень у веб-графіці</h2>
+					<p class="formats__text text">При створенні веб-графіки важливо вибрати правильний формат зображення, оскільки він впливає на швидкість завантаження сайту, якість картинки та її адаптивність. Основні формати зображень, що використовуються в вебі:</p>
+					<div class="formats__items items">
+						<div class="items__item item">
+							<div class="item__content">
+								<h3>JPEG</h3>
+								<p>Використовується для фотографій або складних зображень з великою кількістю кольорів. Підтримує стиснення з втратами, що дозволяє зменшити розмір файлу, але може погіршити якість зображення.</p>
+								<img src="img/jpeg_example.jpg" alt="Дівчина сидить за ноутбуком. На столі також є блокнот, чашка з блюдцем та квіти у вазі.">
+								<div>Вага: 0.99MB</div>
+							</div>
+						</div>
+						<div class="items__item item">
+							<div class="item__content">
+								<h3>PNG</h3>
+								<p>Формат з прозорістю та без втрат якості при стисненні. Ідеальний для іконок, логотипів та інших графічних елементів з чіткими краями.</p>
+								<img src="img/png_example.png" alt="Схематичне зображення монітора з кодом на екрані та системного блоку поруч.">
+								<div>Вага: 16.2KB</div>
+							</div>
+						</div>
+						<div class="items__item item">
+							<div class="item__content">
+								<h3>GIF</h3>
+								<p>Використовується для простих анімацій та зображень з обмеженою кількістю кольорів (до 256). Ідеально підходить для створення анімованих зображень невеликого розміру.</p>
+								<img src="img/gif_example.webp" alt="Анімаційне gif-зображення, на якому чоловік бореться з заплутаними жалюзями, що символізує труднощі у роботі з CSS.">
+								<div>Вага: 1.14MB</div>
+							</div>
+						</div>
+						<div class="items__item item">
+							<div class="item__content">
+								<h3>SVG</h3>
+								<p>Векторний формат, який зберігає чіткість при будь-якому масштабуванні. Підходить для іконок, логотипів та графічних елементів, які потребують масштабування без втрати якості.</p>
+								<img src="img/svg_example.svg" alt="Схематичне зображення монітора з кодом на екрані та системного блоку поруч.">
+								<div>Вага: 3.13KB</div>
+							</div>
+						</div>
+						<div class="items__item item">
+							<div class="item__content">
+								<h3>WebP</h3>
+								<p>Сучасний формат, що поєднує переваги JPEG і PNG: підтримує стиснення з втратами та без втрат, при цьому забезпечуючи менший розмір файлу. WebP використовується для оптимізації графіки на сайтах, зменшуючи час завантаження без помітної втрати якості.</p>
+								<img src="img/webp_example.webp" alt="Дівчина сидить за ноутбуком. На столі також є блокнот, чашка з блюдцем та квіти у вазі.">
+								<div>Вага: 386KB</div>
+							</div>
+						</div>
+						<div class="items__item item">
+							<div class="item__content">
+								<h3>AVIF</h3>
+								<p>Новітній формат, який надає кращу якість зображення при ще меншому розмірі файлу порівняно з WebP і JPEG. Підтримує стиснення з втратами та без втрат, а також прозорість.</p>
+								<img src="img/avif_example.avif" alt="Дівчина сидить за ноутбуком. На столі також є блокнот, чашка з блюдцем та квіти у вазі.">
+								<div>Вага: 599KB</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__examples examples" id="examples">
+					<h2 class="examples__title title">Приклади коду для оптимізації зображень</h2>
+					<p class="examples__text text">Для кращої продуктивності сайту можна використовувати формат WebP, а також fallback (резервний варіант) для браузерів, які його не підтримують.</p>
+					<div class="examples__code">
+						picture
+							<span>source srcset="img/webp_example.webp" type="image/webp"</span>
+							<span>img src="img/jpeg_example.jpg" alt="Дівчина сидить за ноутбуком. На столі також є блокнот, чашка з блюдцем та квіти у вазі."</span>
+						/picture
+					</div>
+					<picture>
+						<source srcset="img/webp_example.webp" type="image/webp">
+						<img src="img/jpeg_example.jpg" alt="Дівчина сидить за ноутбуком. На столі також є блокнот, чашка з блюдцем та квіти у вазі.">
+					</picture>
+					<p class="examples__text text">AVIF забезпечує вищу ступінь стиснення при збереженні якості. Ви можете використовувати його так само, як і WebP, з fallback для старіших браузерів.</p>
+					<div class="examples__code">
+						picture 
+							<span>source srcset="img/avif_example.avif" type="image/avif"</span>
+							<span>source srcset="img/webp_example.webp" type="image/webp"</span>
+							<span>img src="img/jpeg_example.jpg" alt="Дівчина сидить за ноутбуком. На столі також є блокнот, чашка з блюдцем та квіти у вазі."</span>
+						/picture
+					</div>
+					<picture>
+						<source srcset="img/avif_example.avif" type="image/avif">
+						<source srcset="img/webp_example.webp" type="image/webp">
+						<img src="img/jpeg_example.jpg" alt="Дівчина сидить за ноутбуком. На столі також є блокнот, чашка з блюдцем та квіти у вазі.">
+					</picture>
+					<p class="examples__text text">Використовуючи атрибут srcset, можна адаптувати зображення для різних розмірів екранів та швидкості інтернету користувача.</p>
+					<div class="examples__code">
+						picture 
+							<span title="Коментар">Source для зображення у форматі WebP для екранів з шириною 3000px і більше</span>
+							<span>source media="(min-width: 3000px)" srcset="img/webp_example.webp" type="image/webp"</span>
+							<span title="Коментар">Source для зображення у форматі WebP для екранів з шириною 1054px і більше</span>
+							<span>source media="(min-width: 1054px)" srcset="img/webp_1024_example.webp" type="image/webp"</span>
+							<span title="Коментар">Source для зображення у форматі WebP для екранів з шириною 670px і більше</span>
+							<span>source media="(min-width: 670px)" srcset="img/webp_640_example.webp" type="image/webp"</span>
+							<span title="Коментар">Source для зображення у форматі WebP для екранів менше 670px</span>
+							<span>source srcset="img/webp_320_example.webp" type="image/webp" type="image/webp"</span>
+							<span title="Коментар">Source для зображення у форматі JPG для екранів з шириною 3000px і більше. На випадок, коли браузери не підтримують WebP формат.</span>
+							<span>source media="(min-width: 3000px)" srcset="img/jpeg_example.jpg"</span>
+							<span title="Коментар">Source для зображення у форматі JPG для екранів з шириною 1054px і більше. На випадок, коли браузери не підтримують WebP формат.</span>
+							<span>source media="(min-width: 1054px)" srcset="img/jpeg_1024_example.jpg"</span>
+							<span title="Коментар">Source для зображення у форматі JPG для екранів з шириною 670px і більше. На випадок, коли браузери не підтримують WebP формат.</span>
+							<span>source media="(min-width: 670px)" srcset="img/jpeg_640_example.jpg"</span>
+							<span title="Коментар">Основне зображення у форматі JPG для екранів з шириною менше 670px. На випадок, коли браузери не підтримують WebP формат.</span>
+							<span>img src="img/jpeg_320_example.jpg" alt="Дівчина сидить за ноутбуком. На столі також є блокнот, чашка з блюдцем та квіти у вазі."</span>
+						/picture
+					</div>
+					<picture>
+						<!-- Source для зображення у форматі WebP для екранів з шириною 3000px і більше -->
+						<source media="(min-width: 3000px)" srcset="img/webp_example.webp" type="image/webp">
+						<!-- Source для зображення у форматі WebP для екранів з шириною 1054px і більше -->
+						<source media="(min-width: 1054px)" srcset="img/webp_1024_example.webp" type="image/webp">
+						<!-- Source для зображення у форматі WebP для екранів з шириною 670px і більше -->
+						<source media="(min-width: 670px)" srcset="img/webp_640_example.webp" type="image/webp">
+						<!-- Source для зображення у форматі WebP для екранів менше 670px -->
+						<source srcset="img/webp_320_example.webp" type="image/webp">
+						<!-- Source для зображення у форматі JPG для екранів з шириною 3000px і більше. На випадок, коли браузери не підтримують WebP формат. -->
+						<source media="(min-width: 3000px)" srcset="img/jpeg_example.jpg">
+						<!-- Source для зображення у форматі JPG для екранів з шириною 1054px і більше. На випадок, коли браузери не підтримують WebP формат. -->
+						<source media="(min-width: 1054px)" srcset="img/jpeg_1024_example.jpg">
+						<!-- Source для зображення у форматі JPG для екранів з шириною 670px і більше. На випадок, коли браузери не підтримують WebP формат. -->
+						<source media="(min-width: 670px)" srcset="img/jpeg_640_example.jpg">
+						<!-- Основне зображення у форматі JPG для екранів з шириною менше 670px. На випадок, коли браузери не підтримують WebP формат. -->
+						<img src="img/jpeg_320_example.jpg" alt="Дівчина сидить за ноутбуком. На столі також є блокнот, чашка з блюдцем та квіти у вазі.">
+					</picture>
+					<p class="examples__text text">Варіант для оптимізації та найкращої якості</p>
+					<div class="examples__code">
+						picture 
+							<span title="Коментар">WebP формат з різними роздільними здатностями</span>
+							<span>source srcset="img/portfolio/content/main_picture_1_5x.webp 1.5x, img/portfolio/content/main_picture_2x.webp 2x, img/portfolio/content/main_picture_3x.webp 3x, img/portfolio/content/main_picture_4x.webp 4x, img/portfolio/content/main_picture_1x.webp 1x" type="image/webp"</span>
+							<span title="Коментар">JPEG формат на випадок, коли браузери не підтримують WebP формат</span>
+							<span>source srcset="img/portfolio/content/main_picture_1_5x.jpg 1.5x, img/portfolio/content/main_picture_2x.jpg 2x, img/portfolio/content/main_picture_3x.jpg 3x, img/portfolio/content/main_picture_4x.jpg 4x, img/portfolio/content/main_picture_1x.jpg 1x" type="image/jpeg"</span>
+							<span title="Коментар">Основне зображення для випадків, коли жоден з джерел не підходить</span>
+							<span>img src="img/portfolio/content/main_picture_1x.jpg" alt="Чоловік в сонцезахисних окулярах вночі під дощем дивиться вдалину."</span>
+						/picture
+					</div>
+					<picture>
+						<!-- WebP формат з різними роздільними здатностями -->
+						<source srcset="img/portfolio/content/main_picture_1_5x.webp 1.5x, img/portfolio/content/main_picture_2x.webp 2x, img/portfolio/content/main_picture_3x.webp 3x, img/portfolio/content/main_picture_4x.webp 4x, img/portfolio/content/main_picture_1x.webp 1x" type="image/webp">
+						<!-- JPEG формат на випадок, коли браузери не підтримують WebP формат -->
+						<source srcset="img/portfolio/content/main_picture_1_5x.jpg 1.5x, img/portfolio/content/main_picture_2x.jpg 2x, img/portfolio/content/main_picture_3x.jpg 3x, img/portfolio/content/main_picture_4x.jpg 4x, img/portfolio/content/main_picture_1x.jpg 1x" type="image/jpeg">
+						<!-- Основне зображення для випадків, коли жоден з джерел не підходить  -->
+						<img src="img/portfolio/content/main_picture_1x.jpg" alt="Чоловік в сонцезахисних окулярах вночі під дощем дивиться вдалину." >
+					</picture>
+				</div>
+				<div class="main__hover-effects hover-effects" id="hover-effects">
+					<h2 class="hover-effects__title title">Використання векторної графіки для створення ефектів при наведенні</h2>
+					<p class="hover-effects__text text">Векторна графіка, особливо у форматі SVG (Scalable Vector Graphics), є чудовим рішенням для використання на веб-сайтах завдяки своїй масштабованості та невеликій вазі файлів. Окрім того, SVG дозволяє легко додавати різноманітні ефекти при наведенні миші (hover), що покращує інтерактивність сайту та не потребує складної анімації.</p>
+					<div class="formats__items items">
+						<div class="items__item item">
+							<div class="item__content item__content--1">
+								<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g stroke-width="0"></g><g  stroke-linecap="round" stroke-linejoin="round"></g><g> <path d="M16 11L17.6965 12.5268C19.239 13.9151 20.0103 14.6093 20.0103 15.5C20.0103 16.3907 19.239 17.0849 17.6965 18.4732L16 20" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> <path opacity="0.5" d="M13.9868 5L10 20" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> <path d="M8.00005 4.82959L6.30358 6.35641C4.76102 7.74471 3.98975 8.43886 3.98975 9.32959C3.98975 10.2203 4.76102 10.9145 6.30358 12.3028L8.00005 13.8296" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+							</div>
+						</div>
+						<div class="items__item item">
+							<div class="item__content item__content--2">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g> <rect x="160" y="357.424" style="fill:#333333;" width="192" height="108.336"></rect> <polygon points="160,376.16 274.24,376.16 160,434.064 "></polygon> <path style="fill:#999999;" d="M377.456,487.84H134.544c-9.424,0-17.12-7.712-17.12-17.12l0,0c0-9.424,7.712-17.12,17.12-17.12 H377.44c9.424,0,17.12,7.712,17.12,17.12l0,0C394.576,480.144,386.864,487.84,377.456,487.84z"></path> <path style="fill:#D6D6D6;" d="M480,376.16H32c-17.6,0-32-14.4-32-32v-288c0-17.6,14.4-32,32-32h448c17.6,0,32,14.4,32,32v288 C512,361.76,497.6,376.16,480,376.16z"></path> <rect x="21.968" y="46.096" style="fill:#333333;" width="468.16" height="308.128"></rect> <g> <path style="fill:#0BA4E0;" d="M119.664,196.288l91.824-44.56v17.424l-72.832,33.904v0.384l72.832,34.096v17.248l-91.824-44.56 C119.664,210.224,119.664,196.288,119.664,196.288z"></path> <path style="fill:#0BA4E0;" d="M224.928,262.528l47.28-140.448h16.656l-47.28,140.448H224.928z"></path> <path style="fill:#0BA4E0;" d="M392.336,210.624L300.512,254.8v-17.248l74.016-34.096v-0.384l-74.016-34.096v-17.248l91.824,44.176 V210.624z"></path> </g> </g></svg>
+							</div>
+						</div>
+						<div class="items__item item">
+							<div class="item__content item__content--3">
+								<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g stroke-width="0"></g><g  stroke-linecap="round" stroke-linejoin="round"></g><g> <path opacity="0.4" d="M8.92969 2L8.95969 3.53003C8.97969 4.34003 9.64969 5 10.4597 5H13.4797C14.3097 5 14.9797 4.32 14.9797 3.5V2" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="0.4" d="M17 17L15 19L17 21" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="0.4" d="M20 17L22 19L20 21" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M13 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7V14" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+							</div>
+						</div>
+						<div class="items__item item">
+							<div class="item__content item__content--4">
+								<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g stroke-width="0"></g><g  stroke-linecap="round" stroke-linejoin="round"></g><g> <path class="svg-4" opacity="0.5" d="M13.7916 21.319L13.1953 22.3265C12.6638 23.2244 11.3361 23.2244 10.8046 22.3265L10.2083 21.319C9.7458 20.5376 9.51454 20.1469 9.14307 19.9308C8.7716 19.7148 8.30391 19.7067 7.36854 19.6906C5.98764 19.6668 5.12158 19.5822 4.39524 19.2813C3.04759 18.7231 1.97688 17.6524 1.41866 16.3048C1 15.294 1 14.0127 1 11.45V10.35C1 6.74923 1 4.94884 1.81048 3.62626C2.26399 2.8862 2.8862 2.26399 3.62626 1.81048C4.94884 1 6.74923 1 10.35 1H13.65C17.2508 1 19.0512 1 20.3737 1.81048C21.1138 2.26399 21.736 2.8862 22.1895 3.62626C23 4.94884 23 6.74923 23 10.35V11.45C23 14.0127 23 15.294 22.5813 16.3048C22.0231 17.6524 20.9524 18.7231 19.6048 19.2813C18.8784 19.5822 18.0123 19.6668 16.6314 19.6906C15.696 19.7067 15.2284 19.7148 14.8569 19.9308C14.4854 20.1469 14.2542 20.5376 13.7916 21.319Z" fill="#1C274C"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M15.267 6.82953C15.5892 6.50734 16.1116 6.50734 16.4338 6.82953L16.6225 7.01826C16.636 7.03178 16.6495 7.04526 16.6629 7.0587C17.3618 7.75753 17.9446 8.34027 18.345 8.8651C18.7677 9.41906 19.0641 10.0043 19.0641 10.7129C19.0641 11.4214 18.7677 12.0067 18.345 12.5607C17.9446 13.0855 17.3618 13.6683 16.6629 14.3671L16.4338 14.5963C16.1116 14.9184 15.5892 14.9184 15.267 14.5963C14.9448 14.2741 14.9448 13.7517 15.267 13.4295L15.4558 13.2408C16.2056 12.491 16.708 11.9861 17.0332 11.5598C17.3439 11.1526 17.4141 10.9156 17.4141 10.7129C17.4141 10.5102 17.3439 10.2731 17.0332 9.86596C16.708 9.43973 16.2056 8.93481 15.4558 8.18498L15.267 7.99625C14.9448 7.67407 14.9448 7.15171 15.267 6.82953Z" fill="#1C274C"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6367 4.60415C14.0768 4.72208 14.338 5.17446 14.2201 5.61457L11.3731 16.2398C11.2552 16.6799 10.8028 16.941 10.3627 16.8231C9.92256 16.7052 9.66138 16.2528 9.77931 15.8127L12.6263 5.18751C12.7442 4.7474 13.1966 4.48622 13.6367 4.60415Z" fill="#1C274C"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M8.73297 6.82953C8.41079 6.50734 7.88843 6.50734 7.56625 6.82953L7.37752 7.01826C7.36399 7.03178 7.35051 7.04526 7.33707 7.0587C6.63819 7.75753 6.05542 8.34027 5.65499 8.8651C5.23233 9.41906 4.93588 10.0043 4.93588 10.7129C4.93588 11.4214 5.23233 12.0067 5.65499 12.5607C6.05542 13.0855 6.6382 13.6683 7.33708 14.3671L7.56625 14.5963C7.88843 14.9184 8.41079 14.9184 8.73297 14.5963C9.05516 14.2741 9.05516 13.7517 8.73297 13.4295L8.54424 13.2408C7.79442 12.491 7.29197 11.9861 6.96677 11.5598C6.6561 11.1526 6.58588 10.9156 6.58588 10.7129C6.58588 10.5102 6.6561 10.2731 6.96677 9.86596C7.29197 9.43973 7.79442 8.93481 8.54424 8.18498L8.73297 7.99625C9.05516 7.67407 9.05516 7.15171 8.73297 6.82953Z" fill="#1C274C"></path> </g></svg>
+							</div>
+						</div>
+						<div class="items__item item">
+							<div class="item__content item__content--5">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g> <rect x="160" y="357.424" style="fill:#333333;" width="192" height="108.336"></rect> <polygon points="160,376.16 274.24,376.16 160,434.064 "></polygon> <path style="fill:#999999;" d="M377.456,487.84H134.544c-9.424,0-17.12-7.712-17.12-17.12l0,0c0-9.424,7.712-17.12,17.12-17.12 H377.44c9.424,0,17.12,7.712,17.12,17.12l0,0C394.576,480.144,386.864,487.84,377.456,487.84z"></path> <path style="fill:#D6D6D6;" d="M480,376.16H32c-17.6,0-32-14.4-32-32v-288c0-17.6,14.4-32,32-32h448c17.6,0,32,14.4,32,32v288 C512,361.76,497.6,376.16,480,376.16z"></path> <rect x="21.968" y="46.096" style="fill:#0BA4E0;" width="468.16" height="308.128"></rect> <path style="fill:#FFFFFF;" d="M341.088,285.312H170.912c-31.184,0-56.56-25.376-56.56-56.56c0-25.536,16.96-47.504,41.088-54.352 c-0.016-0.464-0.016-0.928-0.016-1.408c0-39.28,31.952-71.232,71.232-71.232c28.08,0,53.408,16.608,64.848,41.904 c2.816-0.56,5.648-0.832,8.496-0.832c19.056,0,35.648,11.824,42.048,29.344c30.736,0.512,55.584,25.68,55.584,56.544 C397.648,259.936,372.272,285.312,341.088,285.312z"></path> </g></svg>
+							</div>
+						</div>
+						<div class="items__item item">
+							<div class="item__content item__content--6">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g> <path style="fill:#D6D6D6;" d="M392.464,512h-224c-17.6,0-32-14.4-32-32V32c0-17.6,14.4-32,32-32h224c17.6,0,32,14.4,32,32v448 C424.464,497.6,410.064,512,392.464,512z"></path> <rect x="159.92" y="50.672" style="fill:#0BA4E0;" width="241.28" height="372"></rect> <g> <path style="fill:#999999;" d="M280.64,489.456c-12.496,0-22.672-10.176-22.672-22.672s10.16-22.672,22.672-22.672 s22.672,10.176,22.672,22.672S293.136,489.456,280.64,489.456z M280.64,452.112c-8.08,0-14.672,6.576-14.672,14.672 s6.576,14.672,14.672,14.672s14.672-6.576,14.672-14.672S288.72,452.112,280.64,452.112z"></path> <circle style="fill:#999999;" cx="280.592" cy="25.328" r="7.792"></circle> <circle style="fill:#999999;" cx="337.28" cy="25.328" r="7.792"></circle> <circle style="fill:#999999;" cx="361.888" cy="25.328" r="7.792"></circle> </g> <g> <polygon style="fill:#333333;" points="301.968,294.848 301.968,368.224 209.008,294.848 "></polygon> <path style="fill:#333333;" d="M334.992,307.408H101.184c-7.504,0-13.648-6.144-13.648-13.648V133.328 c0-7.504,6.144-13.648,13.648-13.648h233.808c7.504,0,13.648,6.144,13.648,13.648V293.76 C348.64,301.264,342.512,307.408,334.992,307.408z"></path> </g> <g> <circle style="fill:#FFFFFF;" cx="150.432" cy="213.552" r="18.832"></circle> <circle style="fill:#FFFFFF;" cx="218.096" cy="213.552" r="18.832"></circle> <circle style="fill:#FFFFFF;" cx="285.744" cy="213.552" r="18.832"></circle> </g> </g></svg>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__svg-sprite svg-sprite" id="svg-sprite">
+					<h2 class="svg-sprite__title title">SVG-спрайти</h2>
+					<p class="svg-sprite__text text">SVG-спрайт — це набір кількох SVG-графічних елементів, об'єднаних в один файл. Зазвичай він містить іконки або інші векторні елементи, які можна використовувати повторно в різних частинах веб-сайту.</p>
+					<div class="svg-sprite__box">
+						<a href="https://www.facebook.com/" target="_blank">
+							<svg class="icon">
+								<use xlink:href="img/sprite.svg#facebook_icon"></use>
+							</svg>
+						</a>
+						<a href="https://www.instagram.com/" target="_blank">
+							<svg class="icon">
+								<use xlink:href="img/sprite.svg#instagram_icon"></use>
+							</svg>
+						</a>
+						<a href="https://www.linkedin.com/" target="_blank">
+							<svg class="icon">
+								<use xlink:href="img/sprite.svg#linkedin_icon"></use>
+							</svg>
+						</a>
+						<a href="https://web.telegram.org/" target="_blank">
+							<svg class="icon">
+								<use xlink:href="img/sprite.svg#telegram_icon"></use>
+							</svg>
+						</a>
+						<a href="https://web.whatsapp.com/" target="_blank">
+							<svg class="icon">
+								<use xlink:href="img/sprite.svg#whatsapp_icon"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="main__icon-font icon-font" id="icon-font">
+					<h2 class="icon-font__title title">Іконочний шрифт</h2>
+					<p class="icon-font__text text">Іконочний шрифт – це ще один популярний спосіб використання іконок на веб-сайтах. По суті, це шрифт, кожен символ якого є окремою іконкою. Такий метод забезпечує зручність у використанні і легко масштабується, як звичайний текст.</p>
+					<div class="icon-font__block">
+						<h3 class="_icon-business_icon">Бізнес портфель</h3>
+						<h3 class="_icon-cart_icon">Корзина</h3>
+						<h3 class="_icon-diagram_icon">Діаграма</h3>
+						<h3 class="_icon-set_up_icon">Налаштування</h3>
+						<h3 class="_icon-upload_icon">Завантажити</h3>
+					</div>
+				</div>
+				<div class="main__homework homework" id="homework">
+					<h2 class="homework__title title">Домашня робота</h2>
+					<div class="homework__items items">
+						<div class="items__item item">
+							<div class="item__content icons">
+								<h3>Іконки</h3>
+								<div class="icons__icon icons__icon--1">
+									<img src="img/portfolio/icons/logo.svg" alt="Логотип компанії - п'ятикутник помаранчевого кольору всередині іншого - трохи більшого п'ятикутника.">
+									<h4>Іконка - логотип, векторне зображення, SVG-формат</h4>
+								</div>
+								<div class="icons__icon icons__icon--2">
+									<div><img src="img/portfolio/icons/experience_icon.svg" alt="Іконка календаря з галочкою посередині."></div>
+									<h4>Іконка - підсилює ефект в блоці - роки досвіду, векторне зображення, SVG-формат</h4>
+								</div>
+								<div class="icons__icon icons__icon--3">
+									<div><img src="img/portfolio/icons/projects_icon.svg" alt="Іконка портфелю."></div>
+									<h4>Іконка - підсилює ефект в блоці - кількість виконаних проектів, векторне зображення, SVG-формат</h4>
+								</div>
+								<div class="icons__icon icons__icon--4">
+									<img src="img/portfolio/icons/play_icon.svg" alt="Іконка трикутник в крузі, що вказує на те, що натиснувши на неї, можна ввімкнути перегляд відео.">
+									<h4>Іконка - вказує на те, що це відео і його можна переглянути, векторне зображення, SVG-формат</h4>
+								</div>
+								<div class="icons__icon icons__icon--5">
+									<img src="img/portfolio/icons/present_icon.svg" alt="Іконка подарунки всередині помаранчевої зірки.">
+									<h4>Іконка - підсилює ефект в блоці "зв'язатися з нами", векторне зображення, SVG-формат</h4>
+								</div>
+								<div class="icons__icon icons__icon--6">
+									<div><img src="img/portfolio/icons/facebook_icon.svg" alt="Іконка - логотип Фейсбуку."></div>
+									<h4>Іконка - логотип Facebook, векторне зображення, SVG-формат</h4>
+								</div>
+								<div class="icons__icon icons__icon--7">
+									<div><img src="img/portfolio/icons/instagram_icon.svg" alt="Іконка - логотип Інстаграму."></div>
+									<h4>Іконка - логотип Instagram, векторне зображення, SVG-формат</h4>
+								</div>
+								<div class="icons__icon icons__icon--8">
+									<div><img src="img/portfolio/icons/twitter_icon.svg" alt="Іконка - логотип Твіттеру."></div>
+									<h4>Іконка - логотип Twitter, векторне зображення, SVG-формат</h4>
+								</div>
+							</div>
+						</div>
+						<div class="items__item item">
+							<div class="item__content design">
+								<h3>Елементи дизайну</h3>
+								<div class="design__img">
+									<img src="img/portfolio/design/cloud_element.svg" alt="Дизайнерський елемент - обведена хмарка, прозора всередині.">
+									<h4>Елемент дизайну - хмарка, векторне зображення, SVG-формат</h4>
+								</div>
+							</div>
+						</div>
+						<div class="items__item item">
+							<div class="item__content content">
+								<h3>Контентні зображення</h3>
+								<div class="content__img content__img--1">
+									<img src="img/portfolio/content/main_picture_1x.webp" alt="Чоловік в сонцезахисних окулярах вночі під дощем дивиться вдалину.">
+									<h4>Основне зображення на сторінці, растрове, JPG - WebP-формат</h4>
+								</div>
+								<div class="content__img content__img--2">
+									<img src="img/portfolio/content/video_preview.webp" alt="Превью до відео. Помаранчева тканина на синьому фоні.">
+									<h4>Превью до відео, растрове зображення, JPG - WebP-формат</h4>
+								</div>
+								<div class="content__img content__img--3">
+									<img src="img/portfolio/content/cooperates_company_1.webp" alt="Логотип із круговим цифровим дизайном, що представляє компанію - Digitalside.">
+									<h4>Логотип компанії, з якою співпрацюють, растрове зображення, PNG - WebP-формат</h4>
+								</div>
+								<div class="content__img content__img--4">
+									<img src="img/portfolio/content/cooperates_company_2.webp" alt="Текстовий логотип компанії - Vortex.">
+									<h4>Логотип компанії, з якою співпрацюють, растрове зображення, PNG - WebP-формат</h4>
+								</div>
+								<div class="content__img content__img--5">
+									<img src="img/portfolio/content/cooperates_company_3.webp" alt="Логотип із зображенням літака, що представляє компанію - Travel Explorer.">
+									<h4>Логотип компанії, з якою співпрацюють, растрове зображення, PNG - WebP-формат</h4>
+								</div>
+								<div class="content__img content__img--6">
+									<img src="img/portfolio/content/cooperates_company_4.webp" alt="Текстовий логотип компанії - Fuzion.">
+									<h4>Логотип компанії, з якою співпрацюють, растрове зображення, PNG - WebP-формат</h4>
+								</div>
+								<div class="content__img content__img--7">
+									<img src="img/portfolio/content/cooperates_company_5.webp" alt="Текстовий логотип компанії - MediaFury.">
+									<h4>Логотип компанії, з якою співпрацюють, растрове зображення, PNG - WebP-формат</h4>
+								</div>
+								<div class="content__img content__img--8">
+									<img src="img/portfolio/content/contact_me_img.svg" alt="Стилізований бізнес-карт із графіком та стрілкою, що вказує на зростання або прогрес.">
+									<h4>Контентне зображення, векторне, SVG</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<p>Anastasiia Pliuta</p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
