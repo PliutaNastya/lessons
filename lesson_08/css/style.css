@@ -107,6 +107,9 @@ body {
 .item__content img {
 	width: 100%;
 }
+.formats__text:not(:last-child), .hover-effects__text:not(:last-child) {
+	margin-block-end: 10px;
+}
 
 /* Стилі для "Приклади коду для оптимізації зображень" */
 
