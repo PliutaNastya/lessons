@@ -66,7 +66,7 @@ body {
 	padding-inline-start: 30px;
 	min-height: 25px;
 }
-.menu__item:hover a{
+.menu__item a:hover {
 	background: url("../img/check_icon_hover.svg") 0 3px / 20px no-repeat;
 	text-decoration: underline;
 	color: #3c0126;
