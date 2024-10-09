@@ -131,6 +131,12 @@ body {
 	border-radius: 15px;
 }
 
+
+.portfolio__title:not(:last-child) {
+	margin-block-end: 10px;
+}
+
+
 /* Стилі для блоку "Приклади розповсюджених назв класів по методології БЕМ" */
 
 .main__names > *, .names__body > * {
