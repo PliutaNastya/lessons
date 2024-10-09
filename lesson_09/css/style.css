@@ -1,0 +1,182 @@
+/* Підключення шрифтів */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+3:regular,700&display=swap");
+
+/* Обнулення стилів */
+@import url("reset.css");
+
+/* Загальні стилі */
+body {
+	font-family: "Source Sans 3", sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+	background-color: #E3F5E0;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+[class$="__container"] {
+	max-width: 1230px;
+	padding-inline: 15px;
+	margin-inline: auto;
+}
+.title {
+	color: #095D4D;
+	font-size: 34px;
+	font-weight: 700;
+	text-align: center;
+}
+.subtitle {
+	font-size: 24px;
+	font-weight: 700;
+	color: #354B2F;
+	text-align: center;
+}
+.main__container {
+	padding-block: 50px;
+}
+[class^="main__"]:not(:last-child) {
+	margin-block-end: 20px;
+}
+
+/* Стилі для header */
+
+.header {
+	background-color: #8bbfb5;
+	padding-block-end: 30px;
+}
+.header__container > * {
+	margin-block-end: 15px;
+}
+.header__container > *:last-child {
+	margin-block-end: 15px;
+}
+.header__title {
+	font-size: 34px;
+}
+.menu {
+	max-width: 700px;
+	padding: 20px;
+	background-color: #4fbba6;
+	border-radius: 10%;
+	color: #122a0c;
+}
+.menu__item a {
+	background: url("../img/check_icon.svg") 0 3px / 20px no-repeat;
+	padding-inline-start: 30px;
+	min-height: 25px;
+}
+.menu__item:hover a{
+	background: url("../img/check_icon_hover.svg") 0 3px / 20px no-repeat;
+	text-decoration: underline;
+	color: #3c0126;
+}
+.header__menu > * {
+	margin-block-end: 10px;
+}
+.header__menu > *:last-child {
+	margin-block-end: 0px;
+}
+
+/* Стилі для блоку "Основні поняття" */
+
+.main__general > * {
+	margin-block-end: 10px;
+}
+.main__general > *:last-child {
+	margin-block-end: 10px;
+}
+.items {
+	font-size: 0;
+	margin-inline: -5px;
+}
+.item {
+	display: inline-block;
+	width: 33.333%;
+	padding: 5px;
+	font-size: 18px;
+	vertical-align: top;
+}
+.content-item {
+	background-color: #eceed367;
+	padding: 10px;
+	border-radius: 15px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) inset;
+}
+.item__content > * {
+	margin-block-end: 10px;
+}
+.item__content > *:last-child {
+	margin-block-end: 0px;
+}
+.content-item__text--green {
+	color: #146743;
+}
+.content-item__text--purple {
+	color: #363033;
+}
+.content-item__text--blue {
+	color: #02042c;
+}
+.content-item__text--red {
+	color: #4d0303;
+}
+.content-item__text {
+	padding-inline-start: 25px;
+	background: url("../img/arrow_right_icon.png") 0 0 / 20px no-repeat;
+	min-height: 20px;
+}
+.content-item img {
+	width: 100%;
+	border-radius: 15px;
+}
+
+/* Стилі для блоку "Приклади розповсюджених назв класів по методології БЕМ" */
+
+.main__names > *, .names__body > * {
+	margin-block-end: 10px;
+}
+.main__names > *:last-child, .names__body > *:last-child {
+	margin-block-end: 0px;
+}
+.names__items {
+	background-color: #eceed367;
+	font-size: 0;
+	margin-inline: -5px;
+	text-align: center;
+	border: 1px solid #3b1f2b34;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) inset;
+}
+.names__item div {
+	display: inline-block;
+	width: 20%;
+	font-size: 18px;
+	padding: 5px;
+}
+.names__item:not(:last-child) {
+	border-bottom: 1px solid #3b1f2b34;
+}
+.names__item div:not(:last-child) {
+	border-right: 1px solid #3b1f2b34;
+}
+.names__items .names__item:first-child {
+	font-weight: 700;
+	color: #3B1F2B;
+}
+
+/* Стилі для footer */
+
+.footer {
+	background-color: #095D4D;
+	padding-block: 20px;
+	text-align: center;
+}
+.footer__item {
+	color: #E3F5E0;
+}
+.footer__item a {
+	color: #8bbfb5;
+}
+.footer__item a:hover {
+	text-decoration: underline;
+}

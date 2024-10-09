@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="keywords" content="БЕМ, методологія БЕМ, компонентний підхід, веб-розробка, блоки, елементи, модифікатори">
+   <meta name="description" content="Методологія БЕМ (Блок, Елемент, Модифікатор) - компонентний підхід до розробки веб-інтерфейсів, що забезпечує незалежність і повторне використання коду.">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Методологія БЕМ: Блок, Елемент, Модифікатор</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<h1 class="header__title title">Методологія БЕМ: Блок, Елемент, Модифікатор</h1>
+				<ul class="header__menu menu">
+					<li class="menu__item"><a href="#general">Основні Поняття</a></li>
+					<li class="menu__item"><a href="#homework">Домашня робота</a></li>
+					<li class="menu__item"><a href="#names">Приклади розповсюджених назв класів по методології БЕМ</a></li>
+				</ul>
+			</div>
+		</header>
+		<main class="main">
+			<div class="main__container">
+				<div class="main__general general" id="general">
+					<h2 class="general__title title">Основні поняття</h2>
+					<div class="general__items items">
+						<div class="items__item item">
+							<div class="item__content content-item">
+								<h3 class="content-item__subtitle subtitle">Блок</h3>
+								<div class="content-item__text content-item__text--green">Функціонально незалежний компонент сторінки, який можна використовувати повторно. В HTML блоки представляються атрибутом class.</div>
+								<div class="content-item__text content-item__text--purple">Назва блоку описує суть компонента («що це?» — наприклад, menu, button), а не його стан чи зовнішній вигляд («який, як виглядає?» — наприклад, red, big).</div>
+								<div class="content-item__text content-item__text--blue">Блоки можуть бути вкладені один в одного, при цьому вкладеність не обмежується.</div>
+								<div class="content-item__text content-item__text--blue">Блок не повинен впливати на своє оточення, тобто блоку не слід задавати зовнішню геометрію (у вигляді відступів, меж, що впливають на розміри) та позиціонування.</div>
+								<img src="img/image_block.png" alt="An image showing where blocks are located on the website.">
+							</div>
+						</div>
+						<div class="items__item item">
+							<div class="item__content content-item">
+								<h3 class="content-item__subtitle subtitle">Елемент</h3>
+								<div class="content-item__text content-item__text--green">Частина блоку, яка не може існувати окремо від нього.</div>
+								<div class="content-item__text content-item__text--purple">Назва елемента описує його суть («що це?» — наприклад, item, text), а не зовнішній вигляд.</div>
+								<div class="content-item__text content-item__text--blue">Назва елемента відділяється від назви блоку двома підкресленнями (__).</div>
+								<div class="content-item__text content-item__text--blue">Елементи можна вкладати один в одного.</div>
+								<div class="content-item__text content-item__text--blue">Допустима будь-яка вкладеність елементів.</div>
+								<div class="content-item__text content-item__text--blue">Елемент — завжди частина блоку, а не іншого елемента. Це означає, що в назвах елементів не можна прописувати ієрархію типу block__elem1__elem2.</div>
+								<img src="img/image_element.png" alt="An image showing where elements are located on the website.">
+							</div>
+						</div>
+						<div class="items__item item">
+							<div class="item__content content-item">
+								<h3 class="content-item__subtitle subtitle">Модифікатор</h3>
+								<div class="content-item__text content-item__text--green">Визначає зовнішній вигляд, стан або поведінку блоку чи елемента.</div>
+								<div class="content-item__text content-item__text--purple">Модифікатор не можна використовувати самостійно.</div>
+								<div class="content-item__text content-item__text--blue">Модифікатор не може використовуватися окремо від модифікованого блоку або елемента.</div>
+								<div class="content-item__text content-item__text--red">Модифікатор повинен змінювати вигляд, поведінку або стан сутності, а не замінювати її.</div>
+								<div class="content-item__text content-item__text--red">Модифікатор дописується до класу блока або елемента шляхом дублювання основного класу з додаванням двох тире (--) і назви модифікатора.</div>
+								<img src="img/image_modifiier.png" alt="An image showing where modifiers are located on the website.">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__portfolio portfolio" id="homework">
+					<div class="portfolio__container">
+						<div class="portfolio__companies companies">
+							<div class="companies__image">
+								<img src="#" alt="Digitalside company logotype">
+							</div>
+							<div class="companies__image">
+								<img src="#" alt="Vortex company logotype">
+							</div>
+							<div class="companies__image">
+								<img src="#" alt="Travel Explorer company logotype">
+							</div>
+							<div class="companies__image">
+								<img src="#" alt="Fuzion company logotype">
+							</div>
+							<div class="companies__image">
+								<img src="#" alt="MediaFury company logotype">
+							</div>
+						</div>
+						<div class="portfolio__about about">
+							<div class="about__body">
+								<div class="about__img img-about">
+									<div class="img-about__element img-about__element--main-image">
+										<img src="#" alt="Brown leather office chair positioned in front of a white desk, on the desk, there is an open laptop, a desk lamp, and a small drawer unit.">
+									</div>
+									<div class="img-about__element img-about__element--avatar">
+										<img src="#" alt="A man with glasses and a beard is smiling in a circular cutout.">
+									</div>
+									<div class="img-about__element img-about__element--cloud">
+										<img src="#" alt="Decorative element - cloud.">
+									</div>
+									<div class="img-about__element img-about__element--square">
+										<img src="#" alt="Decorative element - square in the background">
+									</div>
+									<div class="img-about__element img-about__element--arrow">
+										<img src="#" alt="Arrow graphics in the background.">
+									</div>
+									<div class="img-about__element img-about__element--color-palette">
+										<img src="#" alt="A horizontal rectangle with a color palette of three circles in red, purple, and yellow, next to a placeholder for text.">
+									</div>
+								</div>
+								<div class="about__text-block text-block">
+									<div class="text-block__label">About</div>
+									<h2 class="text-block__title">An Experience Design Agency</h2>
+									<p class="text-block__subtitle">Provides a full service range</p>
+									<p class="text-block__text">Ability to put themselves in the merchant's shoes. It is meant to partner on the long run, and work as an extension of the merchant's team.</p>
+									<a href="#" class="text-block__button button">About Us</a>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio__achievements achievements">
+							<div class="achievements__body">
+								<div class="achievements__column">
+									<div class="achievements__quantity">42%</div>
+									<h3 class="achievements__title">Years of experience</h3>
+								</div>
+								<div class="achievements__column">
+									<div class="achievements__quantity">73+</div>
+									<h3 class="achievements__title">Agency members</h3>
+								</div>
+								<div class="achievements__column">
+									<div class="achievements__quantity">5.000</div>
+									<h3 class="achievements__title">Projects complete</h3>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio__how-we-work how-we-work">
+							<div class="how-we-work__body">
+								<div class="how-we-work__text-block text-block">
+									<div class="text-block__label">How we work</div>
+									<h2 class="text-block__title">Making Your Projects Look Awesome</h2>
+									<p class="text-block__text">Technical skills, design, business understanding, ability to put themselves in the merchant's shoes.</p>
+									<a href="#" class="text-block__link">Read More</a>
+								</div>
+								<ol class="how-we-work__ol-list list-ol">
+									<li class="list-ol__item item-ol-list">
+										<div class="item-ol-list__number">1</div>
+										<div class="item-ol-list__definition">Full service range including</div>
+									</li>
+									<li class="list-ol__item item-ol-list">
+										<div class="item-ol-list__number">2</div>
+										<div class="item-ol-list__definition">Technical skills, design, business</div>
+									</li>
+									<li class="list-ol__item item-ol-list">
+										<div class="item-ol-list__number">3</div>
+										<div class="item-ol-list__definition">Themselves in the merchant's</div>
+									</li>
+								</ol>
+							</div>
+						</div>
+						<div class="portfolio__video video">
+							<div class="video__body">
+								<a href="#" class="video__media">
+									<img src="#" class="video__preview-image" alt="Preview to video">
+								</a>
+								<div class="video__text-block text-block">
+									<div class="text-block__label">Video Reel</div>
+									<h2 class="text-block__title">Unlock The Greatest Value Possible</h2>
+									<p class="text-block__text">Design, business understanding, ability to put themselves in the merchant's shoes meant to partner.</p>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio__features features">
+							<div class="features__text-block text-block">
+								<div class="text-block__label">Features</div>
+								<h2 class="text-block__title">Give Your Site A New Look</h2>
+								<p class="text-block__subtitle">Service range including technical skills, design, business understanding.</p>
+								<ul class="text-block__ul-list list-ul">
+									<li class="list-ul__item">Range including technical skills</li>
+									<li class="list-ul__item">Business understanding</li>
+									<li class="list-ul__item">Partner on the long run</li>
+								</ul>
+							</div>
+							<div class="features__img img-features">
+								<div class="img-features__element img-features__element--main-image">
+									<img src="#" alt="A smartphone, a pair of wireless earphones and a cup of coffee placed on a table.">
+								</div>
+								<div class="img-features__element img-features__element--avatar">
+									<img src="#" alt="A black-and-white circular portrait of a smiling man, surrounded by a purple background.">
+								</div>
+								<div class="img-features__element img-features__element--cloud">
+									<img src="#" alt="Decorative element - cloud.">
+								</div>
+								<div class="img-features__element img-features__element--arrow">
+									<img src="#" alt="A wavy, upward-pointing arrow, lightly drawn behind the image.">
+								</div>
+								<div class="img-features__element img-features__element--rectangle-1">
+									<img src="#" alt="One of two overlapping abstract shapes (pink) in the background, adding a design element.">
+								</div>
+								<div class="img-features__element img-features__element--rectangle-2">
+									<img src="#" alt="One of two overlapping abstract shapes (yellow) in the background, adding a design element.">
+								</div>
+							</div>
+						</div>
+						<div class="portfolio__features-extra extra-features">
+							<div class="extra-features__text-block text-block">
+								<div class="text-block__label">Features</div>
+								<p class="text-block__subtitle">Long run, and work as an extension of the merchant's team.</p>
+								<a href="#" class="text-block__link">Read More</a>
+							</div>
+							<div class="extra-features__cards cards">
+								<div class="cards__item cards__item--highlighted">
+									<div class="cards__icon">
+										<img src="#" alt="The icon that represent features.">
+									</div>
+									<h3 class="cards__title">Professional</h3>
+									<p class="cards__text">Full service range including technical skills, design.</p>
+								</div>
+								<div class="cards__item">
+									<h3 class="cards__title">Accessibility</h3>
+									<p class="cards__text">Business understanding, ability to put themselves.</p>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio__service service">
+							<div class="service__img img-service">
+								<div class="img-service__element img-service__element--person-1">
+									<img src="#" alt="A man standing and looking at his phone, with a purple background behind him.">
+								</div>
+								<div class="img-service__element img-service__element--person-2">
+									<img src="#" alt="A person holding orange slices over their eyes, with a red background behind them.">
+								</div>
+								<div class="img-service__element img-service__element--triangle">
+									<img src="#" alt="Geometric shapes - triangle in the background.">
+								</div>
+								<div class="img-service__element img-service__element--card">
+									<img src="#" alt="White rectangle resembling a card.">
+								</div>
+								<div class="img-service__element img-service__element--sun">
+									<img src="#" alt="Decorative element resembling a sun.">
+								</div>
+								<div class="img-service__element img-service__element--arrow-1">
+									<img src="#" alt="Decorative element - arrow.">
+								</div>
+								<div class="img-service__element img-service__element--arrow-2">
+									<img src="#" alt="Decorative element - arrow.">
+								</div>
+							</div>
+							<div class="service__text-block text-block">
+								<div class="text-block__label">Service</div>
+								<h2 class="text-block__title">Making Complex Digital Products</h2>
+								<p class="text-block__subtitle">Agency provides a full service range including technical skills, design, business.</p>
+								<div class="text-block__quote quote">
+									<div class="quote__avatar">
+										<img src="#" alt="A small circular image of a person who is an author of quote.">
+									</div>
+									<div class="quote__info">
+										<div class="quote__text">"Understanding, ability to put themselves in the merchant's shoes. It is meant to partner."</div>
+										<div class="quote__author">Jenny Murtaugh</div>
+									</div>
+								</div>
+								<a href="#" class="text-block__button button">Explore</a>
+							</div>
+						</div>
+						<div class="portfolio__service-extra extra-service">
+							<div class="extra-service__text-block text-block">
+								<div class="text-block__label">Service</div>
+								<h2 class="text-block__title">How Our AgencyCan Help</h2>
+							</div>
+							<div class="extra-service__cards cards">
+								<div class="cards__item">
+									<div class="cards__icon">
+										<img src="#" alt="The icon that represent design service.">
+									</div>
+									<h3 class="cards__title">Design</h3>
+									<p class="cards__text">Agency provides a full service range including technical skills, design.</p>
+									<a href="#" class="cards__link">Learn More</a>
+								</div>
+								<div class="cards__item">
+									<div class="cards__icon">
+										<img src="#" alt="The icon that represent development service.">
+									</div>
+									<h3 class="cards__title">Development</h3>
+									<p class="cards__text">Full service range including technical skills, design, business.</p>
+									<a href="#" class="cards__link">Discover More</a>
+								</div>
+								<div class="cards__item">
+									<div class="cards__icon">
+										<img src="#" alt="The icon that represent marketing service.">
+									</div>
+									<h3 class="cards__title">Marketing</h3>
+									<p class="cards__text">Technical skills, design, business understanding, ability.</p>
+									<a href="#" class="cards__link">Explore Now</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__names names" id="names">
+					<h2 class="names__title title">Приклади розповсюджених назв класів по методології БЕМ</h2>
+					<div class="names__body">
+						<h3 class="names__subtitle subtitle">Header</h3>
+						<div class="names__items">
+							<div class="names__item">
+								<div>Блок (Block)</div>
+								<div>Елемент (Element)</div>
+								<div>Модифікатор (Modifier)</div>
+								<div>Блок__Елемент--Модифікатор</div>
+								<div>Опис</div>
+							</div>
+							<div class="names__item">
+								<div>header</div>
+								<div>header__logo</div>
+								<div>header--fixed</div>
+								<div>header__logo--small</div>
+								<div>Використовується для логотипу в заголовку.</div>
+							</div>
+							<div class="names__item">
+								<div>header</div>
+								<div>header__menu</div>
+								<div>header__menu--open</div>
+								<div>header__menu--closed</div>
+								<div>Використовується для меню навігації.</div>
+							</div>
+							<div class="names__item">
+								<div>header</div>
+								<div>header__title</div>
+								<div>header__title--large</div>
+								<div>header__title--highlighted</div>
+								<div>Використовується для заголовка сайту.</div>
+							</div>
+							<div class="names__item">
+								<div>header</div>
+								<div>header__search</div>
+								<div>header__search--active</div>
+								<div>header__search--disabled</div>
+								<div>Використовується для активного поля пошуку.</div>
+							</div>
+							<div class="names__item">
+								<div>header</div>
+								<div>header__icon</div>
+								<div>header__icon--dark</div>
+								<div>header__icon--light</div>
+								<div>Використовується для іконок у заголовку.</div>
+							</div>
+						</div>
+					</div>
+					<div class="names__body">
+						<h3 class="names__subtitle subtitle">Основний контент (Main)</h3>
+						<div class="names__items">
+							<div class="names__item">
+								<div>Блок (Block)</div>
+								<div>Елемент (Element)</div>
+								<div>Модифікатор (Modifier)</div>
+								<div>Блок__Елемент--Модифікатор</div>
+								<div>Опис</div>
+							</div>
+							<div class="names__item">
+								<div>main</div>
+								<div>main__section</div>
+								<div>main__section--highlighted</div>
+								<div>main__section--hidden</div>
+								<div>Використовується для секцій основного контенту.</div>
+							</div>
+							<div class="names__item">
+								<div>main</div>
+								<div>main__article</div>
+								<div>main__article--featured</div>
+								<div>main__article--archived</div>
+								<div>Використовується для статей у основному контенті.</div>
+							</div>
+							<div class="names__item">
+								<div>main</div>
+								<div>main__button</div>
+								<div>main__button--primary</div>
+								<div>main__button--disabled</div>
+								<div>Використовується для кнопок у основному контенті.</div>
+							</div>
+							<div class="names__item">
+								<div>main</div>
+								<div>main__image</div>
+								<div>main__image--responsive</div>
+								<div>main__image--error</div>
+								<div>Використовується для зображень у контенті.</div>
+							</div>
+							<div class="names__item">
+								<div>main</div>
+								<div>main__list</div>
+								<div>main__list--bulleted</div>
+								<div>main__list--numbered</div>
+								<div>Використовується для списків у основному контенті.</div>
+							</div>
+						</div>
+					</div>
+					<div class="names__body">
+						<h3 class="names__subtitle subtitle">Секція та стаття (Section/Article)</h3>
+						<div class="names__items">
+							<div class="names__item">
+								<div>Блок (Block)</div>
+								<div>Елемент (Element)</div>
+								<div>Модифікатор (Modifier)</div>
+								<div>Блок__Елемент--Модифікатор</div>
+								<div>Опис</div>
+							</div>
+							<div class="names__item">
+								<div>section</div>
+								<div>section__title</div>
+								<div>section__title--bold</div>
+								<div>section__title--italic</div>
+								<div>Використовується для заголовків секцій.</div>
+							</div>
+							<div class="names__item">
+								<div>article</div>
+								<div>article__content</div>
+								<div>article__content--expanded</div>
+								<div>article__content--collapsed</div>
+								<div>Використовується для контенту статей.</div>
+							</div>
+							<div class="names__item">
+								<div>section</div>
+								<div>section__description</div>
+								<div>section__description--highlighted</div>
+								<div>section__description--muted</div>
+								<div>Використовується для опису секцій.</div>
+							</div>
+							<div class="names__item">
+								<div>article</div>
+								<div>article__footer</div>
+								<div>article__footer--sticky</div>
+								<div>article__footer--hidden</div>
+								<div>Використовується для футера статей.</div>
+							</div>
+							<div class="names__item">
+								<div>section</div>
+								<div>section__media</div>
+								<div>section__media--large</div>
+								<div>section__media--small</div>
+								<div>Використовується для медіа у секціях.</div>
+							</div>
+						</div>
+					</div>
+					<div class="names__body">
+						<h3 class="names__subtitle subtitle">Текст та списки (Text/Lists)</h3>
+						<div class="names__items">
+							<div class="names__item">
+								<div>Блок (Block)</div>
+								<div>Елемент (Element)</div>
+								<div>Модифікатор (Modifier)</div>
+								<div>Блок__Елемент--Модифікатор</div>
+								<div>Опис</div>
+							</div>
+							<div class="names__item">
+								<div>text</div>
+								<div>text__paragraph</div>
+								<div>text__paragraph--highlighted</div>
+								<div>text__paragraph--muted</div>
+								<div>Використовується для параграфів тексту.</div>
+							</div>
+							<div class="names__item">
+								<div>text</div>
+								<div>text__title</div>
+								<div>text__title--small</div>
+								<div>text__title--large</div>
+								<div>Використовується для заголовків тексту.</div>
+							</div>
+							<div class="names__item">
+								<div>list</div>
+								<div>list__item</div>
+								<div>list__item--selected</div>
+								<div>list__item--disabled</div>
+								<div>Використовується для пунктів списків.</div>
+							</div>
+							<div class="names__item">
+								<div>list</div>
+								<div>list__header</div>
+								<div>list__header--collapsed</div>
+								<div>list__header--expanded</div>
+								<div>Використовується для заголовків списків.</div>
+							</div>
+							<div class="names__item">
+								<div>list</div>
+								<div>list__footer</div>
+								<div>list__footer--sticky</div>
+								<div>list__footer--hidden</div>
+								<div>Використовується для футера списків.</div>
+							</div>
+						</div>
+					</div>
+					<div class="names__body">
+						<h3 class="names__subtitle subtitle">Футер (Footer)</h3>
+						<div class="names__items">
+							<div class="names__item">
+								<div>Блок (Block)</div>
+								<div>Елемент (Element)</div>
+								<div>Модифікатор (Modifier)</div>
+								<div>Блок__Елемент--Модифікатор</div>
+								<div>Опис</div>
+							</div>
+							<div class="names__item">
+								<div>footer</div>
+								<div>footer__link</div>
+								<div>footer__link--active</div>
+								<div>footer__link--disabled</div>
+								<div>Використовується для посилань у футері.</div>
+							</div>
+							<div class="names__item">
+								<div>footer</div>
+								<div>footer__social</div>
+								<div>footer__social--highlighted</div>
+								<div>footer__social--hidden</div>
+								<div>Використовується для соціальних іконок.</div>
+							</div>
+							<div class="names__item">
+								<div>footer</div>
+								<div>footer__copyright</div>
+								<div>footer__copyright--small</div>
+								<div>footer__copyright--large</div>
+								<div>Використовується для копірайту.</div>
+							</div>
+							<div class="names__item">
+								<div>footer</div>
+								<div>footer__contact</div>
+								<div>footer__contact--hidden</div>
+								<div>footer__contact--visible</div>
+								<div>Використовується для контактної інформації.</div>
+							</div>
+							<div class="names__item">
+								<div>footer</div>
+								<div>footer__newsletter</div>
+								<div>footer__newsletter--active</div>
+								<div>footer__newsletter--disabled</div>
+								<div>Використовується для підписки на новини.</div>
+							</div>
+						</div>
+					</div>
+					<div class="names__body">
+						<h3 class="names__subtitle subtitle">Карточки (Card)</h3>
+						<div class="names__items">
+							<div class="names__item">
+								<div>Блок (Block)</div>
+								<div>Елемент (Element)</div>
+								<div>Модифікатор (Modifier)</div>
+								<div>Блок__Елемент--Модифікатор</div>
+								<div>Опис</div>
+							</div>
+							<div class="names__item">
+								<div>card</div>
+								<div>card__header</div>
+								<div>card__header--highlighted</div>
+								<div>card__header--small</div>
+								<div>Використовується для заголовка карточки.</div>
+							</div>
+							<div class="names__item">
+								<div>card</div>
+								<div>card__content</div>
+								<div>card__content--expanded</div>
+								<div>card__content--collapsed</div>
+								<div>Використовується для контенту карточки.</div>
+							</div>
+							<div class="names__item">
+								<div>card</div>
+								<div>card__footer</div>
+								<div>card__footer--sticky</div>
+								<div>card__footer--hidden</div>
+								<div>Використовується для футера карточки.</div>
+							</div>
+							<div class="names__item">
+								<div>card</div>
+								<div>card__image</div>
+								<div>card__image--rounded</div>
+								<div>card__image--cover</div>
+								<div>Використовується для зображень в карточках.</div>
+							</div>
+							<div class="names__item">
+								<div>card</div>
+								<div>card__button</div>
+								<div>card__button--primary</div>
+								<div>card__button--disabled</div>
+								<div>Використовується для кнопок у карточках.</div>
+							</div>
+						</div>
+					</div>
+					<div class="names__body">
+						<h3 class="names__subtitle subtitle">Сповіщення (Notification)</h3>
+						<div class="names__items">
+							<div class="names__item">
+								<div>Блок (Block)</div>
+								<div>Елемент (Element)</div>
+								<div>Модифікатор (Modifier)</div>
+								<div>Блок__Елемент--Модифікатор</div>
+								<div>Опис</div>
+							</div>
+							<div class="names__item">
+								<div>notification</div>
+								<div>notification__message</div>
+								<div>notification--success</div>
+								<div>notification__message--error</div>
+								<div>Використовується для повідомлень про успіх.</div>
+							</div>
+							<div class="names__item">
+								<div>notification</div>
+								<div>notification__icon</div>
+								<div>notification__icon--error</div>
+								<div>notification__icon--info</div>
+								<div>Використовується для іконок сповіщень.</div>
+							</div>
+							<div class="names__item">
+								<div>notification</div>
+								<div>notification__close</div>
+								<div>notification__close--hidden</div>
+								<div>notification__close--visible</div>
+								<div>Використовується для кнопки закриття сповіщення.</div>
+							</div>
+							<div class="names__item">
+								<div>notification</div>
+								<div>notification__title</div>
+								<div>notification__title--bold</div>
+								<div>notification__title--italic</div>
+								<div>Використовується для заголовка сповіщення.</div>
+							</div>
+							<div class="names__item">
+								<div>notification</div>
+								<div>notification__button</div>
+								<div>notification__button--primary</div>
+								<div>notification__button--secondary</div>
+								<div>Використовується для кнопок у сповіщеннях.</div>
+							</div>
+						</div>
+					</div>
+					<div class="names__body">
+						<h3 class="names__subtitle subtitle">Модальні вікна (Modal)</h3>
+						<div class="names__items">
+							<div class="names__item">
+								<div>Блок (Block)</div>
+								<div>Елемент (Element)</div>
+								<div>Модифікатор (Modifier)</div>
+								<div>Блок__Елемент--Модифікатор</div>
+								<div>Опис</div>
+							</div>
+							<div class="names__item">
+								<div>modal</div>
+								<div>modal__overlay</div>
+								<div>modal--visible</div>
+								<div>modal__overlay--blurred</div>
+								<div>Використовується для затемнення фону під модальним вікном.</div>
+							</div>
+							<div class="names__item">
+								<div>modal</div>
+								<div>modal__content</div>
+								<div>modal__content--centered</div>
+								<div>modal__content--expanded</div>
+								<div>Використовується для контенту модального вікна.</div>
+							</div>
+							<div class="names__item">
+								<div>modal</div>
+								<div>modal__header</div>
+								<div>modal__header--highlighted</div>
+								<div>modal__header--small</div>
+								<div>Використовується для заголовка модального вікна.</div>
+							</div>
+							<div class="names__item">
+								<div>modal</div>
+								<div>modal__close</div>
+								<div>modal__close--icon</div>
+								<div>modal__close--hidden</div>
+								<div>Використовується для кнопки закриття модального вікна.</div>
+							</div>
+							<div class="names__item">
+								<div>modal</div>
+								<div>modal__footer</div>
+								<div>modal__footer--sticky</div>
+								<div>modal__footer--hidden</div>
+								<div>Використовується для футера модального вікна.</div>
+							</div>
+						</div>
+					</div>
+					<div class="names__body">
+						<h3 class="names__subtitle subtitle">Таблиці (Table)</h3>
+						<div class="names__items">
+							<div class="names__item">
+								<div>Блок (Block)</div>
+								<div>Елемент (Element)</div>
+								<div>Модифікатор (Modifier)</div>
+								<div>Блок__Елемент--Модифікатор</div>
+								<div>Опис</div>
+							</div>
+							<div class="names__item">
+								<div>table</div>
+								<div>table__row</div>
+								<div>table__row--striped</div>
+								<div>table__row--hovered</div>
+								<div>Використовується для рядків таблиць.</div>
+							</div>
+							<div class="names__item">
+								<div>table</div>
+								<div>table__cell</div>
+								<div>table__cell--header</div>
+								<div>table__cell--highlighted</div>
+								<div>Використовується для клітинок таблиць.</div>
+							</div>
+							<div class="names__item">
+								<div>table</div>
+								<div>table__header</div>
+								<div>table__header--sticky</div>
+								<div>table__header--hidden</div>
+								<div>Використовується для заголовка таблиці.</div>
+							</div>
+							<div class="names__item">
+								<div>table</div>
+								<div>table__footer</div>
+								<div>table__footer--sticky</div>
+								<div>table__footer--hidden</div>
+								<div>Використовується для футера таблиці.</div>
+							</div>
+							<div class="names__item">
+								<div>table</div>
+								<div>table__pagination</div>
+								<div>table__pagination--active</div>
+								<div>table__pagination--disabled</div>
+								<div>Використовується для навігації по таблицях.</div>
+							</div>
+						</div>
+					</div>
+					<div class="names__body">
+						<h3 class="names__subtitle subtitle">Кнопки (Button)</h3>
+						<div class="names__items">
+							<div class="names__item">
+								<div>Блок (Block)</div>
+								<div>Елемент (Element)</div>
+								<div>Модифікатор (Modifier)</div>
+								<div>Блок__Елемент--Модифікатор</div>
+								<div>Опис</div>
+							</div>
+							<div class="names__item">
+								<div>button</div>
+								<div>button__icon</div>
+								<div>button--primary</div>
+								<div>button__icon--large</div>
+								<div>Використовується для кнопок з іконками.</div>
+							</div>
+							<div class="names__item">
+								<div>button</div>
+								<div>button__text</div>
+								<div>button--secondary</div>
+								<div>button__text--disabled</div>
+								<div>Використовується для текстових кнопок.</div>
+							</div>
+							<div class="names__item">
+								<div>button</div>
+								<div>button__loading</div>
+								<div>button--loading</div>
+								<div>button__loading--hidden</div>
+								<div>Використовується для кнопок з індикатором завантаження.</div>
+							</div>
+							<div class="names__item">
+								<div>button</div>
+								<div>button__group</div>
+								<div>button__group--vertical</div>
+								<div>button__group--horizontal</div>
+								<div>Використовується для групи кнопок.</div>
+							</div>
+							<div class="names__item">
+								<div>button</div>
+								<div>button__icon--small</div>
+								<div>button--small</div>
+								<div>button__icon--medium</div>
+								<div>Використовується для кнопок різного розміру.</div>
+							</div>
+						</div>
+					</div>
+					<div class="names__body">
+						<h3 class="names__subtitle subtitle">Форми (Form)</h3>
+						<div class="names__items">
+							<div class="names__item">
+								<div>Блок (Block)</div>
+								<div>Елемент (Element)</div>
+								<div>Модифікатор (Modifier)</div>
+								<div>Блок__Елемент--Модифікатор</div>
+								<div>Опис</div>
+							</div>
+							<div class="names__item">
+								<div>form</div>
+								<div>form__input</div>
+								<div>form__input--error</div>
+								<div>form__input--success</div>
+								<div>Використовується для полів вводу з помилками або успіхом.</div>
+							</div>
+							<div class="names__item">
+								<div>form</div>
+								<div>form__label</div>
+								<div>form__label--required</div>
+								<div>form__label--disabled</div>
+								<div>Використовується для міток полів форми.</div>
+							</div>
+							<div class="names__item">
+								<div>form</div>
+								<div>form__textarea</div>
+								<div>form__textarea--resize</div>
+								<div>form__textarea--readonly</div>
+								<div>Використовується для текстових областей.</div>
+							</div>
+							<div class="names__item">
+								<div>form</div>
+								<div>form__button</div>
+								<div>form__button--submit</div>
+								<div>form__button--reset</div>
+								<div>Використовується для кнопок у формах.</div>
+							</div>
+							<div class="names__item">
+								<div>form</div>
+								<div>form__error</div>
+								<div>form__error--visible</div>
+								<div>form__error--hidden</div>
+								<div>Використовується для повідомлень про помилки в формах.</div>
+							</div>
+						</div>
+					</div>
+					<div class="names__body">
+						<h3 class="names__subtitle subtitle">Слайдер (Slider)</h3>
+						<div class="names__items">
+							<div class="names__item">
+								<div>Блок (Block)</div>
+								<div>Елемент (Element)</div>
+								<div>Модифікатор (Modifier)</div>
+								<div>Блок__Елемент--Модифікатор</div>
+								<div>Опис</div>
+							</div>
+							<div class="names__item">
+								<div>slider</div>
+								<div>slider__track</div>
+								<div>slider__track--active</div>
+								<div>slider__track--disabled</div>
+								<div>Використовується для фону слайдера.</div>
+							</div>
+							<div class="names__item">
+								<div>slider</div>
+								<div>slider__thumb</div>
+								<div>slider__thumb--dragging</div>
+								<div>slider__thumb--focused</div>
+								<div>Використовується для повзунка слайдера.</div>
+							</div>
+							<div class="names__item">
+								<div>slider</div>
+								<div>slider__label</div>
+								<div>slider__label--visible</div>
+								<div>slider__label--hidden</div>
+								<div>Використовується для підписів до слайдера.</div>
+							</div>
+							<div class="names__item">
+								<div>slider</div>
+								<div>slider__value</div>
+								<div>slider__value--high</div>
+								<div>slider__value--low</div>
+								<div>Використовується для відображення значення слайдера.</div>
+							</div>
+							<div class="names__item">
+								<div>slider</div>
+								<div>slider__button</div>
+								<div>slider__button--next</div>
+								<div>slider__button--prev</div>
+								<div>Використовується для кнопок перемикання слайдів.</div>
+							</div>
+						</div>
+					</div>
+					<div class="names__body">
+						<h3 class="names__subtitle subtitle">Галерея (Gallery)</h3>
+						<div class="names__items">
+							<div class="names__item">
+								<div>Блок (Block)</div>
+								<div>Елемент (Element)</div>
+								<div>Модифікатор (Modifier)</div>
+								<div>Блок__Елемент--Модифікатор</div>
+								<div>Опис</div>
+							</div>
+							<div class="names__item">
+								<div>gallery</div>
+								<div>gallery__item</div>
+								<div>gallery__item--active</div>
+								<div>gallery__item--hidden</div>
+								<div>Використовується для окремих зображень у галереї.</div>
+							</div>
+							<div class="names__item">
+								<div>gallery</div>
+								<div>gallery__thumbnail</div>
+								<div>gallery__thumbnail--hovered</div>
+								<div>gallery__thumbnail--selected</div>
+								<div>Використовується для мініатюр зображень.</div>
+							</div>
+							<div class="names__item">
+								<div>gallery</div>
+								<div>gallery__caption</div>
+								<div>gallery__caption--visible</div>
+								<div>gallery__caption--hidden</div>
+								<div>Використовується для підпису до зображень.</div>
+							</div>
+							<div class="names__item">
+								<div>gallery</div>
+								<div>gallery__grid</div>
+								<div>gallery__grid--columns</div>
+								<div>gallery__grid--rows</div>
+								<div>Використовується для макета галереї.</div>
+							</div>
+							<div class="names__item">
+								<div>gallery</div>
+								<div>gallery__overlay</div>
+								<div>gallery__overlay--visible</div>
+								<div>gallery__overlay--hidden</div>
+								<div>Використовується для затемнення фону під зображеннями.</div>
+							</div>
+						</div>
+					</div>
+					<div class="names__body">
+						<h3 class="names__subtitle subtitle">Прогрес (Progress)</h3>
+						<div class="names__items">
+							<div class="names__item">
+								<div>Блок (Block)</div>
+								<div>Елемент (Element)</div>
+								<div>Модифікатор (Modifier)</div>
+								<div>Блок__Елемент--Модифікатор</div>
+								<div>Опис</div>
+							</div>
+							<div class="names__item">
+								<div>progress</div>
+								<div>progress__bar</div>
+								<div>progress__bar--success</div>
+								<div>progress__bar--error</div>
+								<div>Використовується для індикації успіху або помилки.</div>
+							</div>
+							<div class="names__item">
+								<div>progress</div>
+								<div>progress__label</div>
+								<div>progress__label--visible</div>
+								<div>progress__label--hidden</div>
+								<div>Використовується для підпису прогресу.</div>
+							</div>
+							<div class="names__item">
+								<div>progress</div>
+								<div>progress__container</div>
+								<div>progress__container--large</div>
+								<div>progress__container--small</div>
+								<div>Використовується для контейнера прогресу.</div>
+							</div>
+							<div class="names__item">
+								<div>progress</div>
+								<div>progress__indicator</div>
+								<div>progress__indicator--active</div>
+								<div>progress__indicator--disabled</div>
+								<div>Використовується для індикатора активності.</div>
+							</div>
+							<div class="names__item">
+								<div>progress</div>
+								<div>progress__step</div>
+								<div>progress__step--completed</div>
+								<div>progress__step--current</div>
+								<div>Використовується для відображення кроків прогресу.</div>
+							</div>
+						</div>
+					</div>
+					<div class="names__body">
+						<h3 class="names__subtitle subtitle">Вкладки (Tabs)</h3>
+						<div class="names__items">
+							<div class="names__item">
+								<div>Блок (Block)</div>
+								<div>Елемент (Element)</div>
+								<div>Модифікатор (Modifier)</div>
+								<div>Блок__Елемент--Модифікатор</div>
+								<div>Опис</div>
+							</div>
+							<div class="names__item">
+								<div>tabs</div>
+								<div>tabs__header</div>
+								<div>tabs__header--active</div>
+								<div>tabs__header--disabled</div>
+								<div>Використовується для заголовків вкладок.</div>
+							</div>
+							<div class="names__item">
+								<div>tabs</div>
+								<div>tabs__content</div>
+								<div>tabs__content--visible</div>
+								<div>tabs__content--hidden</div>
+								<div>Використовується для контенту вкладок.</div>
+							</div>
+							<div class="names__item">
+								<div>tabs</div>
+								<div>tabs__button</div>
+								<div>tabs__button--primary</div>
+								<div>tabs__button--secondary</div>
+								<div>Використовується для кнопок переключення вкладок.</div>
+							</div>
+							<div class="names__item">
+								<div>tabs</div>
+								<div>tabs__icon</div>
+								<div>tabs__icon--highlighted</div>
+								<div>tabs__icon--inactive</div>
+								<div>Використовується для іконок вкладок.</div>
+							</div>
+							<div class="names__item">
+								<div>tabs</div>
+								<div>tabs__badge</div>
+								<div>tabs__badge--new</div>
+								<div>tabs__badge--notification</div>
+								<div>Використовується для позначок нових вкладок.</div>
+							</div>
+						</div>
+					</div>
+					<div class="names__body">
+						<h3 class="names__subtitle subtitle">Інформаційні панелі (Info Panel)</h3>
+						<div class="names__items">
+							<div class="names__item">
+								<div>Блок (Block)</div>
+								<div>Елемент (Element)</div>
+								<div>Модифікатор (Modifier)</div>
+								<div>Блок__Елемент--Модифікатор</div>
+								<div>Опис</div>
+							</div>
+							<div class="names__item">
+								<div>info-panel</div>
+								<div>info-panel__header</div>
+								<div>info-panel__header--highlighted</div>
+								<div>info-panel__header--small</div>
+								<div>Використовується для заголовка інформаційної панелі.</div>
+							</div>
+							<div class="names__item">
+								<div>info-panel</div>
+								<div>info-panel__content</div>
+								<div>info-panel__content--expanded</div>
+								<div>info-panel__content--collapsed</div>
+								<div>Використовується для контенту інформаційної панелі.</div>
+							</div>
+							<div class="names__item">
+								<div>info-panel</div>
+								<div>info-panel__footer</div>
+								<div>info-panel__footer--sticky</div>
+								<div>info-panel__footer--hidden</div>
+								<div>Використовується для футера інформаційної панелі.</div>
+							</div>
+							<div class="names__item">
+								<div>info-panel</div>
+								<div>info-panel__button</div>
+								<div>info-panel__button--primary</div>
+								<div>info-panel__button--secondary</div>
+								<div>Використовується для кнопок в інформаційній панелі.</div>
+							</div>
+							<div class="names__item">
+								<div>info-panel</div>
+								<div>info-panel__icon</div>
+								<div>info-panel__icon--warning</div>
+								<div>info-panel__icon--info</div>
+								<div>Використовується для іконок в інформаційній панелі.</div>
+							</div>
+						</div>
+					</div>
+					<div class="names__body">
+						<h3 class="names__subtitle subtitle">Аксесуари (Accessory)</h3>
+						<div class="names__items">
+							<div class="names__item">
+								<div>Блок (Block)</div>
+								<div>Елемент (Element)</div>
+								<div>Модифікатор (Modifier)</div>
+								<div>Блок__Елемент--Модифікатор</div>
+								<div>Опис</div>
+							</div>
+							<div class="names__item">
+								<div>accessory</div>
+								<div>accessory__item</div>
+								<div>accessory__item--active</div>
+								<div>accessory__item--disabled</div>
+								<div>Використовується для окремих аксесуарів.</div>
+							</div>
+							<div class="names__item">
+								<div>accessory</div>
+								<div>accessory__icon</div>
+								<div>accessory__icon--highlighted</div>
+								<div>accessory__icon--hidden</div>
+								<div>Використовується для іконок аксесуарів.</div>
+							</div>
+							<div class="names__item">
+								<div>accessory</div>
+								<div>accessory__label</div>
+								<div>accessory__label--visible</div>
+								<div>accessory__label--hidden</div>
+								<div>Використовується для підписів аксесуарів.</div>
+							</div>
+							<div class="names__item">
+								<div>accessory</div>
+								<div>accessory__button</div>
+								<div>accessory__button--primary</div>
+								<div>accessory__button--secondary</div>
+								<div>Використовується для кнопок аксесуарів.</div>
+							</div>
+							<div class="names__item">
+								<div>accessory</div>
+								<div>accessory__header</div>
+								<div>accessory__header--small</div>
+								<div>accessory__header--large</div>
+								<div>Використовується для заголовків аксесуарів.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<p class="footer__item">Інформація взята з офіційного сайту <a href="https://en.bem.info/methodology/quick-start/" target="_blank">методології БЕМ</a></p>
+				<p class="footer__item">Назви класів згенеровано за допомогою <a href="https://openai.com/index/gpt-4/" target="_blank">chatGPT</a></p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
