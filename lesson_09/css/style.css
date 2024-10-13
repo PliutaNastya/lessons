@@ -170,6 +170,216 @@ body {
 	color: #3B1F2B;
 }
 
+
+
+.portfolio {
+	background-color: #FDF0E9;
+}
+.companies {
+	padding-block: 73px;
+	border-block-end: 1px solid #F3D1BF;
+}
+
+.companies__image {
+	display: inline-block;
+}
+.companies__image:not(:last-child) {
+	margin-inline-end: 140px;
+}
+.portfolio__about {}
+.about {
+	padding-block-start: 100px;
+	padding-block-end: 80px;
+}
+.about__body > * {
+	display: inline-block;
+	vertical-align: middle;
+}
+.about__img:not(:last-child) {
+	margin-inline-end: 120px;
+}
+
+.text-block {
+	max-width: 480px;
+}
+.text-block > * {
+	margin-block-end: 20px;
+}
+.text-block > *:last-child {
+	margin-block-end: 0px;
+}
+.text-block__label {
+	color: #EF6D58;
+	line-height: 2;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+.text-block__title {
+	color: #391400;
+	text-transform: capitalize;
+	font-size: 56px;
+	font-weight: 800;
+	line-height: 1.1;
+	letter-spacing: -1px;
+}
+.text-block__subtitle {
+	color: #391400;
+	font-size: 20px;
+	line-height: 1.6;
+}
+.text-block__text {
+	color: rgba(57, 20, 0, 0.64);
+	line-height: 2;
+	margin-block-end: 34px;
+}
+.text-block__link {
+	color: #391400;
+	line-height: 2;
+	transition: all 0.3s;
+}
+.text-block__link:hover {
+	text-decoration: underline;
+}
+
+.button {
+	border-radius: 6px;
+	background: #FFF;
+	box-shadow: 0px 3px 9px 0px rgba(57, 20, 0, 0.08);
+	padding: 18px 5px;
+	text-align: center;
+	min-inline-size: 138px;
+	color: #391400;
+	font-size: 14px;
+	font-weight: 900;
+	text-transform: uppercase;
+	transition: all 0.3s;
+}
+.button:hover {
+	background-color: rgba(57, 20, 0, 0.64);
+	color: #FFFFFF;
+}
+.achievements {
+	padding-block-start: 80px;
+	padding-block-end: 70px;
+}
+.achievements__body {
+	font-size: 0;
+	border-radius: 6px;
+	border: 1px solid #F3D1BF;
+}
+.achievements__column {
+	display: inline-block;
+	width: 33.333%;
+	padding: 45px 45px 38px 48px;
+	border-inline-end: 1px solid #F3D1BF;
+}
+.achievements__column > * {
+	margin-block-end: 13px;
+}
+.achievements__column > *:last-child {
+	margin-block-end: 0px;
+}
+.achievements__quantity {
+	color:  #391400;
+	font-size: 40px;
+	font-weight: 800;
+	line-height: 1.2;
+}
+.achievements__title {
+	color: #391400;
+	font-size: 20px;
+	line-height: 1.6;
+}
+.how-we-work {
+	padding-block-start: 70px;
+	padding-block-end: 108px;
+	border-block-end: 1px solid #F3D1BF;
+}
+.how-we-work__body > * {
+	display: inline-block;
+	vertical-align: middle;
+}
+.how-we-work__text-block:not(:last-child) {
+	margin-inline-end: 130px;
+}
+
+.item-ol-list > * {
+	display: inline-block;
+	vertical-align: middle;
+}
+.item-ol-list__number {
+	color: #391400;
+	font-size: 72px;
+	font-weight: 800;
+	line-height: 1.1;
+	letter-spacing: -2px;
+}
+.item-ol-list__number:not(:last-child) {
+	margin-inline-end: 65px;
+}
+.item-ol-list__definition {
+	color: #391400;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1.3;
+}
+.portfolio__video {}
+.video {}
+.video__body {}
+.video__media {}
+.video__preview-image {}
+.video__text-block {}
+.portfolio__features {}
+.features {}
+.features__text-block {}
+.text-block__ul-list {}
+.list-ul {}
+.list-ul__item {}
+.features__img {}
+.img-features {}
+.img-features__element {}
+.img-features__element--main-image {}
+.img-features__element--avatar {}
+.img-features__element--cloud {}
+.img-features__element--arrow {}
+.img-features__element--rectangle-1 {}
+.img-features__element--rectangle-2 {}
+.portfolio__features-extra {}
+.extra-features {}
+.extra-features__text-block {}
+.extra-features__cards {}
+.cards {}
+.cards__item {}
+.cards__item--highlighted {}
+.cards__icon {}
+.cards__title {}
+.cards__text {}
+.portfolio__service {}
+.service {}
+.service__img {}
+.img-service {}
+.img-service__element {}
+.img-service__element--person-1 {}
+.img-service__element--person-2 {}
+.img-service__element--triangle {}
+.img-service__element--card {}
+.img-service__element--sun {}
+.img-service__element--arrow-1 {}
+.img-service__element--arrow-2 {}
+.service__text-block {}
+.text-block__quote {}
+.quote {}
+.quote__avatar {}
+.quote__info {}
+.quote__text {}
+.quote__author {}
+.portfolio__service-extra {}
+.extra-service {}
+.extra-service__text-block {}
+.extra-service__cards {}
+.cards__link {}
+
+
 /* Стилі для footer */
 
 .footer {
