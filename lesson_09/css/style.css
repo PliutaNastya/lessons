@@ -150,20 +150,20 @@ body {
 	background-color: #eceed367;
 	font-size: 0;
 	margin-inline: -5px;
-	text-align: center;
+	/* text-align: center; */
 	border: 1px solid #3b1f2b34;
+	overflow: hidden;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) inset;
+}
+.names__item {
+	margin: 0px -1px -1px 0px;
 }
 .names__item div {
 	display: inline-block;
 	width: 20%;
 	font-size: 18px;
 	padding: 5px;
-}
-.names__item:not(:last-child) {
 	border-bottom: 1px solid #3b1f2b34;
-}
-.names__item div:not(:last-child) {
 	border-right: 1px solid #3b1f2b34;
 }
 .names__items .names__item:first-child {
@@ -171,7 +171,7 @@ body {
 	color: #3B1F2B;
 }
 
-
+/* Стилі для макету "Портфоліо" - Домашня робота */
 
 .portfolio {
 	font-family: "Epilogue", sans-serif;
@@ -464,6 +464,7 @@ body {
 	border-bottom-right-radius: 6px;
 }
 .cards__icon {
+	padding: 5px;
 	width: 80px;
 	height: 80px;
 	display: flex;
@@ -471,6 +472,9 @@ body {
 	justify-content: center;
 	border-radius: 50%;
 	background-color: #EF6C57;
+}
+.cards__icon img{
+	max-width: 100%;
 }
 .cards__title {
 	color: #391400;
