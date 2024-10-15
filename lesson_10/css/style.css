@@ -446,13 +446,18 @@ body {
 }
 .img-block__item--icon {
 	position: absolute;
-	top: 6.65%; /*40/602*/
-	left: 53.33%; /*304/570*/
+	top: 11.30%; /*68/602*/
+	left: 59.47%; /*339/570*/
+	z-index: 2;
+}
+.img-block__item--icon::after {
+	content: "";
+	position: absolute;
+	top: calc(50% - 56px);
+	left: calc(50% - 56px);
+	z-index: -1;
 	width: 112px;
 	height: 112px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	background-color: #EF6D58;
 	border-radius: 50%;
 }
@@ -470,7 +475,6 @@ body {
 	height: 555px;
 	margin-inline: auto;
 }
-.img-personal__item {}
 .img-personal__item--circle {
 	position: absolute;
 	bottom: 0;
@@ -516,22 +520,24 @@ body {
 }
 .img-personal__item--pen {
 	position: absolute;
-	top: 1.8%; /*10/555*/
-	left: 0;
+	top: 16.216216%; /* 90/555 */
+	left: 15.508772%; /* 88.4/570 */
 	z-index: 2;
+}
+.img-personal__item--pen::after {
+	content: "";
+	position: absolute;
+	top: calc(50% - 94px);
+	left: calc(50% - 94px);
 	width: 188px;
 	height: 188px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	vertical-align: middle;
-	text-align: center;
+	z-index: -1;
 	background: url("../img/portfolio/personal_section/star_bg.svg") 0 0 / 188px no-repeat;
 }
 .img-personal__item--arrow {
 	position: absolute;
-	top: 23.6%; /*131/555*/
-	left: 21.05%; /*120/570*/
+	top: 23.01%; /*128/555*/
+	left: 22.46%; /*128/570*/
 	z-index: 0;
 }
 .img-personal__item--arrow-2 {
