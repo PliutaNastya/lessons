@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="keywords" content="CSS, позиціонування, статичне, відносне, абсолютне, фіксоване, липке, z-index, static, absolute, relative, fixed, sticky.">
+   <meta name="description" content="Гайд по властивості позиціонування в CSS: статичне, відносне, абсолютне, фіксоване та липке. Приклади застосування.">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Позиціонування в CSS: типи, приклади та використання</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<ul class="header__menu menu">
+					<li class="menu__item"><a href="#general-positions">Позиціонування в CSS</a></li>
+					<li class="menu__item">
+						<a href="#types-positions">Типи позиціонування</a>
+						<ul class="menu__sublist">
+							<li class="menu__subitem"><a href="#static-block">Статичне позиціонування (static)</a></li>
+							<li class="menu__subitem"><a href="#relative-block">Відносне позиціонування (relative)</a></li>
+							<li class="menu__subitem"><a href="#absolute-block">Абсолютне позиціонування (absolute)</a></li>
+							<li class="menu__subitem"><a href="#fixed-block">Фіксоване позиціонування (fixed)</a></li>
+							<li class="menu__subitem"><a href="#sticky-block">Липке позиціонування (sticky)</a></li>
+						</ul>
+					</li>
+					<li class="menu__item"><a href="#z-index">z-index</a></li>
+					<li class="menu__item"><a href="#practice-cases">Приклади застосування</a></li>
+					<li class="menu__item"><a href="#hexagons">Соти</a></li>
+					<li class="menu__item"><a href="#homework">Домашня робота</a></li>
+				</ul>
+			</div>
+		</header>
+		<main class="main">
+			<div class="main__container">
+				<h1 class="main__title title">Позиціонування в CSS: типи, приклади та використання</h1>
+				<div class="main__positions-general general-positions" id="general-positions">
+					<h2 class="general-positions__title title">Позиціонування в CSS</h2>
+					<p class="general-positions__text text">Позиціонування в CSS — це основний інструмент для контролю над тим, як елементи веб-сторінки відображаються на екрані. Завдяки різним типам позиціонування, ми можемо змінювати положення елементів відносно їхніх батьківських елементів, вікна браузера чи інших об'єктів.</p>
+					<p class="general-positions__text text">CSS дозволяє визначити, як елемент має розташовуватись у документі. Властивість position відповідає за те, де буде знаходитися блок або елемент. Її значення впливають на розміщення елемента, яке може бути динамічним або фіксованим.</p>
+					<div class="general-positions__code text">
+						element {
+							<span>position: тип;</span>
+							<span>top: значення;</span>
+							<span>right: значення;</span>
+							<span>bottom: значення;</span>
+							<span>left: значення;</span>
+						}
+					</div>
+				</div>
+				<div class="main__positions-types types-positions" id="types-positions">
+					<h2 class="types-positions__title title">Типи позиціонування</h2>
+					<div class="types-positions__static static-block" id="static-block">
+						<h3 class="static-block__subtitle subtitle">Статичне позиціонування (static)</h3>
+						<p class="static-block__text text">Це позиціонування за замовчуванням для всіх елементів. Воно не змінює положення елементів відносно їх природного потоку в документі. Статично позиціоновані елементи не реагують на властивості top, right, bottom і left.</p>
+						<div class="static-block__examples examples-position">
+							<div class="examples-position__item examples-position__item--1"></div>
+							<div class="examples-position__item examples-position__item--2"></div>
+							<div class="examples-position__item examples-position__item--3"></div>
+						</div>
+					</div>
+					<div class="types-positions__relative relative-block" id="relative-block">
+						<h3 class="relative-block__subtitle subtitle">Відносне позиціонування (relative)</h3>
+						<p class="relative-block__text text">Елементи з відносним позиціонуванням зміщуються від свого звичайного місця у документі. Вони залишають "порожнє" місце на початковій позиції.</p>
+						<div class="relative-block__examples examples-position">
+							<div class="examples-position__item examples-position__item--1"></div>
+							<div class="examples-position__item examples-position__item--2"></div>
+							<div class="examples-position__item examples-position__item--3"></div>
+						</div>
+						<p class="relative-block__text text">У цьому прикладі елемент зміститься вниз на 10 пікселів і праворуч на 40 пікселів.</p>
+					</div>
+					<div class="types-positions__absolute absolute-block" id="absolute-block">
+						<h3 class="absolute-block__subtitle subtitle">Абсолютне позиціонування (absolute)</h3>
+						<p class="absolute-block__text text">Елементи з абсолютним позиціонуванням розміщуються відносно найближчого батьківського елемента, який має інше, ніж static, позиціонування. Якщо такого елемента немає, елемент буде позиціонуватися відносно вікна браузера.</p>
+						<div class="absolute-block__examples examples-position">
+							<div class="examples-position__item examples-position__item--1"></div>
+							<div class="examples-position__item examples-position__item--2"></div>
+							<div class="examples-position__item examples-position__item--3"></div>
+						</div>
+						<p class="absolute-block__text text">Тут елемент буде зміщений на 10 пікселів від верхнього краю свого батьківського елемента і праворуч на 40 пікселів.</p>
+					</div>
+					<div class="types-positions__fixed fixed-block" id="fixed-block">
+						<h3 class="fixed-block__subtitle subtitle">Фіксоване позиціонування (fixed)</h3>
+						<p class="fixed-block__text text">Фіксовані елементи завжди залишаються на одному місці навіть при прокручуванні сторінки. Вони розміщуються відносно вікна браузера.</p>
+						<div class="fixed-block__examples examples-position">
+							<div class="examples-position__item examples-position__item--1"></div>
+							<div class="examples-position__item examples-position__item--2"></div>
+							<div class="examples-position__item examples-position__item--3"></div>
+						</div>
+						<p class="fixed-block__text text">Цей блок залишиться у нижньому правому куті незалежно від того, скільки користувач прокручує сторінку.</p>
+					</div>
+					<div class="types-positions__sticky sticky-block" id="sticky-block">
+						<h3 class="sticky-block__subtitle subtitle">Липке позиціонування (sticky)</h3>
+						<p class="sticky-block__text text">Липке позиціонування поєднує властивості відносного та фіксованого позиціонування. Елемент діє як відносно позиціонований, доки не досягне певної точки прокручування, після чого "прилипає" і веде себе як фіксований.</p>
+						<div class="sticky-block__examples examples-position">
+							<div class="examples-position__item examples-position__item--1"></div>
+							<div class="examples-position__item examples-position__item--2"></div>
+							<div class="examples-position__item examples-position__item--3"></div>
+						</div>
+						<p class="sticky-block__text text">Цей блок залишиться на своєму місці, доки не буде прокручено до верху сторінки, де він стане фіксованим на 20px нижче верху сторінки.</p>
+					</div>
+				</div>
+				<div class="main__z-index z-index" id="z-index">
+					<h2 class="z-index__title title">Порядок накладання (z-index)</h2>
+					<p class="z-index__text text">z-index визначає порядок накладання елементів, коли вони перекриваються. Елементи з більшим значенням z-index будуть поверх елементів з меншим значенням.</p>
+					<div class="z-index__examples examples-position">
+						<div class="examples-position__item examples-position__item--1"></div>
+						<div class="examples-position__item examples-position__item--2"></div>
+						<div class="examples-position__item examples-position__item--3"></div>
+					</div>
+					<p class="z-index__text text">Третій блок буде відображатися поверх інших елементів, тому що в нього вище z-index.</p>
+				</div>
+				<div class="main__practice-cases practice-cases" id="practice-cases">
+					<h2 class="practice-cases__title title">Приклади застосування</h2>
+					<div class="practice-cases__item practice-cases__item--absolute-centering">
+						<h3 class="practice-cases__subtitle subtitle">Абсолютне позиціонування із центруванням елемента</h3>
+						<p class="practice-cases__text text">Цей приклад демонструє, як можна розташувати елемент у центрі свого батьківського елемента.</p>
+						<div class="practice-cases__code practice-cases__code--absolute-centering text">
+							div {
+								<span>position: absolute;</span>
+								<span>top: calc(50% - 100px);</span>
+								<span>left: calc(50% - 150px);</span>
+								<span>width: 300px;</span>
+								<span>height: 200px;</span>
+							}
+						</div>
+					</div>
+					<div class="practice-cases__item">
+						<h3 class="practice-cases__subtitle subtitle">Фіксована шапка на сторінці</h3>
+						<p class="practice-cases__text text">Нижче наведено приклад створення фіксованої шапки, яка завжди залишається у верхній частині сторінки при прокручуванні. Приклад фіксованої шапки представлено на цій сторінці.</p>
+						<div class="practice-cases__code text">
+							header {
+								<span>position: fixed;</span>
+								<span>top: 0;</span>
+								<span>left: 0;</span>
+								<span>z-index: 50;</span>
+								<span>width: 100%;</span>
+							}
+						</div>
+					</div>
+					<div class="practice-cases__item sticky">
+						<h3 class="sticky__subtitle subtitle">Липкий заголовок. Міста України</h3>
+						<ul class="sticky__list">
+							<li class="sticky__item">
+								<div class="sticky__letter">Б</div>
+								<ul class="sticky__sublist">
+									<li class="sticky__subitem">Біла Церква</li>
+									<li class="sticky__subitem">Бровари</li>
+									<li class="sticky__subitem">Бердянськ</li>
+									<li class="sticky__subitem">Бахмут</li>
+								</ul>
+							</li>
+							<li class="sticky__item">
+								<div class="sticky__letter">В</div>
+								<ul class="sticky__sublist">
+									<li class="sticky__subitem">Вінниця</li>
+									<li class="sticky__subitem">Вишневе</li>
+									<li class="sticky__subitem">Вознесенськ</li>
+									<li class="sticky__subitem">Володимир-Волинський</li>
+								</ul>
+							</li>
+							<li class="sticky__item">
+								<div class="sticky__letter">Д</div>
+								<ul class="sticky__sublist">
+									<li class="sticky__subitem">Дніпро</li>
+									<li class="sticky__subitem">Донецьк</li>
+									<li class="sticky__subitem">Дрогобич</li>
+								</ul>
+							</li>
+							<li class="sticky__item">
+								<div class="sticky__letter">Ж</div>
+								<ul class="sticky__sublist">
+									<li class="sticky__subitem">Житомир</li>
+									<li class="sticky__subitem">Жовті Води</li>
+								</ul>
+							</li>
+							<li class="sticky__item">
+								<div class="sticky__letter">З</div>
+								<ul class="sticky__sublist">
+									<li class="sticky__subitem">Запоріжжя</li>
+									<li class="sticky__subitem">Збараж</li>
+								</ul>
+							</li>
+							<li class="sticky__item">
+								<div class="sticky__letter">І</div>
+								<ul class="sticky__sublist">
+									<li class="sticky__subitem">Івано-Франківськ</li>
+									<li class="sticky__subitem">Ізмаїл</li>
+								</ul>
+							</li>
+							<li class="sticky__item">
+								<div class="sticky__letter">К</div>
+								<ul class="sticky__sublist">
+									<li class="sticky__subitem">Київ</li>
+									<li class="sticky__subitem">Кривий Ріг</li>
+								</ul>
+							</li>
+							<li class="sticky__item">
+								<div class="sticky__letter">Л</div>
+								<ul class="sticky__sublist">
+									<li class="sticky__subitem">Львів</li>
+									<li class="sticky__subitem">Луцьк</li>
+								</ul>
+							</li>
+							<li class="sticky__item">
+								<div class="sticky__letter">М</div>
+								<ul class="sticky__sublist">
+									<li class="sticky__subitem">Миколаїв</li>
+									<li class="sticky__subitem">Мукачево</li>
+								</ul>
+							</li>
+							<li class="sticky__item">
+								<div class="sticky__letter">Н</div>
+								<ul class="sticky__sublist">
+									<li class="sticky__subitem">Нікополь</li>
+									<li class="sticky__subitem">Ніжин</li>
+								</ul>
+							</li>
+							<li class="sticky__item">
+								<div class="sticky__letter">О</div>
+								<ul class="sticky__sublist">
+									<li class="sticky__subitem">Одеса</li>
+									<li class="sticky__subitem">Обухів</li>
+								</ul>
+							</li>
+							<li class="sticky__item">
+								<div class="sticky__letter">П</div>
+								<ul class="sticky__sublist">
+									<li class="sticky__subitem">Переяслав</li>
+									<li class="sticky__subitem">Полтава</li>
+								</ul>
+							</li>
+							<li class="sticky__item">
+								<div class="sticky__letter">С</div>
+								<ul class="sticky__sublist">
+									<li class="sticky__subitem">Суми</li>
+									<li class="sticky__subitem">Севастополь</li>
+								</ul>
+							</li>
+							<li class="sticky__item">
+								<div class="sticky__letter">Т</div>
+								<ul class="sticky__sublist">
+									<li class="sticky__subitem">Тернопіль</li>
+									<li class="sticky__subitem">Торецьк</li>
+								</ul>
+							</li>
+							<li class="sticky__item">
+								<div class="sticky__letter">Х</div>
+								<ul class="sticky__sublist">
+									<li class="sticky__subitem">Харків</li>
+									<li class="sticky__subitem">Херсон</li>
+								</ul>
+							</li>
+							<li class="sticky__item">
+								<div class="sticky__letter">Ч</div>
+								<ul class="sticky__sublist">
+									<li class="sticky__subitem">Черкаси</li>
+									<li class="sticky__subitem">Чернівці</li>
+								</ul>
+							</li>
+							<li class="sticky__item">
+								<div class="sticky__letter">Ю</div>
+								<ul class="sticky__sublist">
+									<li class="sticky__subitem">Южне</li>
+								</ul>
+							</li>
+							<li class="sticky__item">
+								<div class="sticky__letter">Я</div>
+								<ul class="sticky__sublist">
+									<li class="sticky__subitem">Ялта</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="main__hexagons hexagons" id="hexagons">
+					<h2 class="hexagons__title title">Соти</h2>
+					<div class="hexagons__items">
+						<div class="hexagon hexagon--top-1 hexagon--left-4"></div>
+						<div class="hexagon hexagon--top-1 hexagon--left-3"></div>
+						<div class="hexagon hexagon--top-1 hexagon--left-2"></div>
+						<div class="hexagon hexagon--top-1 hexagon--left-1"></div>
+						<div class="hexagon hexagon--top-1 hexagon--width-center"></div>
+						<div class="hexagon hexagon--top-1 hexagon--right-1"></div>
+						<div class="hexagon hexagon--top-1 hexagon--right-2"></div>
+						<div class="hexagon hexagon--top-1 hexagon--right-3"></div>
+						<div class="hexagon hexagon--top-1 hexagon--right-4"></div>
+			
+						<div class="hexagon hexagon--top hexagon--left-9"></div>
+						<div class="hexagon hexagon--top hexagon--left-8"></div>
+						<div class="hexagon hexagon--top hexagon--left-7"></div>
+						<div class="hexagon hexagon--top hexagon--left-6"></div>
+						<div class="hexagon hexagon--top hexagon--left-5"></div>
+						<div class="hexagon hexagon--top hexagon--right-5"></div>
+						<div class="hexagon hexagon--top hexagon--right-6"></div>
+						<div class="hexagon hexagon--top hexagon--right-7"></div>
+						<div class="hexagon hexagon--top hexagon--right-8"></div>
+						
+						<div class="hexagon hexagon--height-center hexagon--left-4"></div>
+						<div class="hexagon hexagon--height-center hexagon--left-3"></div>
+						<div class="hexagon hexagon--height-center hexagon--left-2"></div>
+						<div class="hexagon hexagon--height-center hexagon--left-1"></div>
+						<div class="hexagon hexagon--height-center hexagon--width-center"></div>
+						<div class="hexagon hexagon--height-center hexagon--right-1"></div>
+						<div class="hexagon hexagon--height-center hexagon--right-2"></div>
+						<div class="hexagon hexagon--height-center hexagon--right-3"></div>
+						<div class="hexagon hexagon--height-center hexagon--right-4"></div>
+			
+						<div class="hexagon hexagon--bottom hexagon--left-9"></div>
+						<div class="hexagon hexagon--bottom hexagon--left-8"></div>
+						<div class="hexagon hexagon--bottom hexagon--left-7"></div>
+						<div class="hexagon hexagon--bottom hexagon--left-6"></div>
+						<div class="hexagon hexagon--bottom hexagon--left-5"></div>
+						<div class="hexagon hexagon--bottom hexagon--right-5"></div>
+						<div class="hexagon hexagon--bottom hexagon--right-6"></div>
+						<div class="hexagon hexagon--bottom hexagon--right-7"></div>
+						<div class="hexagon hexagon--bottom hexagon--right-8"></div>
+			
+			
+						<div class="hexagon hexagon--bottom-1 hexagon--left-4"></div>
+						<div class="hexagon hexagon--bottom-1 hexagon--left-3"></div>
+						<div class="hexagon hexagon--bottom-1 hexagon--left-2"></div>
+						<div class="hexagon hexagon--bottom-1 hexagon--left-1"></div>
+						<div class="hexagon hexagon--bottom-1 hexagon--width-center"></div>
+						<div class="hexagon hexagon--bottom-1 hexagon--right-1"></div>
+						<div class="hexagon hexagon--bottom-1 hexagon--right-2"></div>
+						<div class="hexagon hexagon--bottom-1 hexagon--right-3"></div>
+						<div class="hexagon hexagon--bottom-1 hexagon--right-4"></div>
+					</div>
+				</div>
+				<div class="main__portfolio portfolio" id="homework">
+					<h2 class="portfolio__title title">Домашня робота</h2>
+					<div class="portfolio__hero-section hero-section">
+						<div class="hero-section__img-block img-block">
+							<div class="img-block__item img-block__item--circle"></div>
+							<div class="img-block__item img-block__item--person">
+								<img src="img/portfolio/hero_section/person_image.png" alt="A photo of a smiling woman with dark hair, wearing a red top, on a yellow background.">
+							</div>
+							<div class="img-block__item img-block__item--laptop">
+								<img src="img/portfolio/hero_section/laptop_image.png" alt="An illustration of an open laptop with a purple background.">
+							</div>
+							<div class="img-block__item img-block__item--card">
+								<img src="img/portfolio/hero_section/card_image.svg" alt="A stylized white card with a circular icon and lines resembling text.">
+							</div>
+							<div class="img-block__item img-block__item--arrow">
+								<img src="img/portfolio/hero_section/arrow.svg" alt="Decorative element - arrow.">
+							</div>
+							<div class="img-block__item img-block__item--cloud">
+								<img src="img/portfolio/hero_section/cloud.svg" alt="Decorative element - cloud.">
+							</div>
+							<div class="img-block__item img-block__item--icon">
+								<img src="img/portfolio/hero_section/stars.svg" alt="A small circular icon with two sparkle symbols in the center, placed on an orange background.">
+							</div>
+							<div class="img-block__item img-block__item--wavy-arrow">
+								<img src="img/portfolio/hero_section/wavy_arrow.png" alt="Decorative element - arrow.">
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__personal-section personal-section">
+						<div class="personal-section__img-block img-personal">
+							<div class="img-personal__item img-personal__item--circle"></div>
+							<div class="img-personal__item img-personal__item--person">
+								<img src="img/portfolio/personal_section/person_image.png" alt="A portrait of a smiling man with glasses and wavy hair, wearing a black shirt, against a yellow background.">
+							</div>
+							<div class="img-personal__item img-personal__item--card">
+								<img src="img/portfolio/personal_section/card_image.svg" alt="A white card with a circular icon and horizontal lines, symbolizing a business card or profile information.">
+							</div>
+							<div class="img-personal__item img-personal__item--pen">
+								<img src="img/portfolio/personal_section/pen_icon.svg" alt="Pen nib symbol in the center, representing design or creativity.">
+							</div>
+							<div class="img-personal__item img-personal__item--arrow">
+								<img src="img/portfolio/personal_section/arrow_icon.svg" alt=" A white zigzag line connects the pen nib icon to the business card illustration below.">
+							</div>
+							<div class="img-personal__item img-personal__item--arrow-2">
+								<img src="img/portfolio/personal_section/arrow.svg" alt="Decorative element - arrow.">
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__hero-section hero-section">
+						<div class="hero-section__img-block img-block">
+							<div class="img-block__item img-block__item--circle"></div>
+							<div class="img-block__item img-block__item--person">
+								<img src="img/portfolio/hero_section/person_image_2.png" alt=" A portrait of a smiling man with glasses and wavy hair, wearing a black shirt, against a yellow background.">
+							</div>
+							<div class="img-block__item img-block__item--laptop">
+								<img src="img/portfolio/hero_section/laptop_image.png" alt="An illustration of an open laptop with a purple background.">
+							</div>
+							<div class="img-block__item img-block__item--card">
+								<img src="img/portfolio/hero_section/card_image.svg" alt="A stylized white card with a circular icon and lines resembling text.">
+							</div>
+							<div class="img-block__item img-block__item--arrow">
+								<img src="img/portfolio/hero_section/arrow.svg" alt="Decorative element - arrow.">
+							</div>
+							<div class="img-block__item img-block__item--cloud">
+								<img src="img/portfolio/hero_section/cloud.svg" alt="Decorative element - cloud.">
+							</div>
+							<div class="img-block__item img-block__item--icon">
+								<img src="img/portfolio/hero_section/webflow_icon.svg" alt="A small circular icon of webflow in the center, placed on an orange background.">
+							</div>
+							<div class="img-block__item img-block__item--wavy-arrow">
+								<img src="img/portfolio/hero_section/wavy_arrow.png" alt="Decorative element - arrow.">
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__about-section about-section">
+						<div class="about-section__img img-about">
+							<div class="img-about__item img-about__item--main-image">
+								<img src="img/portfolio/about_section/about_main_img.jpg" alt="Brown leather office chair positioned in front of a white desk, on the desk, there is an open laptop, a desk lamp, and a small drawer unit.">
+							</div>
+							<div class="img-about__item img-about__item--avatar">
+								<img src="img/portfolio/about_section/about_avatar.png" alt="A man with glasses and a beard is smiling in a circular cutout.">
+							</div>
+							<div class="img-about__item img-about__item--cloud">
+								<img src="img/portfolio/about_section/about_cloud.svg" alt="Decorative element - cloud.">
+							</div>
+							<div class="img-about__item img-about__item--square"></div>
+							<div class="img-about__item img-about__item--arrow">
+								<img src="img/portfolio/about_section/about_arrow.svg" alt="Arrow graphics in the background.">
+							</div>
+							<div class="img-about__item img-about__item--card">
+								<img src="img/portfolio/about_section/about_card.svg" alt="A horizontal rectangle with a color palette of three circles in red, purple, and yellow, next to a placeholder for text.">
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__features-section features-section">
+						<div class="features-section__img img-features">
+							<div class="img-features__item img-features__item--main-image">
+								<img src="img/portfolio/features_section/features_main_img.jpg" alt="A smartphone, a pair of wireless earphones and a cup of coffee placed on a table.">
+							</div>
+							<div class="img-features__item img-features__item--avatar">
+								<img src="img/portfolio/features_section/features_avatar.png" alt="A black-and-white circular portrait of a smiling man, surrounded by a purple background.">
+							</div>
+							<div class="img-features__item img-features__item--cloud">
+								<img src="img/portfolio/features_section/features_cloud.svg" alt="Decorative element - cloud.">
+							</div>
+							<div class="img-features__item img-features__item--arrow">
+								<img src="img/portfolio/features_section/features_arrow.svg" alt="A wavy, upward-pointing arrow, lightly drawn behind the image.">
+							</div>
+							<div class="img-features__item img-features__item--rectangle-1"></div>
+							<div class="img-features__item img-features__item--rectangle-2"></div>
+						</div>
+					</div>
+					<div class="portfolio__service-section service-section">
+						<div class="service-section__img img-service">
+							<div class="img-service__item img-service__item--person">
+								<img src="img/portfolio/service_section/service_person_img.png" alt="A man standing and looking at his phone, with a purple background behind him.">
+							</div>
+							<div class="img-service__item img-service__item--avatar">
+								<img src="img/portfolio/service_section/service_avatar.png" alt="A person holding orange slices over their eyes, with a red background behind them.">
+							</div>
+							<div class="img-service__item img-service__item--triangle">
+								<img src="img/portfolio/service_section/service_triangle.svg" alt="Geometric shapes - triangle in the background.">
+							</div>
+							<div class="img-service__item img-service__item--card">
+								<img src="img/portfolio/service_section/service_card.svg" alt="White rectangle resembling a card.">
+							</div>
+							<div class="img-service__item img-service__item--sun">
+								<img src="img/portfolio/service_section/service_sun.svg" alt="Decorative element resembling a sun.">
+							</div>
+							<div class="img-service__item img-service__item--arrow-1">
+								<img src="img/portfolio/service_section/service_arrow_1.svg" alt="Decorative element - arrow.">
+							</div>
+							<div class="img-service__item img-service__item--arrow-2">
+								<img src="img/portfolio/service_section/service_arrow_2.svg" alt="Decorative element - arrow.">
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__latest-work latest-work">
+						<div class="latest-work__items">
+							<div class="latest-work__inner">
+								<a href="#" class="latest-work__item">
+									<div class="latest-work__content">
+										<img src="img/portfolio/latest_work/latest_work_01.jpg" alt="A close-up image of soft, curved shapes with a gradient of muted colors (blue, pink, and beige).">
+										<div class="latest-work__overlay">
+											<div class="latest-work__label">Design</div>
+											<h2 class="latest-work__title latest-work__title--uppercase">SOFA</h2>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="latest-work__item">
+									<div class="latest-work__content">
+										<img src="img/portfolio/latest_work/latest_work_02.jpg" alt="A minimalistic 3D render of an abstract architectural scene with arches and circular platforms in beige tones.">
+										<div class="latest-work__overlay">
+											<div class="latest-work__label">Branding</div>
+											<h2 class="latest-work__title">KeyBoard</h2>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="latest-work__item">
+									<div class="latest-work__content">
+										<img src="img/portfolio/latest_work/latest_work_03.jpg" alt="Another 3D render with cylindrical shapes in various heights, also in beige tones.">
+										<div class="latest-work__overlay">
+											<div class="latest-work__label">Illustration</div>
+											<h2 class="latest-work__title">Work Media</h2>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<p class="footer__copy">&copy; Anastasiia Pliuta</p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
