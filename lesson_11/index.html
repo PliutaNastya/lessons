@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="keywords" content="CSS, 2D Transform, 3D Transform, CSS transformations, web development, hover effects, front-end development, combining 2D and 3D.">
+   <meta name="description" content="Learn and explore 2D and 3D CSS transformations. Discover how to combine them and view practical examples for web development, including hover effects.">
+	<meta name="author" content="Anastasiia Pliuta">
+   <link rel="stylesheet" href="css/style.css">
+   <title>CSS transformations</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<ul class="header__menu menu">
+					<li class="menu__item"><a href="#transform-2d">2D-transformation</a></li>
+					<li class="menu__item"><a href="#transform-3d">3D-transformation</a></li>
+					<li class="menu__item"><a href="#transform-2d-3d">Combining 2D and 3D</a></li>
+					<li class="menu__item"><a href="#transform-examples">Examples of Use </a></li>
+					<li class="menu__item menu__item--fixed"><a href="homework.html">The Road to a Dream</a></li>
+				</ul>
+			</div>
+		</header>
+		<main class="main">
+			<div class="main__container">
+				<h1 class="main__title title">CSS transformations</h1>
+				<div class="main__transform-2d transform-2d" id="transform-2d">
+					<h2 class="transform-2d__title title">2D-transformation</h2>
+					<div class="transform-2d__body">
+						<div class="transform-2d__items">
+							<div class="transform-2d__item">
+								<div class="transform-2d__content transform-2d__content---translateX"><code>translateX(30px)</code></div>
+							</div>
+							<div class="transform-2d__item">
+								<div class="transform-2d__content transform-2d__content---translateY"><code>translateY(-60px)</code></div>
+							</div>
+							<div class="transform-2d__item">
+								<div class="transform-2d__content transform-2d__content---translate"><code>translate(-30px, 60px)</code></div>
+							</div>
+							<div class="transform-2d__item">
+								<div class="transform-2d__content transform-2d__content---rotateX"><code>rotateX(45deg);</code></div>
+							</div>
+							<div class="transform-2d__item">
+								<div class="transform-2d__content transform-2d__content---rotateY"><code>rotateY(45deg)</code></div>
+							</div>
+							<div class="transform-2d__item">
+								<div class="transform-2d__content transform-2d__content---rotate"><code>rotate(45deg)</code></div>
+							</div>
+							<div class="transform-2d__item">
+								<div class="transform-2d__content transform-2d__content---scaleX"><code>scaleX(-1)</code></div>
+							</div>
+							<div class="transform-2d__item">
+								<div class="transform-2d__content transform-2d__content---scaleY"><code>scaleY(1.3)</code></div>
+							</div>
+							<div class="transform-2d__item">
+								<div class="transform-2d__content transform-2d__content---scale"><code>scale(3)</code></div>
+							</div>
+							<div class="transform-2d__item">
+								<div class="transform-2d__content transform-2d__content---skewX"><code>skewX(45deg)</code></div>
+							</div>
+							<div class="transform-2d__item">
+								<div class="transform-2d__content transform-2d__content---skewY"><code>skewY(-30deg)</code></div>
+							</div>
+							<div class="transform-2d__item">
+								<div class="transform-2d__content transform-2d__content---skew"><code>skew(30deg, 10deg)</code></div>
+							</div>
+							<div class="transform-2d__item">
+								<div class="transform-2d__content transform-2d__content---transform-2d-multi"><code>translate(30px, 60px) scale(0.7) rotate(45deg) skew(30deg, 10deg)</code></div>
+							</div>
+							<div class="transform-2d__item">
+								<div class="transform-2d__content transform-2d__content---transform-2d-origin-rotate"><code>rotate(45deg); transform-2d-origin: top left;</code></div>
+							</div>
+							<div class="transform-2d__item">
+								<div class="transform-2d__content transform-2d__content---transform-2d-origin-translate"><code>translate(-100%, 50%); transform-2d-origin: 0 0;</code></div>
+							</div>
+							<div class="transform-2d__item">
+								<div class="transform-2d__content transform-2d__content---transform-2d-origin-scale"><code>scale(1.7); transform-2d-origin: 0 0;</code></div>
+							</div>
+							<div class="transform-2d__item">
+								<div class="transform-2d__content transform-2d__content---transform-2d-origin-skew"><code>skew(30deg, 10deg); transform-2d-origin: 0 0;</code></div>
+							</div>
+							<div class="transform-2d__item">
+								<div class="transform-2d__content transform-2d__content---transform-2d-origin-multi"><code>translate(30px, 60px) scale(0.7) rotate(45deg) skew(30deg, 10deg); transform-2d-origin: 0 0;</code></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__transform-3d transform-3d" id="transform-3d">
+					<h2 class="transform-3d__title title">3D-transformation</h2>
+					<div class="transform-3d__items">
+						<div class="transform-3d__item">
+							<div class="transform-3d__body">
+								<div class="transform-3d__content transform-3d__content--translate3d"><code>translate3d(-60px, 30px, 50px)</code></div>
+							</div>
+						</div>
+						<div class="transform-3d__item">
+							<div class="transform-3d__body">
+								<div class="transform-3d__content transform-3d__content--rotate3d"><code>rotate3d(10, 10, 10, 45deg)</code></div>
+							</div>
+						</div>
+						<div class="transform-3d__item">
+							<div class="transform-3d__body">
+								<div class="transform-3d__content transform-3d__content--scale3d"><code>scale3d(1.3, 1.3, 1.3)</code></div>
+							</div>
+						</div>
+						<div class="transform-3d__item">
+							<div class="transform-3d__body">
+								<div class="transform-3d__content transform-3d__content--multi3d"><code>translate3d(-60px, 30px, 50px) rotate3d(10, 10, 10, 45deg) scale3d(1.3, 1.3, 1.3)</code></div>
+							</div>
+						</div>
+						<div class="transform-3d__item">
+							<div class="transform-3d__body transform-3d__body--preserve-3d">
+								<div class="transform-3d__content transform-3d__content--translate3d"><code>translate3d(-60px, 30px, 50px) + transform-style: preserve-3d (for body)</code></div>
+							</div>
+						</div>
+						<div class="transform-3d__item">
+							<div class="transform-3d__body transform-3d__body--preserve-3d">
+								<div class="transform-3d__content transform-3d__content--rotate3d"><code>rotate3d(10, 10, 10, 45deg) + transform-style: preserve-3d (for body)</code></div>
+							</div>
+						</div>
+						<div class="transform-3d__item">
+							<div class="transform-3d__body transform-3d__body--preserve-3d">
+								<div class="transform-3d__content transform-3d__content--scale3d"><code>scale3d(1.3, 1.3, 1.3) + transform-style: preserve-3d (for body)</code></div>
+							</div>
+						</div>
+						<div class="transform-3d__item">
+							<div class="transform-3d__body transform-3d__body--preserve-3d">
+								<div class="transform-3d__content transform-3d__content--multi3d"><code>translate3d(-60px, 30px, 50px) rotate3d(10, 10, 10, 45deg) scale3d(1.3, 1.3, 1.3) + transform-style: preserve-3d (for body)</code></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__transform-2d-3d transform-2d-3d" id="transform-2d-3d">
+					<h2 class="transform-2d-3d__title title">Combining 2D and 3D</h2>
+					<div class="transform-2d-3d__items">
+						<div class="transform-2d-3d__item">
+							<div class="transform-2d-3d__body">
+								<div class="transform-2d-3d__content transform-2d-3d__content--1"><code>scale(1.05) rotateY(12deg) translateY(-10px); </code></div>
+							</div>
+						</div>
+						<div class="transform-2d-3d__item">
+							<div class="transform-2d-3d__body">
+								<div class="transform-2d-3d__content transform-2d-3d__content--2"><code>rotateX(20deg) scale(1.05) skew(5deg, 5deg);</code></div>
+							</div>
+						</div>
+						<div class="transform-2d-3d__item">
+							<div class="transform-2d-3d__body">
+								<div class="transform-2d-3d__content transform-2d-3d__content--3"><code>rotate(15deg) rotateY(10deg);</code></div>
+							</div>
+						</div>
+						<div class="transform-2d-3d__item">
+							<div class="transform-2d-3d__body">
+								<div class="transform-2d-3d__content transform-2d-3d__content--4"><code>rotateY(20deg) translateY(-10px) skew(5deg, 5deg);</code></div>
+							</div>
+						</div>
+						<div class="transform-2d-3d__item">
+							<div class="transform-2d-3d__body">
+								<div class="transform-2d-3d__content transform-2d-3d__content--5"><code>scale(1.1) rotateX(10deg) rotateY(10deg); </code></div>
+							</div>
+						</div>
+						<div class="transform-2d-3d__item">
+							<div class="transform-2d-3d__body">
+								<div class="transform-2d-3d__content transform-2d-3d__content--6"><code>scale(1.1) rotate(10deg) rotateX(15deg);</code></div>
+							</div>
+						</div>
+						<div class="transform-2d-3d__item">
+							<div class="transform-2d-3d__body">
+								<div class="transform-2d-3d__content transform-2d-3d__content--7"><code>transform: scale(1.1) skew(5deg, 5deg) rotateX(20deg) rotateZ(10deg);</code></div>
+							</div>
+						</div>
+						<div class="transform-2d-3d__item">
+							<div class="transform-2d-3d__body transform-2d-3d__body--preserve-3d">
+								<div class="transform-2d-3d__content transform-2d-3d__content--1"><code>scale(1.05) rotateY(12deg) translateY(-10px) + preserve-3d (for body) </code></div>
+							</div>
+						</div>
+						<div class="transform-2d-3d__item">
+							<div class="transform-2d-3d__body transform-2d-3d__body--preserve-3d">
+								<div class="transform-2d-3d__content transform-2d-3d__content--2"><code>rotateX(20deg) scale(1.05) skew(5deg, 5deg) + preserve-3d (for body)</code></div>
+							</div>
+						</div>
+						<div class="transform-2d-3d__item">
+							<div class="transform-2d-3d__body transform-2d-3d__body--preserve-3d">
+								<div class="transform-2d-3d__content transform-2d-3d__content--3"><code>rotate(15deg) rotateY(10deg) + preserve-3d (for body)</code></div>
+							</div>
+						</div>
+						<div class="transform-2d-3d__item">
+							<div class="transform-2d-3d__body transform-2d-3d__body--preserve-3d">
+								<div class="transform-2d-3d__content transform-2d-3d__content--4"><code>rotateY(20deg) translateY(-10px) skew(5deg, 5deg) + preserve-3d (for body)</code></div>
+							</div>
+						</div>
+						<div class="transform-2d-3d__item">
+							<div class="transform-2d-3d__body transform-2d-3d__body--preserve-3d">
+								<div class="transform-2d-3d__content transform-2d-3d__content--5"><code>scale(1.1) rotateX(10deg) rotateY(10deg) + preserve-3d (for body) </code></div>
+							</div>
+						</div>
+						<div class="transform-2d-3d__item">
+							<div class="transform-2d-3d__body transform-2d-3d__body--preserve-3d">
+								<div class="transform-2d-3d__content transform-2d-3d__content--6"><code>scale(1.1) rotate(10deg) rotateX(15deg) + preserve-3d (for body)</code></div>
+							</div>
+						</div>
+						<div class="transform-2d-3d__item">
+							<div class="transform-2d-3d__body transform-2d-3d__body--preserve-3d">
+								<div class="transform-2d-3d__content transform-2d-3d__content--7"><code>transform: scale(1.1) skew(5deg, 5deg) rotateX(20deg) rotateZ(10deg) + preserve-3d (for body)</code></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__examples examples" id="transform-examples">
+					<h2 class="examples__title title">Examples of Use </h2>
+					<div class="examples__items">
+						<!-- Eфект накладання -->
+						<div class="examples__item">
+							<a href="#" class="examples__card-overlay card">
+								<img src="img/card_img.jpg" alt="" class="card__img">
+								<div class="card__overlay">
+									<div class="card__link">Click me</div>
+								</div>
+							</a>
+						</div>
+						<!-- Ефект перегортання -->
+						<div class="examples__item">
+							<a href="#" class="examples__flip-card card">
+								<div class="card__flip-body">
+									<div class="card__flip-front">
+										<img src="img/card_img.jpg" alt="" class="card__img">
+									</div>
+									<div class="card__flip-back">
+										<img src="img/card_back.jpg" alt="" class="card__img">
+									</div>
+								</div>
+							</a>
+						</div>
+						<!-- Ефект відклеювання  -->
+						<div class="examples__item">
+							<a href="#" class="examples__card-peel card">
+								<img src="img/card_img.jpg" alt="" class="card__img">
+								<div class="card__overlay card__overlay--peel">
+									<div class="card__link">Click me</div>
+								</div>
+							</a>
+						</div>
+						<!-- Ефект картинка в картинці -->
+						<div class="examples__item">
+							<a href="#" class="examples__card-zoom card">
+								<img src="img/card_img.jpg" alt="" class="card__img">
+								<div class="card__img-zoom">
+									<img src="img/card_img.jpg" alt="" class="card__img">
+								</div>
+								<div class="card__info">Product Name</div>
+							</a>
+						</div>
+						<!-- Ефект плавного збільшення -->
+						<div class="examples__item">
+							<a href="#" class="examples__card-scale card">
+								<img src="img/card_img.jpg" alt="" class="card__img card__img--scale">
+							</a>
+						</div>
+						<!-- Ефект повороту -->
+						<div class="examples__item">
+							<a href="#" class="examples__card-rotate card">
+								<img src="img/card_img.jpg" alt="" class="card__img">
+								<div class="card__overlay">
+									<div class="card__link">Click me</div>
+								</div>
+							</a>
+						</div>
+						<!-- Ефект 3d-повороту -->
+						<div class="examples__item">
+							<a href="#" class="examples__card-3d-rotate card">
+								<img src="img/card_img.jpg" alt="" class="card__img">
+								<div class="card__overlay">
+									<div class="card__link">Click me</div>
+								</div>
+							</a>
+						</div>
+						<!-- Ефект нахилу -->
+						<div class="examples__item">
+							<a href="#" class="examples__card-skew card">
+								<img src="img/card_img.jpg" alt="" class="card__img">
+								<div class="card__overlay">
+									<div class="card__link">Click me</div>
+								</div>
+							</a>
+						</div>
+						<!-- Ефект підняття + додавання тіні -->
+						<div class="examples__item">
+							<a href="#" class="examples__card-translate-shadow card">
+								<img src="img/card_img.jpg" alt="" class="card__img">
+								<div class="card__overlay">
+									<div class="card__link">Click me</div>
+								</div>
+							</a>
+						</div>
+						<!-- Ефект розділення -->
+						<div class="examples__item">
+							<a href="#" class="examples__card-split card">
+								<img src="img/card_img.jpg" alt="" class="card__img">
+								<div class="card__info-front">
+									<div class="card__inner">
+										<h3 class="card__title">Product name</h3>
+									</div>
+								</div>
+								<div class="card__info-back">
+									<div class="card__inner">
+										<h3 class="card__title">Details</h3>
+										<p class="card__text">Here details about product</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__copy">&copy; Anastasiia Pliuta</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
+	

@@ -1,0 +1,446 @@
+/* Підключення шрифтів */
+@import url("https://fonts.googleapis.com/css?family=Sofia+Sans+Semi+Condensed:regular,700&display=swap");
+
+/* Обнулення стилів */
+@import url("reset.css");
+
+/* Загальні стилі */
+body {
+	font-family: "Sofia Sans Semi Condensed", sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+.page {
+	height: 100vh;
+	overflow: clip;
+}
+.canvas {
+	/* perspective: 700px; */
+}
+/* Фон */
+.canvas__top {
+	width: 100%;
+	/* left: 3%; */
+	aspect-ratio: 11 / 1;
+	background: linear-gradient(180deg, #87CEEB 0%, #4682B4 100%);
+	position: relative;
+	/* transform: rotateY(5deg); */
+}
+.canvas__center {
+	position: relative;
+	width: 100%;
+	/* left: 3%; */
+	aspect-ratio: 11 / 3;
+	background: 
+		radial-gradient(circle, rgba(133, 133, 133, 0.6) 10%, transparent 50%), 
+		radial-gradient(circle, rgba(60, 60, 60, 0.5) 20%, transparent 60%), 
+		radial-gradient(circle, rgba(213, 213, 213, 0.7) 30%, transparent 70%), 
+		linear-gradient(135deg, #404040, #2b2b2b);
+	background-size: 400px 400px, 300px 300px, 200px 200px, 100%;
+	background-blend-mode: overlay;
+	/* transform: rotateY(5deg); */
+}
+.canvas__bottom {
+	position: relative;
+	width: 100%;
+	/* left: 3%; */
+	aspect-ratio: 11 / 1;
+	background: url("../img/grass.png") center top / contain, linear-gradient(145deg, #5f9e44 20%, #4c8236 40%, #3d692c 60%, #2b4f22 80%);
+	/* transform: rotateY(5deg); */
+}
+.center__road-markings {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 20px dashed #FFFFFF;
+}
+/* Дерева */
+.tree {
+	position: absolute;
+	width: 20px;
+	height: 60px;
+	background:  linear-gradient(180deg, #A0522D 0%, #8B4513 100%);
+}
+.top__tree {
+	bottom: 0;
+}
+.tree--1 {
+	left: 20%;
+}
+.tree--2 {
+	left: 40%;
+	transform: scale(1.3);
+}
+.tree--3 {
+	left: 60%;
+}
+.tree--4 {
+	left: 80%;
+	transform: scale(1.2);
+}
+.tree::before {
+	content: "";
+	width: 70px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background: linear-gradient(180deg, #7CFC00 0%, #228B22 100%);
+	position: absolute;
+	top: -100%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+}
+.bottom__flower {
+	position: absolute;
+	bottom: 40%;
+	width: 100px;
+	height: 100px;
+	z-index: 7;
+}
+.bottom__flower--1 {
+	left: 5%;
+	background: url("../img/flower_1.png") center / contain no-repeat;
+}
+.bottom__flower--2 {
+	left: 20%;
+	background: url("../img/flower_2.png") center / contain no-repeat;
+}
+.bottom__flower--3 {
+	left: 35%;
+	background: url("../img/flower_3.png") center / contain no-repeat;
+}
+.bottom__flower--4 {
+	left: 50%;
+	background: url("../img/flower_4.png") center / contain no-repeat;
+}
+.bottom__flower--5 {
+	left: 65%;
+	background: url("../img/flower_1.png") center / contain no-repeat;
+}
+.bottom__flower--6 {
+	left: 80%;
+	background: url("../img/flower_2.png") center / contain no-repeat;
+}
+.bottom__flower--7 {
+	left: 90%;
+	background: url("../img/flower_3.png") center / contain no-repeat;
+}
+/* Автобус */
+.bus {
+	position: absolute;
+	left: 8%;
+	bottom: 12%;
+	width: 770px;
+	height: 440px;
+	border-radius: 15% 15%;
+	border: 1px solid #130a23;
+	background: linear-gradient(180deg, #5e5373 0%, #18b5a4 50%, #ece789 100%);
+	z-index: 4;
+}
+.bus::before, .bus::after {
+	content: "";
+	position: absolute;
+	bottom: 15%;
+	width: 1%;
+	height: 7%;
+	background-color: rgb(233, 157, 17);
+	box-shadow: 0 0 30px rgb(158, 127, 3);
+}
+.bus::before {
+	left: 100%;
+	border-radius: 0% 40% 40% 0%;
+}
+.bus::after {
+	left: -1%;
+	border-radius: 40% 0 0% 40%;
+}
+.bus__hatchway {
+	position: absolute;
+	top: -20px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 400px;
+	height: 20px;
+	border: 1px solid #130a23;
+	background-color: #130a23;
+	border-radius: 50px 50px 0px 0px;
+}
+.bus__table {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 30px;
+	width: 500px;
+	text-align: center;
+	font-size: 32px;
+	background-color: #ece7895d;
+}
+.bus__first-level {
+	position: absolute;
+	bottom: 13%;
+	left: 0%;
+	z-index: 5;
+}
+.bus__second-level {
+	position: absolute;
+	top: 15%;
+	left: 0%;
+	z-index: 5;
+}
+.bus__window {
+	display: inline-block;
+	width: 130px; 
+	height: 110px;
+	border: 1px solid #1C1C1C;
+	border-radius: 10%;
+}
+.bus__window--half {
+	width: 64.5px;
+}
+.bus__window--half-left {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border-left-color: transparent;
+}
+.bus__window--half-right {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-right-color: transparent;
+}
+.bus__window--freelancer {
+	background: url("../img/freelancer.png") center bottom / cover no-repeat, linear-gradient(145deg, rgba(173, 216, 230, 0.8) 0%, rgba(135, 206, 235, 0.6) 50%, rgba(70, 130, 180, 0.2) 100%);
+}
+.bus__window--student-1 {
+	background: url("../img/student_1.png") center bottom / cover no-repeat, linear-gradient(145deg, rgba(173, 216, 230, 0.8) 0%, rgba(135, 206, 235, 0.6) 50%, rgba(70, 130, 180, 0.2) 100%);
+}
+.bus__window--student-2 {
+	background: url("../img/student_5.png") center bottom / contain no-repeat, linear-gradient(145deg, rgba(173, 216, 230, 0.8) 0%, rgba(135, 206, 235, 0.6) 50%, rgba(70, 130, 180, 0.2) 100%);
+}
+.bus__window--student-3 {
+	background: url("../img/student_2.png") center bottom / contain no-repeat, linear-gradient(145deg, rgba(173, 216, 230, 0.8) 0%, rgba(135, 206, 235, 0.6) 50%, rgba(70, 130, 180, 0.2) 100%);
+}
+.bus__window--student-4 {
+	background: url("../img/student_6.png") center bottom / contain no-repeat, linear-gradient(145deg, rgba(173, 216, 230, 0.8) 0%, rgba(135, 206, 235, 0.6) 50%, rgba(70, 130, 180, 0.2) 100%);
+}
+.bus__window--student-5 {
+	background: url("../img/student_3.png") center bottom / contain no-repeat, linear-gradient(145deg, rgba(173, 216, 230, 0.8) 0%, rgba(135, 206, 235, 0.6) 50%, rgba(70, 130, 180, 0.2) 100%);
+}
+.bus__window--student-6 {
+	background: url("../img/student_7.png") center bottom / cover no-repeat, linear-gradient(145deg, rgba(173, 216, 230, 0.8) 0%, rgba(135, 206, 235, 0.6) 50%, rgba(70, 130, 180, 0.2) 100%);
+}
+.bus__window--student-7 {
+	background: url("../img/student_4.png") center bottom / contain no-repeat, linear-gradient(145deg, rgba(173, 216, 230, 0.8) 0%, rgba(135, 206, 235, 0.6) 50%, rgba(70, 130, 180, 0.2) 100%);
+}
+.bus__window--student-8 {
+	background: url("../img/student_8.png") center bottom / contain no-repeat, linear-gradient(145deg, rgba(173, 216, 230, 0.8) 0%, rgba(135, 206, 235, 0.6) 50%, rgba(70, 130, 180, 0.2) 100%);
+}
+.bus__window--student-9 {
+	background: url("../img/student_9.png") center bottom / contain no-repeat, linear-gradient(145deg, rgba(173, 216, 230, 0.8) 0%, rgba(135, 206, 235, 0.6) 50%, rgba(70, 130, 180, 0.2) 100%);
+}
+.bus__window--student-10 {
+	background: url("../img/student_11.png") center bottom / contain no-repeat, linear-gradient(145deg, rgba(173, 216, 230, 0.8) 0%, rgba(135, 206, 235, 0.6) 50%, rgba(70, 130, 180, 0.2) 100%);
+}
+.bus__window--student-11 {
+	background: url("../img/student_10.png") center bottom / cover no-repeat, linear-gradient(145deg, rgba(173, 216, 230, 0.8) 0%, rgba(135, 206, 235, 0.6) 50%, rgba(70, 130, 180, 0.2) 100%);
+}
+.bus__window:not(:last-child) {
+	margin-inline-end: 20px;
+}
+.bus__mirror {
+	position: absolute;
+	bottom: 10%;
+	right: -10%;
+	width: 85px;
+	height: 250px;
+	border: 3px solid #7bada6;
+	border-left-color: transparent;
+	border-radius: 0 400% 0px 0;
+}
+.bus__mirror::before {
+	content: "";
+	position: absolute;
+	top: 65%;
+	right: -15%;
+	width: 40px;
+	height: 70px;
+	border-radius: 10px;
+	background: linear-gradient(145deg, rgba(173, 216, 230, 1) 0%, rgba(135, 206, 235, 1) 50%, rgba(70, 130, 180, 1) 100%);
+}
+.bus__luggage-space {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 3px solid #130a23;
+	border-bottom-color: transparent;
+	width: 200px;
+	height: 50px;
+}
+.bus__luggage-space::before {
+	content: "";
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50px;
+	height: 5px;
+	border-radius: 10px;
+	background-color: #130a23;
+}
+.bus__wheel {
+	position: absolute;
+	bottom: -10%;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 10px dashed #808080;
+	background: linear-gradient(180deg, #2F2F2F 0%, #1C1C1C 100%);
+}
+.bus__wheel::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #808080;
+}
+.bus__wheel--1 {
+	left: 10%;
+}
+.bus__wheel--2 {
+	left: 70%;
+}
+/* Будинки */
+.building {
+	position: absolute;
+	width: 100px;
+	height: 130px;
+	font-size: 0;
+	overflow: hidden;
+	border: 1px solid #6b6464;
+}
+.top__building {
+	bottom: 0;
+}
+.building--1, .building--4, .building--7 {
+	left: 5%;
+	background: 
+		radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 30%), 
+		radial-gradient(circle, rgba(0, 0, 0, 0.05) 20%, transparent 50%), 
+		linear-gradient(145deg, #d7c4a1 20%, #b09d86 40%, #827a6d 60%, #5d564d 80%);
+	background-size: 300px 300px, 400px 400px, 100%;
+	background-blend-mode: overlay;
+	z-index: 2;
+}
+.building--2, .building--5, .building--8 {
+	left: 8%;
+	bottom: 8.5%;
+	z-index: 1;
+	transform: scale(1.2);
+	background: 
+		radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 30%), 
+		radial-gradient(circle, rgba(1, 149, 142, 0.05) 20%, transparent 50%), 
+		linear-gradient(145deg, #6e7ed7 20%, #1b2a48 40%, #415891 60%, #324177 80%);
+	background-size: 300px 300px, 400px 400px, 100%;
+	background-blend-mode: overlay;
+
+}
+.building--3, .building--6 {
+	left: 27%;
+	background: 
+		radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 30%), 
+		radial-gradient(circle, rgba(0, 0, 0, 0.05) 20%, transparent 50%), 
+		linear-gradient(145deg, #d7c4a1 20%, #b09d86 40%, #827a6d 60%, #5d564d 80%);
+	background-size: 300px 300px, 400px 400px, 100%;
+	background-blend-mode: overlay;
+	transform: scale(1.3);
+}
+.building--4 {
+	left: 45%;
+}
+.building--5 {
+	left: 50%;
+}
+.building--6 {
+	left: 67%;
+}
+.building--7 {
+	left: 85%;
+}
+.building--8 {
+	left: 90%;
+}
+.building__windows {
+	margin: 0px -1px -1px 0px;
+}
+.building__window {
+	display: inline-block;
+	width: 33.333%;
+	height: 40px;
+	border-right: 1px solid #6b6464;
+	border-bottom: 1px solid #6b6464;
+}
+/* Автобусна зупинка */
+.bottom__stop {
+	position: absolute;
+	right: 2%;
+	top: -120%;
+	width: 200px;
+	font-size: 26px;
+	border-radius: 20px;
+	padding: 10px;
+	background-color: #5e5373;
+	text-align: center;
+}
+.bottom__stop > * {
+	margin-block-end: 10px;
+}
+.bottom__stop > *:last-child {
+	margin-block-end: 10px;
+}
+.bottom__stop span {
+	display: block;
+	color: #ece789;
+	font-weight: 700;
+}
+.bottom__stop::after {
+	content: "";
+	position: absolute;
+	bottom: -120px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 20px;
+	height: 120px;
+	background-color: #18b5a4;
+}
+/* Хмари та сонце */
+.top__cloud {
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	background: url("../img/cloud.svg") 0 -30px / contain no-repeat;
+}
+.top__cloud--1 {
+	left: 1%;
+}
+.top__cloud--2 {
+	left: 35%;
+}
+.top__cloud--3 {
+	left: 75%;
+}
+.top__sun {
+	position: absolute;
+	top: -40%;
+	right: -3%;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: #e8e80a;
+	box-shadow: 0 0 30px rgba(201, 208, 7, 0.9);
+}

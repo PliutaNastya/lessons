@@ -1,0 +1,518 @@
+/* Підключення шрифтів */
+@import url("https://fonts.googleapis.com/css?family=Sofia+Sans+Semi+Condensed:regular,700&display=swap");
+
+/* Обнулення стилів */
+@import url("reset.css");
+@import url("homework.css");
+
+/* Загальні стилі */
+body {
+	font-family: "Sofia Sans Semi Condensed", sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+	background-color: #F1E3D3;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+}
+[class*="__container"] {
+	max-width: 1230px;
+	width: 100%;
+	padding-inline: 15px;
+	margin-inline: auto;
+}
+.title {
+	color: #463239;
+	font-size: 34px;
+	font-weight: 700;
+	text-align: center;
+}
+.main__title {
+	font-size: 44px;
+}
+.main__container {
+	padding-block: 30px;
+}
+[class^="main__"]:not(:last-child) {
+	margin-block-end: 20px;
+}
+.transform-2d > *, .transform-3d > *, .transform-2d-3d > *, .examples > * {
+	margin-block-end: 15px;
+}
+.transform-2d > *:last-child, .transform-3d > *:last-child, .transform-2d-3d > *:last-child, .examples > *:last-child {
+	margin-block-end: 0px;
+}
+
+/* Стилі для header */
+
+.header {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 50;
+	background-color: #99C1B9;
+}
+.menu {
+	font-size: 0;
+}
+.menu__item {
+	display: inline-block;
+	width: 25%;
+	vertical-align: middle;
+	text-align: center;
+	padding: 10px;
+	font-size: 18px;
+}
+.menu__item a {
+	width: 100%;
+}
+.menu__item:hover a {
+	color: #FFFFFF;
+}
+.menu__item:active a {
+	color: rgb(155, 0, 78);
+}
+.menu__item--fixed {
+	position: fixed;
+	border-radius: 20px 0px 0px 20px;
+	right: -20%;
+	top: 20%;
+	background-color: #99C1B9;
+	transition: all 0.3s;
+}
+.menu__item--fixed a {
+	position: relative;
+}
+.menu__item--fixed:hover {
+	right: 0;
+	background-color: #08937e;
+}
+
+/* Стилі для 2d-трансформацій */
+
+.transform-2d__body {
+	background-color: #02776636;
+	font-size: 0;
+	border: 1px solid #463239;
+}
+.transform-2d__items {
+	margin: 0px -1px -1px 0px;
+}
+.transform-2d__item {
+	font-size: 16px;
+	display: inline-block;
+	width: 20%;
+	aspect-ratio: 1;
+	border-right: 1px solid #463239;
+	border-bottom: 1px solid #463239;
+}
+.transform-2d__content {
+	position: relative;
+	width: 100%;
+   height: 100%;
+	transition: all 0.3s;
+}
+.transform-2d__content code, .transform-3d__content code, .transform-2d-3d__content code {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.transform-2d__item:hover .transform-2d__content {
+	z-index: 5;
+	background-color: #027765;
+	cursor: pointer;
+}
+.transform-2d__item:hover .transform-2d__content---translateX {
+	transform: translateX(60px);
+}
+.transform-2d__item:hover .transform-2d__content---translateY {
+	transform: translateY(-60px);
+}
+.transform-2d__item:hover .transform-2d__content---translate {
+	transform: translate(30px, 60px);
+}
+.transform-2d__item:hover .transform-2d__content---rotateX {
+	transform: rotateX(45deg);
+}
+.transform-2d__item:hover .transform-2d__content---rotateY {
+	transform: rotateY(45deg);
+}
+.transform-2d__item:hover .transform-2d__content---rotate {
+	transform: rotate(45deg);
+}
+.transform-2d__item:hover .transform-2d__content---scaleX {
+	transform: scaleX(-1);
+}
+.transform-2d__item:hover .transform-2d__content---scaleY {
+	transform: scaleY(1.3);
+}
+.transform-2d__item:hover .transform-2d__content---scale {
+	transform: scale(3);
+}
+.transform-2d__item:hover .transform-2d__content---skewX {
+	transform: skewX(45deg);
+}
+.transform-2d__item:hover .transform-2d__content---skewY {
+	transform: skewY(-30deg);
+}
+.transform-2d__item:hover .transform-2d__content---skew {
+	transform: skew(30deg, 10deg);
+}
+.transform-2d__item:hover .transform-2d__content---transform-2d-multi {
+	transform: translate(30px, 60px) scale(0.7) rotate(45deg) skew(30deg, 10deg);
+}
+.transform-2d__item:hover .transform-2d__content---transform-2d-origin-rotate {
+	transform: rotate(45deg);
+	transform-origin: top left;
+}
+.transform-2d__item:hover .transform-2d__content---transform-2d-origin-translate {
+	transform-origin: 0 0;
+	transform: translate(-100%, 50%);
+}
+.transform-2d__item:hover .transform-2d__content---transform-2d-origin-scale {
+	transform: scale(1.7);
+	transform-origin: 0 0;
+}
+.transform-2d__item:hover .transform-2d__content---transform-2d-origin-skew {
+	transform: skew(30deg, 10deg);
+	transform-origin: 0 0;
+}
+.transform-2d__item:hover .transform-2d__content---transform-2d-origin-multi {
+	transform: translate(30px, 60px) scale(0.7) rotate(45deg) skew(30deg, 10deg);
+	transform-origin: 0 0;
+}
+
+/* Стилі для 3d-трансформацій */
+
+.transform-3d__items {
+	font-size: 0;
+	margin-inline: -15px;
+	perspective: 300px;
+	/* perspective-origin: 0 0; */
+}
+.transform-3d__item {
+	display: inline-block;
+	padding: 15px;
+	font-size: 18px;
+	width: 33.333%;
+	aspect-ratio: 1;
+}
+.transform-3d__body {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(200, 200, 200, 0.5);
+}
+.transform-3d__content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition: all 0.3s;
+}
+.transform-3d__item:hover .transform-3d__content {
+	background-color: #00e0be;
+}
+.transform-3d__item:hover .transform-3d__content--translate3d {
+	transform: translate3d(-60px, 30px, 50px);
+}
+.transform-3d__item:hover .transform-3d__content--rotate3d {
+	transform: rotate3d(10, 10, 10, 45deg);
+}
+.transform-3d__item:hover .transform-3d__content--scale3d {
+	transform: scale3d(1.3, 1.3, 1.3);
+}
+.transform-3d__item:hover .transform-3d__content--multi3d {
+	transform: translate3d(-60px, 30px, 50px) rotate3d(10, 10, 10, 45deg) scale3d(1.3, 1.3, 1.3);
+	/* transform: translate3d(20px, 20px, 40px) rotate3d(1, 1, 1, 20deg); */
+}
+.transform-3d__body--preserve-3d {
+	transform-style: preserve-3d;
+}
+
+/* Стилі для комбінацій 2d та 3d трансформацій */
+
+.transform-2d-3d__items {
+	font-size: 0;
+	margin-inline: -15px;
+	perspective: 1000px;
+}
+.transform-2d-3d__item {
+	font-size: 18px;
+	display: inline-block;
+	width: 33.333%;
+	padding: 15px;
+	aspect-ratio: 1;
+}
+.transform-2d-3d__body {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+.transform-2d-3d__content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition: all 0.3s;
+}
+.transform-2d-3d__item:hover .transform-2d-3d__content {
+	background-color: #23edc8;
+}
+.transform-2d-3d__body--preserve-3d {
+	transform-style: preserve-3d;
+} 
+.transform-2d-3d__item:hover .transform-2d-3d__content--1 {
+	transform: scale(1.05) rotateY(12deg) translateY(-10px); 
+}
+.transform-2d-3d__item:hover .transform-2d-3d__content--2 {
+	transform: rotateX(20deg) scale(1.05) skew(5deg, 5deg);
+}
+.transform-2d-3d__item:hover .transform-2d-3d__content--3 {
+	transform: rotate(15deg) rotateY(10deg);
+}
+.transform-2d-3d__item:hover .transform-2d-3d__content--4 {
+	transform: rotateY(20deg) translateY(-10px) skew(5deg, 5deg);
+}
+.transform-2d-3d__item:hover .transform-2d-3d__content--5 {
+	transform: scale(1.1) rotateX(10deg) rotateY(10deg); 
+}
+.transform-2d-3d__item:hover .transform-2d-3d__content--6 {
+	transform: scale(1.1) rotate(10deg) rotateX(15deg);
+}
+.transform-2d-3d__item:hover .transform-2d-3d__content--7 {
+	transform: scale(1.1) skew(5deg, 5deg) rotateX(20deg) rotateZ(10deg);
+}
+
+/* Стилі для прикладів використання */
+/* Загальні стилі картки + ефект накладання */
+.examples__items {
+	font-size: 0;
+	margin-inline: -15px;
+}
+.examples__item {
+	font-size: 18px;
+	padding: 15px;
+	display: inline-block;
+	width: 33.333%;
+}
+.card {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	overflow: hidden;
+	transition: all 0.3s;
+}
+.card__img {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	object-fit: cover;
+}
+.card__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transform: translateY(-100%);
+	background-color: #0000008d;
+	transition: all 0.5s;
+}
+.card:hover .card__overlay {
+	opacity: 1;
+	transform: translateY(0);
+}
+.card__link {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-size: 24px;
+	font-weight: 700;
+	padding: 10px 20px;
+	min-width: 200px;
+	background-color: #08937e;
+	border-radius: 10px;
+	transition: all 0.3s;
+}
+.card__link:hover {
+	background-color: #00e0be;
+}
+
+/* Ефект перегортання */
+
+.examples__flip-card {
+	background-color: #F1E3D3;
+}
+.card__flip-body {
+	position: relative;
+	perspective: 800px;
+	perspective-origin: 0 0;
+	transform-style: preserve-3d;
+}
+.card__flip-front, .card__flip-back {
+	backface-visibility: hidden;
+	transition: all 0.7s;
+}
+.card__flip-back {
+	transform: rotateY(180deg);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.examples__flip-card:hover .card__flip-front {
+	transform: rotateY(180deg);
+}
+.examples__flip-card:hover .card__flip-back {
+	transform: rotateY(0deg);
+}
+
+/* Ефект відклеювання */
+
+.card__overlay--peel {
+	transform: rotateZ(15deg);
+	transform-origin: top left;
+}
+.card:hover .card__overlay--peel {
+	transform: rotateZ(0);
+}
+
+/* Ефект картинка в картинці */
+
+.card__img-zoom {
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	width: 40%;
+	height: 40%;
+	border: 3px solid #027765;
+	transform: translateX(140%);
+	transition: all 0.3s;
+}
+.card:hover .card__img-zoom {
+	transform: translateX(0%);
+}
+.card__info {
+	position: absolute;
+	bottom: 5%;
+	left: 5%;
+	padding: 10px 20px;
+	border-radius: 10px;
+	background-color: #0277668d;
+}
+.card__info:hover {
+	background-color: #027766b0;
+}
+
+/* Ефект плавного збільшення */
+
+.examples__card-scale{
+	perspective: 1000px;
+}
+.card__img--scale {
+	transform: translateZ(-1px) scale(1.2);
+	transition: all 0.5s;
+}
+.card:hover .card__img--scale {
+	transform: translateZ(-1.5px) scale(1.3);
+}
+
+/* Ефект повороту */
+
+.examples__item:hover .examples__card-rotate {
+	transform: rotate(3deg);
+}
+
+/* Ефект 3d-повороту */
+
+.examples__card-3d-rotate {
+	perspective: 400px;
+}
+.examples__item:hover .examples__card-3d-rotate {
+	transform: rotateY(10deg);
+}
+
+/* Ефект нахилу */
+
+.examples__item:hover .examples__card-skew {
+	transform: translateY(-5px) skew(-1deg, -1deg);
+}
+
+/* Ефект підняття + додавання тіні */
+
+.examples__item:hover .examples__card-translate-shadow {
+	transform: translateY(-10px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Ефект розділення */
+
+.examples__card-split {
+	perspective: 1000px;
+}
+.card__img {
+	transition: all 0.3s;
+}
+.card__info-front, .card__info-back {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	backface-visibility: hidden;
+	transition: all 0.3s;
+}
+.card__inner {
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	right: 10%;
+	transform: translateY(-50%);
+	text-align: center;
+}
+.card__inner > * {
+	margin-block-end: 10px;
+}
+.card__inner > *:last-child {
+	margin-block-end: 0px;
+}
+.card__info-back{
+	background-color: #09ab9351;
+	transform: rotateY(180deg);
+}
+.card__title {
+	font-weight: 700;
+	font-size: 30px;
+	color: #61ffe2;
+	text-shadow: 0px 0px 5px #000;
+}
+.card__text {
+	font-size: 24px;
+	color: #fcffb0;
+	text-shadow: 0px 0px 5px #000;
+}
+.examples__card-split:hover .card__info-back {
+	transform: rotateY(0deg);
+}
+.examples__card-split:hover .card__info-front {
+	transform: rotateY(180deg);
+}
+
+/* Стилі для footer */
+
+.footer {
+	padding-block: 20px;
+	background-color: #027765;
+}
+.footer__copy {
+	font-size: 32px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	text-align: center;
+	color: #a5fff2;
+}
