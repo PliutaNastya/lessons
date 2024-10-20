@@ -357,6 +357,7 @@ body {
 }
 .card__flip-front, .card__flip-back {
 	backface-visibility: hidden;
+	will-change: transform;
 	transition: all 0.7s;
 }
 .card__flip-back {
