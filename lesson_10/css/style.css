@@ -382,7 +382,7 @@ code {
 	left: 56.84%; /*324/570*/
 	width: 43.157895%; /* 246/570 */
 	height: 53.508772%; /* 305/570 */
-	border-radius: 50% 50% 8px 8px;
+	border-radius: 50% 50% 6px 6px / 41% 41% 6px 6px;
 	background-color: #F7CC47;
 	overflow: hidden;
 }
@@ -400,7 +400,7 @@ code {
 	left: 0;
 	width: 43.157895%; /* 246/570 */
 	height: 53.508772%; /* 305/570 */
-	border-radius: 50% 50% 8px 8px;
+	border-radius: 50% 50% 6px 6px / 41% 41% 6px 6px;
 	background-color: #B550F8;
 }
 .img-block__item--laptop img {
@@ -454,8 +454,9 @@ code {
 }
 .img-block__item--icon img {
 	position: absolute;
-	top: calc(50% - 28px);
-	left: calc(50% - 28px);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	width: 50%;
 	height: 50%;
 }
@@ -531,8 +532,9 @@ code {
 }
 .img-personal__item--pen img {
 	position: absolute;
-	top: calc(50% - 24px);
-	left: calc(50% - 24px);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	width: 25.531915%; /* 48/188 */
 	height: 25.531915%; /* 48/188 */
 }
@@ -602,7 +604,8 @@ code {
 	height: 89.041096%; /* 195/219 */
 	position: absolute;
 	bottom: 0;
-	left: calc(50% - 80px);
+	left: 50%;
+	transform: translateX(-50%);
 }
 .img-about__item--cloud {
 	position: absolute;
@@ -687,7 +690,8 @@ code {
 	height: 91.847826%; /* 169/184 */
 	position: absolute;
 	bottom: 0;
-	left: calc(50% - 56px);
+	left: 50%;
+	transform: translateX(-50%);
 }
 .img-features__item--cloud {
 	position: absolute;
@@ -750,7 +754,7 @@ code {
 	left: 7.068966%; /* 41/580 */
 	width: 42.413793%; /* 246/580 */
 	height: 52.586207%; /* 305/580 */
-	border-radius: 50% 50% 8px 8px;
+	border-radius: 50% 50% 6px 6px / 41% 41% 6px 6px;
 	background-color: #B550F8;
 	z-index: 5;
 	overflow: hidden;
@@ -758,7 +762,8 @@ code {
 .img-service__item--person img{
 	position: absolute;
 	bottom: 0;
-	left: calc(50% - 96px);
+	left: 50%;
+	transform: translateX(-50%);
 	width: 78.455285%; /* 193/246px */
 	aspect-ratio: 193/274;
 }
@@ -777,7 +782,8 @@ code {
 	width: 90.995261%; /* 192/211 */
 	aspect-ratio: 1;
 	position: absolute;
-	left: calc(50% - 96px);
+	left: 50%;
+	transform: translateX(-50%);
 	bottom: 0;
 }
 .img-service__item--triangle {
