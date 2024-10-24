@@ -401,7 +401,8 @@ body {
 .card__info {
 	position: absolute;
 	bottom: 5%;
-	left: 5%;
+	inset-inline: 5%;
+	width: fit-content;
 	padding: 10px 20px;
 	border-radius: 10px;
 	background-color: #0277668d;
@@ -461,10 +462,7 @@ body {
 }
 .card__info-front, .card__info-back {
 	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	inset: 0;
 	backface-visibility: hidden;
 	transition: all 0.3s;
 }
