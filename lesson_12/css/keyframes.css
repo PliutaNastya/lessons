@@ -1,0 +1,305 @@
+/* Анімація для показу функцій */
+@keyframes showing-animation-timing-function {
+	0% {
+		left: 0%;
+	}
+	100% {
+		left: 70%;
+	}
+}
+
+/* Анімація м'яча */
+@keyframes bouncing-ball {
+	0% {
+		transform: translate(0, 0);
+	}
+	25% {
+		transform: translate(200px, -50px);
+	}
+	50% {
+		transform: translate(400px, 0px);
+	}
+	75% {
+		transform: translate(600px, -50px);
+	}
+	100% {
+		transform: translate(800px, 0px);
+	}
+}
+
+/* Анімація кнопок */
+@keyframes background-change {
+   0% { 
+		background-color: #fff36f;
+	}
+   50% { 
+		background-color: #8FB996; 
+	}
+   100% { 
+		background-color: #2fffbd;
+	}
+}
+@keyframes pulse {
+   0% { 
+		transform: scale(1); 
+	}
+   50% { 
+		transform: scale(1.1); 
+	}
+   100% { 
+		transform: scale(1); 
+	}
+}
+@keyframes floating {
+   0%, 100% { 
+		transform: translateY(0); 
+	}
+   50% { 
+		transform: translateY(-10px); 
+	}
+}
+@keyframes call-me {
+   0%, 50%, 100% { 
+		transform: rotate(0deg); 
+	}
+	25% {
+		transform: rotate(10deg); 
+	}
+   75% { 
+		transform: rotate(-10deg); 
+	}
+}
+@keyframes change-border {
+   0%, 100% { 
+		border-color: #00497a;
+	}
+	25% {
+		border-color: #51007a;
+	}
+   50% { 
+		border-color: #7a0078; 
+	}
+	75% { 
+		border-color: #7a0000; 
+	}
+}
+
+/* Анімація тексту */
+@keyframes fade-in-text {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes rotating-text {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes changing-color-text {
+	0% {
+		color: #960404;
+	}
+	25% {
+		color: #833a02;
+	}
+	50% {
+		color: #175200;
+	}
+	75% {
+		color: #003755;
+	}
+	100% {
+		color: #3a004a;
+	}
+}
+@keyframes typewriter {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+@keyframes jumping-text {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-10px);
+	}
+}
+@keyframes blinking-text {
+	0% {
+		visibility: visible;
+	}
+	100% {
+		visibility: hidden;
+	}
+}
+@keyframes running-text {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+@keyframes glowing-text {
+	0% {
+		text-shadow: 0 0 10px #0000a5;
+	}
+	25% {
+		text-shadow: 0 0 10px #00bc61;
+	}
+	50% {
+		text-shadow: 0 0 10px #00e2e2;
+	}
+	75% {
+		text-shadow: 0 0 10px #8900cd;
+	}
+	100% {
+		text-shadow: 0 0 20px #f39c12;;
+	}
+}
+
+/* Анімація фону */
+@keyframes bg-gradient {
+	0% { 
+		background-position: 0% 50%; 
+	}
+	50% { 
+		background-position: 100% 50%; 
+	}
+	100% { 
+		background-position: 0% 50%; 
+	}
+}
+@keyframes ripple{
+	0%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(7);
+	}
+}
+@keyframes drop {
+	0% {
+		top: -50%
+	}
+	100% {
+		top: 110%
+	}
+	
+}
+@keyframes bg-pulse {
+   0% { 
+		background-color: #53f10f99; 
+	}
+   100% { 
+		background-color: #01839791; 
+	}
+}
+@keyframes bg-slide {
+   0% { 
+		background-position: 0% 50%; 
+	}
+   50% { 
+		background-position: 100% 50%; 
+	}
+   100% { 
+		background-position: 0% 50%; 
+	}
+}
+
+/* Маятник Ньютона 3d */
+@keyframes left-item {
+	0% {
+		transform: rotateX(45deg);
+	}
+	50%,
+	100% {
+		transform: rotateX(0deg);
+	}
+}
+@keyframes right-item {
+	0%, 50% {
+		transform: rotateX(0deg);
+	}
+	100% {
+		transform: rotateX(-45deg);
+	}
+}
+
+/* Маятник Ньютона 2d */
+@keyframes left-item-2d {
+	0% {
+		transform: rotate(15deg);
+	}
+	50%,
+	100% {
+		transform: rotate(0deg);
+	}
+}
+@keyframes right-item-2d {
+	0%, 50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-15deg);
+	}
+}
+
+/* Анімація packman */
+@keyframes packman-eat {
+	0% {
+		clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+	}
+	25% {
+		clip-path: polygon(100% 60%, 44% 48%, 100% 40%);
+	}
+
+	50% {
+		clip-path: polygon(100% 50%, 44% 48%, 100% 50%);
+	}
+
+	75% {
+	clip-path: polygon(100% 59%, 44% 48%, 100% 35%);
+	}
+
+	100% {
+	clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+	}
+	}
+@keyframes packman-food {
+	0% { 
+		opacity: 1;
+	}
+	100% {
+		right: 30%;
+		opacity: 0;
+	}
+}
+
+/* Анімація механізму */
+@keyframes gears-rotate-right {
+	0% {
+		transform: rotate(0deg);
+	}
+	0% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes gears-rotate-left {
+	0% {
+		transform: rotate(0deg);
+	}
+	0% {
+		transform: rotate(-360deg);
+	}
+}

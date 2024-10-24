@@ -1,0 +1,766 @@
+/* Підключення шрифтів */
+@import url("https://fonts.googleapis.com/css?family=Sofia+Sans+Semi+Condensed:regular,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Epilogue:regular,800&display=swap");
+
+/* Обнулення стилів */
+@import url("reset.css");
+@import url("homework.css");
+@import url("keyframes.css");
+
+/* Загальні стилі */
+body {
+	font-family: "Sofia Sans Semi Condensed", sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+	background-color: #A1CCA5;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+}
+[class*="__container"] {
+	max-width: 1230px;
+	width: 100%;
+	padding-inline: 15px;
+	margin-inline: auto;
+}
+.title {
+	color: #111D13;
+	font-size: 34px;
+	font-weight: 700;
+	text-align: center;
+}
+.main__title {
+	font-size: 44px;
+}
+.subtitle {
+	font-size: 24px;
+	font-weight: 700;
+	color: #415D43;
+	text-align: center;
+}
+.text {
+	background-color: #415d4370;
+	padding: 10px;
+}
+.main__container {
+	padding-block-start: 30px;
+	padding-block-end: 100px;
+}
+[class^="main__"]:not(:last-child) {
+	margin-block-end: 20px;
+}
+.menu__sublist > *, .transition-block > *, .list > *, .animation-block > *, .practice-cases > *, .button-animations > *, .text-animations > *, .text-animations__items > *, .bg-animations > *, .other-examples > * {
+	margin-block-end: 15px;
+}
+.menu__sublist > *:last-child, .transition-block > *:last-child, .list > *:last-child, .animation-block > *:last-child, .practice-cases > *:last-child, .button-animations > *:last-child, .text-animations > *:last-child, .text-animations__items > *:last-child, .bg-animations > *:last-child, .other-examples > *:last-child {
+	margin-block-end: 0px;
+}
+.list {
+	background-color: #415d4370;
+	padding: 10px;
+}
+
+/* Стилі для header */
+
+.header {
+	position: sticky;
+	width: 100%;
+	top: 0;
+	z-index: 50;
+	background-color: #A1CCA5;
+}
+.header__menu {
+	padding: 10px;
+	font-size: 0;
+}
+.menu__item {
+	position: relative;
+	font-size: 18px;
+	display: inline-block;
+	vertical-align: middle;
+	width: 33.333%;
+	text-align: center;
+}
+.menu__sublist {
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	padding: 10px;
+	background-color: #A1CCA5;
+	transition: all 0.3s;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+.menu__link:hover {
+	text-decoration: underline;
+}
+.menu__item:hover .menu__sublist {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
+.menu__link--icon::after {
+	content: "\27A3";
+	margin-inline-start: 5px;
+	transform: rotate(90deg);
+	transition: all 0.3s;
+}
+.menu__link--icon:hover::after {
+	transform: rotate(-90deg);
+}
+
+/* Стилі для блоку "Переходи" */
+
+.transition-block__example {
+	width: 200px;
+	height: 200px;
+	margin-inline: auto;
+	background-color: #9af1a9;
+	border-radius: 50%;
+	box-shadow: 0 0 25px rgba(0, 60, 20, 0.7);
+	transition: width 0.5s ease-in-out, 
+					height 1s ease-in 0.5s, 
+					background-color 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.5s, 
+					box-shadow 1s linear 1.8s;
+}
+.transition-block__example:hover {
+	width: 300px;
+	height: 300px;
+	background-color: #09eacc;
+	box-shadow: 0 0 25px rgba(0, 57, 67, 0.7) inset;
+}
+
+.transition-block code, .transition-block span {
+	display: block;
+}
+.transition-block span {
+	padding-inline-start: 30px;
+}
+
+/* Стилі для блоку "Анімації" */
+
+.animation-block__functions {
+	background-color: #8FB996;
+	padding: 10px;
+}
+.animation-block__functions > * {
+	margin-block-end: 10px;
+}
+.animation-block__functions div {
+	padding: 10px;
+	font-size: 14px;
+	max-width: 250px;
+	border: 1px dashed #111D13;
+	background-color: #9af1a9;
+	position: relative;
+}
+.animation-block__functions:hover div {
+	animation-name: showing-animation-timing-function; 
+	animation-duration: 3s;
+}
+.animation-block__functions div:nth-of-type(1) {
+	animation-timing-function: ease;
+}
+.animation-block__functions div:nth-of-type(2) {
+	animation-timing-function: ease-in;
+}
+.animation-block__functions div:nth-of-type(3) {
+	animation-timing-function: ease-out;
+}
+.animation-block__functions div:nth-of-type(4) {
+	animation-timing-function: ease-in-out;
+}
+.animation-block__functions div:nth-of-type(5) {
+	animation-timing-function: linear;
+}
+.animation-block__functions div:nth-of-type(5) {
+	animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.animation-block__example {
+	width: 100px;
+	height: 100px;
+	background-color: #09eacc;
+	border-radius: 50%;
+	border: 1px solid #111D13;
+	animation: bouncing-ball 2s linear infinite alternate;
+}
+
+/* Стилі для анімованих кнопок */
+
+.button-animations__items {
+	font-size: 0;
+}
+.button-animations__item {
+	display: inline-block;
+	vertical-align: top;
+	width: 20%;
+	padding: 10px;
+	font-size: 18px;
+}
+.button-animations__link {
+	text-align: center;
+	padding: 10px;
+	width: 100%;
+	border-radius: 10px;
+	font-weight: 700;
+	background-color: #8FB996;
+}
+.button-animations__link--1 {
+	transition: all 0.3s;
+	animation: background-change 2s linear infinite alternate;
+}
+.button-animations__item:hover .button-animations__link--1, .button-animations__item:hover .button-animations__link--2, .button-animations__item:hover .button-animations__link--4, .button-animations__item:hover .button-animations__link--5 {
+	transform: translateY(3px);
+}
+.button-animations__link--2 {
+	transition: all 0.3s;
+	position: relative;
+	background-color: transparent;
+}
+.button-animations__link--2::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #8FB996;
+	border-radius: 10px;
+	z-index: -1;
+	animation: pulse 2s infinite;
+}
+.button-animations__link--3 {
+	animation: floating 3s infinite ease-in-out;
+}
+.button-animations__link--4 {
+	transition: all 0.3s;
+}
+.button-animations__link--4 span {
+	display: inline-block;
+	margin-inline-end: 10px;
+	animation: call-me 3s ease-in-out infinite;
+}
+.button-animations__link--5 {
+	transition: all 0.3s;
+	border: 3px solid #00497a;
+	animation: change-border 2s ease-in-out infinite alternate;
+}
+.button-animations__link--6 {
+	position: relative;
+}
+.button-animations__link--6::before, .button-animations__link--6::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 3px solid #4f7756;
+	border-radius: 10px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+	transition: all 0.5s;
+}
+.button-animations__link--6:hover::before {
+	opacity: 0;
+	border-color: transparent;
+}
+.button-animations__link--6::after {
+	opacity: 0;
+	transform: scale(1.1, 1.3);
+	border-color: #03a27b;
+}
+.button-animations__link--6:hover::after {
+	opacity: 1;
+	transform: scale(1);
+}
+.button-animations__link--7 {
+	transition: all 0.3s;
+	position: relative;
+}
+.button-animations__link--7 span {
+	position: absolute;
+	font-size: 20px;
+	font-weight: 700;
+	right: 15%;
+	top: 50%;
+	opacity: 0;
+	transform: translateY(-50%);
+	transition: all 0.3s linear;
+} 
+.button-animations__link--7:hover {
+	text-indent: -20px;
+}
+.button-animations__link--7:hover span {
+	opacity: 1;
+	text-indent: 0;
+}
+.button-animations__link--8 {
+	position: relative;
+	border-radius: 0;
+	transition: all 0.3s;
+}
+.button-animations__link--8 svg {
+	height: 47px;
+	left: 0;
+	position: absolute;
+	top: 0; 
+	width: 100%; 
+} 
+.button-animations__link--8 rect {
+	fill: none;
+	stroke: #4f7756;
+	stroke-width: 6;
+	stroke-dasharray: 422, 0;
+	transition: all 0.35s linear;
+}
+.button-animations__link--8:hover {
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+.button-animations__link--8:hover rect {
+	stroke-width: 5;
+	stroke-dasharray: 15, 310;
+	stroke-dashoffset: 48;
+	transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.button-animations__link--9 {
+	letter-spacing: 0;
+	transition: all 0.3s;
+}
+.button-animations__link--9::before, .button-animations__link--9::after {
+	content: "";
+	border: 2px solid transparent;
+	width: 0;
+	display: block;
+	margin: 0 auto;
+	transition: all 0.3s ease-in-out;
+}
+.button-animations__link--9:hover::before, .button-animations__link--9:hover::after {
+	border-color: #03a27b;
+	width: 70%;
+}
+.button-animations__link--9:hover {
+	letter-spacing: 2px;
+}
+.button-animations__link--10 {
+	position: relative;
+	background-color: transparent;
+	border: 3px solid #04825a;
+	transition: all 0.3s;
+	overflow: hidden;
+}
+.button-animations__link--10::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	z-index: -1;
+	background-color: #04825a;
+	transition: all 0.3s;
+}
+.button-animations__link--10:hover::before {
+	left: 0;
+}
+
+/* Стилі для анімованого тексту */
+
+.text-animations__item {
+	font-size: 24px;
+	padding: 10px;
+	background-color: #04825a4e;
+}
+.text-animations__item--fade-in {
+	animation: fade-in-text 3s forwards infinite alternate;
+}
+
+.text-animations__item--rotating {
+	display: inline-block;
+	animation: rotating-text 5s linear infinite;
+}
+.text-animations__item--change-color {
+	animation: changing-color-text 5s infinite alternate;
+}
+.text-animations__item--typewriter {
+	display: inline-block;
+	border-inline-end: 2px solid;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 0;
+	animation: typewriter 4s steps(30, end) forwards infinite;
+}
+.text-animations__item--jumping-text span {
+	display: inline-block;
+   animation: jumping-text 1s ease infinite alternate;
+}
+.text-animations__item--jumping-text span:nth-child(odd) {
+   animation-delay: 0.1s;
+}
+.text-animations__item--jumping-text span:nth-child(even) {
+   animation-delay: 0.2s;
+}
+.text-animations__item--blink-text {
+	color: #a20000;
+	font-weight: 700;
+	text-transform: uppercase;
+	animation: blinking-text 1s steps(2, start) infinite;
+}
+.text-animations__item--running-text {
+	background-color: #3a004a;
+	color: #ffffff;
+	overflow: hidden;
+}
+.text-animations__item--running-text span {
+	display: inline-block;
+	white-space: nowrap;
+	animation: running-text 10s linear infinite;
+}
+.text-animations__item--glowing-text {
+	text-shadow: 0 0 10px #0000a5, 0 0 20px #0000a5, 0 0 30px #0000a5, 0 0 40px #0000a5, 0 0 50px #0000a5;
+	animation: glowing-text 3s infinite alternate;
+}
+
+/* Стилі для анімованого фону */
+
+.bg-animations__items {
+	font-size: 0;
+}
+.bg-animations__item {
+	display: inline-block;
+	width: 20%;
+	height: 300px;
+	padding: 15px;
+}
+.bg-animations__example {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.bg-animations__example--1 {
+	background: linear-gradient(270deg, #00e297, #fff8ce, #7afcff, #feff9c);
+	background-size: 800% 800%;
+	animation: bg-gradient 10s ease infinite alternate;
+}
+.bg-animations__example--2 {
+	position: relative;
+	background-color: #a8dcff;
+}
+.bg-animations__example--2 span {
+	position: absolute;
+	border-radius: 50%;
+	animation: ripple 10s linear infinite alternate-reverse;
+	box-shadow: 0px 0px 1px 0px #508fb9;
+}
+.bg-animations__example--2 span:nth-of-type(1) {
+	width: 20px;
+	height: 20px;
+	left: -10px;
+	bottom: -10px;
+	opacity: 0.1;
+}
+.bg-animations__example--2 span:nth-of-type(2) {
+	width: 40px;
+	height: 40px;
+	left: -20px;
+	bottom: -20px;
+	opacity: 0.3;
+
+}
+.bg-animations__example--2 span:nth-of-type(3) {
+	width: 60px;
+	height: 60px;
+	left: -30px;
+	bottom: -30px;
+	opacity: 0.4;
+}
+.bg-animations__example--2 span:nth-of-type(4) {
+	width: 80px;
+	height: 80px;
+	left: -40px;
+	bottom: -40px;
+	opacity: 0.5;
+}
+.bg-animations__example--2 span:nth-of-type(5) {
+	width: 100px;
+	height: 100px;
+	left: -50px;
+	bottom: -50px;
+	opacity: 0.9;
+}
+.bg-animations__example--3 {
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #171717;
+}
+.bg-animations__example--3 span {
+	position: absolute;
+	width: 1px;
+	height: 100%;
+	top: 0;
+	left: 50%;
+	background: rgba(255, 255, 255, 0.1);
+	overflow: hidden;
+}
+.bg-animations__example--3 span::before {
+	content: "";
+	display: block;
+	position: absolute;
+	height: 15vh;
+	width: 100%;
+	top: -50%;
+	left: 0;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+	animation: drop 7s 0s infinite;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.bg-animations__example--3 span:nth-of-type(1) {
+	margin-left: -25%;
+}
+.bg-animations__example--3 span:nth-of-type(1)::before {
+	animation-delay: 2s;
+}
+.bg-animations__example--3 span:nth-of-type(3) {
+	margin-left: 25%;
+}
+.bg-animations__example--3 span:nth-of-type(3)::before {
+	animation-delay: 2.5s;
+}
+
+.bg-animations__example--4 {
+	background-color: #0ff1758b;
+	animation: bg-pulse 3s infinite alternate;
+}
+.bg-animations__example--5 {
+	background: linear-gradient(270deg, #3498db87, #009e428a, #00bccd8b);
+	background-size: 600% 600%;
+	animation: bg-slide 8s ease infinite alternate;
+}
+
+/* Стилі для Маятнику Ньютона 3d */
+
+.other-examples__newton-3d {
+	margin-block-end: 200px;
+}
+.newton-3d {}
+.newton-3d__body {
+	perspective: 300px;
+	width: 300px;
+	height: 300px;
+	margin-inline: auto;
+	border-block-start: 10px solid #04825a;
+	position: relative;
+	transform: rotateY(20deg);
+}
+.newton-3d__body:hover .newton-3d__item {
+	animation-play-state: paused;
+}
+.newton-3d__item {
+	position: absolute;
+	top: -2px;
+	height: 100%;
+	width: 33.333%;
+	left: 33.333%;
+	transform-origin: top;
+}
+.newton-3d__item::before {
+	content: "";
+	width: 5px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	height: 100%;
+	margin-inline-start: -2.5px;
+	background-color: #04825a;
+}
+.newton-3d__item::after {
+	content: "";
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: radial-gradient(circle at top, yellowgreen, black);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	box-shadow: 0px 30px 20px 1px rgba(0, 0, 0, 0.2);
+}
+.newton-3d__item:nth-of-type(1) {
+	animation: left-item 1s infinite ease-in alternate;
+	z-index: 3;
+}
+.newton-3d__item:nth-of-type(2) {
+	z-index: 2;
+}
+.newton-3d__item:nth-of-type(3) {
+	animation: right-item 1s infinite ease-out alternate;
+	z-index: 1;
+}
+.newton-3d__item:nth-of-type(1)::after {
+	bottom: -8%;
+	transform: scale(1.2);
+}
+.newton-3d__item:nth-of-type(3)::after {
+	bottom: 8%;
+	transform: scale(0.8);
+}
+
+/* Стилі для Маятнику Ньютона 2d */
+
+.newton-2d__body {
+	width: 300px;
+	height: 300px;
+	margin-inline: auto;
+	position: relative;
+}
+.newton-2d__body::before {
+	content: "";
+	width: 100%;
+	height: 5px;
+	position: absolute;
+	top: 0;
+	background-color: #04825a;
+}
+.newton-2d__item {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	transform-origin: top;
+}
+.newton-2d__item::before {
+	content: "";
+	height: 200px;
+	width: 5px;
+	background-color: #04825a;
+}
+.newton-2d__item::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	background-color: #083426;
+	transform: translate(-52.5px, 0px);
+}
+.newton-2d__item:nth-of-type(1) {
+	animation: left-item-2d 1s infinite ease-in alternate;
+	left: 50px;
+}
+.newton-2d__item:nth-of-type(2) {
+	left: 148px;
+}
+.newton-2d__item:nth-of-type(3) {
+	right: 50px;
+	animation: right-item-2d 1s infinite ease-out alternate;
+}
+
+/* Стилі для packman */
+
+.pacman {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background-color: #ffee6b;
+	margin-inline: auto;
+}
+.pacman__body {
+	width: 100%;
+	height: 100%;
+	clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+	background-color: #A1CCA5;
+	animation: packman-eat 0.7s infinite;
+}
+.pacman::before {
+	content: "";
+	position: absolute;
+	top: 15%;
+	right: 45%;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: #083426;
+}
+.pacman::after {
+	content: "";
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background: #FFF;
+	border-radius: 50%;
+	top: 50%;
+	transform: translateY(-50%);
+	right: -120px;
+	animation: packman-food 0.7s infinite;
+}
+
+/* Стилі для механізму */
+
+.gears {
+	position: relative;
+	width: 100%;
+	height: 300px;
+}
+.gears__gear {
+	position: absolute;
+}
+.gears__gear img {
+	max-width: 200px;
+}
+.gears__gear:nth-of-type(even) {
+	animation: gears-rotate-right 3s linear infinite;
+}
+.gears__gear:nth-of-type(odd) {
+	animation: gears-rotate-left 3s linear infinite;
+}
+.gears__gear--1 {
+	top: 0;
+	left: 0;
+}
+.gears__gear--2 {
+	top: 140px;
+	left: 130px;
+}
+.gears__gear--3 {
+	top: 0;
+	left: 260px;
+}
+.gears__gear--4 {
+	top: 140px;
+	left: 390px;
+}
+.gears__gear--5 {
+	top: 0;
+	left: 520px;
+}
+.gears__gear--6 {
+	top: 140px;
+	left: 650px;
+}
+.gears__gear--7 {
+	top: 0;
+	left: 780px;
+}
+.gears__gear--8 {
+	top: 140px;
+	left: 910px;
+}
+
+/* Стилі для footer */
+
+.footer {
+	background-color: #111D13;
+	padding: 20px;
+}
+.footer__copy {
+	text-align: center;
+	font-weight: 700;
+	font-size: 25px;
+	color: #FFFFFF;
+}

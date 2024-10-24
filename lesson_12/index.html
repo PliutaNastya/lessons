@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Анімації та переходи в CSS</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<ul class="header__menu menu">
+					<li class="menu__item"><a href="#transition-block" class="menu__link">Переходи в CSS</a></li>
+					<li class="menu__item"><a href="#animation-block" class="menu__link">Анімації в CSS</a></li>
+					<li class="menu__item">
+						<a href="#practice-cases" class="menu__link menu__link--icon">Приклади використання</a>
+						<ul class="menu__sublist">
+							<li class="menu__subitem"><a href="#button-animations" class="menu__link">Анімація кнопок</a></li>
+							<li class="menu__subitem"><a href="#text-animations" class="menu__link">Анімація тексту</a></li>
+							<li class="menu__subitem"><a href="#bg-animations" class="menu__link">Анімація фону</a></li>
+							<li class="menu__subitem"><a href="#other-examples" class="menu__link">Інші приклади анімацій</a></li>
+							<li class="menu__subitem"><a href="homework.html" class="menu__link">Домашня робота</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<main class="main">
+			<div class="main__container">
+				<h1 class="main__title title">Анімації та переходи в CSS</h1>
+				<div class="main__transition-block transition-block" id="transition-block">
+					<h2 class="transition-block__title title">Переходи в CSS</h2>
+					<p class="transition-block__text text">Переходи (transition) забезпечують плавну зміну значення однієї або декількох CSS-властивостей протягом визначеного часу.</p>
+					<p class="text"><strong>transition:</strong> властивість тривалість функція_таймінгу затримка;</p>
+					<ul class="transition-block__list list">
+						<li class="list__item"><strong>властивість (property)</strong> — CSS-властивість, яку ви хочете змінити (наприклад, color, width, height, background-color тощо). Можна вказати all для зміни всіх властивостей.</li>
+						<li class="list__item"><strong>тривалість (duration)</strong> — час, за який має відбутися перехід (наприклад, 0.5s, 300ms).</li>
+						<li class="list__item"><strong>функція_таймінгу (timing-function)</strong> — описує, як буде змінюватися значення властивості протягом часу (наприклад, ease, linear, ease-in, ease-out, cubic-bezier()).</li>
+						<li class="list__item"><strong>затримка (delay)</strong> — час, через який почнеться перехід (наприклад, 0.2s, 1s).</li>
+					</ul>
+					<div class="transition-block__example"></div>
+					<code class="text">transition:
+						<span>width 0.5s ease-in-out, </span>
+						<span>height 1s ease-in 0.5s, </span>
+						<span>background-color 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.5s, </span>
+						<span>box-shadow 1s linear 1.8s;</span>
+					</code>
+				</div>
+				<div class="main__animation-block animation-block" id="animation-block">
+					<h2 class="animation-block__title title">Анімації в CSS</h2>
+					<p class="animation-block__text text">Анімації (CSS Animations) дозволяють анімувати зміни властивостей за допомогою ключових кадрів (keyframes), контролюючи процес зміни на різних етапах анімації.</p>
+					<p class="animation-block__text text"><strong>animation:</strong> назва_анімації тривалість функція_таймінгу затримка кількість_повторень напрямок заповнення стан_гри;</p>
+					<ul class="animation-block__list list">
+						<li class="list__item"><strong>назва_анімації (animation-name)</strong> — назва, присвоєна анімації у ключових кадрах (@keyframes).</li>
+						<li class="list__item"><strong>тривалість (animation-duration)</strong> — час, протягом якого відбувається анімація (наприклад, 2s, 500ms).</li>
+						<li class="list__item"><strong>функція_таймінгу (animation-timing-function)</strong> — спосіб зміни властивостей у часі, аналогічний transition-timing-function.</li>
+						<li class="list__item"><strong>затримка (animation-delay)</strong> — час до початку анімації.</li>
+						<li class="list__item"><strong>кількість_повторень (animation-iteration-count)</strong> — кількість разів, коли анімація повторюється (1, 2, infinite).</li>
+						<li class="list__item"><strong>напрямок (animation-direction)</strong> — напрямок анімації (normal, reverse, alternate, alternate-reverse).</li>
+						<li class="list__item"><strong>заповнення (animation-fill-mode)</strong> — визначає, чи зберігаються стилі до початку або після завершення анімації (none, forwards, backwards, both).</li>
+						<li class="list__item"><strong>стан_гри (animation-play-state)</strong> — визначає, чи буде анімація на паузі або активна (running, paused).</li>
+					</ul>
+					<div class="animation-block__functions">
+						<div>ease</div>
+						<div>ease-in</div>
+						<div>ease-out</div>
+						<div>ease-in-out</div>
+						<div>linear</div>
+						<div>cubic-bezier(0.68, -0.55, 0.265, 1.55)</div>
+					</div>
+					<div class="animation-block__example"></div>
+				</div>
+				<div class="main__practice-cases practice-cases" id="practice-cases">
+					<h2 class="practice-cases__title title">Приклади використання</h2>
+					<div class="practice-cases__button-animations button-animations" id="button-animations">
+						<h3 class="button-animations__subtitle subtitle">Анімація кнопок</h3>
+						<div class="button-animations__items">
+							<div class="button-animations__item">
+								<a href="#" class="button-animations__link button-animations__link--1">I'm changing the color</a>
+							</div>
+							<div class="button-animations__item">
+								<a href="#" class="button-animations__link button-animations__link--2">I'm pulsating</a>
+							</div>
+							<div class="button-animations__item">
+								<a href="#" class="button-animations__link button-animations__link--3">I'm floating</a>
+							</div>
+							<div class="button-animations__item">
+								<a href="#" class="button-animations__link button-animations__link--4"><span>&#9742;</span>Call me</a>
+							</div>
+							<div class="button-animations__item">
+								<a href="#" class="button-animations__link button-animations__link--5">Click me</a>
+							</div>
+							<div class="button-animations__item">
+								<a href="#" class="button-animations__link button-animations__link--6">Hover me</a>
+							</div>
+							<div class="button-animations__item">
+								<a href="#" class="button-animations__link button-animations__link--7">Hover me <span>&#8594;</span></a>
+							</div>
+							<div class="button-animations__item">
+								<a href="#" class="button-animations__link button-animations__link--8">
+									<svg>
+										<rect x="0" y="0" fill="none" width="100%" height="100%"/>
+									</svg>
+									Hover me
+								</a>
+							</div>
+							<div class="button-animations__item">
+								<a href="#" class="button-animations__link button-animations__link--9">Hover me</a>
+							</div>
+							<div class="button-animations__item">
+								<a href="#" class="button-animations__link button-animations__link--10">Hover me</a>
+							</div>
+						</div>
+					</div>
+					<div class="practice-cases__text-animations text-animations" id="text-animations">
+						<h3 class="subtitle">Анімація тексту</h3>
+						<div class="text-animations__items">
+							<!-- Зникаючий текст -->
+							<p class="text-animations__item text-animations__item--fade-in">I'm fading in.</p>
+							<!-- Текст, що обертається -->
+							<p class="text-animations__item text-animations__item--rotating">I'm rotating text.</p>
+							<!-- Зміна кольору тексту -->
+							<p class="text-animations__item text-animations__item--change-color">I'm changing my color.</p>
+							<!-- Ефект друкарської машинки -->
+							<p class="text-animations__item text-animations__item--typewriter">This is a typewriter effect.</p>
+							<!-- Стрибаючий текст -->
+							<p class="text-animations__item text-animations__item--jumping-text"><span>J</span><span>u</span><span>m</span><span>p</span><span>i</span><span>n</span><span>g</span></p>
+							<!-- Мигаючий текст -->
+							<p class="text-animations__item text-animations__item--blink-text">This is a blink-text effect.</p>
+							<!-- Біжучий текст -->
+							<p class="text-animations__item text-animations__item--running-text"><span>Breaking news!</span></p>
+							<!-- Світіння тексту -->
+							<p class="text-animations__item text-animations__item--glowing-text"><span>I`m glowing.</span></p>
+						</div>
+					</div>
+					<div class="practice-cases__bg-animations bg-animations" id="bg-animations">
+						<h3 class="subtitle">Анімація фону</h3>
+						<div class="bg-animations__items">
+							<div class="bg-animations__item">
+								<div class="bg-animations__example bg-animations__example--1"></div>
+							</div>
+							<div class="bg-animations__item">
+								<div class="bg-animations__example bg-animations__example--2"><span></span><span></span><span></span><span></span><span></span></div>
+							</div>
+							<div class="bg-animations__item">
+								<div class="bg-animations__example bg-animations__example--3"><span></span><span></span><span></span></div>
+							</div>
+							<div class="bg-animations__item">
+								<div class="bg-animations__example bg-animations__example--4"></div>
+							</div>
+							<div class="bg-animations__item">
+								<div class="bg-animations__example bg-animations__example--5"></div>
+							</div>
+						</div>
+					</div>
+					<div class="practice-cases__other-examples other-examples" id="other-examples">
+						<h2 class="other-examples__title title">Інші приклади анімацій</h2>
+						<div class="other-examples__newton-3d newton-3d">
+							<div class="newton-3d__body">
+								<div class="newton-3d__item"></div>
+								<div class="newton-3d__item"></div>
+								<div class="newton-3d__item"></div>
+							</div>
+						</div>
+						<div class="other-examples__newton-2d newton-2d">
+							<div class="newton-2d__body">
+								<div class="newton-2d__item"></div>
+								<div class="newton-2d__item"></div>
+								<div class="newton-2d__item"></div>
+							</div>
+						</div>
+						<div class="other-examples__pacman pacman">
+							<div class="pacman__body"></div>
+						</div>
+						<div class="other-examples__gears gears">
+							<div class="gears__gear gears__gear--1">
+								<img src="img/icon_settings.svg" alt="Image">
+							</div>
+							<div class="gears__gear gears__gear--2">
+								<img src="img/icon_settings.svg" alt="Image">
+							</div>
+							<div class="gears__gear gears__gear--3">
+								<img src="img/icon_settings.svg" alt="Image">
+							</div>
+							<div class="gears__gear gears__gear--4">
+								<img src="img/icon_settings.svg" alt="Image">
+							</div>
+							<div class="gears__gear gears__gear--5">
+								<img src="img/icon_settings.svg" alt="Image">
+							</div>
+							<div class="gears__gear gears__gear--6">
+								<img src="img/icon_settings.svg" alt="Image">
+							</div>
+							<div class="gears__gear gears__gear--7">
+								<img src="img/icon_settings.svg" alt="Image">
+							</div>
+							<div class="gears__gear gears__gear--8">
+								<img src="img/icon_settings.svg" alt="Image">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<p class="footer__copy">&copy; Anastasiia Pliuta</p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

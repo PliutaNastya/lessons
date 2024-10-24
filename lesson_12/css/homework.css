@@ -1,0 +1,716 @@
+/* Підключення шрифтів */
+@import url("https://fonts.googleapis.com/css?family=Sofia+Sans+Semi+Condensed:regular,700&display=swap");
+
+/* Обнулення стилів */
+@import url("reset.css");
+
+/* Загальні стилі */
+body {
+	font-family: "Sofia Sans Semi Condensed", sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+.page {
+	height: 100vh;
+	overflow: clip;
+}
+.canvas {
+	/* perspective: 700px; */
+}
+/* Фон */
+.canvas__top {
+	width: 100%;
+	/* left: 3%; */
+	aspect-ratio: 11 / 1;
+	background: linear-gradient(180deg, #87CEEB 0%, #4682B4 100%);
+	position: relative;
+	/* transform: rotateY(5deg); */
+}
+.canvas__center {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 11 / 3;
+	background: 
+		radial-gradient(circle, rgba(133, 133, 133, 0.6) 10%, transparent 50%), 
+		radial-gradient(circle, rgba(60, 60, 60, 0.5) 20%, transparent 60%), 
+		radial-gradient(circle, rgba(213, 213, 213, 0.7) 30%, transparent 70%), 
+		linear-gradient(135deg, #404040, #2b2b2b);
+	background-size: 400px 400px, 300px 300px, 200px 200px, 100%;
+	background-blend-mode: overlay;
+}
+.canvas__bottom {
+	position: relative;
+	width: 100%;
+	z-index: 10;
+	/* left: 3%; */
+	aspect-ratio: 11 / 1;
+	background: url("../img/grass.png") center top / contain, linear-gradient(145deg, #5f9e44 20%, #4c8236 40%, #3d692c 60%, #2b4f22 80%);
+	transform: rotateY(5deg);
+}
+.center__road-markings {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 20px dashed #FFFFFF;
+}
+/* Дерева */
+.tree {
+	position: absolute;
+	width: 20px;
+	height: 60px;
+	background:  linear-gradient(180deg, #A0522D 0%, #8B4513 100%);
+}
+.top__tree {
+	bottom: 0;
+}
+.tree--1 {
+	left: 20%;
+}
+.tree--2 {
+	left: 40%;
+	transform: scale(1.3);
+}
+.tree--3 {
+	left: 60%;
+}
+.tree--4 {
+	left: 80%;
+	transform: scale(1.2);
+}
+.tree::before {
+	content: "";
+	width: 70px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background: linear-gradient(180deg, #7CFC00 0%, #228B22 100%);
+	position: absolute;
+	top: -100%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+}
+.bottom__flower {
+	position: absolute;
+	bottom: 40%;
+	width: 100px;
+	height: 100px;
+	z-index: 7;
+}
+.bottom__flower--1 {
+	left: 5%;
+	background: url("../img/flower_1.png") center / contain no-repeat;
+}
+.bottom__flower--2 {
+	left: 20%;
+	background: url("../img/flower_2.png") center / contain no-repeat;
+}
+.bottom__flower--3 {
+	left: 35%;
+	background: url("../img/flower_3.png") center / contain no-repeat;
+}
+.bottom__flower--4 {
+	left: 50%;
+	background: url("../img/flower_4.png") center / contain no-repeat;
+}
+.bottom__flower--5 {
+	left: 65%;
+	background: url("../img/flower_1.png") center / contain no-repeat;
+}
+.bottom__flower--6 {
+	left: 80%;
+	background: url("../img/flower_2.png") center / contain no-repeat;
+}
+.bottom__flower--7 {
+	left: 90%;
+	background: url("../img/flower_3.png") center / contain no-repeat;
+}
+/* Автобус */
+.bus {
+	position: absolute;
+	left: 8%;
+	bottom: 12%;
+	width: 770px;
+	height: 440px;
+	border-radius: 15% 15%;
+	border: 1px solid #130a23;
+	background: linear-gradient(180deg, #5e5373 0%, #18b5a4 50%, #ece789 100%);
+	z-index: 4;
+	animation: bus-arrival 4s ease forwards, bus-leaving 4s ease 22s forwards;
+}
+.bus::before, .bus::after {
+	content: "";
+	position: absolute;
+	bottom: 15%;
+	width: 1%;
+	height: 7%;
+	background-color: rgb(233, 157, 17);
+	box-shadow: 0 0 30px rgb(158, 127, 3);
+}
+.bus::before {
+	left: 100%;
+	border-radius: 0% 40% 40% 0%;
+}
+.bus::after {
+	left: -1%;
+	border-radius: 40% 0 0% 40%;
+}
+.bus__hatchway {
+	position: absolute;
+	top: -20px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 400px;
+	height: 20px;
+	border: 1px solid #130a23;
+	background-color: #130a23;
+	border-radius: 50px 50px 0px 0px;
+}
+.bus__table {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 30px;
+	width: 500px;
+	text-align: center;
+	font-size: 32px;
+	background-color: #ece7895d;
+	overflow: hidden;
+}
+.bus__table span {
+	display: block;
+	animation: text-running 10s linear infinite backwards;
+}
+.bus__second-level {
+	position: absolute;
+	top: 15%;
+	left: 0%;
+	z-index: 5;
+}
+.bus__window {
+	display: inline-block;
+	width: 130px; 
+	height: 110px;
+	border: 1px solid #1C1C1C;
+	border-radius: 10%;
+}
+.bus__first-level {
+	position: absolute;
+	top: 60%;
+	left: 0;
+}
+.first-level {
+	font-size: 0;
+}
+.first-level__window {
+	display: inline-block;
+	vertical-align: top;
+	width: 130px; 
+	height: 110px;
+	border: 1px solid #1C1C1C;
+	border-radius: 10%;
+	overflow: hidden;
+}
+.bus__window--half, .first-level__window--half {
+	width: 64.5px;
+}
+.first-level__window:not(:last-child) {
+	margin-inline-end: 25px;
+}
+.first-level__door {
+	display: inline-block;
+	vertical-align: top;
+	width: 140px; 
+	height: 175px;
+	border: 1px solid #1C1C1C;
+	background-color: #5e5373dd;
+}
+.first-level__doors {
+	perspective: 300px;
+	position: relative;
+	z-index: 5;
+	font-size: 0;
+	display: inline-block;
+	margin-inline-end: 24px;
+	background: url("../img/open_door.png") center bottom / 200px no-repeat;
+}
+.first-level__door--left {
+	animation: open-left-door 1s linear 11.5s forwards, close-left-door 1s linear 21s forwards;
+}
+.first-level__door--right {
+	animation: open-right-door 1s linear 11.5s forwards, close-right-door 1s linear 21s forwards;
+}
+.bus__window--half-left, .first-level__window--half-left {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border-left-color: transparent;
+}
+.bus__window--half-right, .first-level__window--half-right {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-right-color: transparent;
+}
+.bus__window:not(:last-child) {
+	margin-inline-end: 20px;
+}
+.first-level > *:not(.first-level__doors) {
+	background: linear-gradient(145deg, rgba(173, 216, 230, 0.8) 0%, rgba(135, 206, 235, 0.6) 50%, rgba(70, 130, 180, 0.2) 100%);
+}
+.first-level__window--freelancer {
+	position: relative;
+	overflow: visible;
+}
+.first-level__window--freelancer::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: url("../img/freelancer.png") center bottom / cover no-repeat;
+	animation: opacity-hidden 0.1s linear 12s forwards, opacity-visible 0.1s linear 21s forwards;
+}
+.first-level__window--freelancer::after {
+	content: "Кінцева зупинка. Вітаю всіх із успішним закінченням курсу. Тримайте свої сертифікати.";
+	position: absolute;
+	top: -120%;
+	right: -300px;
+	width: 300px;
+	padding: 20px;
+	border-radius: 50px 10px 50px 0px;
+	z-index: 50;
+	color: #1b2a48;
+	font-size: 18px;
+	transform: rotate(-3deg);
+	background-color: #ffffff;
+	visibility: hidden;
+	animation: showing-text 1s linear 4.5s forwards, opacity-hidden 0.1s linear 8s forwards;
+} 
+.first-level__window--student  {
+	position: relative;
+}
+.first-level__window--student::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	animation: opacity-hidden 0.1s linear 15s forwards;
+}
+.first-level__window--student::after, .bus__window--student::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 50px;
+	height: 30px;
+	background: url("../img/certificate.png") center / cover no-repeat;
+	visibility: hidden;
+	animation: certificates 3s linear 6.5s forwards, opacity-hidden 0.1s linear 15s forwards;
+}
+.first-level__window--student-1::before {
+	background: url("../img/student_1.png") center bottom / cover no-repeat;
+}
+.first-level__window--student-2::before {
+	background: url("../img/student_5.png") center bottom / contain no-repeat;
+}
+.first-level__window--student-3::before {
+	background: url("../img/student_2.png") center bottom / contain no-repeat;
+}
+
+.bus__window--student {
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(145deg, rgba(173, 216, 230, 0.8) 0%, rgba(135, 206, 235, 0.6) 50%, rgba(70, 130, 180, 0.2) 100%);;
+}
+.bus__window--student::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	animation: opacity-hidden 0.1s linear 15s forwards;
+}
+.bus__window--student-6::before {
+	background: url("../img/student_7.png") center bottom / cover no-repeat;
+}
+
+.bus__window--student-7::before {
+	background: url("../img/student_4.png") center bottom / contain no-repeat;
+}
+.bus__window--student-8::before {
+	background: url("../img/student_8.png") center bottom / contain no-repeat;
+}
+.bus__window--student-9::before {
+	background: url("../img/student_9.png") center bottom / contain no-repeat;
+}
+.bus__window--student-10::before {
+	background: url("../img/student_11.png") center bottom / contain no-repeat;
+}
+.bus__window--student-11::before {
+	background: url("../img/student_10.png") center bottom / cover no-repeat;
+}
+.bus__mirror {
+	position: absolute;
+	bottom: 10%;
+	right: -10%;
+	width: 85px;
+	height: 250px;
+	border: 3px solid #7bada6;
+	border-left-color: transparent;
+	border-radius: 0 400% 0px 0;
+}
+.bus__mirror::before {
+	content: "";
+	position: absolute;
+	top: 65%;
+	right: -15%;
+	width: 40px;
+	height: 70px;
+	border-radius: 10px;
+	background: linear-gradient(145deg, rgba(173, 216, 230, 1) 0%, rgba(135, 206, 235, 1) 50%, rgba(70, 130, 180, 1) 100%);
+}
+.bus__wheel {
+	position: absolute;
+	bottom: -10%;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 10px dashed #808080;
+	background: linear-gradient(180deg, #2F2F2F 0%, #1C1C1C 100%);
+	animation: wheel-move 4s ease-in-out forwards, wheel-move 4s ease-in-out 22s forwards;
+}
+.bus__wheel::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #808080;
+}
+.bus__wheel--1 {
+	left: 10%;
+}
+.bus__wheel--2 {
+	left: 70%;
+}
+/* Будинки */
+.building {
+	position: absolute;
+	width: 100px;
+	height: 130px;
+	font-size: 0;
+	overflow: hidden;
+	border: 1px solid #6b6464;
+}
+.top__building {
+	bottom: 0;
+}
+.building--1, .building--4, .building--7 {
+	left: 5%;
+	background: 
+		radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 30%), 
+		radial-gradient(circle, rgba(0, 0, 0, 0.05) 20%, transparent 50%), 
+		linear-gradient(145deg, #d7c4a1 20%, #b09d86 40%, #827a6d 60%, #5d564d 80%);
+	background-size: 300px 300px, 400px 400px, 100%;
+	background-blend-mode: overlay;
+	z-index: 2;
+}
+.building--2, .building--5, .building--8 {
+	left: 8%;
+	bottom: 8.5%;
+	z-index: 1;
+	transform: scale(1.2);
+	background: 
+		radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 30%), 
+		radial-gradient(circle, rgba(1, 149, 142, 0.05) 20%, transparent 50%), 
+		linear-gradient(145deg, #6e7ed7 20%, #1b2a48 40%, #415891 60%, #324177 80%);
+	background-size: 300px 300px, 400px 400px, 100%;
+	background-blend-mode: overlay;
+
+}
+.building--3, .building--6 {
+	left: 27%;
+	background: 
+		radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 30%), 
+		radial-gradient(circle, rgba(0, 0, 0, 0.05) 20%, transparent 50%), 
+		linear-gradient(145deg, #d7c4a1 20%, #b09d86 40%, #827a6d 60%, #5d564d 80%);
+	background-size: 300px 300px, 400px 400px, 100%;
+	background-blend-mode: overlay;
+	transform: scale(1.3);
+}
+.building--4 {
+	left: 45%;
+}
+.building--5 {
+	left: 50%;
+}
+.building--6 {
+	left: 67%;
+}
+.building--7 {
+	left: 85%;
+}
+.building--8 {
+	left: 90%;
+}
+.building__windows {
+	margin: 0px -1px -1px 0px;
+}
+.building__window {
+	display: inline-block;
+	width: 33.333%;
+	height: 40px;
+	border-right: 1px solid #6b6464;
+	border-bottom: 1px solid #6b6464;
+}
+/* Автобусна зупинка */
+.bottom__stop {
+	position: absolute;
+	right: 2%;
+	top: -120%;
+	width: 200px;
+	font-size: 26px;
+	border-radius: 20px;
+	padding: 10px;
+	background-color: #5e5373;
+	text-align: center;
+}
+.bottom__stop > * {
+	margin-block-end: 10px;
+}
+.bottom__stop > *:last-child {
+	margin-block-end: 10px;
+}
+.bottom__stop span {
+	display: block;
+	color: #ece789;
+	font-weight: 700;
+}
+.bottom__stop::after {
+	content: "";
+	position: absolute;
+	bottom: -120px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 20px;
+	height: 120px;
+	background-color: #18b5a4;
+}
+/* Хмари та сонце */
+.top__cloud {
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	background: url("../img/cloud.svg") 0 -30px / contain no-repeat;
+}
+.top__cloud--1 {
+	left: 1%;
+}
+.top__cloud--2 {
+	left: 35%;
+}
+.top__cloud--3 {
+	left: 75%;
+}
+.top__sun {
+	position: absolute;
+	top: -40%;
+	right: -3%;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: #e8e80a;
+	box-shadow: 0 0 30px rgba(201, 208, 7, 0.9);
+}
+.center__freelancer-exit {
+	position: absolute;
+	top: 7%;
+	left: 48%;
+	z-index: 11;
+	opacity: 0;
+	animation: freelancer-exit 2s linear 12s forwards, opacity-visible 0.1s linear 12s forwards, freelancer-entrance 2s linear 19s forwards, opacity-hidden 0.1s linear 21s forwards;
+} 
+.center__freelancer-exit img {
+	width: 150px;
+}
+.center__freelancer-exit::after {
+	content: "Ну а я поїхав далі, навчати інших!";
+	position: absolute;
+	top: -90px;
+	right: -150px;
+	width: 200px;
+	padding: 20px;
+	z-index: 50;
+	color: #1b2a48;
+	font-size: 18px;
+	border-radius: 50px 10px 50px 0px;
+	transform: rotate(-3deg);
+	background-color: #ffffff;
+	visibility: hidden;
+	animation: showing-text 1s linear 16s forwards, opacity-hidden 0.1s linear 18s forwards;
+}
+.center__pyro > .center__before-pyro, .center__pyro > .center__after-pyro {
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	box-shadow: 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff;
+	animation: 1s bang ease-out infinite 6.5s backwards, 1s gravity ease-in infinite 6.5s backwards, 5s position linear infinite 6.5s backwards;
+}
+.center__pyro > .center__after-pyro {
+	animation-delay: 6.5s, 6.5s, 6.5s;
+	animation-duration: 1.25s, 1.25s, 6.25s;
+}
+@keyframes bus-arrival {
+	0% {
+		left: -200%;
+	}
+	100% {
+		left: 28%;
+	}
+}
+@keyframes bus-leaving {
+	0% {
+		left: 28%;
+	}
+	100% {
+		left: 200%;
+	}
+}
+@keyframes wheel-move {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes showing-text {
+	0% {
+		visibility: hidden;
+		opacity: 0;
+	}
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+@keyframes open-left-door {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-90px);
+	}
+}
+@keyframes open-right-door {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(90px);
+	}
+}
+@keyframes close-left-door {
+	0% {
+		transform: translateX(-90px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+@keyframes close-right-door {
+	0% {
+		transform: translateX(90px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+@keyframes freelancer-exit {
+	0% {
+		transform: translate(0, 0);
+	}
+	50% {
+		transform: translate(0, 200px);
+	}
+	100% {
+		transform: translate(150px, 200px);
+	}
+}
+@keyframes opacity-visible {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes opacity-hidden {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes certificates {
+	0%{
+		transform: translateY(-300px);
+		visibility: visible;
+	}
+	100% {
+		transform: translateY(0);
+		visibility: visible;
+	}
+}
+@keyframes freelancer-entrance {
+	0% {
+		transform: translate(150px, 200px);
+	}
+	50% {
+		transform: translate(-40px, 200px);
+	}
+	100% {
+		transform: translate(-40px, -10px);
+	}
+}
+@keyframes text-running {
+	0%{
+		transform: translateX(-500px);
+	}
+	100% {
+		transform: translateX(500px);
+	}
+}
+@keyframes bang {
+  to {
+    box-shadow: -161px -400.6666666667px #00ff44, -125px -336.6666666667px #00ff33, 146px -170.6666666667px #0099ff, 135px -35.6666666667px #e6ff00, 178px -349.6666666667px #aaff00, -37px -384.6666666667px #fff200, 150px -244.6666666667px #ffa200, 76px -351.6666666667px #dd00ff, -37px -376.6666666667px #00ffa6, -176px -136.6666666667px #00ff8c, 219px -202.6666666667px #3700ff, -24px -284.6666666667px aqua, 164px 34.3333333333px #66ff00, -17px -15.6666666667px #ff1100, 231px -67.6666666667px #00ff91, 69px -248.6666666667px #00d0ff, 204px -95.6666666667px #0400ff, -246px 50.3333333333px #ff4000, -2px -3.6666666667px #00ff33, 105px -185.6666666667px #00f2ff, -228px -79.6666666667px #6f00ff, 189px -193.6666666667px #3cff00, -52px -29.6666666667px #00ffd0, -182px -33.6666666667px #9d00ff, 214px 11.3333333333px #a2ff00, 172px -18.6666666667px #ff0026, 195px 6.3333333333px #80ff00, -99px -42.6666666667px #0400ff, 64px -49.6666666667px #ff9d00, 19px -73.6666666667px #ff0084, 84px -29.6666666667px #8c00ff, -107px -199.6666666667px #00ff6a, -92px 74.3333333333px #00ffc8, -236px -49.6666666667px #0040ff, -207px -230.6666666667px #006fff, 20px -119.6666666667px #ff9500, 31px 5.3333333333px #ff6f00, 81px -142.6666666667px #ffb700, 13px -177.6666666667px #ff0400, -208px -249.6666666667px #7700ff, -137px -63.6666666667px #2fff00, 15px -163.6666666667px fuchsia, 165px -270.6666666667px #0040ff, -206px -214.6666666667px #ffa600, -229px -186.6666666667px #8cff00, 95px -265.6666666667px #00c4ff, -247px 66.3333333333px #00fff2, -74px -326.6666666667px #fffb00, 86px 14.3333333333px #2f00ff, 218px -98.6666666667px #00ffb7, -249px -116.6666666667px #0091ff;
+  }
+}
+@keyframes gravity {
+  to {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+}
+@keyframes position {
+  0%, 19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+  20%, 39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+  40%, 59.9% {
+    margin-top: 20%;
+    margin-left: 70%;
+  }
+  60%, 79.9% {
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+  80%, 99.9% {
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+}
