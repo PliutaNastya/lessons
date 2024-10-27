@@ -396,7 +396,7 @@ body {
 	position: relative;
 	z-index: 4;
 	overflow: hidden;
-	transition: all 0.3s linear 0.3s;
+	transition: all 0.3s linear;
 }
 .button-animations__link--12::before {
 	content: "";
@@ -416,13 +416,13 @@ body {
 }
 .button-animations__item:hover .button-animations__link--12 {
 	color: #FFFFFF;
+	transition: all 0.3s linear 0.3s;
 }
 .button-animations__link--13 {
 	position: relative;
 	overflow: hidden;
 	z-index: 3;
-	border-radius: 10px 25px 10px 10px;
-	transition: all 0.3s linear 0.3s;
+	transition: all 0.3s linear;
 }
 .button-animations__link--13::before {
 	content: "";
@@ -431,10 +431,11 @@ body {
 	right: 0;
 	width: 0;
 	height: 0;
+	z-index: 4;
 	border: 10px solid #03a27b;
 	border-radius: 0px 0px 0px 10px;
-	border-top-color: transparent;
-	border-right-color: transparent;
+	border-top-color: #A1CCA5;
+	border-right-color: #A1CCA5;
 	transition: all 0.3s linear;
 }
 .button-animations__link--13::after {
@@ -451,7 +452,6 @@ body {
 }
 .button-animations__item:hover .button-animations__link--13::before {
 	transform: translate(20px, -20px);
-	border-top-right-radius: 10px;
 }
 .button-animations__item:hover .button-animations__link--13::after {
 	top: 0%;
@@ -460,6 +460,7 @@ body {
 .button-animations__item:hover .button-animations__link--13 {
 	border-top-right-radius: 10px;
 	color: #ffffff;
+	transition: all 0.3s linear 0.3s;
 }
 
 /* Стилі для анімованого тексту */
