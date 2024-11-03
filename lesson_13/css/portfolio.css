@@ -390,6 +390,8 @@ body {
 .events__item {
 	flex-grow: 1;
 	inline-size: 370px;
+	display: flex;
+	flex-direction: column;
 	padding: 40px;
 	border-radius: 6px;
 	border: 1px solid #3A3C56;
@@ -444,6 +446,9 @@ body {
 }
 .item-events__title:not(:last-child) {
 	margin-block-end: 19px;
+}
+.item-events__text {
+	flex-grow: 1;
 }
 .item-events__text p  {
 	color: rgba(255, 255, 255, 0.64);
