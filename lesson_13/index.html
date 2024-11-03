@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="keywords" content="Flexbox, Flex-контейнер, Flex-елементи, flex-direction, align-items, flex-wrap, flex-flow, justify-content, align-content, gap, order, align-self, flex-grow, flex-shrink, flex-basis, flex, CSS, Flexbox приклади, адаптивна верстка, CSS сітка, веб-розробка">
+   <meta name="description" content="Гайд по Flexbox, включаючи властивості Flex-контейнера, Flex-елементів та приклади використання: галерея, продуктові сторінки, картки та сітки.">
+	<meta name="author" content="Анастасія Плюта">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Flexbox: flex-контейнер і flex-елементи, приклади використання</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<ul class="header__menu menu">
+					<li class="menu__item">
+						<a href="#flex-container" class="menu__link menu__link--icon">Flex контейнер</a>
+						<ul class="menu__sublist">
+							<li class="menu__subitem"><a href="#display" class="menu__sublink">display</a></li>
+							<li class="menu__subitem"><a href="#flex-direction" class="menu__sublink">flex-direction</a></li>
+							<li class="menu__subitem"><a href="#flex-wrap" class="menu__sublink">flex-wrap</a></li>
+							<li class="menu__subitem"><a href="#flex-flow" class="menu__sublink">flex-flow</a></li>
+							<li class="menu__subitem"><a href="#justify-content" class="menu__sublink">justify-content</a></li>
+							<li class="menu__subitem"><a href="#align-items" class="menu__sublink">align-items</a></li>
+							<li class="menu__subitem"><a href="#align-content" class="menu__sublink">align-content</a></li>
+							<li class="menu__subitem"><a href="#gap" class="menu__sublink">gap</a></li>
+						</ul>
+					</li>
+					<li class="menu__item">
+						<a href="#flex-item" class="menu__link menu__link--icon">Flex елементи</a>
+						<ul class="menu__sublist">
+							<li class="menu__subitem"><a href="#order" class="menu__sublink">order</a></li>
+							<li class="menu__subitem"><a href="#align-self" class="menu__sublink">align-self</a></li>
+							<li class="menu__subitem"><a href="#flex-grow" class="menu__sublink">flex-grow</a></li>
+							<li class="menu__subitem"><a href="#flex-shrink" class="menu__sublink">flex-shrink</a></li>
+							<li class="menu__subitem"><a href="#flex-basis" class="menu__sublink">flex-basis</a></li>
+							<li class="menu__subitem"><a href="#flex" class="menu__sublink">flex</a></li>
+						</ul>
+					</li>
+					<li class="menu__item">
+						<a href="#examples" class="menu__link menu__link--icon">Приклади використання</a>
+						<ul class="menu__sublist">
+							<li class="menu__subitem"><a href="#gallery" class="menu__sublink">Галерея</a></li>
+							<li class="menu__subitem"><a href="#products" class="menu__sublink">Продуктова сторінка</a></li>
+							<li class="menu__subitem"><a href="#reverse" class="menu__sublink">Використання reverse</a></li>
+							<li class="menu__subitem"><a href="#levels" class="menu__sublink">Мої навички</a></li>
+							<li class="menu__subitem"><a href="#vertical-bars" class="menu__sublink">Vertical bars</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<main class="main">
+			<a href="portfolio.html" class="other-page">&#10147;</a>
+			<div class="main__container">
+				<h1 class="main__title title">Flexbox: flex-контейнер і flex-елементи, приклади використання</h1>
+				<div class="main__flex-cnt flex-cnt flex-cnt--margin" id="flex-container">
+					<h2 class="title">Flex контейнер</h2>
+					<div class="flex-cnt__display flex-cnt__display--margin" id="display">
+						<h3 class="subtitle">display</h3>
+						<details class="flex-cnt__spollers">
+							<summary><code>display: flex;</code></summary>
+							<div class="flex-items">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+								<div class="flex-items__item">6</div>
+								<div class="flex-items__item">7</div>
+								<div class="flex-items__item">8</div>
+								<div class="flex-items__item">9</div>
+							</div>
+						</details>
+						<details class="flex-cnt__spollers">
+							<summary><code>display: inline-flex;</code></summary>
+							<div class="flex-items flex-items--inline-flex">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+								<div class="flex-items__item">6</div>
+								<div class="flex-items__item">7</div>
+								<div class="flex-items__item">8</div>
+								<div class="flex-items__item">9</div>
+							</div>
+						</details>
+					</div>
+					<div class="flex-cnt__flex-dir flex-cnt__flex-dir--margin" id="flex-direction">
+						<h3 class="subtitle">flex-direction</h3>
+						<details class="flex-cnt__spollers">
+							<summary><code>flex-direction: row-reverse;</code></summary>
+							<div class="flex-items flex-items--flex-dir-row-reverse">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+								<div class="flex-items__item">6</div>
+								<div class="flex-items__item">7</div>
+								<div class="flex-items__item">8</div>
+								<div class="flex-items__item">9</div>
+							</div>
+						</details>
+						<details class="flex-cnt__spollers">
+							<summary><code>flex-direction: column;</code></summary>
+							<div class="flex-items flex-items--flex-dir-col">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+								<div class="flex-items__item">6</div>
+								<div class="flex-items__item">7</div>
+								<div class="flex-items__item">8</div>
+								<div class="flex-items__item">9</div>
+							</div>
+						</details>
+						<details class="flex-cnt__spollers">
+							<summary><code>flex-direction: column-reverse;</code></summary>
+							<div class="flex-items flex-items--flex-dir-col-reverse">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+								<div class="flex-items__item">6</div>
+								<div class="flex-items__item">7</div>
+								<div class="flex-items__item">8</div>
+								<div class="flex-items__item">9</div>
+							</div>
+						</details>
+					</div>
+					<div class="flex-cnt__flex-wrap flex-cnt__flex-wrap--margin" id="flex-wrap">
+						<h3 class="subtitle">flex-wrap</h3>
+						<details class="flex-cnt__spollers">
+							<summary><code>flex-wrap: wrap;</code></summary>
+							<div class="flex-items flex-items--flex-wrap-wrap">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+								<div class="flex-items__item">6</div>
+								<div class="flex-items__item">7</div>
+								<div class="flex-items__item">8</div>
+								<div class="flex-items__item">9</div>
+							</div>
+						</details>
+						<details class="flex-cnt__spollers">
+							<summary><code>flex-wrap: wrap-reverse;</code></summary>
+							<div class="flex-items flex-items--flex-wrap-reverse">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+								<div class="flex-items__item">6</div>
+								<div class="flex-items__item">7</div>
+								<div class="flex-items__item">8</div>
+								<div class="flex-items__item">9</div>
+							</div>
+						</details>
+					</div>
+					<div class="flex-cnt__flex-flow flex-cnt__flex-flow--margin" id="flex-flow">
+						<h3 class="subtitle">flex-flow</h3>
+						<details class="flex-cnt__spollers">
+							<summary><code>flex-flow: row-reverse wrap-reverse;</code></summary>
+							<div class="flex-items flex-items--flex-flow-row-rev-wrap-rev">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+								<div class="flex-items__item">6</div>
+								<div class="flex-items__item">7</div>
+								<div class="flex-items__item">8</div>
+								<div class="flex-items__item">9</div>
+							</div>
+						</details>
+						<details class="flex-cnt__spollers">
+							<summary><code>flex-flow: column-reverse wrap-reverse;</code></summary>
+							<div class="flex-items flex-items--flex-flow-col-rev-wrap-rev">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+								<div class="flex-items__item">6</div>
+								<div class="flex-items__item">7</div>
+								<div class="flex-items__item">8</div>
+								<div class="flex-items__item">9</div>
+							</div>
+						</details>
+					</div>
+					<div class="flex-cnt__justify-content flex-cnt__justify-content--margin" id="justify-content">
+						<h3 class="subtitle">justify-content</h3>
+						<details class="flex-cnt__spollers">
+							<summary><code>justify-content: flex-end;</code></summary>
+							<div class="flex-items flex-items--js-flex-end">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+							</div>
+						</details>
+						<details class="flex-cnt__spollers">
+							<summary><code>justify-content: center;</code></summary>
+							<div class="flex-items flex-items--js-center">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+							</div>
+						</details>
+						<details class="flex-cnt__spollers">
+							<summary><code>justify-content: space-between;</code></summary>
+							<div class="flex-items flex-items--js-space-btw">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+							</div>
+						</details>
+						<details class="flex-cnt__spollers">
+							<summary><code>justify-content: space-around;</code></summary>
+							<div class="flex-items flex-items--js-space-around">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+							</div>
+						</details>
+						<details class="flex-cnt__spollers">
+							<summary><code>justify-content: space-evenly;</code></summary>
+							<div class="flex-items flex-items--js-space-evenly">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+							</div>
+						</details>
+					</div>
+					<div class="flex-cnt__align-items flex-cnt__align-items--margin" id="align-items">
+						<h3 class="subtitle">align-items</h3>
+						<details class="flex-cnt__spollers">
+							<summary><code>align-items: flex-start;</code></summary>
+							<div class="flex-items flex-items--height flex-items--ai-flex-start">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+							</div>
+						</details>
+						<details class="flex-cnt__spollers">
+							<summary><code>align-items: flex-end;</code></summary>
+							<div class="flex-items flex-items--height flex-items--ai-flex-end">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+							</div>
+						</details>
+						<details class="flex-cnt__spollers">
+							<summary><code>align-items: center;</code></summary>
+							<div class="flex-items flex-items--height flex-items--ai-center">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+							</div>
+						</details>
+					</div>
+					<div class="flex-cnt__align-content flex-cnt__align-content--margin" id="align-content">
+						<h3 class="subtitle">align-content</h3>
+						<details class="flex-cnt__spollers">
+							<summary><code>align-content: flex-start;</code></summary>
+							<div class="flex-items flex-items--wrap flex-items--height flex-items--ac-flex-start">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+								<div class="flex-items__item">6</div>
+								<div class="flex-items__item">7</div>
+								<div class="flex-items__item">8</div>
+								<div class="flex-items__item">9</div>
+							</div>
+						</details>
+						<details class="flex-cnt__spollers">
+							<summary><code>align-content: flex-end;</code></summary>
+							<div class="flex-items flex-items--wrap flex-items--height flex-items--ac-flex-end">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+								<div class="flex-items__item">6</div>
+								<div class="flex-items__item">7</div>
+								<div class="flex-items__item">8</div>
+								<div class="flex-items__item">9</div>
+							</div>
+						</details>
+						<details class="flex-cnt__spollers">
+							<summary><code>align-content: center;</code></summary>
+							<div class="flex-items flex-items--wrap flex-items--height flex-items--ac-center">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+								<div class="flex-items__item">6</div>
+								<div class="flex-items__item">7</div>
+								<div class="flex-items__item">8</div>
+								<div class="flex-items__item">9</div>
+							</div>
+						</details>
+						<details class="flex-cnt__spollers">
+							<summary><code>align-content: space-between;</code></summary>
+							<div class="flex-items flex-items--wrap flex-items--height flex-items--ac-space-btw">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+								<div class="flex-items__item">6</div>
+								<div class="flex-items__item">7</div>
+								<div class="flex-items__item">8</div>
+								<div class="flex-items__item">9</div>
+							</div>
+						</details>
+						<details class="flex-cnt__spollers">
+							<summary><code>align-content: space-around;</code></summary>
+							<div class="flex-items flex-items--wrap flex-items--height flex-items--ac-space-around">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+								<div class="flex-items__item">6</div>
+								<div class="flex-items__item">7</div>
+								<div class="flex-items__item">8</div>
+								<div class="flex-items__item">9</div>
+							</div>
+						</details>
+						<details class="flex-cnt__spollers">
+							<summary><code>align-content: space-evenly;</code></summary>
+							<div class="flex-items flex-items--wrap flex-items--height flex-items--ac-space-evenly">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+								<div class="flex-items__item">6</div>
+								<div class="flex-items__item">7</div>
+								<div class="flex-items__item">8</div>
+								<div class="flex-items__item">9</div>
+							</div>
+						</details>
+					</div>
+					<div class="flex-cnt__gap flex-cnt__gap--margin" id="gap">
+						<h3 class="subtitle">gap</h3>
+						<details class="flex-cnt__spollers">
+							<summary><code>gap: 10px 30px;</code></summary>
+							<div class="flex-items flex-items--wrap flex-items--gap">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+								<div class="flex-items__item">6</div>
+								<div class="flex-items__item">7</div>
+								<div class="flex-items__item">8</div>
+								<div class="flex-items__item">9</div>
+							</div>
+						</details>
+						<details class="flex-cnt__spollers">
+							<summary><code>column-gap: 30px;</code></summary>
+							<div class="flex-items flex-items--wrap flex-items--col-gap">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+								<div class="flex-items__item">6</div>
+								<div class="flex-items__item">7</div>
+								<div class="flex-items__item">8</div>
+								<div class="flex-items__item">9</div>
+							</div>
+						</details>
+						<details class="flex-cnt__spollers">
+							<summary><code>row-gap: 10px;</code></summary>
+							<div class="flex-items flex-items--wrap flex-items--row-gap">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+								<div class="flex-items__item">6</div>
+								<div class="flex-items__item">7</div>
+								<div class="flex-items__item">8</div>
+								<div class="flex-items__item">9</div>
+							</div>
+						</details>
+					</div>
+				</div>
+				<div class="main__flex-item flex-item flex-item--margin" id="flex-item">
+					<h2 class="title">Flex елементи</h2>
+					<div class="flex-item__order flex-item__order--margin" id="order">
+						<h3 class="subtitle">order</h3>
+						<details class="flex-item__spollers">
+							<summary><code>order: 1;</code></summary>
+							<div class="flex-items">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+								<div class="flex-items__item">6</div>
+								<div class="flex-items__item">7</div>
+								<div class="flex-items__item">8</div>
+								<div class="flex-items__item">9</div>
+							</div>
+						</details>
+					</div>
+					<div class="flex-item__align-self flex-item__align-self--margin" id="align-self">
+						<h3 class="subtitle">align-self</h3>
+						<details class="flex-item__spollers">
+							<summary><code>align-self: auto | flex-start | flex-end | center | baseline | stretch;</code></summary>
+							<div class="flex-items flex-items--height">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+								<div class="flex-items__item">6</div>
+							</div>
+						</details>
+					</div>
+					<div class="flex-item__flex-grow flex-item__flex-grow--margin" id="flex-grow">
+						<h3 class="subtitle">flex-grow</h3>
+						<details class="flex-item__spollers">
+							<summary><code>flex-grow: 1;</code></summary>
+							<div class="flex-items">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+							</div>
+						</details>
+					</div>
+					<div class="flex-item__flex-shrink flex-item__flex-shrink--margin" id="flex-shrink">
+						<h3 class="subtitle">flex-shrink</h3>
+						<details class="flex-item__spollers">
+							<summary><code>flex-shrink: 0;</code></summary>
+							<div class="flex-items">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+								<div class="flex-items__item">6</div>
+								<div class="flex-items__item">7</div>
+								<div class="flex-items__item">8</div>
+								<div class="flex-items__item">9</div>
+							</div>
+						</details>
+					</div>
+					<div class="flex-item__flex-basis flex-item__flex-basis--margin" id="flex-basis">
+						<h3 class="subtitle">flex-basis</h3>
+						<details class="flex-item__spollers">
+							<summary><code>flex-basis: auto | 0 | 100px | 300px | 50%;</code></summary>
+							<div class="flex-items">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+							</div>
+						</details>
+					</div>
+					<div class="flex-item__flex flex-item__flex--margin" id="flex">
+						<h3 class="subtitle">flex</h3>
+						<details class="flex-item__spollers">
+							<summary><code>flex: 0 1 auto | 1 1 100px | 1 0 50px | 0 0 20% | 1 1 70%;</code></summary>
+							<div class="flex-items">
+								<div class="flex-items__item">1</div>
+								<div class="flex-items__item">2</div>
+								<div class="flex-items__item">3</div>
+								<div class="flex-items__item">4</div>
+								<div class="flex-items__item">5</div>
+							</div>
+						</details>
+					</div>
+				</div>
+				<div class="main__examples examples examples--margin" id="examples">
+					<div class="examples__gallery gallery gallery--margin" id="gallery">
+						<h2 class="title">Галерея</h2>
+						<div class="gallery__items">
+							<div class="gallery__item">
+								<img src="img/gallery/gallery_img_1.webp" class="gallery__image" alt="Two giraffes standing close together in a savannah landscape.">
+							</div>
+							<div class="gallery__item">
+								<img src="img/gallery/gallery_img_2.webp" class="gallery__image" alt="Close-up of a chameleon with its tail curled, gripping a branch.">
+							</div>
+							<div class="gallery__item">
+								<img src="img/gallery/gallery_img_3.webp" class="gallery__image" alt="White kitten with blue eyes, looking upward, on a dark background.">
+							</div>
+							<div class="gallery__item">
+								<img src="img/gallery/gallery_img_4.webp" class="gallery__image" alt="Close-up of vibrant, colorful birds perched together.">
+							</div>
+							<div class="gallery__item">
+								<img src="img/gallery/gallery_img_5.webp" class="gallery__image" alt="Giant panda sitting and eating bamboo against a wooden backdrop.">
+							</div>
+							<div class="gallery__item">
+								<img src="img/gallery/gallery_img_6.webp" class="gallery__image" alt="Two flamingos standing in shallow water, surrounded by greenery.">
+							</div>
+							<div class="gallery__item">
+								<img src="img/gallery/gallery_img_7.webp" class="gallery__image" alt="Red fox standing in a natural setting, staring directly at the camera.">
+							</div>
+							<div class="gallery__item">
+								<img src="img/gallery/gallery_img_8.webp" class="gallery__image" alt="Aerial view of a flock of black birds.">
+							</div>
+							<div class="gallery__item">
+								<img src="img/gallery/gallery_img_9.webp" class="gallery__image" alt="Orange jellyfish with long tentacles floating in a bright orange-pink background.">
+							</div>
+							<div class="gallery__item">
+								<img src="img/gallery/gallery_img_10.webp" class="gallery__image" alt="Adult monkey holding a baby monkey in a protective embrace.">
+							</div>
+							<div class="gallery__item">
+								<img src="img/gallery/gallery_img_11.webp" class="gallery__image" alt="Two zebras standing in tall green grass, looking toward the camera.">
+							</div>
+							<div class="gallery__item">
+								<img src="img/gallery/gallery_img_12.webp" class="gallery__image" alt="Two dogs, one with a collar and both with floppy ears, sitting in an outdoor setting.">
+							</div>
+							<div class="gallery__item">
+								<img src="img/gallery/gallery_img_13.webp" class="gallery__image" alt="Black and white butterfly perched on a green plant.">
+							</div>
+							<div class="gallery__item">
+								<img src="img/gallery/gallery_img_14.webp" class="gallery__image" alt="Jellyfish with blue and pink hues floating against a deep blue background.">
+							</div>
+						</div>
+					</div>
+					<div class="examples__products products products--margin" id="products">
+						<h2 class="title">Продуктова сторінка</h2>
+						<div class="products__items">
+							<a href="" class="products__item">
+								<img src="img/products/product_1.webp" alt="Skincare bottles arranged on a blue surface with slices of lime and orange." class="products__img">
+								<h4 class="products__title">Title</h4>
+								<div class="products__price">
+									<div class="products__old-price">450$</div>
+									<div class="products__new-price">345$</div>
+								</div>
+							</a>
+							<a href="" class="products__item">
+								<img src="img/products/product_2.webp" alt="Pink lipstick and blush compact displayed on a white surface." class="products__img">
+								<h4 class="products__title">Title</h4>
+								<div class="products__price">
+									<div class="products__old-price">450$</div>
+									<div class="products__new-price">345$</div>
+								</div>
+							</a>
+							<a href="" class="products__item">
+								<img src="img/products/product_3.webp" alt="Assortment of natural bath products with wooden and fabric accessories on a white cloth." class="products__img">
+								<h4 class="products__title">Title</h4>
+								<div class="products__price">
+									<div class="products__old-price">450$</div>
+									<div class="products__new-price">345$</div>
+								</div>
+							</a>
+							<a href="" class="products__item">
+								<img src="img/products/product_4.webp" alt="Collection of beauty products including a spray bottle and facial oil, arranged with a small gift bag." class="products__img">
+								<h4 class="products__title">Title</h4>
+								<div class="products__price">
+									<div class="products__old-price">450$</div>
+									<div class="products__new-price">345$</div>
+								</div>
+							</a>
+							<a href="" class="products__item">
+								<img src="img/products/product_5.webp" alt="Minimalist cream bottle and other cosmetic items on a white marble surface." class="products__img">
+								<h4 class="products__title">Title</h4>
+								<div class="products__price">
+									<div class="products__old-price">450$</div>
+									<div class="products__new-price">345$</div>
+								</div>
+							</a>
+							<a href="" class="products__item">
+								<img src="img/products/product_6.webp" alt="Skincare serum bottles with a dropper on a marble background with green leaves." class="products__img">
+								<h4 class="products__title">Title</h4>
+								<div class="products__price">
+									<div class="products__old-price">450$</div>
+									<div class="products__new-price">345$</div>
+								</div>
+							</a>
+							<a href="" class="products__item">
+								<img src="img/products/product_7.webp" alt="Amber glass bottle and spa accessories on a woven tray, including sponges and wooden decor." class="products__img">
+								<h4 class="products__title">Title</h4>
+								<div class="products__price">
+									<div class="products__old-price">450$</div>
+									<div class="products__new-price">345$</div>
+								</div>
+							</a>
+							<a href="" class="products__item">
+								<img src="img/products/product_8.webp" alt="Wooden brush, jars, and reusable pads on a natural wooden background." class="products__img">
+								<h4 class="products__title">Title</h4>
+								<div class="products__price">
+									<div class="products__old-price">450$</div>
+									<div class="products__new-price">345$</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="examples__reverse reverse reverse--margin" id="reverse">
+						<h2 class="title">Використання reverse</h2>
+						<div class="reverse__items">
+							<div class="reverse__item">
+								<div class="reverse__content">
+									<div class="reverse__body">
+										<h3 class="reverse__title">Light, Fast & Powerful</h3>
+										<div class="reverse__text">
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus </p>
+											<p>mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+										</div>
+									</div>
+								</div>
+								<div class="reverse__image">
+									<img src="img/reverse/reverse_img_1.svg" class="reverse__picture" alt="A woman with an envelope with letter standing among large leaves.">
+								</div>
+							</div>
+							<div class="reverse__item">
+								<div class="reverse__content">
+									<div class="reverse__body">
+										<h3 class="reverse__title">Light, Fast & Powerful</h3>
+										<div class="reverse__text">
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus </p>
+											<p>mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+										</div>
+									</div>
+								</div>
+								<div class="reverse__image">
+									<img src="img/reverse/reverse_img_2.svg" class="reverse__picture" alt="Two people looking at a large smartphone.">
+								</div>
+							</div>
+							<div class="reverse__item">
+								<div class="reverse__content">
+									<div class="reverse__body">
+										<h3 class="reverse__title">Light, Fast & Powerful</h3>
+										<div class="reverse__text">
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus </p>
+											<p>mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+										</div>
+									</div>
+								</div>
+								<div class="reverse__image">
+									<img src="img/reverse/reverse_img_3.svg" class="reverse__picture" alt="A woman with a large '@' symbol surrounded by plants.">
+								</div>
+							</div>
+							<div class="reverse__item">
+								<div class="reverse__content">
+									<div class="reverse__body">
+										<h3 class="reverse__title">Light, Fast & Powerful</h3>
+										<div class="reverse__text">
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus </p>
+											<p>mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+										</div>
+									</div>
+								</div>
+								<div class="reverse__image">
+									<img src="img/reverse/reverse_img_2.svg" class="reverse__picture" alt="Two people looking at a large smartphone.">
+								</div>
+							</div>
+							<div class="reverse__item">
+								<div class="reverse__content">
+									<div class="reverse__body">
+										<h3 class="reverse__title">Light, Fast & Powerful</h3>
+										<div class="reverse__text">
+											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus </p>
+											<p>mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+										</div>
+									</div>
+								</div>
+								<div class="reverse__image">
+									<img src="img/reverse/reverse_img_3.svg" class="reverse__picture" alt="A woman with a large '@' symbol surrounded by plants.">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="examples__levels levels levels--margin" id="levels">
+						<h2 class="title">Мої навички</h2>
+						<div class="levels__values">
+							<div class="levels__level levels__level--4">Figma</div>
+							<div class="levels__level levels__level--5">HTML</div>
+							<div class="levels__level levels__level--5">CSS</div>
+							<div class="levels__level levels__level--3">Javascript</div>
+							<div class="levels__level levels__level--4">BEM</div>
+						</div>
+						<div class="levels__rule">
+							<div class="levels__part"></div>
+							<div class="levels__part"></div>
+							<div class="levels__part"></div>
+							<div class="levels__part"></div>
+							<div class="levels__part"></div>
+						</div>
+						<div class="levels__labels">
+							<div class="levels__label">1</div>
+							<div class="levels__label">2</div>
+							<div class="levels__label">3</div>
+							<div class="levels__label">4</div>
+							<div class="levels__label">5</div>
+						</div>
+					</div>
+					<div class="examples__vertical-bars vertical-bars vertical-bars--margin" id="vertical-bars">
+						<h2 class="title">Vertical bars</h2>
+						<div class="vertical-bars__body">
+							<div class="vertical-bars__values">
+								<div class="vertical-bars__level vertical-bars__level--4">Figma</div>
+								<div class="vertical-bars__level vertical-bars__level--5">HTML</div>
+								<div class="vertical-bars__level vertical-bars__level--5">CSS</div>
+								<div class="vertical-bars__level vertical-bars__level--3">Javascript</div>
+								<div class="vertical-bars__level vertical-bars__level--4">BEM</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<p class="footer__copy">&copy; Anastasiia Pliuta</p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
+
+
+<!-- <div class="flex-items">
+	<div class="flex-items__item"></div>
+	<div class="flex-items__item"></div>
+	<div class="flex-items__item"></div>
+	<div class="flex-items__item"></div>
+	<div class="flex-items__item"></div>
+</div> -->

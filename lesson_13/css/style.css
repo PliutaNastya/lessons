@@ -1,0 +1,555 @@
+/* Підключення шрифтів */
+@import url("https://fonts.googleapis.com/css?family=Sofia+Sans+Semi+Condensed:regular,700&display=swap");
+
+/* Обнулення стилів */
+@import url("reset.css");
+@import url("portfolio.css");
+
+/* Загальні стилі */
+
+body {
+	font-family: "Sofia Sans Semi Condensed", sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+	background-color: #D1B3C4;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+[class*="__container"] {
+	max-width: 1230px;
+	width: 100%;
+	padding-inline: 15px;
+	margin-inline: auto;
+}
+.title {
+	color: #37006a;
+	font-size: 30px;
+	font-weight: 700;
+}
+.main__title {
+	color: #17002d;
+	text-align: center;
+	font-size: 38px;
+}
+.subtitle {
+	font-size: 24px;
+	font-weight: 700;
+	color: #55004e;
+}
+.text {
+	background-color: #415d4370;
+	padding: 10px;
+}
+.main__container {
+	padding-block-start: 30px;
+	padding-block-end: 100px;
+}
+[class^="main__"]:not(:last-child) {
+	margin-block-end: 20px;
+}
+.other-page {
+	position: fixed;
+	top: calc(50% - 25px);
+	right: 25px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	font-size: 32px;
+	background-color: #6b3178;
+	color: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	transition: all 0.3s;
+}
+.other-page:hover {
+	background-color: #8c11a7;
+	transform: rotate(360deg);
+	z-index: 70;
+}
+[class*="--margin"] > * {
+	margin-block-end: 10px;
+}
+[class*="--margin"] > *:last-child {
+	margin-block-end: 0px;
+}
+.flex-items {
+	display: flex;
+	gap: 10px;
+}
+.flex-items__item {
+	flex-basis: 200px;
+	min-height: 200px;
+	background: url("../img/flex/corgi_1.png") center / contain no-repeat, #eb7cff;
+}
+.flex-items__item:nth-child(2) {
+	background-image: url("../img/flex/corgi_2.png");
+}
+.flex-items__item:nth-child(3) {
+	background-image: url("../img/flex/corgi_3.png");
+}
+.flex-items__item:nth-child(4) {
+	background-image: url("../img/flex/corgi_4.png");
+}
+.flex-items__item:nth-child(5) {
+	background-image: url("../img/flex/corgi_5.png");
+}
+.flex-items__item:nth-child(6) {
+	background-image: url("../img/flex/corgi_6.png");
+}
+.flex-items__item:nth-child(7) {
+	background-image: url("../img/flex/corgi_7.png");
+}
+.flex-items__item:nth-child(8) {
+	background-image: url("../img/flex/corgi_8.png");
+}
+.flex-items__item:nth-child(9) {
+	background-image: url("../img/flex/corgi_9.png");
+}
+
+/* Стилі для header */
+
+.header {
+	position: sticky;
+	width: 100%;
+	top: 0;
+	z-index: 50;
+	padding-block: 10px;
+	background-color: #E8C2CA;
+}
+.menu {
+	display: flex;
+	column-gap: 50px;
+	row-gap: 5px;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.menu__item {
+	position: relative;
+	font-size: 20px;
+	text-align: center;
+}
+.menu__sublist {
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	padding: 10px;
+	background-color: #E8C2CA;
+	display: flex;
+	flex-direction: column;
+	row-gap: 5px;
+	transition: all 0.3s;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+.menu__sublink {
+	font-size: 18px;
+}
+.menu__link:hover, .menu__sublink:hover {
+	color: #6b3178;
+}
+.menu__item:hover .menu__sublist {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
+.menu__link--icon::after {
+	content: "\27A3";
+	margin-inline-start: 5px;
+	transform: rotate(90deg);
+	transition: all 0.3s;
+}
+.menu__link--icon:hover::after {
+	transform: rotate(-90deg);
+}
+
+/* Стилі для Flex-контейнера */
+
+.flex-items--inline-flex {
+	display: inline-flex;
+}
+.flex-items--flex-dir-row-reverse {
+	flex-direction: row-reverse;
+}
+.flex-items--flex-dir-col {
+	flex-direction: column;
+}
+.flex-items--flex-dir-col-reverse {
+	flex-direction: column-reverse;
+}
+.flex-items--flex-wrap-wrap {
+	flex-wrap: wrap;
+}
+.flex-items--flex-wrap-reverse {
+	flex-wrap: wrap-reverse;
+}
+.flex-items--flex-row-rev-wrap-rev {
+}
+.flex-items--flex-flow-row-rev-wrap-rev {
+	flex-flow: row-reverse wrap-reverse;
+}
+.flex-items--flex-flow-col-rev-wrap-rev {
+	flex-flow: column-reverse wrap-reverse;
+}
+.flex-items--js-flex-end {
+	justify-content: flex-end;
+}
+.flex-items--js-center {
+	justify-content: center;
+}
+.flex-items--js-space-btw {
+	justify-content: space-between;
+}
+.flex-items--js-space-around {
+	justify-content: space-around;
+}
+.flex-items--js-space-evenly {
+	justify-content: space-evenly;
+}
+.flex-items--height {
+	height: 500px;
+}
+.flex-items--ai-flex-start {
+	align-items: flex-start;
+}
+.flex-items--ai-flex-end {
+	align-items: flex-end;
+}
+.flex-items--ai-center {
+	align-items: center;
+}
+.flex-items--wrap {
+	flex-wrap: wrap;
+}
+.flex-items--ac-flex-start {
+	align-content: flex-start;
+}
+.flex-items--ac-flex-end {
+	align-content: flex-end;
+}
+.flex-items--ac-center {
+	align-content: center;
+}
+.flex-items--ac-space-btw {
+	align-content: space-between;
+}
+.flex-items--ac-space-around {
+	align-content: space-around;
+}
+.flex-items--ac-space-evenly {
+	align-content: space-evenly;
+}
+.flex-items--gap {
+	gap: 10px 30px;
+}
+.flex-items--col-gap {
+	column-gap: 30px;
+	row-gap: 0;
+}
+.flex-items--row-gap {
+	row-gap: 10px;
+	column-gap: 0;
+}
+
+/* Стилі для Flex-елементів */
+
+.flex-item__order .flex-items__item:nth-child(1) {
+	order: 3;
+}
+.flex-item__order .flex-items__item:nth-child(2) {
+	order: 1;
+}
+.flex-item__order .flex-items__item:nth-child(3) {
+	order: 5;
+}
+.flex-item__order .flex-items__item:nth-child(4) {
+	order: 9;
+}
+.flex-item__order .flex-items__item:nth-child(5) {
+	order: 7;
+}
+.flex-item__order .flex-items__item:nth-child(6) {
+	order: 2;
+}
+.flex-item__order .flex-items__item:nth-child(7) {
+	order: 4;
+}
+.flex-item__order .flex-items__item:nth-child(8) {
+	order: 6;
+}
+.flex-item__order .flex-items__item:nth-child(9) {
+	order: 8;
+}
+.flex-item__align-self .flex-items__item:nth-child(2) {
+	align-self: flex-start;
+}
+.flex-item__align-self .flex-items__item:nth-child(3) {
+	align-self: flex-end;
+}
+.flex-item__align-self .flex-items__item:nth-child(4) {
+	align-self: center;
+}
+.flex-item__align-self .flex-items__item:nth-child(5) {
+	align-self: baseline;
+}
+.flex-item__align-self .flex-items__item:nth-child(6) {
+	align-self: stretch;
+}
+.flex-item__flex-grow .flex-items__item {
+	flex-grow: 1;
+}
+.flex-item__flex-shrink .flex-items__item {
+	flex-shrink: 0;
+}
+.flex-item__flex-basis .flex-items__item:nth-child(2) {
+	flex-basis: 0;
+}
+.flex-item__flex-basis .flex-items__item:nth-child(3) {
+	flex-basis: 100px;
+}
+.flex-item__flex-basis .flex-items__item:nth-child(4) {
+	flex-basis: 300px;
+}
+.flex-item__flex-basis .flex-items__item:nth-child(5) {
+	flex-basis: 50%;
+}
+.flex-item__flex .flex-items {
+	flex-wrap: wrap;
+}
+.flex-item__flex .flex-items__item:nth-child(2) {
+	flex: 1 1 100px;
+}
+.flex-item__flex .flex-items__item:nth-child(3) {
+	flex: 0 0 50px;
+}
+.flex-item__flex .flex-items__item:nth-child(4) {
+	flex: 0 0 20%;
+}
+.flex-item__flex .flex-items__item:nth-child(5) {
+	flex: 0 1 70%;
+}
+
+/* Стилі для галереї */
+
+.gallery__items {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+.gallery__item {
+	flex: 1 1 350px;
+}
+.gallery__item:nth-child(odd) {
+}
+.gallery__item:nth-child(even) {
+	aspect-ratio: 1;
+	align-self: center;
+}
+.gallery__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+/* Стилі для продуктової сторінки */
+
+.products__items {
+	display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
+}
+.products__item {
+	flex-grow: 1;
+	inline-size: 250px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	border-radius: 15px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3) inset;
+	transition: all 0.3s;
+}
+.products__img {
+	border-radius: 15px 15px 0px 0px;
+	width: 100%;
+	aspect-ratio: 1;
+	object-fit: cover;
+	object-position: center;
+}
+.products__title {
+	flex-grow: 1;
+	font-size: 24px;
+	font-weight: 700;
+	padding: 0px 10px;
+	transition: all 0.3s;
+}
+.products__price {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	padding: 10px;
+	font-weight: 700;
+	font-size: 32px;
+}
+.products__old-price {
+	color: #410002;
+	text-decoration: line-through;
+}
+.products__new-price {
+	color: #003e21;
+}
+.products__item:hover  {
+	transform: scale(1.01);
+}
+.products__title:hover {
+	text-decoration: underline;
+}
+
+/* Стилі для прикладу з використанням reverse */
+
+.reverse__items {
+	display: flex;
+	flex-direction: column;
+	gap: 80px;
+}
+.reverse__item {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+.reverse__content {
+	flex: 1 1 250px;
+}
+.reverse__body {
+	max-width: 445px;
+}
+.reverse__title {
+	color: #091133;
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 1.3;
+}
+.reverse__title:not(:last-child) {
+	margin-block-end: 30px;
+}
+.reverse__text p {
+	color:  #6F7CB2;
+	font-size: 16px;
+	line-height: 1.6;
+}
+.reverse__text > * {
+	margin-block-end: 10px;
+}
+.reverse__text > *:last-child {
+	margin-block-end: 0px;
+}
+.reverse__image {
+	flex: 1 1 250px;
+}
+.reverse__picture {
+	max-width: 100%;
+}
+.reverse__item:nth-child(odd) {
+	flex-direction: row-reverse;
+}
+.reverse__item:nth-child(odd) .reverse__body {
+	margin-inline-end: auto;
+}
+
+/* Стилі для блоку "Мої навички" */
+
+.levels__values {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.levels__level {
+	background-color: #55004e;
+	padding: 10px;
+	color: #FFFFFF;
+}
+.levels__level--1 {
+	width: 20%;
+}
+.levels__level--2 {
+	width: 40%;
+}
+.levels__level--3 {
+	width: 60%;
+}
+.levels__level--4 {
+	width: 80%;
+}
+.levels__level--5 {
+	width: 100%;
+}
+.levels__rule, .levels__labels {
+	display: flex;
+}
+.levels__part {
+	flex-grow: 1;
+	height: 20px;
+	border-block-end: 3px solid #55004e;
+	border-inline-end: 3px solid #55004e;
+}
+.levels__label {
+	flex-grow: 1;
+	text-align: right;
+	font-weight: 700;
+}
+
+/* Стилі для "Vertical bars" */
+
+.vertical-bars__body {
+	display: flex;
+	height: 300px;
+}
+.vertical-bars__values {
+	display: flex;
+	gap: 30px;
+}
+.vertical-bars__level {
+	padding: 10px;
+	background-color: #55004e;
+	align-self: flex-end;
+	color: #FFFFFF;
+}
+.vertical-bars__level--1 {
+	height: 20%;
+}
+.vertical-bars__level--2 {
+	height: 40%;
+}
+.vertical-bars__level--3 {
+	height: 60%;
+}
+.vertical-bars__level--4 {
+	height: 80%;
+}
+.vertical-bars__level--5 {
+	height: 100%;
+}
+
+/* Стилі для footer */
+
+.footer {
+	background-color: #735D78;
+	padding: 20px;
+}
+.footer__copy {
+	text-align: center;
+	font-weight: 700;
+	font-size: 25px;
+	color: #FFFFFF;
+}
