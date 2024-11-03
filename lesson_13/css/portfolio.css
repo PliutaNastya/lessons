@@ -111,6 +111,10 @@ body {
 	line-height: 2;
 	transition: all 0.3s;
 }
+.portfolio__link sup {
+	transform: translateY(-9px);
+	display: inline-block;
+}
 .portfolio__link:active, .portfolio__link:hover, .portfolio__link--active {
 	color: #FFF;
 }
@@ -131,18 +135,21 @@ body {
 	flex-grow: 1;
 	inline-size: 470px;
 	aspect-ratio: 470/416;
+	border-radius: 6px;
 	overflow: hidden;
 }
 .portfolio__item:nth-child(4n + 2), .portfolio__item:nth-child(4n + 3) {
-	inline-size: 670px;
+	flex-basis: 670px;
 	aspect-ratio: 670/416;
 }
 .portfolio__image {
-	max-width: 100%;
+	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	object-position: center;
-	border-radius: 6px;
+}
+.portfolio__picture {
+	width: 100%;
+	height: 100%;
 }
 .portfolio__item::before {
 	content: "";
@@ -309,7 +316,7 @@ body {
 .contact-us__card {
 	position: relative;
 	text-align: center;
-	z-index: 1;
+	z-index: 5;
 	border-radius: 6px;
 	background: #FFF;
 	box-shadow: 0px 24px 48px 0px rgba(85, 30, 0, 0.04);
@@ -318,10 +325,10 @@ body {
 }
 .contact-us__card::before, .contact-us__card::after {
 	content: "";
-	z-index: -1;
 	position: absolute;
 	border-radius: 6px;
 	background-color: #FFF;
+	z-index: -1;
 	box-shadow: 0px 24px 48px 0px rgba(85, 30, 0, 0.04);
 }
 .contact-us__card::before {
@@ -487,7 +494,6 @@ body {
 	margin-block-end: 64px;
 }
 .header-block--left {
-	margin-inline-end: auto;
 	text-align: left;
 }
 .our-team__items {
@@ -505,7 +511,7 @@ body {
 .our-team__image {
 	display: flex;
 	justify-content: center;
-	padding-block-start: 36px;
+	align-items: flex-end;
 	max-width: 270px;
 	width: 100%;
 	aspect-ratio: 1;
@@ -518,7 +524,7 @@ body {
 }
 .our-team__picture {
 	width: 100%;
-	aspect-ratio: 1;
+	height: 85.185185%; /* 230/270 */
 	object-fit: contain;
 }
 .our-team__info > * {
@@ -545,6 +551,7 @@ body {
 .founder-words__items {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	gap: 30px;
 	flex-wrap: wrap;
 }
@@ -552,18 +559,14 @@ body {
 	flex: 1 1 570px;
 }
 .founder-words__picture {
-	max-width: 100%;
+	width: 100%;
 	aspect-ratio: 570 / 448;
 	object-position: center;
 	object-fit: cover;
 	border-radius: 8px;
 }
 .founder-words__content {
-	flex: 1 1 570px;
-}
-.founder-words__body {
-	max-width: 470px;
-	margin-inline-start: auto;
+	flex: 1 1 470px;
 }
 .founder-words__label {
 	color: #EF6D58;
