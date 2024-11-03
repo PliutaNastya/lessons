@@ -86,7 +86,7 @@ body {
 	gap: 10px;
 }
 .flex-items__item {
-	flex-basis: 200px;
+	width: 200px;
 	min-height: 200px;
 	background: url("../img/flex/corgi_1.png") center / contain no-repeat, #eb7cff;
 }
