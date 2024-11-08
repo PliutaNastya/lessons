@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="keywords" content="HTML форми, атрибути форм, CSS стилізація, input, button, form, label, select, textarea, атрибути форм, input text, input password, input email, input number, input checkbox, input radio, input range, input date, input color, input file, input hidden, input submit, input reset, input image, input search, CSS appearance, input placeholder, required, autofocus, autocomplete, readonly, disabled, pattern, min, max, step, maxlength, minlength, multiple, size, форма HTML.">
+   <meta name="description" content="Гайд по тегам і атрибутам форм в HTML з прикладами, стилізацією та важливою інформацією.">
+	<meta name="author" content="Анастасія Плюта">
+   <link rel="stylesheet" href="css/style.css">
+   <title>HTML форми та атрибути</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<ul class="header__menu menu">
+					<li class="menu__item"><a href="#html-tags" class="menu__link">Основні HTML теги для форм</a></li>
+					<li class="menu__item"><a href="#input-tag" class="menu__link">Типи input та їх атрибути</a></li>
+					<li class="menu__item"><a href="#stylization" class="menu__link">CSS-стилізація елементів форми</a></li>
+					<li class="menu__item"><a href="#homework-1" class="menu__link">Форма №1</a></li>
+					<li class="menu__item"><a href="#homework-2" class="menu__link">Форма №2</a></li>
+				</ul>
+			</div>
+		</header>
+		<main class="main main--margin">
+			<h1 class="main__title title">HTML форми та атрибути</h1>
+			<div class="main__html-tags html-tags" id="html-tags">
+				<div class="html-tags__container html-tags__container--margin">
+					<h2 class="html-tags__title title">Основні HTML теги для форм</h2>
+					<div class="html-tags__items">
+						<div class="html-tags__item item-html-tag">
+							<h3 class="item-html-tag__subtitle subtitle">&lt;form&gt;</h3>
+							<p class="item-html-tag__text">Тег &lt;form&gt; є контейнером для всіх полів форми. У нього є важливі атрибути:</p>
+							<ul class="item-html-tag__list list">
+								<li class="list__item"><strong>action:</strong> вказує URL-адресу для надсилання даних форми.</li>
+								<li class="list__item"><strong>method:</strong> визначає метод відправки даних (GET або POST).</li>
+								<li class="list__item"><strong>enctype:</strong> використовується для кодування даних (наприклад, multipart/form-data для завантаження файлів).</li>
+							</ul>
+							<code>
+								&lt;form action="/submit" method="post" enctype="multipart/form-data"&gt;
+								&lt;!-- Поля форми --&gt;
+								&lt;/form&gt;
+							</code>
+						</div>
+						<div class="html-tags__item item-html-tag">
+							<h3 class="subtitle">&lt;input&gt;</h3>
+							<p class="item-html-tag__text">Тег &lt;input&gt; використовується для створення різноманітних полів введення. Має багато атрибутів і типів, які визначають його функціональність.</p>
+							<p class="item-html-tag__text">Використовується для введення даних, які можуть бути текстовими, числовими, датами, паролями, файлами, кнопками тощо.</p>
+							<input type="text" placeholder="Це input">
+						</div>
+						<div class="html-tags__item item-html-tag">
+							<h3 class="subtitle">&lt;label&gt;</h3>
+							<p class="item-html-tag__text">Тег &lt;label&gt; асоціює текстову мітку з полем форми, що робить форму більш доступною. Аттрибут "for" прив'язує мітку до конкретного input через його id.</p>
+							<label for="username">Ім'я:</label>
+							<input type="text" id="username" name="form[]" placeholder="Введіть своє ім'я">
+						</div>
+						<div class="html-tags__item item-html-tag">
+							<h3 class="subtitle">&lt;select&gt;</h3>
+							<p class="item-html-tag__text">Тег &lt;select&gt; створює випадаючий список, а &lt;option&gt; визначає окремі варіанти. Атрибути тегу &lt;select&gt;:</p>
+							<ul class="item-html-tag__list list">
+								<li class="list__item"><strong>multiple:</strong> дозволяє вибір кількох опцій.</li>
+								<li class="list__item"><strong>size:</strong> вказує кількість видимих опцій.</li>
+								<li class="list__item"><strong>disabled:</strong> робить список неактивним для вибору.</li>
+							</ul>
+						</div>
+						<div class="html-tags__item item-html-tag">
+							<h3 class="subtitle">&lt;option&gt;</h3>
+							<p class="item-html-tag__text">&lt;option&gt; визначає окремі варіанти тегу &lt;select&gt;. Атрибути:</p>
+							<ul class="item-html-tag__list list">
+								<li class="list__item"><strong>selected:</strong> визначає вибраний за замовчуванням пункт.</li>
+								<li class="list__item"><strong>disabled:</strong> робить конкретний варіант неактивним для вибору.</li>
+							</ul>
+							<select size="5" multiple>
+								<option selected>Опція 1</option>
+								<option>Опція 2</option>
+								<option disabled>Опція 3 (недоступна)</option>
+								<option>Опція 4</option>
+								<option>Опція 5</option>
+							</select>
+						</div>
+						<div class="html-tags__item item-html-tag">
+							<h3 class="subtitle">&lt;optgroup&gt;</h3>
+							<p class="item-html-tag__text">Тег &lt;optgroup&gt; використовується всередині тега &lt;select&gt; для створення групи опцій. Кожна група може мати свій заголовок (через атрибут label). Це полегшує користувачам навігацію, особливо у великих списках.</p>
+							<ul class="item-html-tag__list list">
+								<li class="list__item"><strong>label:</strong> задає заголовок для групи опцій, що буде відображатися як підпис для даної групи.</li>
+								<li class="list__item"><strong>disabled:</strong> робить всю групу недоступною для вибору.</li>
+							</ul>
+							<select>
+								<optgroup label="Фрукти">
+									<option>Яблуко</option>
+									<option>Банан</option>
+									<option>Апельсин</option>
+								</optgroup>
+								<optgroup label="Овочі" disabled>
+									<option>Морква</option>
+									<option>Капуста</option>
+									<option>Помідор</option>
+								</optgroup>
+								<optgroup label="Напої">
+									<option>Вода</option>
+									<option>Сік</option>
+									<option>Чай</option>
+								</optgroup>
+							</select>
+						</div>
+						<div class="html-tags__item item-html-tag">
+							<h3 class="subtitle">&lt;textarea&gt;</h3>
+							<p class="item-html-tag__text">Тег &lt;textarea&gt; використовується для введення багаторядкового тексту в HTML-формі. Це ідеальний вибір, коли потрібно ввести великий обсяг тексту, як-от коментарі, відгуки, нотатки тощо. Атрибути:</p>
+							<ul class="item-html-tag__list list">
+								<li class="list__item"><strong>rows:</strong> задає кількість видимих рядків у текстовому полі.</li>
+								<li class="list__item"><strong>cols:</strong> задає кількість видимих символів в одному рядку.</li>
+								<li class="list__item"><strong>name:</strong> задає ім'я для текстового поля, що використовується для передачі даних форми на сервер.</li>
+								<li class="list__item"><strong>placeholder:</strong> відображає підказку у текстовому полі, що зникне, коли користувач почне вводити текст.</li>
+								<li class="list__item"><strong>maxlength:</strong> обмежує кількість символів, які можна ввести у поле.</li>
+								<li class="list__item"><strong>required:</strong> позначає текстове поле обов'язковим для заповнення.</li>
+								<li class="list__item"><strong>readonly:</strong> робить текстове поле доступним для перегляду, але забороняє редагування.</li>
+								<li class="list__item"><strong>disabled:</strong> повністю деактивує текстове поле, роблячи його недоступним для взаємодії.</li>
+							</ul>
+							<textarea name="comments" rows="5" cols="30" placeholder="Ваш коментар" maxlength="200" required></textarea>
+						</div>
+						<div class="html-tags__item item-html-tag">
+							<h3 class="subtitle">&lt;button&gt;</h3>
+							<p class="item-html-tag__text">Тег &lt;button&gt; створює інтерактивну кнопку. Атрибути:</p>
+							<ul class="item-html-tag__list list">
+								<li class="list__item"><strong>type:</strong> визначає тип кнопки. Можливі значення:
+									<ul class="list__sublist">
+										<li class="list__subitem"><strong>submit:</strong> відправляє дані форми.</li>
+										<li class="list__subitem"><strong>reset:</strong> скидає значення форми до початкових.</li>
+										<li class="list__subitem"><strong>button:</strong> звичайна кнопка, яка не виконує ніяких дій за замовчуванням. Зазвичай використовується для виклику JavaScript.</li>
+									</ul>
+								</li>
+								<li class="list__item"><strong>name:</strong> задає ім'я кнопки для передачі даних на сервер. Наприклад, name="myButton" може бути використане для ідентифікації конкретної кнопки у формі.</li>
+								<li class="list__item"><strong>value:</strong> задає значення кнопки, яке буде відправлене на сервер, коли кнопка натиснута. Наприклад, value="sendData" передасть на сервер значення "sendData" при натисканні кнопки.</li>
+								<li class="list__item"><strong>disabled:</strong> деактивує кнопку, роблячи її недоступною для натискання.</li>
+								<li class="list__item"><strong>autofocus:</strong> автоматично надає фокус кнопці при завантаженні сторінки. Наприклад, &lt;button autofocus&gt; встановить фокус на цій кнопці після завантаження сторінки.</li>
+								<li class="list__item"><strong>form:</strong> визначає ідентифікатор форми, з якою пов’язана кнопка. Це корисно, коли кнопка розташована поза межами форми. Наприклад, &lt;button form="myForm"&gt;, де myForm — це id форми.</li>
+								<li class="list__item"><strong>readonly:</strong> робить текстове поле доступним для перегляду, але забороняє редагування.</li>
+								<li class="list__item"><strong>disabled:</strong> повністю деактивує текстове поле, роблячи його недоступним для взаємодії.</li>
+							</ul>
+							<form id="myForm">
+								<button type="submit" name="sendData" value="Submit" autofocus>Відправити</button>
+								<button type="reset">Скинути</button>
+								<button type="button" onclick="alert('Button clicked!')">Клікни мене</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main__input-tag input-tag" id="input-tag">
+				<div class="input-tag__container input-tag__container--margin">
+					<h2 class="title">Типи input та їх атрибути</h2>
+					<div class="input-tag__attributes input-tag__attributes--margin">
+						<h3 class="subtitle">Загальні атрибути для всіх &lt;input&gt;</h3>
+						<ul class="list">
+							<li class="list__item"><strong>type —</strong> визначає тип введення (наприклад, text, password, email, тощо).</li>
+							<li class="list__item"><strong>name —</strong> ім'я, яке використовується для ідентифікації введених даних на сервері.</li>
+							<li class="list__item"><strong>value —</strong> початкове значення поля.</li>
+							<li class="list__item"><strong>placeholder —</strong> текст, який відображається в полі, коли воно пусте.</li>
+							<li class="list__item"><strong>required —</strong> визначає, чи є поле обов'язковим для заповнення.</li>
+							<li class="list__item"><strong>readonly —</strong> забороняє редагування поля, але дозволяє переглядати його значення.</li>
+							<li class="list__item"><strong>disabled —</strong> повністю деактивує поле, роблячи його недоступним для взаємодії.</li>
+							<li class="list__item"><strong>autocomplete —</strong> дозволяє браузеру запам'ятовувати значення, які вводив користувач, і пропонувати їх надалі (значення: on або off).</li>
+							<li class="list__item"><strong>autofocus —</strong> автоматично встановлює фокус на полі при завантаженні сторінки.</li>
+							<li class="list__item"><strong>pattern —</strong> задає регулярний вираз, який потрібно ввести в поле.</li>
+							<li class="list__item"><strong>minlength і maxlength —</strong> задають мінімальну та максимальну кількість символів для введення.</li>
+							<li class="list__item"><strong>form —</strong> вказує ID форми, до якої належить поле (корисно, якщо елемент знаходиться поза межами тега &lt;form&gt;).</li>
+							<li class="list__item"><strong>size —</strong> визначає ширину поля в символах.</li>
+						</ul>
+					</div>
+					<div class="input-tag__types types-input">
+						<div class="types-input__item">
+							<h3 class="subtitle">Тип &lt;input&gt; - text</h3>
+							<p class="types-input__text">Використовується для введення короткого тексту. Атрибути: placeholder, maxlength, minlength, pattern.</p>
+							<input type="text" name="username" placeholder="Введіть ім'я" maxlength="20" required>
+						</div>
+						<div class="types-input__item">
+							<h3 class="subtitle">Тип &lt;input&gt; - password</h3>
+							<p class="types-input__text">Забезпечує введення пароля (символи приховані). Атрибути: maxlength, minlength, pattern, required.</p>
+							<input type="password" name="userpass" placeholder="Введіть пароль" minlength="8" required>
+						</div>
+						<div class="types-input__item">
+							<h3 class="subtitle">Тип &lt;input&gt; - email</h3>
+							<p class="types-input__text">Перевіряє, що введене значення відповідає формату електронної пошти. Атрибути: placeholder, required.</p>
+							<input type="email" name="useremail" placeholder="example@mail.com" required>
+						</div>
+						<div class="types-input__item">
+							<h3 class="subtitle">Тип &lt;input&gt; - number</h3>
+							<p class="types-input__text">Призначений для введення числових значень. Атрибути: min, max, step.</p>
+							<input type="number" name="age" min="1" max="100" step="1" required>
+						</div>
+						<div class="types-input__item">
+							<h3 class="subtitle">Тип &lt;input&gt; - tel</h3>
+							<p class="types-input__text">Поле для введення телефонного номера. Не має вбудованої перевірки формату, але може використовуватися разом з pattern. Атрибути: pattern, maxlength.</p>
+							<input type="tel" name="phone" placeholder="+380XXXXXXXXX" pattern="\+?[0-9\s\-]+" required>
+						</div>
+						<div class="types-input__item">
+							<h3 class="subtitle">Тип &lt;input&gt; - url</h3>
+							<p class="types-input__text">Призначений для введення URL-адрес. Атрибути: placeholder, required.</p>
+							<input type="url" name="website" placeholder="https://example.com" required>
+						</div>
+						<div class="types-input__item">
+							<h3 class="subtitle">Тип &lt;input&gt; - search</h3>
+							<p class="types-input__text">Поле для пошукових запитів з можливістю очищення введеного тексту на деяких браузерах. Атрибути: placeholder.</p>
+							<input type="search" name="query" placeholder="Я шукаю ...">
+						</div>
+						<div class="types-input__item">
+							<h3 class="subtitle">Тип &lt;input&gt; - date</h3>
+							<p class="types-input__text">Використовується для вибору дати з календаря. Атрибути: min, max.</p>
+							<input type="date" name="birthdate" min="1900-01-01" max="2024-12-31" required>
+						</div>
+						<div class="types-input__item">
+							<h3 class="subtitle">Тип &lt;input&gt; - time</h3>
+							<p class="types-input__text">Поле для вибору часу. Атрибути: min, max, step.</p>
+							<input type="time" name="appointment" min="09:00" max="18:00" step="900">
+						</div>
+						<div class="types-input__item">
+							<h3 class="subtitle">Тип &lt;input&gt; - datetime-local</h3>
+							<p class="types-input__text">Поле для вибору дати та часу без часової зони. Атрибути: min, max, step.</p>
+							<input type="datetime-local" name="meeting" required>
+						</div>
+						<div class="types-input__item">
+							<h3 class="subtitle">Тип &lt;input&gt; - month</h3>
+							<p class="types-input__text">Дозволяє вибирати місяць та рік. Атрибути: min, max.</p>
+							<input type="month" name="expiration" min="2024-01" max="2025-12">
+						</div>
+						<div class="types-input__item">
+							<h3 class="subtitle">Тип &lt;input&gt; - week</h3>
+							<p class="types-input__text">Дозволяє вибирати тиждень у форматі "рік-тиждень". Атрибути: min, max.</p>
+							<input type="week" name="week_year" min="2024-W01" max="2024-W52">
+						</div>
+						<div class="types-input__item">
+							<h3 class="subtitle">Тип &lt;input&gt; - color</h3>
+							<p class="types-input__text">Додає кольоровий вибір.</p>
+							<input type="color" name="favcolor" value="#ff0000">
+						</div>
+						<div class="types-input__item">
+							<h3 class="subtitle">Тип &lt;input&gt; - checkbox</h3>
+							<p class="types-input__text">Дозволяє вибір одного або декількох елементів. Атрибути: checked.</p>
+							<input type="checkbox" name="subscribe" value="newsletter" checked> Підписатися на розсилку.
+						</div>
+						<div class="types-input__item">
+							<h3 class="subtitle">Тип &lt;input&gt; - radio</h3>
+							<p class="types-input__text">Дозволяє вибрати один варіант з групи. Атрибути: checked.</p>
+							<input type="radio" name="gender" value="male" checked> Чоловік
+							<input type="radio" name="gender" value="female"> Жінка
+						</div>
+						<div class="types-input__item">
+							<h3 class="subtitle">Тип &lt;input&gt; - file</h3>
+							<p class="types-input__text">Дозволяє завантажувати файли. Атрибути: accept, multiple.</p>
+							<input type="file" name="upload" accept=".jpg,.jpeg,.png" multiple>
+						</div>
+						<div class="types-input__item">
+							<h3 class="subtitle">Тип &lt;input&gt; - hidden</h3>
+							<p class="types-input__text">Сховане поле, яке не відображається на сторінці, але передається на сервер.</p>
+							<input type="hidden" name="userid" value="12345">
+						</div>
+						<div class="types-input__item">
+							<h3 class="subtitle">Тип &lt;input&gt; - submit</h3>
+							<p class="types-input__text">Кнопка для відправки форми. Атрибути: value.</p>
+							<input type="submit" value="Відправити">
+						</div>
+						<div class="types-input__item">
+							<h3 class="subtitle">Тип &lt;input&gt; - reset</h3>
+							<p class="types-input__text">Кнопка для скидання всіх полів форми до початкових значень. Атрибути: value.</p>
+							<input type="reset" value="Скинути">
+						</div>
+						<div class="types-input__item types-input__item--image">
+							<h3 class="subtitle">Тип &lt;input&gt; - image</h3>
+							<p class="types-input__text">Кнопка у вигляді зображення для відправки форми. Атрибути: src, alt, width, height.</p>
+							<input type="image" src="img/submit.png" alt="Submit icon" width="50" height="50">
+						</div>
+						<div class="types-input__item">
+							<h3 class="subtitle">Тип &lt;input&gt; - button</h3>
+							<p class="types-input__text">Звичайна кнопка, яка не виконує жодних дій за замовчуванням.</p>
+							<input type="button" value="Натисніть" onclick="alert('Button clicked!')">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main__stylization stylization" id="stylization">
+				<div class="stylization__container stylization__container--margin">
+					<h2 class="title">CSS-стилізація елементів форми</h2>
+					<form action="#" enctype="multipart/form-data" class="form">
+						<div class="form__row">
+							<div class="form__text form__text--1">
+								<input type="text" id="firstname-1" name="form[]" placeholder=" " required>
+								<label for="firstname-1">Введіть ім'я*</label>
+							</div>
+							<div class="form__text form__text--2">
+								<label for="firstname-2">Введіть ім'я*</label>
+								<input type="text" id="firstname-2" name="form[]" placeholder="Введіть ім'я" required>
+							</div>
+							<div class="form__text form__text--3">
+								<input type="text" id="firstname-3" name="form[]" placeholder="Введіть ім'я" required>
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__password form__password--1">
+								<input type="password" id="password-1" name="form[]" placeholder=" " required>
+								<label for="password-1">Введіть пароль*</label>
+							</div>
+							<div class="form__password form__password--2">
+								<input type="password" id="password-2" name="form[]" required>
+								<label for="password-2">Пароль</label>
+							</div>
+							<div class="form__password form__password--3">
+								<input type="password" id="password-3" name="form[]" placeholder="Пароль" required>
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__email form__email--1">
+								<label for="email-1">Введіть адресу електронної пошти</label>
+								<input type="email" id="email-1" name="form[]" placeholder="Електронна пошта" required>
+							</div>
+							<div class="form__email form__email--2">
+								<label for="email-2">Введіть адресу електронної пошти</label>
+								<input type="email" id="email-2" name="form[]" placeholder="Електронна пошта" required>
+							</div>
+							<div class="form__email form__email--3">
+								<label for="email-3"></label>
+								<input type="email" id="email-3" name="form[]" required>
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__color form__color--1">
+								<label for="color-1">Оберіть колір</label>
+								<input type="color" id="color-1" name="form[]" value="#eeeeee">
+							</div>
+							<div class="form__color form__color--2">
+								<label for="color-2">Оберіть колір</label>
+								<input type="color" id="color-2" name="form[]" value="#dddddd">
+							</div>
+							<div class="form__color form__color--3">
+								<label for="color-3"></label>
+								<input type="color" id="color-3" name="form[]" value="#cccccc">
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__date form__date--1">
+								<label for="birthday-1">Введіть свою дату народження</label>
+								<input type="date" id="birthday-1" name="form[]">
+							</div>
+							<div class="form__date form__date--2">
+								<label for="birthday-2">Введіть свою дату народження</label>
+								<input type="date" id="birthday-2" name="form[]">
+							</div>
+							<div class="form__date form__date--3">
+								<label for="birthday-3">Введіть свою дату народження</label>
+								<input type="date" id="birthday-3" name="form[]">
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__search form__search--1">
+								<input type="search" id="search-1" name="form[]" placeholder="Я шукаю ...">
+								<label for="search-1"></label>
+							</div>
+							<div class="form__search form__search--2">
+								<label for="search-2"></label>
+								<input type="search" id="search-2" name="form[]" placeholder="Я шукаю ...">
+							</div>
+							<div class="form__search form__search--3">
+								<input type="search" id="search-3" name="form[]">
+								<label for="search-3">Пошук</label>
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__checkbox form__checkbox--1">
+								<input type="checkbox" id="newsletter-1" name="form[]" value="newsletter" checked>
+								<label for="newsletter-1">Підписатися на розсилку</label>
+							</div>
+							<div class="form__checkbox form__checkbox--2">
+								<input type="checkbox" id="newsletter-2" name="form[]" value="newsletter" checked>
+								<label for="newsletter-2">Підписатися на розсилку</label>
+							</div>
+							<div class="form__checkbox form__checkbox--3">
+								<input type="checkbox" id="newsletter-3" name="form[]" value="newsletter" checked>
+								<label for="newsletter-3">Підписатися на розсилку</label>
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__radio form__radio--1">
+								<input type="radio" id="radio-male-1" name="gender-1" value="male" checked>
+								<label for="radio-male-1">Чоловік</label>
+								<input type="radio" id="radio-female-1" name="gender-1" value="female">
+								<label for="radio-female-1">Жінка</label>
+							</div>
+							<div class="form__radio form__radio--2">
+								<input type="radio" id="radio-male-2" name="gender-2" value="male" checked>
+								<label for="radio-male-2">Чоловік</label>
+								<input type="radio" id="radio-female-2" name="gender-2" value="female">
+								<label for="radio-female-2">Жінка</label>
+							</div>
+							<div class="form__radio form__radio--3">
+								<input type="radio" id="radio-male-3" name="gender-3" value="male" checked>
+								<label for="radio-male-3">Чоловік</label>
+								<input type="radio" id="radio-female-3" name="gender-3" value="female">
+								<label for="radio-female-3">Жінка</label>
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__upload form__upload--1">
+								<label for="uploadPhoto-1"><img src="img/upload_icon.svg" alt="Upload icon"></label>
+								<input type="file" id="uploadPhoto-1" name="form[]" accept=".jpg,.jpeg,.png" multiple>
+							</div>
+							<div class="form__upload form__upload--2">
+								<label for="uploadPhoto-2">Завантажити фото...</label>
+								<input type="file" id="uploadPhoto-2" name="form[]" accept=".jpg,.jpeg,.png" multiple>
+							</div>
+							<div class="form__upload form__upload--3">
+								<label for="uploadPhoto-3"><img src="img/upload_icon.svg" alt="Upload icon"><span>Завантажити фото</span></label>
+								<input type="file" id="uploadPhoto-3" name="form[]" accept=".jpg,.jpeg,.png" multiple>
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__submit form__submit--1">
+								<label for="submit-1" class="form__label-submit form__label-submit--1">Відправити</label>
+								<input type="submit" id="submit-1" value="Відправити">
+							</div>
+							<div class="form__submit form__submit--2">
+								<label for="submit-2" class="form__label-submit form__label-submit--2">Відправити</label>
+								<input type="submit" id="submit-2" value="Відправити">
+							</div>
+							<div class="form__submit form__submit--3">
+								<label for="submit-3" class="form__label-submit form__label-submit--3">Відправити</label>
+								<input type="submit" id="submit-3" value="Відправити">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="main__portfolio portfolio" id="homework-1">
+				<div class="portfolio__container">
+					<div class="portfolio__text">
+						<p>There are many variations of passages of Lorem Ipsu available, but the majority have suffered alte.</p>
+					</div>
+					<form action="#" class="portfolio__form form-portfolio">
+						<div class="form-portfolio__item">
+							<input type="text" name="form[]" id="name-portfolio" class="form-portfolio__input" placeholder=" " required>
+							<label for="name-portfolio" class="form-portfolio__label">Name*</label>
+						</div>
+						<div class="form-portfolio__item">
+							<input type="email" name="form[]" id="email-portfolio" class="form-portfolio__input" placeholder=" " required>
+							<label for="email-portfolio" class="form-portfolio__label">Email*</label>
+						</div>
+						<div class="form-portfolio__item">
+							<input type="text" name="form[]" id="location-portfolio" class="form-portfolio__input" placeholder=" " required>
+							<label for="location-portfolio" class="form-portfolio__label">Location</label>
+						</div>
+						<div class="form-portfolio__item form-portfolio__item--col">
+							<div class="form-portfolio__body form-portfolio__body--budget">
+								<input type="number" name="form[]" id="budget-portfolio" class="form-portfolio__input" placeholder=" " required>
+								<label for="budget-portfolio" class="form-portfolio__label">Budget*</label>
+							</div>
+							<div class="form-portfolio__body form-portfolio__body--subject">
+								<input type="text" name="form[]" id="subject-portfolio" class="form-portfolio__input" placeholder=" " required>
+								<label for="subject-portfolio" class="form-portfolio__label">Subject*</label>
+							</div>
+						</div>
+						<div class="form-portfolio__item">
+							<textarea name="form[]" class="form-portfolio__input" id="message-portfolio" placeholder=" " required></textarea>
+							<label for="message-portfolio" class="form-portfolio__label">Message*</label>
+						</div>
+						<div class="form-portfolio__button">
+							<input type="submit" id="submit-portfolio" value="submit">
+							<label for="submit-portfolio" class="form-portfolio__submit">Submit
+								<span><img src="img/form_portfolio_btn_icon.svg" alt="Arrow right icon."></span>
+							</label>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="main__dark dark" id="#homework-2">
+				<div class="dark__container">
+					<form action="#" class="dark__form form-dark">
+						<div class="form-dark__items">
+							<div class="form-dark__item">
+								<label for="first-name" class="form-dark__label">First Name</label>
+								<input type="text" name="form[]" id="first-name" class="form-dark__input" placeholder="Enter First Name" required>
+							</div>
+							<div class="form-dark__item">
+								<label for="last-name" class="form-dark__label">Last Name</label>
+								<input type="text" name="form[]" id="last-name" class="form-dark__input" placeholder="Enter Last Name" required>
+							</div>
+							<div class="form-dark__item">
+								<label for="email" class="form-dark__label">Email</label>
+								<input type="text" name="form[]" id="email" class="form-dark__input" placeholder="Enter your Email" required>
+							</div>
+							<div class="form-dark__item">
+								<label for="phone-number" class="form-dark__label">Phone Number</label>
+								<input type="tel" name="form[]" id="phone-number" class="form-dark__input" placeholder="Enter Phone Number" required>
+							</div>
+						</div>
+						<div class="form-dark__item">
+							<label for="dark-message" class="form-dark__label">Message</label>
+							<textarea name="form[]" id="dark-message" class="form-dark__input form-dark__input--textarea" placeholder="Enter your Message" required></textarea>
+						</div>
+						<div class="form-dark__footer">
+							<div class="form-dark__checkbox">
+								<input type="checkbox" name="form[]" id="agree">
+								<label for="agree" class="form-dark__label-check">I agree with Terms of Use and Privacy Policy</label>
+							</div>
+							<div class="form-dark__submit">
+								<label for="dark-send" class="form-dark__label-btn">Send Message</label>
+								<input type="submit" id="dark-send" value="Send Message">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<p class="footer__copy">&copy; Anastasiia Pliuta</p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
