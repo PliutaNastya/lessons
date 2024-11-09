@@ -723,12 +723,13 @@ body {
 	position: absolute;
 	display: inline-block;
 	bottom: 14px;
-	left: 5px;
+	left: 0px;
 	color: #747474;
 	transition: transform 0.3s;
 }
 .form-portfolio__input:focus-visible + label, .form-portfolio__input:not(:placeholder-shown) + label {
 	transform: translateY(-25px);
+	font-size: 14px;
 	color: #A53DFF;
 }
 .form-portfolio__input:focus-visible {
