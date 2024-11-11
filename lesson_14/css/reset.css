@@ -62,8 +62,5 @@ input[type="tel"],
 textarea {
 	appearance: none;
 }
-input:focus-visible {
-	outline: none;
-}
 
 

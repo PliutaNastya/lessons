@@ -734,6 +734,7 @@ body {
 }
 .form-portfolio__input:focus-visible {
 	border-color: #A53DFF;
+	outline: none;
 }
 .form-portfolio__item--col {
 	display: flex;
@@ -788,11 +789,14 @@ body {
 .form-portfolio__button img {
 	width: 100%;
 }
-.form-portfolio__submit:hover span {
+.form-portfolio__submit:hover span, .form-portfolio__submit:focus-visible span {
 	transform: translateX(5px);
 }
-.form-portfolio__submit:hover {
+.form-portfolio__submit:hover, .form-portfolio__submit:focus-visible {
 	background-color: #8d2fe0;
+}
+.form-portfolio__submit:focus-visible {
+	outline: none;
 }
 
 /* Стилі до форми з макету "Dark Theme" */
@@ -875,6 +879,12 @@ body {
 	background: url("../img/dark_check_icon.svg") 0 0 / 100% no-repeat;
 	box-shadow: 0 0 5px #e5000056;
 }
+.form-dark__label-check:focus-visible {
+	outline: none;
+}
+.form-dark__label-check:focus-visible::before {
+	box-shadow: 0 0 5px #e5000056;
+}
 .form-dark__submit {
 }
 .form-dark__submit input {
@@ -889,9 +899,12 @@ body {
 	background-color: #E50000;
 	transition: all 0.3s;
 }
-.form-dark__label-btn:hover {
+.form-dark__label-btn:hover, .form-dark__label-btn:focus-visible {
 	transform: translateY(1px);
 	background-color: #a90000;
+}
+.form-dark__label-btn:focus-visible {
+	outline: none;
 }
 
 /* Стилі для footer */
