@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Anastasiia Pliuta">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Responsive Web Design</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="#" class="header__logo">
+					<img src="img/personal_page/logo.svg" alt="Logotype.">Personal
+				</a>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="#" class="menu__link">About</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Services</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Pricing</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Blog</a></li>
+						</ul>
+					</nav>
+				</div>
+				<a href="#" class="header__button button button--white-text">Contact</a>
+				<button type="button" class="header__icon-menu icon-menu"><span></span></button>
+			</div>
+		</header>
+		<main class="main">
+			<a href="portfolio.html" class="other-page other-page--next">&#10147;</a>
+			<div class="main__hero hero">
+				<div class="hero__container">
+					<div class="hero__content">
+						<div class="hero__label">Gabriel Pires</div>
+						<h1 class="hero__title">The Simple, Clean Design</h1>
+						<div class="hero__text">
+							<p>Agency provides a full service range including technical skills, design, business understanding.</p>
+						</div>
+						<a href="#" class="hero__button button button--orange">See My Work</a>
+					</div>
+					<div class="hero__item">
+						<div class="hero__img-block img-hero">
+							<div class="img-hero__item img-hero__item--circle"></div>
+							<div class="img-hero__item img-hero__item--person">
+								<img src="img/personal_page/hero_section/person_image.png" alt="A portrait of a smiling man with glasses and wavy hair, wearing a black shirt, against a yellow background.">
+							</div>
+							<div class="img-hero__item img-hero__item--card">
+								<img src="img/personal_page/hero_section/card_image.svg" alt="A white card with a circular icon and horizontal lines, symbolizing a business card or profile information.">
+							</div>
+							<div class="img-hero__item img-hero__item--pen">
+								<img src="img/personal_page/hero_section/pen_icon.svg" alt="Pen nib symbol in the center, representing design or creativity.">
+							</div>
+							<div class="img-hero__item img-hero__item--arrow">
+								<img src="img/personal_page/hero_section/arrow_icon.svg" alt=" A white zigzag line connects the pen nib icon to the business card illustration below.">
+							</div>
+							<div class="img-hero__item img-hero__item--arrow-2">
+								<img src="img/personal_page/hero_section/arrow.svg" alt="Decorative element - arrow.">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<p class="footer__copy">Copyright © 2022 Laaqiq. All Rights Reserved.</p>
+			</div>
+		</footer>
+	</div>
+	<script>
+		function menuInit() {
+			if (document.querySelector(".icon-menu")) {
+				document.addEventListener("click", function (e) {
+					if (e.target.closest('.icon-menu')) {
+						document.documentElement.classList.toggle("menu-open");
+					}
+					if (e.target.closest('.menu') && document.documentElement.classList.contains("menu-open")) {
+						document.documentElement.classList.remove("menu-open");
+					}
+				});
+			}
+		}
+		menuInit();
+	</script>
+</body>
+</html>
