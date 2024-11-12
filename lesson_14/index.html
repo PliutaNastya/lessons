@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="keywords" content="HTML форми, атрибути форм, CSS стилізація, input, button, form, label, select, textarea, атрибути форм, input text, input password, input email, input number, input checkbox, input radio, input range, input date, input color, input file, input hidden, input submit, input reset, input image, input search, CSS appearance, input placeholder, required, autofocus, autocomplete, readonly, disabled, pattern, min, max, step, maxlength, minlength, multiple, size, форма HTML.">
-   <meta name="description" content="Гайд по тегам і атрибутам форм в HTML з прикладами, стилізацією та важливою інформацією.">
+   <meta name="description" content="Гайд по тегам і атрибутам форм в HTML з прикладами.">
 	<meta name="author" content="Анастасія Плюта">
    <link rel="stylesheet" href="css/style.css">
    <title>HTML форми та атрибути</title>
@@ -460,12 +460,9 @@
 							<textarea name="form[]" class="form-portfolio__input" id="message-portfolio" placeholder=" " tabindex="6" required></textarea>
 							<label for="message-portfolio" class="form-portfolio__label">Message*</label>
 						</div>
-						<div class="form-portfolio__button">
-							<input type="submit" id="submit-portfolio" value="submit">
-							<label for="submit-portfolio" class="form-portfolio__submit" tabindex="7">Submit
-								<span><img src="img/form_portfolio_btn_icon.svg" alt="Arrow right icon."></span>
-							</label>
-						</div>
+						<button type="submit" tabindex="7" class="form-portfolio__button">Submit
+							<img src="img/form_portfolio_btn_icon.svg" alt="Arrow right icon.">
+						</button>
 					</form>
 				</div>
 			</div>
@@ -499,10 +496,7 @@
 								<input type="checkbox" name="form[]" id="agree">
 								<label for="agree" class="form-dark__label-check" tabindex="13">I agree with Terms of Use and Privacy Policy</label>
 							</div>
-							<div class="form-dark__submit">
-								<label for="dark-send" class="form-dark__label-btn" tabindex="14">Send Message</label>
-								<input type="submit" id="dark-send" value="Send Message">
-							</div>
+							<button type="submit" class="form-dark__submit" tabindex="14">Send Message</button>
 						</div>
 					</form>
 				</div>

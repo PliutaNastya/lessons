@@ -764,13 +764,11 @@ body {
 	transform: translateY(-45px);
 	color: #A53DFF;
 }
-.form-portfolio__button input {
-	display: none;
-}
-.form-portfolio__submit {
+.form-portfolio__button {
 	padding: 12px 24px;
 	display: inline-flex;
 	align-items: center;
+	width: fit-content;
 	column-gap: 12px;
 	background-color: #A53DFF;
 	border-radius: 4px;
@@ -780,22 +778,19 @@ body {
 	line-height: 1.5;
 	transition: all 0.3s;
 }
-.form-portfolio__button span {
-	display: block;
+.form-portfolio__button img {
 	width: 24px;
+	max-width: 100%;
 	aspect-ratio: 1;
 	transition: all 0.3s;
 }
-.form-portfolio__button img {
-	width: 100%;
-}
-.form-portfolio__submit:hover span, .form-portfolio__submit:focus-visible span {
+.form-portfolio__button:hover img, .form-portfolio__button:focus-visible img {
 	transform: translateX(5px);
 }
-.form-portfolio__submit:hover, .form-portfolio__submit:focus-visible {
+.form-portfolio__button:hover, .form-portfolio__button:focus-visible {
 	background-color: #8d2fe0;
 }
-.form-portfolio__submit:focus-visible {
+.form-portfolio__button:focus-visible {
 	outline: none;
 }
 
@@ -886,12 +881,6 @@ body {
 	box-shadow: 0 0 5px #e5000056;
 }
 .form-dark__submit {
-}
-.form-dark__submit input {
-	display: none;
-}
-.form-dark__label-btn {
-	display: inline-block;
 	padding: 18px 24px;
 	border-radius: 8px;
 	font-weight: 600;
@@ -899,11 +888,11 @@ body {
 	background-color: #E50000;
 	transition: all 0.3s;
 }
-.form-dark__label-btn:hover, .form-dark__label-btn:focus-visible {
+.form-dark__submit:hover, .form-dark__submit:focus-visible {
 	transform: translateY(1px);
 	background-color: #a90000;
 }
-.form-dark__label-btn:focus-visible {
+.form-dark__submit:focus-visible {
 	outline: none;
 }
 
