@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Anastasiia Pliuta">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Responsive Web Design</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="#" class="header__logo">
+					<img src="img/logo.svg" alt="Logotype.">
+					<span>Agency</span>
+				</a>
+				<div class="header__menu menu">
+					<div class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="#" class="menu__link">About</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Services</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Pricing</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Blog</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="header__actions actions-header">
+					<a href="#" class="actions-header__button button">Contact</a>
+					<button type="button" class="actions-header__icon icon-menu"><span></span></button>
+				</div>
+			</div>
+		</header>
+		<main class="main"></main>
+		<footer class="footer">
+			<div class="footer__container">
+				<p class="footer__copy">Copyright © 2022 Laaqiq. All Rights Reserved.</p>
+			</div>
+		</footer>
+	</div>
+	<script>
+		function menuInit() {
+			if (document.querySelector(".icon-menu")) {
+				document.addEventListener("click", function (e) {
+					if (e.target.closest('.icon-menu')) {
+						document.documentElement.classList.toggle("menu-open");
+					}
+					if (e.target.closest('.menu') && document.documentElement.classList.contains("menu-open")) {
+						document.documentElement.classList.remove("menu-open");
+					}
+				});
+			}
+		}
+		menuInit();
+	</script>
+</body>
+</html>
