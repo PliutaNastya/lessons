@@ -13,7 +13,7 @@ body {
 	padding-block: 90px;
 	overflow: hidden;
 }
-@media (min-width: 1100.98px){
+@media (min-width: 1100.98px){ppea
 	.homework {
 		padding: 92px 0px 176px 0px;
 	}
@@ -597,6 +597,8 @@ body {
 .our-team__items {
 	display: flex;
 	gap: 30px;
+	overflow: auto;
+	scroll-snap-type: x mandatory;
 }
 .our-team__items:not(:last-child) {
 	margin-block-end: 52px;
@@ -612,6 +614,7 @@ body {
 .our-team__item {
 	flex: 0 0 270px;
 	overflow: hidden;
+	scroll-snap-align: start;
 }
 .our-team__image {
 	display: flex;

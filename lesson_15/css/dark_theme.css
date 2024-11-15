@@ -72,6 +72,7 @@
 	}
 }
 .movies__label {
+	display: inline-block;
 	font-weight: 600;
 	line-height: 1.5;
 	padding: 8px 20px;
@@ -201,6 +202,8 @@
 .items-block {
 	display: flex;
 	column-gap: 20px;
+	overflow: auto;
+	scroll-snap-type: x mandatory;
 }
 @media (max-width: 849.98px){
 	.items-block--margin {
@@ -216,6 +219,7 @@
 	border: 1px solid #262626;
 	background: #1A1A1A;
 	transition: all 0.3s;
+	scroll-snap-align: start;
 }
 .item-block:hover {
 	box-shadow: 0 0 5px rgba(229, 0, 0, 0.3);
