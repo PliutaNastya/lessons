@@ -162,7 +162,7 @@ body {
 		inset-inline-start: 100%;
 		inset-block-start: 0;
 		inline-size: 100%;
-		block-size: 100%;
+		block-size: 100vh;
 		z-index: 5;
 		overflow: auto;
 		padding: 100px 15px 30px 15px;
