@@ -175,7 +175,7 @@ body {
 		inset-inline-start: 100%;
 		inset-block-start: 0;
 		inline-size: 100%;
-		min-block-size: 70px;
+		block-size: 70px;
 		z-index: 4;
 		background-color: #28293e;
 		transition: inset-inline-start 0.3s ease;
@@ -188,7 +188,7 @@ body {
 	.menu__link {
 		font-size: 28px;
 	}
-	.icon-menu {
+	/* .icon-menu {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -216,10 +216,6 @@ body {
 		background-color: #ffffff;
 		transition: all 0.3s;
 	}
-	.menu-open .menu__body,
-	.menu-open .menu__body::before {
-		inset-inline-start: 0;
-	}
 	.menu-open .icon-menu span {
 		inline-size: 0;
 		block-size: 0;
@@ -230,6 +226,55 @@ body {
 	}
 	.menu-open .icon-menu::after {
 		transform: rotate(-45deg) translateY(-1px);
+	} */
+	.icon-menu {
+		display: block;
+		position: relative;
+		z-index: 50;
+		width: 48px;
+		height: 48px;
+		border-radius: 6px;
+		border: 1px solid rgba(255, 255, 255, 0.30);
+		transition: all 0.3s;
+	}
+	.icon-menu:hover {
+		box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+	}
+	.icon-menu span, .icon-menu span::before, .icon-menu span::after {
+		content: "";
+		left: 16px;
+		position: absolute;
+		width: 16px;
+		height: 2px;
+		background-color: #ffffff;
+		border-radius: 10px;
+		transition: all 0.3s ease 0s;
+	}
+	.icon-menu span::before {
+		left: 0;
+		top: -4px;
+	}
+	.icon-menu span::after {
+		left: 0;
+		bottom: -4px;
+	}
+	.icon-menu span {
+		top: calc(50% - 1px);
+	}
+	.menu-open span {
+		width: 0;
+	}
+	.menu-open span::before {
+		top: calc(50% - 1px);
+		transform: rotate(-45deg);
+	}
+	.menu-open span::after {
+		bottom: calc(50% - 1px);
+		transform: rotate(45deg);
+	}
+	.menu-open .menu__body,
+	.menu-open .menu__body::before {
+		inset-inline-start: 0;
 	}
 	.header__logo {
 		column-gap: 5px;
