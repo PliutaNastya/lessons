@@ -725,7 +725,7 @@ body {
 	bottom: 14px;
 	left: 0px;
 	color: #747474;
-	transition: transform 0.3s;
+	transition: transform 0.3s, font-size 0.3s; 
 }
 .form-portfolio__input:focus-visible + label, .form-portfolio__input:not(:placeholder-shown) + label {
 	transform: translateY(-25px);
@@ -861,6 +861,7 @@ body {
 .form-dark__label-check {
 	display: inline-flex;
 	column-gap: 10px;
+	cursor: pointer;
 }
 .form-dark__label-check::before {
 	content: "";
