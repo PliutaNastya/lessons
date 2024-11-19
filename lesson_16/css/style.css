@@ -527,6 +527,7 @@ body {
 	transform: translate(-50%, -50%);
 	width: 50%;
 	height: 50%;
+	object-fit: contain;
 }
 .img-block__item--wavy-arrow {
 	position: absolute;
