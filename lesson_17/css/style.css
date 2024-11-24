@@ -4,7 +4,7 @@
 @import url("common.css");
 
 .main {
-	padding-block: clamp(2.5rem, 6.25vw + 1.25rem, 5.938rem);
+	padding-block-start: clamp(2.5rem, 6.25vw + 1.25rem, 5.938rem);
 }
 .main__portfolio:not(:last-child) {
 	margin-block-end: 40px;
