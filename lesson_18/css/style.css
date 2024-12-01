@@ -51,8 +51,8 @@ body {
 	.masonry__container {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: 19fr 1fr 11fr 1fr 19fr 19fr 1fr 11fr 1fr 19fr;
-		grid-auto-flow: row;
+		/* grid-template-rows: 19fr 1fr 11fr 1fr 19fr 19fr 1fr 11fr 1fr 19fr;
+		grid-auto-flow: row; */
 	}
 	.masonry__item:nth-child(17n + 3), 
 	.masonry__item:nth-child(17n + 9),
