@@ -39,6 +39,9 @@ body {
 	column-gap: clamp(0.625rem, 3.959vw - 1.275rem, 2.063rem);
 	row-gap: clamp(0.5rem, 2.754vw - 0.822rem, 1.5rem);
 }
+.masonry__content {
+	height: 100%;
+}
 .masonry__content img {
 	width: 100%;
 	height: 100%;
