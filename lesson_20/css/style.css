@@ -30,6 +30,9 @@
 	--boxShadow: 0rem 0rem 0.625rem rgba(218, 77, 241, 0.80);
 }
 /* Common styles */
+html {
+	scroll-behavior: smooth;
+}
 body {
 	font-family: var(--mainFontFamily);
 	font-size: 1.125rem;
