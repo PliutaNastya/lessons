@@ -272,7 +272,6 @@ body {
 		width: 100%;
 		background-color: var(--darkBg);
 	}
-
 	.menu__body {
 		position: fixed;
 		inset-inline-start: 100%;
@@ -296,7 +295,6 @@ body {
 		background-color: #c4f5e9;
 		transition: inset-inline-start 0.3s;
 	}
-
 	.menu__list {
 		flex-direction: column;
 		align-items: flex-end;
@@ -306,12 +304,10 @@ body {
 		font-size: 1.5rem;
 		padding: 0;
 	}
-
 	.menu-open .menu__body,
 	.menu-open .menu__body::before {
 		inset-inline-start: 0;
 	}
-
 	.menu-open .icon-menu span {
 		width: 0;
 		height: 0;
@@ -322,6 +318,9 @@ body {
 	}
 	.menu-open .icon-menu::after {
 		transform: rotate(-45deg) translateY(-0.0938rem);
+	}
+	.menu-open body {
+		overflow: hidden;
 	}
 }
 @media (max-width: 23.125rem) {
@@ -338,7 +337,7 @@ body {
 /* Hero section */
 .hero {
 	padding-block-start: clamp(1.875rem, 9.32vw + 0.011rem, 7.875rem);
-	padding-block-end: clamp(1.875rem, 3.883vw + 1.098rem, 4.375rem);
+	padding-block-end: clamp(1.25rem, 4.854vw + 0.279rem, 4.375rem);
 }
 .hero__container {
 	position: relative;
@@ -465,7 +464,7 @@ body {
 }
 /* About me section */
 .about-me {
-	padding-block-start: clamp(2.188rem, 10.388vw + 0.11rem, 8.875rem);
+	padding-block-start: clamp(1.25rem, 11.845vw - 1.119rem, 8.875rem);
 	padding-block-end: 0.625rem;
 }
 .about-me__container {
