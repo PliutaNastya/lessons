@@ -53,6 +53,9 @@ body {
 	padding-inline: 0.9375rem;
 	margin-inline: auto;
 }
+[class^="main__"] {
+	scroll-margin-top: 4.375rem;
+}
 /* Common styles */
 .logo {
 	display: flex;
