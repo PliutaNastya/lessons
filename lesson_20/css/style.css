@@ -33,6 +33,12 @@
 html {
 	scroll-behavior: smooth;
 }
+@media (max-width: 62.0613em){
+	[class^="main__"] {
+		scroll-margin-top: 4.375rem;
+	}
+}
+
 body {
 	font-family: var(--mainFontFamily);
 	font-size: 1.125rem;
@@ -52,9 +58,6 @@ body {
 	inline-size: 100%;
 	padding-inline: 0.9375rem;
 	margin-inline: auto;
-}
-[class^="main__"] {
-	scroll-margin-top: 4.375rem;
 }
 /* Common styles */
 .logo {
