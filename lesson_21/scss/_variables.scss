@@ -1,0 +1,43 @@
+/* Variables */
+
+$fontFamily: "Manrope", sans-serif;
+
+$mainTextColor: #FFFFFF;
+$secondaryTextColor: #BFBFBF;
+$thirdTextColor: #999;
+
+$darkBg: #141414;
+$darkBg2: #0F0F0F;
+$lightBg: #1A1A1A;
+$lightBg2: #333;
+
+
+$borderColor1: #262626;
+$borderColor2: #1F1F1F;
+
+$ctaBg: #E50000;
+$ctaBgHover: darken($ctaBg, 15%);
+
+$filterForChangeImageColor: brightness(0) saturate(100%) invert(14%) sepia(76%) saturate(4258%) hue-rotate(353deg) brightness(102%) contrast(125%);
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1600;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поїнти
+$tablet: toEm(991.98); // Планшети, деякі телефони в горизонтальному положенні
+$mobile: toEm(767.98); // Телефони L
+$mobileSmall: toEm(479.98); // Телефони S
+// Тип адаптива:
+// 1 = чуйність (у контейнера немає брейкпоінтів),
+// 2 = по брейк-поїнт (контейнер змінює свою ширину по брейк-поїнт)
+$responsiveType: 1;
