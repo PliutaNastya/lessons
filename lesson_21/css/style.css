@@ -1055,12 +1055,12 @@ body {
 }
 @media (min-width: 62.06125em) and (max-width: 101.875em) {
   .card--genres {
-    padding: clamp( 1.25rem , 0.2757566481rem  +  1.5698094251vw , 1.875rem );
+    padding: clamp( 0.9375rem , -0.5238650278rem  +  2.3547141377vw , 1.875rem );
   }
 }
 @media (max-width: 62.06125em) {
   .card--genres {
-    padding: 1.25rem;
+    padding: 0.9375rem;
   }
 }
 .card--popular {
@@ -1073,12 +1073,12 @@ body {
 }
 @media (min-width: 62.06125em) and (max-width: 101.875em) {
   .card--popular {
-    padding: clamp( 1.25rem , 0.2757566481rem  +  1.5698094251vw , 1.875rem );
+    padding: clamp( 0.9375rem , -0.5238650278rem  +  2.3547141377vw , 1.875rem );
   }
 }
 @media (max-width: 62.06125em) {
   .card--popular {
-    padding: 1.25rem;
+    padding: 0.9375rem;
   }
 }
 .card--trending {
@@ -1091,12 +1091,12 @@ body {
 }
 @media (min-width: 62.06125em) and (max-width: 101.875em) {
   .card--trending {
-    padding: clamp( 0.75rem , -0.0293946815rem  +  1.2558475401vw , 1.25rem );
+    padding: clamp( 0.625rem , -0.3492433519rem  +  1.5698094251vw , 1.25rem );
   }
 }
 @media (max-width: 62.06125em) {
   .card--trending {
-    padding: 0.75rem;
+    padding: 0.625rem;
   }
 }
 .card--releases {
@@ -1109,12 +1109,12 @@ body {
 }
 @media (min-width: 62.06125em) and (max-width: 101.875em) {
   .card--releases {
-    padding: clamp( 0.75rem , -0.0293946815rem  +  1.2558475401vw , 1.25rem );
+    padding: clamp( 0.625rem , -0.3492433519rem  +  1.5698094251vw , 1.25rem );
   }
 }
 @media (max-width: 62.06125em) {
   .card--releases {
-    padding: 0.75rem;
+    padding: 0.625rem;
   }
 }
 .card--must-watch {
@@ -1127,12 +1127,12 @@ body {
 }
 @media (min-width: 62.06125em) and (max-width: 101.875em) {
   .card--must-watch {
-    padding: clamp( 0.75rem , -0.0293946815rem  +  1.2558475401vw , 1.25rem );
+    padding: clamp( 0.625rem , -0.3492433519rem  +  1.5698094251vw , 1.25rem );
   }
 }
 @media (max-width: 62.06125em) {
   .card--must-watch {
-    padding: 0.75rem;
+    padding: 0.625rem;
   }
 }
 .card--multiple {
@@ -1385,12 +1385,12 @@ body {
 }
 @media (min-width: 68.74875em) and (max-width: 101.875em) {
   .info-card__item {
-    font-size: clamp( 0.75rem , 0.2311610883rem  +  0.7546885023vw , 1rem );
+    font-size: clamp( 0.625rem , -0.1532583676rem  +  1.1320327535vw , 1rem );
   }
 }
 @media (max-width: 68.74875em) {
   .info-card__item {
-    font-size: 0.75rem;
+    font-size: 0.625rem;
   }
 }
 .info-card__item--duration::before, .info-card__item--views::before, .info-card__item--seasons::before {
@@ -1612,17 +1612,17 @@ body {
   line-height: 1.5;
 }
 @media (min-width: 101.875em) {
-  .footer__copy {
+  .footer__bottom {
     font-size: 1.125rem;
   }
 }
 @media (min-width: 20em) and (max-width: 101.875em) {
-  .footer__copy {
+  .footer__bottom {
     font-size: clamp( 1rem , 0.9694656489rem  +  0.1526717557vw , 1.125rem );
   }
 }
 @media (max-width: 20em) {
-  .footer__copy {
+  .footer__bottom {
     font-size: 1rem;
   }
 }
