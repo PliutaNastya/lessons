@@ -1007,6 +1007,7 @@ body {
   display: grid;
   grid-auto-flow: column;
   overflow-x: auto;
+  overflow-y: hidden;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
 }
@@ -1031,12 +1032,23 @@ body {
             column-gap: 0.9375rem;
   }
 }
+.cards--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.cards--5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.cards article, .cards li {
+  height: 100%;
+}
+
 .card {
   background-color: #1A1A1A;
   border-radius: 0.75rem;
   border: 0.0625rem solid #262626;
   scroll-snap-align: start;
   overflow: hidden;
+  height: 100%;
 }
 @media (any-hover: hover) {
   .card:hover .card__picture img {
