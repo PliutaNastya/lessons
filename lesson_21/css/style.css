@@ -1010,6 +1010,8 @@ body {
   overflow-y: hidden;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
+  -webkit-padding-after: 0.9375rem;
+          padding-block-end: 0.9375rem;
 }
 @media (min-width: 101.875em) {
   .cards {
@@ -1031,6 +1033,16 @@ body {
        -moz-column-gap: 0.9375rem;
             column-gap: 0.9375rem;
   }
+}
+.cards::-webkit-scrollbar {
+  height: 0.3125rem;
+}
+.cards::-webkit-scrollbar-thumb {
+  background-color: #E50000;
+  border-radius: 0.25rem;
+}
+.cards::-webkit-scrollbar-track {
+  background: transparent;
 }
 .cards--4 {
   grid-template-columns: repeat(4, 1fr);
