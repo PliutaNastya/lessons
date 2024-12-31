@@ -545,7 +545,18 @@ body {
 	overflow-x: auto;
 	overflow-y: hidden;
 	scroll-snap-type: x mandatory;
+	padding-block-end: toRem(15);
 	@include adaptiveValue("column-gap", 30, 15);
+	&::-webkit-scrollbar {
+		height: toRem(5);
+		&-thumb {
+			background-color: $ctaBg;
+			border-radius: toRem(4);
+		}
+		&-track {
+			background: transparent;
+		}
+	}
 	&--4 {
 		grid-template-columns: repeat(4, 1fr);
 	}
