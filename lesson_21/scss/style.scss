@@ -543,10 +543,20 @@ body {
 	display: grid;
 	grid-auto-flow: column;
 	overflow-x: auto;
+	overflow-y: hidden;
 	scroll-snap-type: x mandatory;
 	@include adaptiveValue("column-gap", 30, 15);
+	&--4 {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	&--5 {
+		grid-template-columns: repeat(5, 1fr);
+	}
 	// .cards__card
 	&__card {
+	}
+	article, li {
+		height: 100%;
 	}
 }
 .card {
@@ -555,6 +565,7 @@ body {
 	border: toRem(1) solid $borderColor1;
 	scroll-snap-align: start;
 	overflow: hidden;
+	height: 100%;
 	@media (any-hover: hover) {
 		&:hover .card__picture img {
 			transform: scale(1.03);
