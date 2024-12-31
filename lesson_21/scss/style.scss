@@ -562,19 +562,19 @@ body {
 	}
 	// .card--multiple
 	&--genres {
-		@include card(30, 20, 180);
+		@include card(30, 15, 180);
 	}
 	&--popular {
-		@include card(30, 20, 230);
+		@include card(30, 15, 230);
 	}
 	&--trending {
-		@include card(20, 12, 180);
+		@include card(20, 10, 180);
 	}
 	&--releases {
-		@include card(20, 12, 180);
+		@include card(20, 10, 180);
 	}
 	&--must-watch {
-		@include card(20, 12, 207);
+		@include card(20, 10, 207);
 	}
 	&--multiple {
 		position: relative;
@@ -708,7 +708,7 @@ body {
 		color: $thirdTextColor;
 		font-weight: 500;
 		line-height: 1.5;
-		@include adaptiveValue("font-size", 16, 12, 0, $containerWidth, 1099.98);
+		@include adaptiveValue("font-size", 16, 10, 0, $containerWidth, 1099.98);
 		&--duration::before,
 		&--views::before,
 		&--seasons::before {
@@ -838,10 +838,10 @@ body {
 		color: $thirdTextColor;
 		font-weight: 500;
 		line-height: 1.5;
+		@include adaptiveValue("font-size", 18, 16);
 	}
 	// .footer__copy
 	&__copy {
-		@include adaptiveValue("font-size", 18, 16);
 	}
 	// .footer__policy-list
 	&__policy-list {
