@@ -688,6 +688,7 @@ body {
 /* Hero section */
 .hero__body {
   padding-block: 1.25rem;
+  padding-inline: 0.9375rem;
   position: relative;
   width: 100%;
   min-height: 100svh;
