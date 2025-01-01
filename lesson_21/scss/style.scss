@@ -364,6 +364,7 @@ body {
 	// .hero__body
 	&__body {
 		padding-block: toRem(20);
+		padding-inline: toRem(15);
 		position: relative;
 		width: 100%;
 		min-height: 100svh;
