@@ -36,8 +36,7 @@ console.log(`Кількість відвідувань сторінки: ${visit
 // ------------------------------------6-------------------------------------------------------------------------
 // Реалізувати простий діалог з користувачем через prompt, який запитує ім’я та рік народження, і виводить у alert відповідь із розрахованим віком.
 const userName = prompt(`Введіть Ваше ім'я`)
-let userYearOfBirth = prompt(`Введіть рік Вашого народження`)
-userYearOfBirth = parseFloat(userYearOfBirth)
+const userYearOfBirth = parseFloat(prompt(`Введіть рік Вашого народження`))
 const currentYear = new Date().getFullYear()
 
 if (userName !== null && userYearOfBirth !== null && userName !== "" && userYearOfBirth !== "" && !isNaN(userYearOfBirth)) {
