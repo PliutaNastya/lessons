@@ -36,7 +36,8 @@ console.log(`Кількість відвідувань сторінки: ${visit
 // ------------------------------------6-------------------------------------------------------------------------
 // Реалізувати простий діалог з користувачем через prompt, який запитує ім’я та рік народження, і виводить у alert відповідь із розрахованим віком.
 const userName = prompt(`Введіть Ваше ім'я`)
-const userYearOfBirth = parseFloat(prompt(`Введіть рік Вашого народження`))
+let userYearOfBirth = prompt(`Введіть рік Вашого народження`)
+userYearOfBirth = parseFloat(userYearOfBirth)
 const currentYear = new Date().getFullYear()
 
 if (userName !== null && userYearOfBirth !== null && userName !== "" && userYearOfBirth !== "" && !isNaN(userYearOfBirth)) {
@@ -61,7 +62,7 @@ let templateList = `<ul class="list"></ul>`
 let templateListItem = `<li class="item"></li>`
 
 function addListItems(itemNumbers = 1) {
-	if (elementBody) {
+	if (elementBody && itemNumbers > 0) {
 		elementBody.insertAdjacentHTML(`afterbegin`, templateList)
 	}
 	let elementList = document.querySelector(`.list`)
@@ -105,14 +106,18 @@ if (items.length) {
 
 const button = document.querySelector(`.button`)
 
-function scrollToButton(element) {
-	element.scrollIntoView({
-		block: `start`,
-		inline: `nearest`,
-		behavior: `smooth`
-	})
+if (button) {
+	function scrollToButton(element) {
+		element.scrollIntoView({
+			block: `start`,
+			inline: `nearest`,
+			behavior: `smooth`
+		})
+	}
+	scrollToButton(button)
 }
-scrollToButton(button)
+
+
 // ------------------------------Задача №6-----------------------------------------------------------------------
 // Дано в html: посилання з класом link
 // Треба додати до посилання дата атрибут зі значенням 100
@@ -131,3 +136,6 @@ if (link) {
 		link.style.color = `red`
 	}
 }
+
+
+
