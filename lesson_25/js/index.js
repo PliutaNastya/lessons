@@ -84,7 +84,7 @@ function toggleTime(e) {
 	}
 }
 
-document.addEventListener("click", toggleTime)
+stopTimerButton.addEventListener("click", toggleTime)
 startTimer()
 
 // -----------------------------------------4--------------------------------------------------------------------
